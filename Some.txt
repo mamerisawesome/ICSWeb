@@ -5,3 +5,5 @@ Integrating WAMP folder to Github:
 2. In Documents/Github, insert files into .git to manipulate the repo in github
 
 3. Mergesh, try pushing guys. MEHEHE>
+
+- I tried editing here.
