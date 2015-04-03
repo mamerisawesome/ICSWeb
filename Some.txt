@@ -1,1 +1,7 @@
-Hello
+Integrating WAMP folder to Github:
+
+1. git --work-tree=C:/wamp/www/{NEW FOLDER NAME} clone
+
+2. In Documents/Github, insert files into .git to manipulate the repo in github
+
+3. Mergesh, try pushing guys. MEHEHE>
