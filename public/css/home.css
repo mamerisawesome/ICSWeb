@@ -1,0 +1,100 @@
+#image-slider-wrapper {
+	margin-left: -15px;
+	margin-right: -15px;	
+}
+
+#carousel-wrapper {
+	height: 500px;
+}
+
+#image-slider {
+	float: left;
+	margin-left: -15px;
+	margin-right: -45px;
+}
+
+#image-slider-text-wrapper {
+	float: right;
+	height: 500px;
+	margin-right: -15px;
+	color: white;
+	background-color: #25242C;
+}
+
+.item {
+	height: 100%;
+}
+
+.carousel-caption > h3 {
+	letter-spacing: 5px;
+}
+
+#event-preview {
+	height: auto;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.segment-title {
+	margin: 20px;
+	text-align: center;
+}
+
+.event-wrapper {
+	height: auto;
+	text-align: center;
+}
+
+.event-wrapper > div {
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	margin: auto;
+	background-color: #25242C;
+	border: 0;
+}
+
+.event-wrapper > p {
+	text-align: justify;
+	margin-top: 20px;
+}
+
+#event-preview-wrapper {
+	height: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	overflow: hidden;
+}
+
+#publication-content-wrapper {
+	height: auto;
+	width: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	overflow: hidden;
+}
+
+.pub-title-bar {
+	height: 50px;
+	background-color: #ad3a45;
+	text-indent: 100px;
+	color: white;
+}
+
+.publication-entry {
+	box-shadow: 1px 1px 5px #888888;
+}
+
+.pub-title-bar > h3 {
+	line-height: 50px;
+}
+
+.pub-text {
+	background-color: rgba(233, 224, 214, 0.3);
+}
+
+.pub-text > p {
+	text-align: justify;
+	padding: 20px;
+	padding-top: 30px;
+}

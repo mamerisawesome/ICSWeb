@@ -20,6 +20,6 @@ class TestController extends BaseController{
 
     public function show()
     {
-        return View::make('content/test');
+        return View::make('pages.test');
     }
 } 

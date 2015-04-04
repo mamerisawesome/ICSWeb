@@ -12,4 +12,4 @@
 */
 
 Route::get('/', array('uses' => 'HomeController@showWelcome', 'as' => 'index'));
-Route::get('/test', array('uses' => 'TestController@show', 'as' => 'content.test'));
+Route::get('/test', array('uses' => 'TestController@show', 'as' => 'pages.test'));

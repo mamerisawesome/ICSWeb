@@ -1,0 +1,145 @@
+@media (max-width: 900px) {
+	#site-title {
+		font-size: 10pt;
+	}
+
+	#site-name {
+		display: none;
+	}
+
+	#search-bar {
+		display: none;
+	}
+}
+
+@font-face {
+	font-family: lemon;
+	src: url("../fonts/lemon-milk.otf");
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: lemon;
+}
+
+body {
+	background-color: #DCDCDC;
+	background-image: url("../res/images/swirl.png");
+}
+
+.navbar-default {
+    background-color:#FFFFFF;
+}
+
+.navbar-fixed {
+	top: 0;
+	width: 100%;
+	position: fixed;
+	background-color: white;
+}
+
+#main-header-wrapper {
+	background-color: #006ab3;
+	border-top: solid #354458 10px; 
+	height: 60px;
+}
+
+#main-header-content-wrapper {
+	margin-left: 110px;
+}
+
+#site-logo {
+	width: 112px;
+	height: 112px;
+	position: absolute;
+	margin-top: -10px;
+	z-index: 1000;
+}
+
+#site-title {
+	line-height: 10px;
+	letter-spacing: 2px;
+	color: white;
+}
+
+#search-panel {
+	margin-top: 15px;
+}
+
+#navigation-menu {
+	border-radius: 0;
+	box-shadow: 1px 1px 5px #888888;
+	margin-bottom: 0;
+	z-index: 900;
+}
+
+#site-name {
+	width: 112px;
+}
+
+#search-panel-inner-wrapper {
+	float: right;
+}
+
+#search-panel-inner-wrapper input {
+	border-radius: 10px;
+	height: 18px;
+	font-size: 10pt;
+	border: none;
+	text-indent: 5px;
+}
+
+#login-field {
+	width: 250px;
+	height: auto;
+	position: absolute;
+	background-color: white;
+	top: 51px;
+	right: 120px;
+	display: none;
+	box-shadow: 1px 1px 5px #888888;
+}
+
+.login-filed-content-wrapper {
+	width: 230px;
+	margin: 10px;
+	text-align: center;
+}
+
+.log-in-input-field {
+	width: 85%;
+	height: 20px;
+}
+
+.login-filed-content-wrapper > p {
+	margin: 0;
+}
+
+.login-filed-content-wrapper > input {
+	margin: 0;
+}
+
+.log-in-button {
+	background-color: #ad3a45;
+	color: white;
+	margin-top: -10px;
+}
+
+.body-wrapper {
+	height: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: 1px 1px 5px #888888;
+}
+
+.footer {
+	height: 200px;
+	background-color: #006ab3;
+	margin-top: 20px;
+	box-shadow: 1px -1px 5px #888888;
+}
+
+#footer-left {
+	height: 100%;
+	background-color: #354458;
+}
