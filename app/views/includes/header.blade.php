@@ -24,7 +24,7 @@
             </div>
             <div class="collapse navbar-collapse" id="navigation-menu-content">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="{{ URL::to('/'); }}">Home</a></li>
                 <li><a href="#">Publications</a></li>
                 <li><a href="#">ICS Online Library</a></li>
                 <li><a href="#">Faculty and Staff</a></li>
