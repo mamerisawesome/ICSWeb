@@ -1,14 +1,22 @@
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
 	#site-title {
-		font-size: 10pt;
+		font-size: 12pt;
 	}
+	#search-panel {
+		display: none;
+	}
+}
 
+@media (max-width: 900px) {
 	#site-name {
 		display: none;
 	}
+}
 
-	#search-bar {
-		display: none;
+@media (max-width: 600px) {
+	#site-title {
+		font-size: 7pt;
+		text-align: center;
 	}
 }
 
@@ -17,17 +25,27 @@
 	src: url("../fonts/lemon-milk.otf");
 }
 
+@font-face {
+	font-family: roboto;
+	src: url("../fonts/roboto.ttf");
+}
+
+body {
+	font-family: roboto;
+	background-color: white;
+	background-image: url("../res/images/swirl.png");
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: lemon;
 }
 
-body {
-	background-color: #DCDCDC;
-	background-image: url("../res/images/swirl.png");
-}
-
-.navbar-default {
-    background-color:#FFFFFF;
+.body-wrapper {
+	height: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	background-color: white;
+	box-shadow: 1px 1px 5px #888888;
 }
 
 .navbar-fixed {
@@ -59,6 +77,7 @@ body {
 	line-height: 10px;
 	letter-spacing: 2px;
 	color: white;
+	text-shadow: 1px 1px 2px #333333;
 }
 
 #search-panel {
@@ -86,15 +105,79 @@ body {
 	font-size: 10pt;
 	border: none;
 	text-indent: 5px;
+	box-shadow: 1px 1px 2px #888888 inset;
 }
 
+.footer {
+	height: 200px;
+	background-color: #006ab3;
+	margin-top: 20px;
+	box-shadow: 1px -1px 5px #888888;
+}
+
+#footer-left {
+	height: 100%;
+	background-color: #354458;
+}
+
+/*IF USER IS LOGGED IN*/
+.img-circle {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  box-shadow: 1px 1px 5px #888888;
+}
+
+#nav-pic{
+	height: 30px;
+	width: 30px;
+	margin-bottom:-15px;
+	margin-top: 10px;	
+}
+
+
+#drop-field{
+	width: 150px;
+	height: auto;
+	position: absolute;
+	background-color: white;
+	background-image: url("../res/images/feathers.png");
+	top: 51px;
+	right: 60px;
+	display: none;
+	box-shadow: 1px 1px 5px #666666;
+}
+
+.dropdown-items {
+	width: 100%;
+	margin-left: -20px;
+	color: #666;
+	text-align: center;
+	cursor: hand;
+}
+
+.dropdown-items:hover {
+	color: black;
+}
+
+#drpdwn{
+	height: 30px;
+	width: 30px;
+	margin-left:15px;
+	margin-right:15px;
+	margin-bottom:-15px;
+	margin-top: 10px;
+}
+
+
+/* IF USER IS NOT LOGGED IN */
 #login-field {
 	width: 250px;
 	height: auto;
 	position: absolute;
 	background-color: white;
+	background-image: url("../res/images/feathers.png");
 	top: 51px;
-	right: 120px;
+	right: 50px;
 	display: none;
 	box-shadow: 1px 1px 5px #888888;
 }
@@ -108,6 +191,10 @@ body {
 .log-in-input-field {
 	width: 85%;
 	height: 20px;
+	text-indent: 5px;
+	border: none;
+	box-shadow: 1px 1px 2px #888 inset;
+	border-radius: 3px;
 }
 
 .login-filed-content-wrapper > p {
@@ -124,22 +211,3 @@ body {
 	margin-top: -10px;
 }
 
-.body-wrapper {
-	height: auto;
-	margin-top: 25px;
-	margin-bottom: 25px;
-	background-color: rgba(255, 255, 255, 0.8);
-	box-shadow: 1px 1px 5px #888888;
-}
-
-.footer {
-	height: 200px;
-	background-color: #006ab3;
-	margin-top: 20px;
-	box-shadow: 1px -1px 5px #888888;
-}
-
-#footer-left {
-	height: 100%;
-	background-color: #354458;
-}

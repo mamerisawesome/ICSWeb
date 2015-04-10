@@ -1,0 +1,101 @@
+ul#tabs {
+	list-style-type: none;
+	margin: 200px 0 0 0;
+	transform: rotate(-90deg);
+	padding: 2em 0 0.3em 0;
+	position: absolute;
+	left: -6px;
+	font-family: lemon;
+	font-size: 15px;
+	letter-spacing: 1px;
+}
+
+ul#tabs li {
+	display: inline;
+	padding-bottom: 30%;
+}
+
+ul#tabs li a {
+	/*color: #42454a;*/
+	color: white;
+	background-color: #354458;
+	border: 1px solid #c9c3ba;
+	border-radius: 10px 10px 0 0;
+	border-bottom: none;
+	padding: 0.3em;
+	text-decoration: none;
+	height: 50px;
+	padding: 0.9em 0.5em 0.58em 0.5em;
+}
+
+ul#tabs li a:hover {
+	color: #42454a;
+	background-color: #f1f0ee;
+}
+
+ul#tabs li a.selected {
+	color: white;
+	background-color: #006ab3;
+	font-weight: bold;
+	padding: 1.2em 0.8em 0.9em 0.8em;
+}
+
+div.tabContent {
+	border: 1px
+	solid #e9e0d6;
+	padding: 2em;
+	background-color: #f1f0ee;
+}
+
+div.tabContent.hide {
+	display: none;
+}
+
+.content-wrapper {
+	padding: 3%;
+	padding-left: 0;
+	width: 90%;
+	float: right;
+}
+
+h2.content-header {
+	background-color: #ad3a45;
+	color: white;
+	padding-left: 3%;
+	letter-spacing: 2px;
+}
+
+#content{
+	width: 95%;
+}
+
+
+#side{
+	transform: rotate(90deg);
+	height: 5%;
+	font-family: lemon;
+	font-size: 40px;
+	letter-spacing: 5px;
+	color: gray;
+	float: right;
+	position: absolute;
+	top: 500px;
+	right: -130px;
+}
+
+#part{
+	background-color: #e9e0d6;
+	border: dotted 1px gray;
+	border-radius: 10px;
+	padding: 10px;
+	width: 90%;
+	margin-bottom: -3px;
+}
+
+#timeline-image{
+	background-color: white;
+
+	border-radius: 50%;
+	align: middle;
+	padding: 50px;
+}

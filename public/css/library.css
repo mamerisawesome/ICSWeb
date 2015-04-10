@@ -1,0 +1,177 @@
+#shelf {
+	height: 480px;
+	background-color: #333333;
+	background-image: url("../res/images/black_texture.jpg");
+	overflow: hidden;
+	box-shadow: 1px 1px 5px #888888;
+}
+
+#shelf-menu {
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	box-shadow: 1px 1px 5px black;
+	color: white;
+	text-align: center;
+	padding-top: 25px;
+}
+
+#shelf-wrapper {
+	height: 100%;
+}
+
+#shelf-wrapper-content {
+	height: 100%;
+	width: 100%;
+}
+
+#search-result {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	color: white;
+	display: none;
+}
+
+#search-result > div {
+	width: 100%;
+	margin-top: 25px;
+}
+
+#results-field {
+	width: 100%;
+	overflow-y: scroll;
+	height: 300px;
+}
+
+#search-result #results-field::-webkit-scrollbar {
+	display: none;
+}
+
+#back-to-shelf {
+	height: 80px;
+	width: 80px;
+	border-radius: 100px;
+	position: absolute;
+	right: 25px;
+	margin-top: -25px;
+	background-color: #ad3a45;
+	box-shadow: 1px 1px 3px black;
+	text-align: center;
+	cursor: hand; 
+}
+
+#back-to-shelf p {
+	line-height: 80px;
+}
+
+#shelf-menu input {
+	font-family: roboto;
+	text-indent: 5px;
+	box-shadow: 1px 1px 3px #666666 inset;
+	border: none;
+	border-radius: 5px;
+	color: black;
+}
+
+#date-container {
+	width: 100%;
+	text-align: center;
+	color: white;
+	margin-top: 25px;
+}
+
+#book-title-wrapper {
+	height: 50px;
+	width: 90%;
+	margin: auto;
+	color: white;
+	background: #ad3a45;
+	border-radius: 5px;
+	text-align: center;
+	margin-top: 15px;
+	box-shadow: 1px 1px 5px black;
+}
+
+#book-title {
+	line-height: 50px;
+}
+
+.book-list {
+	margin: auto;
+	margin-left: -20px;
+	width: 100%;
+	list-style: none;
+	text-align: center;
+	margin-top: 25px;
+}
+
+.book-list li {
+	margin: auto;
+	display: inline-block;
+}
+
+.book-list li > div {
+	height: 200px;
+	width: 70px;
+	margin: auto;
+	margin-top: 20px;
+	background-color: #e9e0d6;
+	box-shadow: 1px 1px 3px #666666;
+	cursor: hand;
+}
+
+.book-list li > div > h5 {
+	margin-top: 80px;
+}
+
+
+#shelf-wood {
+	margin: auto;
+	width: 90%;
+	height: auto;
+	margin-top: -90px;
+}
+
+#plate-top {
+	height: 0;
+	width: 100%;
+	border: solid 50px saddlebrown;
+	border-top-color: rgba(0,0,0,0);
+	border-right-color: rgba(0,0,0,0);
+	border-left-color: rgba(0,0,0,0);
+
+}
+
+#plate-edge {
+	width: 100%;
+	height: 30px;
+	background-color: saddlebrown;
+	background-image: url("../res/images/wood.png");
+}
+
+#SPT-preview {
+	display: none;
+}
+
+#SPT-preview img {
+	width: 100%;
+	height: auto;
+}
+
+#library-switch {
+	width: 100px;
+	height: 100px;
+	border-radius: 200px;
+	background-color: maroon;
+	z-index: 5000;
+	text-align: center;
+	position: fixed;
+	right: 25;
+	bottom: 25;
+	color: white;
+	cursor: hand;
+}
+
+#library-switch p {
+	line-height: 100px;
+}

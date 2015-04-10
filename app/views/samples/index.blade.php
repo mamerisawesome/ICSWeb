@@ -10,7 +10,6 @@
     @include('includes.header')
 </header>
 
-
 <!-- whole body (content) wrapped by a single div -->
 
 <div class="body-wrapper container">
@@ -27,28 +26,28 @@
 
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
-					<img src="res/images/temp.jpg">
+					<img src="{{ URL::to('res/images/temp.jpg'); }}">
 					<div class="carousel-caption">
 						<h3>Chania</h3>
 					    <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
 					</div>
 				</div>
 				<div class="item">
-					<img src="res/images/temp.jpg">
+					<img src="{{ URL::to('res/images/temp.jpg'); }}">
 					<div class="carousel-caption">
 						<h3>Chania</h3>
 					    <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
 					</div>
 				</div>
 				<div class="item">
-					<img src="res/images/temp.jpg">
+					<img src="{{ URL::to('res/images/temp.jpg'); }}">
 					<div class="carousel-caption">
 						<h3>Chania</h3>
 					    <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
 					</div>
 				</div>
 				<div class="item">
-					<img src="res/images/temp.jpg">
+					<img src="{{ URL::to('res/images/temp.jpg'); }}">
 					<div class="carousel-caption">
 						<h3>Chania</h3>
 					    <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
@@ -78,7 +77,7 @@
 		<div class="col-md-4" id="event1">
 			<div class="event-wrapper">
 				<div>
-				<img src="" alt="about ICS">
+				<img src="{{ URL::to(''); }}" alt="about ICS">
 				</div>
 				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 			</div>
@@ -86,7 +85,7 @@
 		<div class="col-md-4" id="event2">
 			<div class="event-wrapper">
 				<div>
-				<img src="" alt="ICS history">
+				<img src="{{ URL::to(''); }}" alt="ICS history">
 				</div>
 				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 			</div>			
@@ -94,7 +93,7 @@
 		<div class="col-md-4" id="event3">
 			<div class="event-wrapper">
 				<div>
-				<img src="" alt="ICS Mission & Vision">
+				<img src="{{ URL::to(''); }}" alt="ICS Mission & Vision">
 				</div>
 				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 			</div>			

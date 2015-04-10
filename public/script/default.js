@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
 	var loginFieldStatus = false;
-
+	var drop = false;
+	
 	$("#login-toggle").click(function(){
 		if(loginFieldStatus) {
 			$("#login-field").slideUp("slow");			
@@ -13,6 +14,17 @@ $(document).ready(function(){
 		}
 	});
 
+	$("#drop-toggle").click(function(){
+		if(drop) {
+			$("#drop-field").slideUp("slow");			
+			drop = false;
+		}
+		else {
+			$("#drop-field").slideDown("slow");			
+			drop = true;
+		}
+	});
+	
 	$(window).scroll(function () {
 		if ($(window).scrollTop() > 60) {
   			$(".navbar").addClass('navbar-fixed');

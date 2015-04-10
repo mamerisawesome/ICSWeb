@@ -11,7 +11,7 @@
 </header>
 
 <!-- whole body (content) wrapped by a single div -->
-<div id="main" class="row">
+<div id="main">
     @yield('content')
 </div>
 

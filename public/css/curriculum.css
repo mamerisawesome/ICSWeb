@@ -1,0 +1,40 @@
+.title {
+	text-align: center;
+}
+
+.scrollable{
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	overflow-x: scroll;
+	overflow-y: visible;
+}
+
+.content{
+	display: inline-block;
+	top: 0;
+	left: 0;
+	background-size: contain;
+}
+/*
+a.masterTooltip div {
+    background-color: red;
+    display: none;
+}
+
+a.masterTooltip:hover div{
+    padding: 5px 20px 5px 5px;
+    display: block;
+    z-index: 100;
+    background-color: red;
+    left: 0px;
+    margin: 10px;
+    width: 250px;
+    position: absolute;
+    top: 10px;
+}*/
+
+/*
+What to do: add about below svg
+if cannot add tooltip or enlarge shape
+*/

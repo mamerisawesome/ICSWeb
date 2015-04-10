@@ -1,0 +1,55 @@
+#body-wrapper {
+	height: auto;
+	margin-bottom: 25px;
+}
+
+#left-panel {
+	margin-top: 25px;
+	background: #ad3a45;
+	padding-bottom: 20px;
+	color: white;
+
+}
+
+#search-panel {
+	margin: 10px 0 10px 0;
+}
+
+#search-bar-publication{
+	width:90%;
+	border-radius: 5px;
+	border: 0;
+	color: gray;
+	text-align: center;
+	box-shadow: 1px 1px 5px #666666;
+}
+
+#search-icon-publication {
+	margin-left: 5px;
+}
+
+.links-panel{
+	height: auto;
+	background-color: #006ab3;
+	text-align:center;
+	color: white;
+	padding: 5px;
+	margin: 5px 0 5px 0;
+}
+
+
+#publication-preview {
+	margin-top: 25px;
+	float: right;
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: 1px 1px 5px #888888;
+}
+
+#title-panel {
+	margin: 25px;
+}
+
+#body-panel {
+	margin: 25px;
+	text-align: justify;
+}
