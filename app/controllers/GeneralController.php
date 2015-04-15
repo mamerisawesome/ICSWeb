@@ -18,6 +18,11 @@ class GeneralController extends BaseController{
 	|
 	*/
 
+    public function show($somePage)
+    {
+        return View::make($somePage);
+    }
+
     public function showCurriculum()
     {
         return View::make('pages.curriculum');

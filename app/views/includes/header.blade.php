@@ -1,6 +1,6 @@
     <div class="container-fluid" id="main-header-wrapper">
         <div class="container" id="main-header">
-            <a href="index.html"><img id="site-logo" src="{{URL::to('res/images/ics_logo.jpg')}}"></a>
+            <a href="{{URL::to('/')}}"><img id="site-logo" src="{{URL::to('res/images/ics_logo.jpg')}}"></a>
             <div class="row-fluid" id="main-header-content-wrapper">
                 <div class="col-sm-7">
                     <h2 id="site-title">INSTITUTE OF COMPUTER SCIENCE</h2>
@@ -20,7 +20,7 @@
     <nav class="navbar navbar-default" id="navigation-menu">
         <div class="container">
             <div class="navbar-header" id="site-name">
-              <a class="navbar-brand" href="index.html">ICS UPLB</a>
+              <a class="navbar-brand" href="{{URL::to('/')}}">ICS UPLB</a>
             </div>
             <div class="collapse navbar-collapse" id="navigation-menu-content">
               <ul class="nav navbar-nav">

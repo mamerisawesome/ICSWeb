@@ -25,3 +25,9 @@ Route::get('pages/group',array('uses' => 'GeneralController@showGroup', 'as' => 
 Route::get('pages/home',array('uses' => 'GeneralController@showHome', 'as' => 'page.home'));
 Route::get('pages/profile',array('uses' => 'GeneralController@showProfile', 'as' => 'page.profile'));
 Route::get('pages/publication',array('uses' => 'GeneralController@showPublication', 'as' => 'page.publication'));
+
+Route::get('/thisIsATestRoute','LaravelHomeControl@showHome');
+
+Route::get('home', function(){
+	return "<h1>This is my home</h1>";
+});

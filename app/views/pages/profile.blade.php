@@ -6,7 +6,7 @@
 
 		<div id="upper-panel">
 			<div class="col-md-4" id="profile-upper-left-panel">
-				<img src="res/images/sample3.png" id="profile-pic" alt="Profile-Pic">
+				<img src="{{URL::to('res/images/sample3.png')}}" id="profile-pic" alt="Profile-Pic">
 				<div id="profile-basic-info">
 					<h4 class="prof-info" id="prof-name">LASTNAME, FIRSTNAME, MI.</h4>
 					<h5 class="prof-info" id="prof-desig">DESIGNATION</h5>
@@ -22,7 +22,7 @@
 				</p>
 				</div>
 				<div id="profile-message-wrapper">
-					<a href="#"><img src="res/images/envelope.png" id="profile-msg-icon" class="img-rounded" alt="MSG"><p>LEAVE A MESSAGE</p></a>
+					<a href="#"><img src="{{(URL::to('res/images/envelope.png'))}}" id="profile-msg-icon" class="img-rounded" alt="MSG"><p>LEAVE A MESSAGE</p></a>
 				</div>
 			</div>
 		</div>
