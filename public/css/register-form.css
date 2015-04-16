@@ -1,0 +1,14 @@
+table {
+/*	width: 100%;
+*/}
+
+input {
+	color: #999999;
+}
+
+#reg-form-div {
+	background-color: rgba(255, 255, 255, 0.8);
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding: 50px;
+}

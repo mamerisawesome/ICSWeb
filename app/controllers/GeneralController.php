@@ -67,4 +67,9 @@ class GeneralController extends BaseController{
     {
         return View::make('pages.publication');
     }
-} 
+
+    public function showRegisterForm()
+    {
+        return View::make('pages.register_form');
+    }
+}

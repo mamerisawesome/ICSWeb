@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    //echo '<script>alert("hello");</script>';
+?>
 <html>
 <head>
     @include('includes.head')

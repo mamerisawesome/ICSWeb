@@ -3,6 +3,8 @@
     <meta name="author" content="Almer and Friends"/>
     <title>ICS UPLB</title>
 
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+
     {{ HTML::style('css/bootstrap.css'); }}
     {{ HTML::style('css/bootstrap-theme.css'); }}
     {{ HTML::style('css/home.css'); }}
@@ -15,6 +17,7 @@
     {{ HTML::style('css/library.css'); }}
     {{ HTML::style('css/profile.css'); }}
     {{ HTML::style('css/publication.css'); }}
+    {{ HTML::style('css/register-form.css'); }}
     
     {{ HTML::script('script/jquery.min.js'); }}
     {{ HTML::script('script/bootstrap.min.js'); }}
@@ -26,3 +29,4 @@
     {{ HTML::script('script/directory.js'); }}
     {{ HTML::script('script/division.js'); }}
     {{ HTML::script('script/library.js'); }}
+    {{ HTML::script('script/validate.js'); }}

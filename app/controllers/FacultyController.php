@@ -1,6 +1,6 @@
 <?php
 
-class UserController extends \BaseController {
+class FacultyController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -10,7 +10,6 @@ class UserController extends \BaseController {
 	public function index()
 	{
 		//
-
 	}
 
 
@@ -21,8 +20,8 @@ class UserController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('pages.register_form');
-    }
+		//
+	}
 
 
 	/**

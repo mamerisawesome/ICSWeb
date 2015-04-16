@@ -33,7 +33,7 @@
 		
 		<div class="row" id="slide-view">
 			<ul id="scroll-content">
-				<?php for($i = 0; $i < 100; $i += 1){ ?>
+				<?php for($i = 0; $i < 10; $i += 1){ ?>
 					<li>
 					<div class="person">
 						<img src="{{URL::to('res/images/blue_contacts.png')}}" class="people-image">
