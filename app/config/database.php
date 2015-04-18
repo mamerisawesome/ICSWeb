@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '127.0.0.1:33060',
+			'host'      => 'localhost',
 			'database'  => 'icsweb',
-			'username'  => 'root',
-			'password'  => '',
+			'username'  => 'almermamer',
+			'password'  => 'marie11',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

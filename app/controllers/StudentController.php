@@ -23,6 +23,32 @@ class StudentController extends \BaseController {
         return View::make('pages.register_form');
     }
 
+    /**
+     * Process this form.
+     *
+     * @return Response
+     */
+    public function processForm(Request $request)
+    {
+        $sampleVar = $request -> get('nameOfInputFromFOrm');
+        if(isset($sampleVar) /* checks if the input is empty */){
+            $query = DB::table('tableNameHere')->where('column',$column)->get();
+            /* query builder if column is unique; 'column' == $column*/
+
+            if(($password == $retypePassword) && count($query) == 0){
+                DB::table('tableNameHere')->insert(
+                    [
+                        'column1' => $column1,
+                        'column2' => $column2
+                    ]
+                );
+
+                /* something here */
+            }
+
+        }
+    }
+
 
 	/**
 	 * Store a newly created resource in storage.

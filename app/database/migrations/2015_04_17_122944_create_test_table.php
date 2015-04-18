@@ -12,7 +12,11 @@ class CreateTestTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('hello', function(Blueprint $table)
+		{
+			$table->increments('id');
+			$table->timestamps();
+		});
 	}
 
 	/**
@@ -22,7 +26,7 @@ class CreateTestTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('hello');
 	}
 
 }
