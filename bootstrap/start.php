@@ -24,11 +24,38 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
+//$env = $app->detectEnvironment(
+//    'local' => array('MAMERisawesome'),
+//);
+
+Dotenv::load(__DIR__.'/../');
+
 $env = $app->detectEnvironment(array(
-
-	'local' => array('homestead', 'MAMERisawesome'),
-
+    function() use($app) {
+        return getenv('APP_ENV') ?: ($app->runningInConsole() ? 'local' : 'production');
+    }
 ));
+
+/*
+    Error is expected since
+    function(array(function()
+        {
+            statements here.
+        }
+    ));
+    is not defined
+*/
+
+//$env = $app->detectEnvironment(
+//    function()
+//    {
+//        if(getenv('APP_ENV') !== null)
+//        {
+//            Dotenv::load(__DIR__ .'/../');
+//        }
+//        return getenv('APP_ENV');
+//    }
+//);
 
 /*
 |--------------------------------------------------------------------------
