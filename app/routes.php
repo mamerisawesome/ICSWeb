@@ -34,5 +34,5 @@ Route::get('home', function(){
 	return "<h1>This is my home</h1>";
 });
 
-Route::resource('student','StudentController');
+Route::resource('pages/students','StudentsController');
 Route::resource('faculty','FacultyController');

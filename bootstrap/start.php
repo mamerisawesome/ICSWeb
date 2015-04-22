@@ -24,17 +24,17 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-//$env = $app->detectEnvironment(
-//    'local' => array('MAMERisawesome'),
-//);
+$env = $app->detectEnvironment(
+    array('local' => 'localhost')
+);
 
-Dotenv::load(__DIR__.'/../');
+//Dotenv::load(__DIR__.'/../');
 
-$env = $app->detectEnvironment(array(
+/*$env = $app->detectEnvironment(array(
     function() use($app) {
         return getenv('APP_ENV') ?: ($app->runningInConsole() ? 'local' : 'production');
     }
-));
+));*/
 
 /*
     Error is expected since

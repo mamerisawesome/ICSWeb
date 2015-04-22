@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'icsweb',
+			'database'  => 'learning-laravel',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',

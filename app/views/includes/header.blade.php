@@ -33,7 +33,7 @@
                 <li><a href="{{URL::to('pages/about')}}">About Us</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ URL::to('student/create') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="{{ URL::to('pages/students/create') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li id="login-toggle"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
               </ul>
               <div id="login-field">
