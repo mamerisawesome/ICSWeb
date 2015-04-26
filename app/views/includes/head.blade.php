@@ -6,8 +6,11 @@
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
     {{ HTML::style('css/bootstrap.css'); }}
-    {{ HTML::style('css/bootstrap-theme.css'); }}
+    {{ HTML::style('css/font-awesome.css'); }}
+    {{ HTML::style('css/font-awesome.min.css'); }}
 
+<!--    {{ HTML::style('css/bootstrap-theme.css'); }}
+-->
     {{ HTML::style('css/default.css'); }}
     {{ HTML::style('css/register-form.css'); }}
     

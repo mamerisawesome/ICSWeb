@@ -28,6 +28,15 @@ h1, h2, h3, h4, h5, h6 {
 	color: #34495e;
 }
 
+.col-md-12 {
+	padding: 0;
+}
+
+.wrapping-panel {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
 /* TITLE BAR */
 
 	#title-bar-wrapper {
@@ -42,9 +51,10 @@ h1, h2, h3, h4, h5, h6 {
 
 	#navigation-menu {
 		border-radius: 0;
-		background-color: white;
 		border: none;
+		background-color: white;
 		box-shadow: 0 1px 5px silver;
+		margin: 0;
 	}
 
 	#title-bar img {

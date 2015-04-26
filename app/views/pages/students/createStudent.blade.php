@@ -1,10 +1,13 @@
 @extends('layouts.default')
-
 @section('content')
-    <div>
-        <div>
-            <div>
+    <div class="wrapping-panel" id="reg-form-panel">
+        <div class="container">
+            <div class="col-md-12">
+            <div class="col-md-8" id="registration-form-panel">
+                <div class="col-md-12" id="reg-form-title">
                 <h2>ICS Student Register Form</h2>
+                </div>
+                <div class="col-md-12" id="reg-form-body">
                 {{ Form::open(array('route'=>'pages.students.store', 'name'=>'reg-form', 'id'=>'reg-form'))}}
                 
                     {{Form::macro('regInput', function($inputType, $idName, $placeholderValue, $labelValue)
@@ -53,7 +56,27 @@
                     <br>
                     {{ Form::submit('Submit', array('class'=>'btn btn-primary')) }}
                 {{ Form::close() }}
+                </div>
 
+            </div>
+            <div class="col-md-4" id="welcome-text-panel">
+            <h2>WELCOME to ICS Portal!</h2>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi<br><br>
+            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            oluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum."</p>
+            <span>
+                <hr>
+                <span class="fa fa-quote-left"></span>
+                <p id="quote-text">Everyone in this country should know how to program, because it teaches you how to think.</p>
+                <span class="fa fa-quote-right"></span>
+                <p id="quote-author">- Steve Jobs<p>
+                <hr>
+            </span>
+            </div>
             </div>
         </div>
     </div>

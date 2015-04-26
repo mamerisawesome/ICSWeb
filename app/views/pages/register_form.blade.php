@@ -1,8 +1,8 @@
 @extends('layouts.default')
 @section('content')
-    <div class="container">
+
+    <div>
         <div class="container" id="reg-form-div">
-            <div class="row">
                 <h2>ICS Sign up</h2>
                 {{ Form::open(array('route' => array('index'), 'name'=>'reg-form', 'id'=>'reg-form')) }}
                     {{Form::macro('regInput', function($inputType, $idName, $placeholderValue, $labelValue)
@@ -38,7 +38,6 @@
                     {{ Form::submit('Submit', array('class'=>'btn btn-primary')) }}
                 {{ Form::close() }}
 
-            </div>
         </div>
     </div>
 

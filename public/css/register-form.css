@@ -6,9 +6,46 @@ input {
 	color: #999999;
 }
 
-#reg-form-div {
-	background-color: rgba(255, 255, 255, 0.8);
-	margin-top: 25px;
-	margin-bottom: 25px;
-	padding: 50px;
+
+#reg-form-panel {
+	background-image: url("../res/images/uplb-blur.jpg");
+	background-size: 100% 100%;
+}
+
+#registration-form-panel {
+}
+
+#registration-form-panel h2 {
+	text-align: center;
+	color: white;	
+}
+
+#welcome-text-panel {
+	text-align: center;
+	font-family:  montserrat-bold;
+	color: white;
+	text-shadow: 1px 1px 1px black;
+}
+
+#quote-text {
+	color: white;
+	text-align: center;
+	font-style: italic;
+	font-size: 15pt;
+}
+
+#welcome-text-panel span.fa {
+	color: white;
+	font-size: 20pt;
+}
+
+#reg-form-title {
+	padding: 10px;
+	background-color: #34495e;
+}
+
+#reg-form-body {
+	background-color: #ecf0f1;
+	border-bottom: solid 10px #34495e;
+	padding: 20px;
 }
