@@ -1,5 +1,9 @@
 @extends('layouts.default')
 @section('content')
+
+    {{ HTML::style('css/directory.css'); }}
+    {{ HTML::script('script/directory.js'); }}
+
 	<!-- whole body (content) wrapped by a single div -->
 	<div class="container body-wrapper">
 

@@ -1,5 +1,9 @@
 @extends('layouts.default')
 @section('content')
+
+    {{ HTML::style('css/division.css'); }}
+    {{ HTML::script('script/division.js'); }}
+
 	<!-- whole body (content) wrapped by a single div -->
 
 	<div class="container">

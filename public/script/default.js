@@ -1,38 +1,17 @@
 $(document).ready(function(){
 
-	var loginFieldStatus = false;
-	var drop = false;
-	
-	$("#login-toggle").click(function(){
-		if(loginFieldStatus) {
+	$(window).scroll(function(){
+		if ($(window).scrollTop() > 50) {
+			$(".navbar").addClass('navbar-fixed-top');
 			$("#login-field").slideUp("slow");			
-			loginFieldStatus = false;
 		}
-		else {
-			$("#login-field").slideDown("slow");			
-			loginFieldStatus = true;
+		if ($(window).scrollTop() < 50) {
+			$(".navbar").removeClass('navbar-fixed-top');
 		}
 	});
 
-	$("#drop-toggle").click(function(){
-		if(drop) {
-			$("#drop-field").slideUp("slow");			
-			drop = false;
-		}
-		else {
-			$("#drop-field").slideDown("slow");			
-			drop = true;
-		}
-	});
-	
-	$(window).scroll(function () {
-		if ($(window).scrollTop() > 60) {
-  			$(".navbar").addClass('navbar-fixed');
-		}
-		
-		if ($(window).scrollTop() < 60) {
-  			$(".navbar").removeClass('navbar-fixed');
-		}
+	$("#login-toggle").click(function(){
+		$("#login-field").slideToggle("slow");
 	});
 
 });

@@ -1,6 +1,8 @@
 @extends('layouts.default')
 @section('content')
-	<!-- whole body (content) wrapped by a single div -->
+
+    {{ HTML::style('css/about.css'); }}
+    {{ HTML::script('script/about.js'); }}
 
 	<div class="body-wrapper container">
 	<div class="row">
@@ -10,7 +12,6 @@
 		  <li><a href="#timeline">Timeline</a></li>
 		  <li><a href="#about">About Us</a></li>
 		</ul>
-		<!-- </div> -->
 
 	<div class="content-wrapper container">
 		<div class="tabContent" id="about">

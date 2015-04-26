@@ -1,5 +1,8 @@
 @extends('layouts.default')
 @section('content')
+
+    {{ HTML::style('css/group.css'); }}
+
 	<div class="container-fluid" id="body-wrapper">
 		<div class="container">
 			<div class="row col-md-3" id="profile-panel">

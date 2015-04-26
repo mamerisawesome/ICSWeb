@@ -1,6 +1,9 @@
 @extends('layouts.default')
 @section('content')
 
+    {{ HTML::style('css/library.css'); }}
+    {{ HTML::script('script/library.js'); }}
+
 	<div id="shelf">
 		<div class="col-md-2" id="shelf-menu">
 			<h3>{ ICS LIBRARY }</h3>

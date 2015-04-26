@@ -1,6 +1,8 @@
 @extends('layouts.default')
 @section('content')
 
+    {{ HTML::style('css/publication.css'); }}
+
 
 	<div class="row" id="body-wrapper">
 		<div class="container">

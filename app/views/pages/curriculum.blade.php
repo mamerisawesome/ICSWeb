@@ -1,6 +1,9 @@
 @extends('layouts.default')
 @section('content')
-	<!-- whole body (content) wrapped by a single div -->
+	
+	{{ HTML::style('css/curriculum.css'); }}
+    {{ HTML::script('script/curriculum.js'); }}
+
 
 	<div class="body-wrapper container">
 	<h2 class="title">BSCS Curriculum (2011)</h2>

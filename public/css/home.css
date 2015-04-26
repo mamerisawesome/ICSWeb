@@ -1,173 +1,145 @@
-hr {
-	width: 95%;
+.col-md-12 {
+	padding: 0;
 }
 
-#carousel-wrapper {
-	margin-top: 25px;
+.wrapping-panel {
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
-#image-slider-wrapper {
-	width: 100%;
-	height: 400px;
-	overflow: hidden;
-	background: black;
+/* WELCOME PANEL */
 
-}
+	#welcome-panel {
+		background-color: white;
+	}
 
-#image-slider {
-	margin-right: -15px;
-	margin-left: -15px;
-}
+	#welcome-wrapper {
+		text-align: center;
+	}
 
-.item {
-	width: 100%;
-	height: 100%;
-}
+	#welcome-wrapper p {
+		color: #2980b9;
+		font-style: italic;
+	}
 
-.item img {
-	width: 100%;
-}
+/* DEGREE PROGRAMS */
+	
+	#degree-programs {
+		padding: 0;
+		text-align: center;
+		height: auto;
+	}
 
-.carousel-caption > h3 {
-	letter-spacing: 5px;
-}
+	#degree-program-icon {
+		width: 100%;
+		padding: 5%;
+		border-radius: 100%;
+	}
 
-.segment-title {
-	margin: 20px;
-	text-align: center;
-}
+	.degree-program-wrapper {
+		padding: 10px;
+		background-color: #ecf0f1;
+		border: solid 5px white;
+	}
 
-#event-preview-wrapper {
-	height: auto;
-	margin-top: 25px;
-	margin-bottom: 25px;
-}
+/* IMAGE CAROUSEL */
 
-#event-preview {
-	height: auto;
-	margin-bottom: 20px;
-	text-align: center;
-}
+	#carousel-wrapper {
+		padding: 0;
+		margin-top: -20px;
+		height: auto;
+		box-shadow: 1px 1px 5px silver;
+	}
 
-.event-wrapper {
-	height: auto;
-	text-align: center;
-	padding: 10px;
-	border-radius: 20px;
-}
+	.carousel-caption {
+		display: none;
+	}
 
-.event-wrapper > div {
-	width: 200px;
-	height: 200px;
-	border-radius: 200px;
-	margin: auto;
-	background-color: #25242C;
-	border: 0;
-}
+	#image-slider-wrapper {
+		width: 100%;
+		overflow: hidden;
+	}
 
-.event-wrapper > p {
-	text-align: justify;
-	margin-top: 10px;
-}
+	#image-slider {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
 
-.event-wrapper > div > img {
-	width: 70%;
-	margin-top: 15%;
-}
+	.item {
+		width: 100%;
+		height: auto;
+	}
+
+	.item img {
+		width: 100%;
+	}
 
 
-#publication-content-wrapper {
-	height: auto;
-	width: auto;
-	margin-bottom: 25px;
-	overflow: hidden;
-}
+/*EVENT GROUP */
 
-#publication-preview {
-	height: auto;
-	margin-top: 15px;
-}
+	#event-wrapper {
+		background-color: #ecf0f1;
+		text-align: center;
+	}
 
-.publication-entry:first-of-type {
-	margin-top: -20px;
-}
 
-.publication-entry {
-	box-shadow: 1px 1px 5px #888888; 
-}
+	#event-group {
+		height: auto;
+	}
+	
+	.event-entry {
+		border: solid 5px #ecf0f1;
+		background: white;
+		padding: 0;
+	}
 
-.pub-title-bar {
-	height: 50px;
-	background-color: #ad3a45;
-	text-indent: 100px;
-	color: white;
-}
+	.event-date-stamp {
+		padding: 10px;
+		background-color: #2ecc71;
+		font-size: 0.8em;
+		color: white;
+		border-left: solid 5px #27ae60;
+		line-height: 5px;
+	}
 
-.pub-title-bar > h3 {
-	line-height: 50px;
-}
+	.event-date-stamp h4 {
+		font-size: 2em;
+	}
 
-.pub-text {
-	background: linear-gradient(white, rgb(233, 224, 214));
-	border-bottom: solid maroon 3px;
-}
+	.event-date-stamp p {
+		font-size: 0.9em;
+	}
 
-.pub-text > p {
-	text-align: justify;
-	padding: 15px;
-	padding-top: 20px;
-}
+	.event-body {
+		padding: 10px;
+		line-height: auto;
+	}
 
-#publication-list {
-	height: 815px;
-	background-color: #e9e0d6;
-	margin-top: 15px;
-	margin-bottom: 25px;
-	border-radius: 5px;
-	box-shadow: 1px 1px 5px #888888 inset;
-	overflow: hidden;
-}
 
-#publication-list-title-bar {
-	width: 100%;
-	height: 8%;
-	min-height: 35px;
-	padding-top: 5px;
-	text-align: center;
-	z-index: 200;
-}
+/* PUBLICATIONS */
+	
+	#publications-panel {
+		background-color: white;
+	}
 
-#publication-list-inner-wrapper {
-	height: 92%;
-	margin-right: -5px;
-	overflow-y: scroll;
-}
+	#publications-panel h1 {
+		text-align: center;
+	}
 
-#publication-list-inner-wrapper::-webkit-scrollbar{
-    width: 10px;
-    background: rgba(0,0,0,0);
-}
+	.pub-entry {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		text-align: justify;
+		border-bottom: dashed 1px #34495e;
+	}
 
-#publication-list-inner-wrapper::-webkit-scrollbar-thumb{
-    background: white;
-    box-shadow: 1px 1px 5px #888888;
-    height: 50px;
-    border-radius: 10px;
-}
+	.pub-entry img {
+		width: 90%;
+		margin: 5%;
+		padding-right: 10px;
+	}
 
-.publication-list-article {
-	height: auto;
-	margin-bottom: 5px;
-	margin-right: 10px;
-	padding: 10px 20px 10px 20px;
-	background-color: #3a9ada;
-	border-radius: 5px;
-	box-shadow: 1px 1px 5px #888888;
-}
-
-.publication-list-article > div {
-	text-align: center;
-	font-size: 14pt;
-	color: white;
-	line-height: 15pt;
-}
+	.pub-body {
+		padding: 0;
+		padding-left: 20px;
+	}

@@ -1,6 +1,9 @@
 @extends('layouts.default')
 @section('content')
 
+    {{ HTML::style('css/profile.css'); }}
+
+
 	<div class="container">
 	<div class="container" id="body-wrapper">
 
