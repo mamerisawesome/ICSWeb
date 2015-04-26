@@ -1,3 +1,35 @@
+/* IMAGE CAROUSEL */
+
+	#carousel-wrapper {
+		padding: 0;
+		height: auto;
+		box-shadow: 1px 1px 5px silver;
+	}
+
+	.carousel-caption {
+		display: none;
+	}
+
+	#image-slider-wrapper {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	#image-slider {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+
+	.item {
+		width: 100%;
+		height: auto;
+	}
+
+	.item img {
+		width: 100%;
+	}
+
+
 /* WELCOME PANEL */
 
 	#welcome-panel {
@@ -31,38 +63,6 @@
 		padding: 10px;
 		background-color: #ecf0f1;
 		border: solid 5px white;
-	}
-
-/* IMAGE CAROUSEL */
-
-	#carousel-wrapper {
-		padding: 0;
-		margin-top: -20px;
-		height: auto;
-		box-shadow: 1px 1px 5px silver;
-	}
-
-	.carousel-caption {
-		display: none;
-	}
-
-	#image-slider-wrapper {
-		width: 100%;
-		overflow: hidden;
-	}
-
-	#image-slider {
-		margin-right: -15px;
-		margin-left: -15px;
-	}
-
-	.item {
-		width: 100%;
-		height: auto;
-	}
-
-	.item img {
-		width: 100%;
 	}
 
 

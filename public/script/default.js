@@ -14,10 +14,4 @@ $(document).ready(function(){
 		$("#login-field").slideToggle("slow");
 	});
 
-
-	//Registration Form
-
-	$("#firstName").keyUp(function(){
-		alert();
-	});
 });
