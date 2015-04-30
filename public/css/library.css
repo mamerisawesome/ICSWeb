@@ -1,18 +1,58 @@
 #shelf {
-	height: 480px;
 	background-color: #333333;
-	background-image: url("../res/images/black_texture.jpg");
+	background-image: url("../res/images/uplb-blur.jpg");
+	background-size: 100% 100%;
 	overflow: hidden;
-	box-shadow: 1px 1px 5px #888888;
+}
+
+#shelf-panel1 {
+}
+
+#shelf-panel2 {
+	display: none;
+	background-color: rgba(255,255,255, 0.5);
+	padding-bottom: 25px;
+	border-top: solid 5px #95a5a6;
+	border-bottom: solid 5px #95a5a6;
 }
 
 #shelf-menu {
-	height: 100%;
-	background-color: rgba(0,0,0,0.5);
-	box-shadow: 1px 1px 5px black;
-	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+#shelf-menu table {
+}
+
+#advance-search-toggle {
+	margin-top: -55px;
+	float: right;
 	text-align: center;
-	padding-top: 25px;
+}
+
+#advance-search-toggle span {
+	font-size: 30pt;
+	color: #7f8c8d;
+	margin-top: -15px;
+}
+
+#shelf-menu .search-text-input {
+	width: 100%;
+	border: none;
+	background-color: rgba(255,255,255, 0.7);
+	border-bottom: solid 1px #7f8c8d;
+	text-align: center;
+}
+
+#shelf-menu .search-option-left {
+	text-align: right;
+	width: auto;
+	padding-right: 20px;
+}
+
+#shelf-menu button {
+	margin: 5px;
+	float: right;
 }
 
 #shelf-wrapper {
@@ -64,14 +104,6 @@
 	line-height: 80px;
 }
 
-#shelf-menu input {
-	font-family: roboto;
-	text-indent: 5px;
-	box-shadow: 1px 1px 3px #666666 inset;
-	border: none;
-	border-radius: 5px;
-	color: black;
-}
 
 #date-container {
 	width: 100%;

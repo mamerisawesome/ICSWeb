@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+	$("#advance-search-toggle span").click(function(){
+		$("#shelf-panel2").slideToggle("slow");
+	});
+
+
 	$(".book").hover(function(){
 		$(this).animate({
 			"top": "-10px"
