@@ -35,4 +35,4 @@ Route::get('home', function(){
 });
 
 Route::resource('pages/students','StudentsController');
-Route::resource('faculty','FacultyController');
+Route::resource('pages/faculty','FacultyController');
