@@ -21,20 +21,35 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="{{URL::to('/')}}">Home</a></li>
-                    <li><a href="{{URL::to('pages/publication')}}">Publications</a></li>
+                    <li><a href="{{URL::to('pages/publication')}}">News</a></li>
                     <li><a href="{{URL::to('pages/library')}}">Library</a></li>
-                    <li><a href="{{URL::to('pages/directory')}}">Directory</a></li>
+                    <li><a href="{{URL::to('pages/directory')}}">Faculty and Staff</a></li>
                     <li><a href="{{URL::to('pages/curriculum')}}">Courses</a></li>
                     <li><a href="{{URL::to('pages/division')}}">Divisions</a></li>
                     <li><a href="{{URL::to('pages/about')}}">About Us</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ URL::to('pages/students/create') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+<!--                    <li><a href="{{ URL::to('pages/students/create') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+-->                 <li id="register-toggle"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                     <li id="login-toggle"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
+
+            <div id="register-field" class="col-md-12">
+                <div id="register-field-content">
+                <center>
+                    <h5>REGISTER to ICS Portal</h5>
+                    <button class="btn register-button" id="register-student">
+                    <a href="{{URL::to('pages/students/create')}}">Student</a></button>
+                    <br>
+                    <button class="btn register-button" id="register-faculty">
+                    <a href="{{URL::to('pages/faculty/create')}}">Faculty</a></button>
+                </center>
+                </div>
+            </div>
+
             <div id="login-field" class="col-md-12">
-                <div id="login-field-content" class="col-md-6">
+                <div id="login-field-content">
                 <center>
                     <h5>LOGIN to ICS Portal</h5>
                     <input type="text" name="username" class="log-in-input-field" id="log-in-userna me" placeholder="username"><br>
