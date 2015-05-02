@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	#login-field button {
-		margin: 10px;
+		margin-top: 10px;
 		color: white;
 		background-color: #2980b9;
 	}
@@ -189,97 +189,3 @@ h1, h2, h3, h4, h5, h6 {
 		border-radius: 100%;
 		background-color: white;
 	}
-
-
-/*IF USER IS LOGGED IN
-.img-circle {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  box-shadow: 1px 1px 5px #888888;
-}
-
-#nav-pic{
-	height: 30px;
-	width: 30px;
-	margin-bottom:-15px;
-	margin-top: 10px;	
-}
-
-
-#drop-field{
-	width: 150px;
-	height: auto;
-	position: absolute;
-	background-color: white;
-	background-image: url("../res/images/feathers.png");
-	top: 51px;
-	right: 60px;
-	display: none;
-	box-shadow: 1px 1px 5px #666666;
-}
-
-.dropdown-items {
-	width: 100%;
-	margin-left: -20px;
-	color: #666;
-	text-align: center;
-	cursor: hand;
-}
-
-.dropdown-items:hover {
-	color: black;
-}
-
-#drpdwn{
-	height: 30px;
-	width: 30px;
-	margin-left:15px;
-	margin-right:15px;
-	margin-bottom:-15px;
-	margin-top: 10px;
-}
-
-
-/* IF USER IS NOT LOGGED IN */
-/*
-#login-field {
-	width: 250px;
-	height: auto;
-	position: absolute;
-	background-color: white;
-	background-image: url("../res/images/feathers.png");
-	top: 51px;
-	right: 50px;
-	display: none;
-	box-shadow: 1px 1px 5px #888888;
-}
-
-.login-filed-content-wrapper {
-	width: 230px;
-	margin: 10px;
-	text-align: center;
-}
-
-.log-in-input-field {
-	width: 85%;
-	height: 20px;
-	text-indent: 5px;
-	border: none;
-	box-shadow: 1px 1px 2px #888 inset;
-	border-radius: 3px;
-}
-
-.login-filed-content-wrapper > p {
-	margin: 0;
-}
-
-.login-filed-content-wrapper > input {
-	margin: 0;
-}
-
-.log-in-button {
-	background-color: #ad3a45;
-	color: white;
-	margin-top: -10px;
-}
-
