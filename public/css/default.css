@@ -30,7 +30,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .col-md-12 {
 	padding: 0;
-	
 }
 
 .wrapping-panel {
@@ -73,6 +72,43 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 
+/*REGISTRATION PANEL */
+
+	#register-field {
+		display: none;
+		width: auto;
+		height: auto;
+		position: absolute;
+		top: 50px;
+		right: 150px;
+		z-index: 1000;
+		padding: 10px;
+		padding-right: 25px;
+		padding-left: 25px;
+		background-color: white;
+		border-top: solid 5px #34495e;
+		border-bottom: solid 5px #34495e;
+		box-shadow: 1px 1px 5px silver;
+	}
+
+	#register-field a {
+		color: white;
+	}
+
+	#register-field a:hover {
+		font-weight: bolder;
+		text-decoration: none;
+	}
+
+	.register-button {
+		margin: 5px;
+		color: white;
+		background-color: #2980b9;
+	}
+
+
+
+
 /*LOGIN PANEL */
 
 	#login-field {
@@ -84,11 +120,12 @@ h1, h2, h3, h4, h5, h6 {
 		right: 50px;
 		z-index: 1000;
 		padding: 10px;
+		padding-right: 25px;
+		padding-left: 25px;
 		background-color: white;
 		border-top: solid 5px #34495e;
 		border-bottom: solid 5px #34495e;
 		box-shadow: 1px 1px 5px silver;
-
 	}
 
 	#login-field button {
@@ -99,6 +136,7 @@ h1, h2, h3, h4, h5, h6 {
 
 	#login-field input {
 		margin-top: 5px;
+		color: #34495e;
 	}
 
 	#login-field-content {
