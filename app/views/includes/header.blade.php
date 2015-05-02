@@ -3,7 +3,7 @@
              <a href="{{URL::to('/')}}"><img src="{{URL::to('res/images/ics_logo.jpg')}}"></a>
             <h2 id="site-title">INSTITUTE OF COMPUTER SCIENCE</h2>
         </div>
-    </div>
+    </div> 
 
     <nav class="navbar navbar-default" id="navigation-menu">
         <div class="container">
@@ -22,8 +22,8 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{URL::to('/')}}">Home</a></li>
                     <li><a href="{{URL::to('pages/publication')}}">Publications</a></li>
-                    <li><a href="{{URL::to('pages/library')}}">ICS Online Library</a></li>
-                    <li><a href="{{URL::to('pages/directory')}}">Faculty and Staff</a></li>
+                    <li><a href="{{URL::to('pages/library')}}">Library</a></li>
+                    <li><a href="{{URL::to('pages/directory')}}">Directory</a></li>
                     <li><a href="{{URL::to('pages/curriculum')}}">Courses</a></li>
                     <li><a href="{{URL::to('pages/division')}}">Divisions</a></li>
                     <li><a href="{{URL::to('pages/about')}}">About Us</a></li>
