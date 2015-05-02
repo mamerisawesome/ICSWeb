@@ -1,0 +1,29 @@
+/**
+ * MILESTONE 0.0
+ */
+
+ - project concept finalized
+ - ICSWebsite final concept for the project
+
+/**
+ * MILESTONE 1.0
+ */
+
+ - Initial UI for the project done
+ - Bootstrap used as template for UI
+
+/**
+ * MILESTONE 1.2
+ */
+ 
+ - Routes are created and initialized
+ - Controllers updated that generate pages
+
+/**
+ * MILESTONE 2.0
+ */
+
+ - Project now connects to the database
+ - Registration now implemented for students
+ - Input values from registration now saves into database
+ - Updated UI for the index and the student registration form
