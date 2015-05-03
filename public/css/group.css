@@ -1,70 +1,13 @@
+﻿/*
+	BODY CSS
+*/
 
-#profile-panel {
-	height: auto;
-	padding-bottom: 20px;
-	background-color: #354458;
-	color: white;
-	margin-top: 25px;
+#group-right-panel {
+	padding 0;
 }
 
-#user-info-wrapper {
-	width: 100%;
-	height: auto;
-	margin-bottom: 25px;
-}
-
-#user-info {
-	width: 60%;
-	padding: 10px;
-	float: right;
-}
-
-#prof-pic {
-	width: 40%;
-	height: auto;
-	float: left;
-	margin-top: 25px;
-	text-align: center;
-}
-
-#prof-pic img {
-	width: 90px;
-	height: 90px;
-	margin-top: 10px;
-  	border-radius: 100px;
-	background-color: white;
-}
-
-#user-bio {
-	float: left;
-	width: 100%;
-	margin: 5px 0 5px 0;
-	text-align: justify;
-}
-
-#profile-panel h3 {
-	line-height: 15px;
-}
-
-#inbox-panel {
-	height: 50px;
-	border-radius: 5px;
-	margin: 5px 0 5px 0;
-	background-color: #ad3a45;
-	box-shadow: 1px 1px 5px #ad3a45;
-}
-
-#group-panel{
-	height: 50px;
-	border-radius: 5px;
-	margin: 5px 0 5px 0;
-	background-color: #ad3a45;
-}
-
-a > img {
-	margin-top: 5px;
-	height: 40px;
-	width: 55px;
+#group-menu-wrapper {
+	padding:0;
 }
 
 #nav-pic {
@@ -74,30 +17,149 @@ a > img {
 	margin-top: 10px;	
 }
 
-#group-feed {
-	height: auto;
-	float: right;
-	background-color: rgba(255, 255, 255, 0.8);
-	box-shadow: 1px 1px 5px #888888;
-	padding: 0;
-	margin-top: 25px;
+#drpdwn{
+	margin-left:10px;
+	width:auto;
+	height:33px;
 }
 
-.update-panel-wrapper {
-	height: auto;
-	border-bottom: solid 1px #e9e0d6;
+/**
+	Profile-Panel
+**/
+
+.profile-icon{
+	margin-top:8px;
+	margin-left:15px;
+	font-size:35px;
 }
+
+#profile-panel h3 {
+	line-height: 15px;
+}
+
+#profile-panel-wrapper{
+	padding-left:0px;
+}
+
+#profile-panel {
+	height: auto;
+	padding-bottom: 20px;
+	padding-left:5px;
+	background-color: #2980b9;
+	color: white;
+}
+
+#name{
+	margin-top:25px;
+}
+
+#user-info-wrapper {
+	width: 100%;
+	height: auto;
+	margin-bottom: 25px;
+}
+
+#user-bio {
+	float: left;
+	width: auto;
+	padding-left:5px;
+	padding-right:10px;
+	margin: 10px 0 10px 0;
+	text-align: justify;
+}
+
+#user-info {
+	width: 60%;
+	padding: 10px;
+	float: right;
+}
+
+/**
+	Inbox Panel
+**/
+
+a > img {
+	margin-top: 5px;
+	height: 40px;
+	width: 55px;
+}
+
+.label-text{
+	text-align:center;
+	bottom:20px;
+	line-height:10px;
+}
+
+#inbox-panel {
+	height: auto;
+	border-bottom: solid 3px #95a5a6;
+	margin: 0px 0 0px 0;
+	background-color: #bdc3c7;
+}
+
+#circle {
+	width: 20px;
+	height: auto;
+	background: #f1c40f;
+	margin: 14px 0 0 0px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+/**
+	Group-Panel
+**/
+
+#group-pic{
+	width:auto;
+}
+
+.notif-number{
+	text-align:center;
+}
+
+#group-panel{
+	height: auto;
+	border-bottom: solid 3px #95a5a6;
+	margin: 0px 0 0px 0;
+	background-color: #bdc3c7;
+}
+
+/**
+	Group-feed
+**/
+
+#group-feed {
+	height: auto;
+	background-color: white;
+	padding: 0;
+	margin: 0 0 0 auto;
+}
+
+/**
+	Welcome Note(For Empty Group page)
+**/
 
 #welcome-note{
 	width: 100%;
 	padding: 5px;
 	color: white;
 	text-align:center;
-	background-color: #ad3a45;
+	background-color: #7f8c8d;
 }
 
 #welcome{
 	background-color: ‪#25242C;
+}
+
+/**
+	Update-panel
+**/
+
+.update-panel-wrapper {
+	height: auto;
+	border-bottom: solid 1px #e9e0d6;
 }
 
 .update-panel {
@@ -123,8 +185,4 @@ a > img {
 	height: auto;
 	text-align: justify;
 
-}
-
-#name{
-	margin-top:25px;
 }
