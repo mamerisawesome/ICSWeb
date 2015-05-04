@@ -1,61 +1,72 @@
-#shelf {
-	background-color: #333333;
-	background-image: url("../res/images/uplb-blur.jpg");
-	background-size: 100% 100%;
-	overflow: hidden;
-}
+/* SHELF WRAPPER */
 
-#shelf-panel1 {
-}
+	#shelf {
+		background-image: url("../res/images/library-overlay.jpg");
+		background-color: #bdc3c7;
+		background-size: 100% 100%;
+	}
 
-#shelf-panel2 {
-	display: none;
-	background-color: rgba(255,255,255, 0.5);
-	padding-bottom: 25px;
-	border-top: solid 5px #95a5a6;
-	border-bottom: solid 5px #95a5a6;
-}
+	#shelf-overlay {
+		background-color: rgba(0,0,0,0.7);
+	}
+	  
+	#shelf-panel1 {
+		color: white;
+	}
 
-#shelf-menu {
-	padding: 0;
-	margin: 0;
-}
+	#shelf-panel1 h1 {
+		color: white;
 
-#shelf-menu table {
-}
+	}
 
-#advance-search-toggle {
-	margin-top: -55px;
-	float: right;
-	text-align: center;
-}
+	#shelf-menu {
+		padding: 0;
+		margin: 0;
+	}
 
-#advance-search-toggle span {
-	font-size: 30pt;
-	color: #7f8c8d;
-	margin-top: -15px;
-}
+	#shelf-info-panel {
+		padding: 0;
+		padding-right: 15px;
+		text-align: justify;
+	}
 
-#shelf-menu .search-text-input {
-	width: 100%;
-	border: none;
-	background-color: rgba(255,255,255, 0.7);
-	border-bottom: solid 1px #7f8c8d;
-	text-align: center;
-}
+	#shelf-search-panel {
+		color: white;
+		background-color: rgba(236, 240, 241, 0.5);
+		padding: 15px;
+	}
 
-#shelf-menu .search-option-left {
-	text-align: right;
-	width: auto;
-	padding-right: 20px;
-}
+	#shelf-search-panel h3 {
+		text-align: center;
+	}
 
-#shelf-menu button {
-	margin: 5px;
-	float: right;
-}
+	#shelf-search-panel h3, h5 {
+		color: white;
+	}
+
+	#shelf-menu .search-text-input {
+		width: 100%;
+		border: none;
+		border-radius: 5px;
+		background-color: white;
+		text-indent: 15px;
+	}
+
+	.type-button {
+		padding: 10px;
+		background-color: #bdc3c7;
+		text-align: center;
+		border:solid 1px #95a5a6;
+		cursor: hand;
+	}
+
+	#shelf-menu button {
+		margin: 5px;
+		float: right;
+	}
 
 #shelf-wrapper {
+	display: none;
 	height: 100%;
 }
 
