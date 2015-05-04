@@ -92,7 +92,7 @@ a > img {
 
 #inbox-panel {
 	height: auto;
-	border-bottom: solid 3px #95a5a6;
+	border-bottom: solid 2px #95a5a6;
 	margin: 0px 0 0px 0;
 	background-color: #bdc3c7;
 }
@@ -101,7 +101,7 @@ a > img {
 	width: 20px;
 	height: auto;
 	background: #f1c40f;
-	margin: 14px 0 0 0px;
+	margin: 14px 0 10px 0px;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
@@ -121,10 +121,48 @@ a > img {
 
 #group-panel{
 	height: auto;
-	border-bottom: solid 3px #95a5a6;
+	border-bottom: solid 2px #95a5a6;
 	margin: 0px 0 0px 0;
+	overflow: auto;
 	background-color: #bdc3c7;
 }
+
+/*GROUP FIELD*/
+	#group-field{
+		display: none;
+		width: auto;
+		height: auto;
+		padding: 5px;
+		padding-right: 5px;
+		padding-left: 5px;
+		background-color: white;
+		border: solid 2px #34495e;
+		box-shadow: 1px 1px 5px silver;
+	}
+
+	#group-field-content{
+		width: auto;
+		height:auto;
+	}
+
+	.user-group{
+		border-bottom: solid 3px #95a5a6;
+		height: auto;
+		margin: 0px 0 0px 0;
+	}
+
+	.group-name{
+		font-size: 15px;
+		margin-left:5px;
+		text-align: center;
+		bottom:20px;
+		line-height:10px;
+	}
+
+	.group-icon{
+		font-size: 25px;
+		margin-top:15px;
+	}
 
 /**
 	Group-feed
