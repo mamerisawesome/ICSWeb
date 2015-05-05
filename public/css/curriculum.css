@@ -1,5 +1,6 @@
 .title {
 	text-align: center;
+    color: #34495e;
 }
 
 .scrollable{
@@ -16,6 +17,30 @@
 	left: 0;
 	background-size: contain;
 }
+
+#svg-curriculum{
+    background-color: rgba(255,255,255,0.8);
+    margin: 10px 0 10px 0; 
+}
+
+
+#course-desc{
+    background-color: white;
+    padding-bottom: -10px;
+}
+
+#course{
+    margin: 20px;
+    background-color: white;
+    border-top: 5px solid #2ecc71;
+}
+
+#course-desc p, #course-desc h3, #course-desc h5{
+    text-align: center;
+}
+
+#
+
 /*
 a.masterTooltip div {
     background-color: red;
