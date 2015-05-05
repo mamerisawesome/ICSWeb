@@ -49,53 +49,63 @@
 		</div>
 	</div>
 	
+	<div id="shelf-body" class="wrapping-panel">
+		<div class="container">
+			<div class="col-md-12" id="shelf-body-wrapper">
+				<div id="shelf-body-title-container">
+					<h2>UNDERGRADUATE SPECIAL PROJECT AND THESIS</h2>
+					<h4>AY 2014-2015</h4>
+				</div>
 
-		<div class="col-md-12" id="shelf-wrapper">
-			<div id="shelf-wrapper-content">
-			<div id="date-container">
-				<h3>SPECIAL PROJECT AND THESIS</h3>
-				<h5>AY 2014-2015</h5>
-			</div>
-			
-			<ul class="book-list">
-				<li><div class="col-md-1 book"><h5>SP</h5></div></li>
-				<li><div class="col-md-1 book"><h5>SP</h5></div></li>
-				<li><div class="col-md-1 book"><h5>SP</h5></div></li>
-				<li><div class="col-md-1 book"><h5>SP</h5></div></li>
-				<li><div class="col-md-1 book"><h5>SP</h5></div></li>
-				<li><div class="col-md-1 book"><h5>SP</h5></div></li>
-				<li><div class="col-md-1 book"><h5>SP</h5></div></li>
-				<li><div class="col-md-1 book"><h5>Thesis</h5></div></li>
-				<li><div class="col-md-1 book"><h5>Thesis</h5></div></li>
-				<li><div class="col-md-1 book"><h5>Thesis</h5></div></li>
-				<li><div class="col-md-1 book"><h5>Thesis</h5></div></li>
-				<li><div class="col-md-1 book"><h5>Thesis</h5></div></li>
-			</ul>
+				<div><img id="shelf-image" src="{{URL::to('res/images/shelf.png')}}"></div>
+				<div class="col-md-12" id="book-list">
+					<table id="book-list-table">
+						<?php for($l=0; $l<2; $l++) { ?>
+							<tr>
+								<?php for($m=0; $m<6; $m++) { ?>
+								<td>
+									<div class="book"><h5>SP</h5></div>								
+								</td>
+								<?php } ?>
+							</tr>
+						<?php } ?>
+						<?php for($l=0; $l<1; $l++) { ?>
+							<tr>
+								<?php for($m=0; $m<6; $m++) { ?>
+								<td>
+									<div class="book"><h5>THESIS</h5></div>								
+								</td>
+								<?php } ?>
+							</tr>
+						<?php } ?>
+					</table>
+				</div>
+			</div>		
+		</div>
+	</div>
 
-			<div id="shelf-wood">
-				<div id="plate-top"></div>
-				<div id="plate-edge"></div>
-			</div>
-
-			<div id="book-title-wrapper"><h4 id="book-title">Title Goes here!</h4></div>
-			</div>
-			<div class="" id="search-result">
+	<div id="shelf-search-results" class="wrapping-panel">
+		<div class="container">
+			<div class="col-md-12" id="search-result">
 				<div class="container">
-				<h4>SEARCH RESULTS</h4>
-				<hr>
-				<div id="results-field">
-					<p>NO RESULTS FOUND</p>
+					<h4>SEARCH RESULTS</h4>
+					<hr>
+					<div id="results-field">
+						<p>NO RESULTS FOUND</p>
+					</div>
+					<div id="back-to-shelf"><p>BACK</p></div>
 				</div>
-				<div id="back-to-shelf"><p>BACK</p></div>
-				</div>
-			</div>
+			</div>						
+		</div>
+	</div>
+
 
 
 	<!-- whole body (content) wrapped by a single div -->
 
 	</div>
-	<div class="container body-wrapper" id="SPT-preview">
-		<img src={{URL::to('/res/images/temp.jpg')}}>
+	<div class="container" id="SPT-preview">
+		<img src={{URL::to('/res/images/sample-SPT.jpg')}}>
 		<div id="library-switch"><p>LIBRARY</p></div>
 	</div>
 

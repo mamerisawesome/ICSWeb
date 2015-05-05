@@ -22,7 +22,7 @@
                                 <h3>Chania</h3>
                                 <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
                             </div>
-                        </div>
+                        </div> 
                         <div class="item">
                             <img src="{{URL::to('res/slider-images/slide-img2.jpg')}}">
                             <div class="carousel-caption">
