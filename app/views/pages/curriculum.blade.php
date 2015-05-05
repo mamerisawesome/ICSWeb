@@ -5,7 +5,8 @@
     {{ HTML::script('script/curriculum.js'); }}
 
 
-	<div class="body-wrapper container">
+	<div class="container">
+	<div class="col-md-12">
 	<h2 class="title">BSCS Curriculum (2011)</h2>
 		<div class="scrollable">
 			<svg width="1130" height="500" preserveAspectRatio="xMinYMin meet" class="content">
@@ -15,7 +16,7 @@
 				 	<feGaussianBlur stdDeviation="7" result="blur2" />
 		        	<feSpecularLighting result="spec2" in="blur2" specularConstant="2" specularExponent="13" lighting-color="#cccccc">
 		            	<feDistantLight azimuth="5" elevation="25" />
-		</feSpecularLighting>
+					</feSpecularLighting>
 		        	<feComposite in="SourceGraphic" in2="spec2" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
 					<!-- ADDS LIGHT EFFECT 
 						
@@ -242,6 +243,170 @@
 			
 			</svg>
 		</div>
-	<p>*to add course titles</p>
+	</div>
+</div>
+
+	<div class="col-md-12" id="course-desc">
+		<h2 class="title">List of Courses</h2>
+		<p>ohmygad sorry alam kong siksikan pero babaguhin ko pa to</p>
+		<div class="col-md-12">
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC100</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC123</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Abstract data types and implementation of data structures; arrays, stacks, queues, linked lists, mappings, trees, sets and graphs.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC130</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC22</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC22</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC100</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC123</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Abstract data types and implementation of data structures; arrays, stacks, queues, linked lists, mappings, trees, sets and graphs.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC130</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC22</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC22</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC100</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC123</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Abstract data types and implementation of data structures; arrays, stacks, queues, linked lists, mappings, trees, sets and graphs.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC130</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC22</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC22</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC100</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC123</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Abstract data types and implementation of data structures; arrays, stacks, queues, linked lists, mappings, trees, sets and graphs.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC130</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC22</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC22</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-2" id="course">
+				<h3>CMSC100</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC123</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Abstract data types and implementation of data structures; arrays, stacks, queues, linked lists, mappings, trees, sets and graphs.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC130</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC22</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+			<div class="col-md-2" id="course">
+
+				<h3>CMSC22</h3>
+				<h5>Chorla chorla chenebu</h5>
+				<p>Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS.</p>
+			</div>
+		</div>
 	</div>
 @stop
