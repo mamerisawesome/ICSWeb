@@ -1,47 +1,28 @@
 $(document).ready(function(){
 
-	$("#advance-search-toggle span").click(function(){
-		$("#shelf-panel2").slideToggle("slow");
-	});
-
-
-	$(".book").hover(function(){
-		$(this).animate({
-			"top": "-10px"
-		},  "fast");
-		$(this).css({
-			"background":"khaki"
-		});
-	});
-
-	$(".book").mouseout(function(){
-		$(this).animate({
-			"top": "0"
-		},  "slow");
-		$(this).css({
-			"background":"#e9e0d6"
-		});
-	});
-
 	$("#search-SPT").click(function(){
-		$("#shelf-wrapper-content").hide("slow");
-		$("#search-result").show("slow");			
+		$("#shelf-body").slideToggle("slow");
+		$("#shelf").slideToggle("slow");
+		$("#shelf-search-results").slideToggle("slow");			
 	});
 
 	$("#back-to-shelf").click(function(){
-		$("#shelf-wrapper-content").toggle("slow");
-		$("#search-result").toggle("slow");			
+		$("#shelf-body").slideToggle("slow");
+		$("#shelf").slideToggle("slow");
+		$("#shelf-search-results").slideToggle("slow");			
 	});
 
 	$(".book").click(function(){
 		$("#library-switch").show("slow");
 		$("#shelf").slideUp("slow");
+		$("#shelf-body").slideUp("slow");
 		$("#SPT-preview").slideDown("slow");
 	});
 	
 	$("#library-switch").click(function(){
 		$("#library-switch").hide("slow");
 		$("#shelf").slideDown("slow");
+		$("#shelf-body").slideDown("slow");
 		$("#SPT-preview").slideUp("slow");
 	});
 

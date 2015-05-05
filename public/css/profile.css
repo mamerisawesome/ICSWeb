@@ -1,13 +1,18 @@
+/* UPPER PANEL - ABOUT */
+
 #upper-panel {
-	margin: 0 -20px;
+	margin: 10px 0 10px 0;
 	height: 350px;
-	background-color: #006ab3;
 }
+
+
+	/* UPPER LEFT - INFO */
 
 #profile-upper-left-panel {
 	height: 100%;
 	text-align: center;
-	background-color: #354458;
+	background-color: #95a5a6;
+	border-right: 5px solid #2ecc71;
 	color: white;
 }
 
@@ -16,7 +21,6 @@
   width: 220px;
   border-radius: 220px;
   margin-top: 25px;
-  border: solid 2px black;
   background-color: white;
   box-shadow: 1px 1px 5px #333333;
 }
@@ -25,130 +29,83 @@
 	margin: 25px;
 }
 
+	/* UPPER RIGHT - LONGER INFO */
+
 #profile-upper-right-panel {
-	height: 90%;
+	height: 100%;
+	background-color: #bdc3c7;
 	color: white;
-	margin: 25px 0 25px 0;
+	padding: 2%;
 }
 
 #profile-upper-right-panel p {
-	text-align: justify;
+	text-align: justify; 
 }
 
 #profile-info {
 	height: 250px;
 }
 
-#profile-msg-icon {
-	height: 40px;
-	width: 60px;
-}
-
-
 .prof-info{
 	text-align:center;
 }
-
-#sample-pic{
-	margin-top:10px;
-	height: 50px;
-	width:50px;
-	border: 2px solid #a1a1a1;
-    border-radius: 25px;
-}
-
+	/* UPPER RIGHT > BELOW - MESSAGING */
 #profile-message-wrapper {
 	width: 100%;
 	margin-top: 20px;
 }
 
-#profile-message-wrapper img {
-	float: right;
-}
-
 #profile-message-wrapper p {
 	float: right;
-	color: white;
+	color: #2c3e50;
 	margin: 10px;
 }
 
+/* BOTTOM PANEL - SENDING EXER */
+
 #prof-bottom-panel {
-	height: 400px;
+	height: 300px;
+	margin-bottom: 15px;
+	padding-top: 15px;
 }
+
+	/* BOTTOM LEFT - GUIDELINES ON SENDING EXER */
 
 #prof-bottom-panel-content {
-	height: 200px;
-	margin: 25px;
+	margin: 15px 25px 0 0;
 	text-align: center;
-}
-
-#prof-right-panel2{
-	height: auto;
-	margin-right: 45px;
-	margin-left: 0px;
-	margin-bottom:auto;
-	background-color: ‪‪red‬;
-	width:777px;
-	float:right;
 }
 
 #text-panel {
 	text-align: justify;
+	margin-bottom: 5px;
 }
 
-#profie-exer {
+	/* BOTTOM RIGHT - EXER FORM */
+
+#send-exer-panel{
+	height: 100%;
+	float: left;
+}
+
+#profile-exer {
 	width: 100%;
 }
 
-#profie-exer table {
+#profile-exer table {
 	width: 100%;
 }
 
-#profie-exer table p {
+#profile-exer table p {
 	float: right;
 	margin-right: 20px;
 }
 
-#profie-exer table input {
+#profile-exer table input {
 	width: 100%;
 }
 
 
-#profie-exer table button {
+#profile-exer table button {
 	text-align: center;
-}
-
-#nav-pic{
-	height: 30px;
-	width: 30px;
-	margin-bottom:-15px;
-	margin-top: 10px;	
-}
-
-#group-pic{
-
-	margin-top: 10px;
-	margin-bottom: 10px;
-	height: 40px;
-	width: 55px;
-}
-
-#pic-panel{
-	height: 50px;
-	width:50px;
-	margin-right: 20px;
-}
-
-#inbox-panel{
-	margin-top:-15px;
-	margin-bottom:-20px;
-	background-color: #ad3a45;
-	box-shadow: 1px 1px 5px #ad3a45;
-}
-
-#group-panel{
-	margin-top:-15px;
-	margin-bottom:-20px;
-	background-color: #ad3a45;
-	box-shadow: 1px 1px 5px #ad3a45;
 }

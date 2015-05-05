@@ -1,9 +1,9 @@
 /* LEFT PENL */
 
-
 	#news-left-panel {
 		padding: 0;
 		text-align: center;
+		box-shadow: 0px 0px 5px #bdc3c7;
 	}
 
 	#news-header {
@@ -11,7 +11,7 @@
 	}
 
 	#news-header h1 {
-		color: white;
+		color: white; 
 	}
 	
 	#news-search-panel {
@@ -56,11 +56,9 @@
 
 /* RIGHT PANEL */
 
-	#news-right-panel {
-	}
-
 	#news-article-wrapper {
 		background-color: white;
+		box-shadow: 0px 0px 5px #bdc3c7;
 	}
 
 	#news-article-wrapper h2 {

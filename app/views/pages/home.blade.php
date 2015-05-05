@@ -4,7 +4,7 @@
     {{ HTML::style('css/home.css'); }}
     {{ HTML::script('script/home.js'); }}
 
-    <div id="body-wrapper">
+    <div id="body-wrapper"> 
     
         <div class="container-fluid" id="carousel-wrapper">
             <div class="col-md-12" id="image-slider-wrapper">
@@ -22,7 +22,7 @@
                                 <h3>Chania</h3>
                                 <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
                             </div>
-                        </div>
+                        </div> 
                         <div class="item">
                             <img src="{{URL::to('res/slider-images/slide-img2.jpg')}}">
                             <div class="carousel-caption">

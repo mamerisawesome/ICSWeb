@@ -6,7 +6,7 @@
 		display: none;
 	}
 }
-
+  
 @font-face {
 	font-family: montserrat-reg;
 	src: url("../fonts/Montserrat-Regular.ttf");
@@ -55,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 		background-color: white;
 		box-shadow: 0 1px 5px silver;
 		margin: 0;
+		z-index: 10;
 	}
 
 	#title-bar img {
