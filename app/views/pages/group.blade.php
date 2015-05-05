@@ -19,7 +19,7 @@
 				<div class="col-md-12" id="inbox-panel">
 					<a href="#"><div>
 						<div class="col-sm-3">
-							<a href="#"><span class="glyphicon glyphicon-envelope profile-icon"></span></a>
+							<span class="glyphicon glyphicon-envelope profile-icon"></span>
 						</div>
 						<div class="col-sm-7">
 							<h3 class="label-text">INBOX</h3>
@@ -30,10 +30,10 @@
 					</div></a>
 				</div>
 				
-				<div class="col-md-12" id="group-panel">
-					<a href="#"><div>
+				<a href="#"><div class="col-md-12" id="group-panel">
+					<div>
 						<div class="col-sm-3">
-							<a href="#"><span class="fa fa-users profile-icon" id="sample"></span></a>
+							<span class="fa fa-users profile-icon" id="sample"></span>
 						</div>
 						<div class="col-sm-7">
 							<h3 class="label-text">GROUPS</h3>
@@ -41,10 +41,36 @@
 						<div class="col-sm-2">
 						<div id="circle"><p class="notif-number">2</p></div>
 						</div>
-					</div></a>
-				</div>
+					</div>
+				</div></a>
+            <div id="group-field" class="col-md-12">
+                <div id="group-field-content">
+                	<a href="#"><div class="col-md-12 user-group">
+                			<div class="col-sm-2">
+                				<span class="glyphicon glyphicon-heart group-icon"></span>
+                			</div>
+							<div class="col-sm-8">
+								<h3 class="group-name">Edi Sa Puso Mo!</h3>
+							</div>
+							<div class="col-sm-2">
+								<div id="circle"><p class="notif-number">2</p></div>
+							</div>                			
+                	</div></a>
+                	<a href="#"><div class="col-md-12 user-group">
+                			<div class="col-sm-2">
+                				<span class="glyphicon glyphicon-king group-icon"></span>
+                			</div>
+							<div class="col-sm-8">
+								<h3 class="group-name">Chess Groups</h3>
+							</div>
+							<div class="col-sm-2">
+								<div id="circle"><p class="notif-number">2</p></div>
+							</div>                			
+                	</div></a>
+                </div>
+            </div>
 
-			</div>
+        	</div>
 		
 		<div class="col-md-9" id="group-feed">
 			<div class="col-md-12">
@@ -109,5 +135,4 @@
 	</div>
 
 </div>
-
 @stop

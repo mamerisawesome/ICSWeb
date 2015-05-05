@@ -2,7 +2,9 @@ $(document).ready(function(){
 
 	var logInFormStatus = false;
 	var regFormStatus = false;
-	
+	var groupStatus = false;
+	var w = window.outerWidth;
+
 	$(window).scroll(function(){
 		if ($(window).scrollTop() > 50) {
 			$(".navbar").addClass('navbar-fixed-top');
@@ -32,6 +34,24 @@ $(document).ready(function(){
 			$("#login-field").slideUp("slow");
 			logInFormStatus = false;
 		}}
+	});
+
+
+	$("#group-panel").click(function(){
+		$("#group-field").slideToggle("slow");
+		groupStatus = true;
+	});
+
+	$(window).resize(function(){
+		if($(window).width() < 975){
+			$(".profile-icon").hide();
+			$(".group-icon").hide();
+		}
+		else{
+			$(".profile-icon").show();
+			$(".group-icon").show();
+		}
+		
 	});
 
 });
