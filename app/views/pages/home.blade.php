@@ -4,7 +4,7 @@
     {{ HTML::style('css/home.css'); }}
     {{ HTML::script('script/home.js'); }}
 
-    <div id="body-wrapper">
+    <div id="body-wrapper"> 
     
         <div class="container-fluid" id="carousel-wrapper">
             <div class="col-md-12" id="image-slider-wrapper">

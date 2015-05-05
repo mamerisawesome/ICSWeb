@@ -22,7 +22,7 @@
 						</div>
 					</div>
 					
-					
+					 
 					<?php
 						for($i=1; $i<6; $i++) { ?>
 						<div class="links-panel col-md-12">
