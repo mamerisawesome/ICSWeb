@@ -53,7 +53,7 @@
                 <center>
                     <h5>LOGIN to ICS Portal</h5>
                     <form name="login-form">
-                        <input type="text" name="username" class="log-in-input-field" id="log-in-username" placeholder="username" required><br>
+                        <input type="text" name="username" class="log-in-input-field" id="log-in-userna me" placeholder="username" required><br>
                         <input type="password" name="password" class="log-in-input-field" id="log-in-password" placeholder="password" required><br>
                         <input type="radio" name="account-type" value="student" required>&nbsp;Student&nbsp;&nbsp;
                         <input type="radio" name="account-type" value="faculty" required>&nbsp;Faculty<br>
