@@ -31,7 +31,7 @@ class CreateUsersTable extends Migration {
             // for student
             $table->string('studentNumber',10)->nullable()->unique();
 
-			$table->timestamps();
+			//$table->timestamps();
 		});
 	}
 
