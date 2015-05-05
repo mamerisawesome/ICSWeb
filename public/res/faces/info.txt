@@ -1,0 +1,53 @@
+FACULTY
+	Ivy Joy U. Aguila; Instructor 1; 116
+	Allister Grant C. Alambra ; Instructor 1, 114
+	Eliezer A. Albacea; Professor 12; 119
+	Zenith O. Arnejo; Instructor 3; 112
+	Kristine Elaine P. Bautista; Instructor 1; 118
+	Juan Miguel III J. Bawagan; Instructor 1; 114
+	Sheila Kathleen L Borja; Instructor 3; 114
+	Rommel Bulalacao; ; 
+	Francisco Enrique Vicente G. Castro; Instructor 1; 112
+	Maria Art Antonette D. Clarino; Assistant Professor 1; 121
+	Lailanie R. Danila; Instructor 1; 117
+	Marie Yvette B. de Robles; Instructor 3; 118
+	John Emmanuel I. Encinas; Instructor 3; 112
+	Ailea Kathleen G. Garcera; Instructor 1; 116
+	Joseph Anthony C. Hermocilla; Assistant Professor 3; 120
+	Arian J. Jacildo; Assistant Professor4; 120
+	Concepcion L. Khan; Assistant Professor 7; 127
+	Lei Kristoffer R. Lactuan; Instructor 1; 112
+	Fermin ROberto G. Lapitan; Assistant Professor 1; 120
+	Christian John M. Lo; Instructor 3; 114
+	Val Randolf M. Madrid; Assistant Professor 1; 114
+	Katrina Joy H. Magno; Instructor 1; 117
+	Marteen Aaron L. Manalang; Instructor 1; 118
+	Vladimir Y. Mariano; Associate Professor 1, 125
+	Danila J. Mercado; Assistant Professor 1; 115
+	Rizza DC. Mercado; Assistant Professor 1; 118
+	Toni-Jan Keith P. Monserrat; Assistant Professor 1; on study leave - no picture
+	Rick Jason G. Obrero; Instructor 1; 112
+	Jaderick P. Pabico; Associate Professor 6; 123
+	Margarita Carmen S. Paterno; Assistant Professor 6; 121
+	Caroline Natalie M. Peralta; Instructor 3; 117
+	James Carlo E. Plaras; Instructor 1; 118
+	Joe Ramir A. Ramirez; Instructor 1; 114
+	Reginald Neil C. Recario; Assistant Professor 1; 116
+	Mark Harold C. Rivera; Assistant Professor 1; 114
+	Jaime M. Samaniego; Assistant Professor 7; 115
+	Mark Froilan B. Tando; Instructor 1; 114
+	Ludwig Johann B. Tirazona; Instructor1; 123
+	Ginanina Renee V. Vergara; Instructor 1; 116
+
+NGW
+	Mark Efraim M. Gironella; Computer Technician;Switch/Hub Room
+	Maritess M. Gironella; Administrative Support; 124
+
+sTAFF
+	Flor R. Alviar; Administrative Assistant 6; 122
+	Nilo P. Arganosa; Administrative Aide 4; 126
+	Armando P. Inabangan; Administrative Aide 3; Switch/Hub Room
+	Cecilio Jr. L. Junsay; Administrative Assistant 1; 126
+	Zenaida M. Lustria; Administrative Assistant 2; 125
+	Reggie O. Pelayo; Laboratory Aide 2; Switch/Hub Room
+	Aurora O. Soriano; Administritative Officer 4; 122
