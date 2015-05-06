@@ -1,3 +1,18 @@
+{{
+$username = Session::get('username');
+$id = Session::get('id');
+$firstname = Session::get('firstName');
+$middlename = Session::get('middleName');
+$lastname = Session::get('lastName');
+$birthdate = Session::get('birthdate');
+$sex = Session::get('sex');
+$email = Session::get('email');
+$password = Session::get('password');
+$studentNumber = Session::get('studentNumber');
+ $accessCode = Session::get('accessCode');
+ //start of the session
+ }}
+
 @extends('layouts.default')
 @section('content') 
 
@@ -15,8 +30,8 @@
 				<div class="col-md-12" id="profile-panel">
 					<div id="user-info-wrapper">
 						<div class="col-md-12">
-							<h4 class="user-info" id="name">LASTNAME, FIRSTNAME, MIDDLENAME</h4>
-							<h5 class="user-info" id="stdNo">2013-04596</h5>
+							<h4 class="user-info" id="name"> <?php echo $lastname. ', '. $firstname .' '. $middlename; ?>  </h4>
+							<h5 class="user-info" id="stdNo"><?php echo $studentNumber ?></h5>
 						</div>
 					</div>
 				</div>
@@ -37,47 +52,6 @@
 						</div>
 					</div>
 				
-<<<<<<< HEAD
-				<a href="#"><div class="col-md-12" id="group-panel">
-					<div>
-						<div class="col-sm-3">
-							<span class="fa fa-users profile-icon"></span>
-						</div>
-						<div class="col-sm-7">
-							<h3 class="label-text">GROUPS</h3>
-						</div>
-						<div class="col-sm-2">
-						<div id="circle"><p class="notif-number">2</p></div>
-						</div>
-					</div>
-				</div></a>
-            <div id="group-field" class="col-md-12">
-                <div id="group-field-content">
-                	<a href="#"><div class="col-md-12 user-group">
-                			<div class="col-sm-2">
-                				<span class="glyphicon glyphicon-th group-icon"></span>
-                			</div>
-							<div class="col-sm-8">
-								<h3 class="group-name">Almer and Friends</h3>
-							</div>
-							<div class="col-sm-2">
-								<div id="circle"><p class="notif-number">2</p></div>
-							</div>                			
-                	</div></a>
-                	<a href="#"><div class="col-md-12 user-group" id="sample-group">
-                			<div class="col-sm-2">
-                				<span class="glyphicon glyphicon-file group-icon"></span>
-                			</div>
-							<div class="col-sm-8">
-								<h3 class="group-name">CMSC 100 Reporting</h3>
-							</div>
-							<div class="col-sm-2">
-								<div id="circle"><p class="notif-number">2</p></div>
-							</div>                			
-                	</div></a>
-                </div>
-            </div>
-=======
 
 		            <div id="group-field" class="col-md-12">
 		                <div id="group-field-content">
@@ -99,7 +73,6 @@
 		            </div>
 
 				</div>
->>>>>>> c8c19178c353d0be7e2e307b5fa794972d05c912
 
         	</div>
 		

@@ -8,7 +8,7 @@
 
 <!-- header / navigation bar -->
 <header>
-    @include('includes.header')
+    @include('includes.header-log')
 </header>
 
 <!-- whole body (content) wrapped by a single div -->

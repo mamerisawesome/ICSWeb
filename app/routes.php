@@ -11,14 +11,12 @@
 |
 */
 
-//Controllers for home
+//Route::get('/test', array('uses' => 'TestController@show', 'as' => 'pages.test'));
 Route::get('/', array('uses' => 'HomeController@showWelcome', 'as' => 'index'));
 Route::post('/', array('uses'=> 'HomeController@showWelcome', 'as' => 'index'));
+//Route::get('/pages',array('uses' => 'GeneralController@show', 'as' => 'page/library'));
 
 //Controller to the web pages in the site
-Route::get('pages/group',array('uses' => 'GeneralController@showGroup', 'as' => 'page.group'));
-
-//Defined by GeneralController to the web pages in the site
 Route::get('pages/about',array('uses' => 'GeneralController@showAbout', 'as' => 'page.about'));
 Route::get('pages/library',array('uses' => 'GeneralController@showLibrary', 'as' => 'page.library'));
 Route::get('pages/curriculum',array('uses' => 'GeneralController@showCurriculum', 'as' => 'page.curriculum'));
@@ -28,10 +26,19 @@ Route::get('pages/group',array('uses' => 'GeneralController@showGroup', 'as' => 
 Route::get('pages/home',array('uses' => 'GeneralController@showHome', 'as' => 'page.home'));
 Route::get('pages/profile',array('uses' => 'GeneralController@showProfile', 'as' => 'page.profile'));
 Route::get('pages/publication',array('uses' => 'GeneralController@showPublication', 'as' => 'page.publication'));
+Route::get('pages/register',array('uses' => 'GeneralController@showRegisterForm', 'as' => 'page.reg_form'));
 
-//Resourceful controllers
-Route::resource('pages/students','StudentsController');
-Route::resource('pages/faculty','FacultyController');
-
-//Initial route given by the Laravel project
 Route::get('/thisIsATestRoute','LaravelHomeControl@showHome');
+
+Route::get('home', function(){
+	return "<h1>This is my home</h1>";
+});
+
+Route::resource('pages/students','StudentsController');
+Route::resource('faculty','FacultyController');
+
+//this is for login
+Route::get('pages/student/login', array('as' => 'student.login', 'uses' => 'SessionsController@getLogin'));
+Route::post('pages/student/login', array('as' => 'student.login.post', 'uses' => 'SessionsController@postLogin'));
+Route::get('pages/student/logout', array('as' => 'student.logout', 'uses' => 'SessionsController@logout'));
+Route::resource('sessions', 'SessionsController');

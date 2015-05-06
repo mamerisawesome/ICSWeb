@@ -1,3 +1,5 @@
+
+<?php $username = Session::get('username'); ?>
     <div id="title-bar-wrapper">
         <div class="container" id="title-bar">
              <a href="{{URL::to('/')}}"><img src="{{URL::to('res/images/ics_logo.jpg')}}"></a>
@@ -30,22 +32,9 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 <!--                    <li><a href="{{ URL::to('pages/students/create') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
--->                 <li id="register-toggle"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li id="login-toggle"><a href="{{URL::to('pages/student/login')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+-->                 <p> <?php echo $username ?></p>
+                     <li><a href="{{URL::to('pages/student/logout')}}"><span class="glyphicon glyphicon-user"></span> Log out</a></li> 
                 </ul>
-            </div>
-
-            <div id="register-field" class="col-md-12">
-                <div id="register-field-content">
-                <center>
-                    <h5>REGISTER to ICS Portal</h5>
-                    <button class="btn register-button" id="register-student">
-                    <a href="{{URL::to('pages/students/create')}}">Student</a></button>
-                    <br>
-                    <button class="btn register-button" id="register-faculty">
-                    <a href="{{URL::to('pages/faculty/create')}}">Faculty</a></button>
-                </center>
-                </div>
             </div>
 
         </div>
