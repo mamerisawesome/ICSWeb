@@ -3,7 +3,6 @@ $(document).ready(function(){
 	var logInFormStatus = false;
 	var regFormStatus = false;
 	var groupStatus = false;
-	var w = window.outerWidth;
 
 	$(window).scroll(function(){
 		if ($(window).scrollTop() > 50) {
@@ -50,8 +49,22 @@ $(document).ready(function(){
 		else{
 			$(".profile-icon").show();
 			$(".group-icon").show();
-		}
-		
+		}	
 	});
 
+	$(".user-group").click(function(){
+		/* If kaya ng by whole na i-load
+		$("#group-feed").load("/script/sample.html")
+		*/
+		$("#welcome-note").load("/script/sample.html")
+		$(".feed-text").load("/script/sample.html")
+	});
+
+	$("#inbox-panel").click(function(){
+		/* If kaya ng by whole na i-load
+		$("#group-feed").load("/script/sample2.html")
+		*/
+		$("#welcome-note").load("/script/sample2.html")
+		$(".feed-text").load("/script/sample2.html")
+	});	
 });

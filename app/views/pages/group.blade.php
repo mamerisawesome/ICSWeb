@@ -16,8 +16,8 @@
 					</div>
 				</div>
 				</div>
-				<div class="col-md-12" id="inbox-panel">
-					<a href="#"><div>
+				<a href="#"><div class="col-md-12" id="inbox-panel">
+					<div>
 						<div class="col-sm-3">
 							<span class="glyphicon glyphicon-envelope profile-icon"></span>
 						</div>
@@ -27,13 +27,13 @@
 						<div class="col-sm-2">
 							<div id="circle"><p class="notif-number">2</p></div>
 						</div>
-					</div></a>
-				</div>
+					</div>
+				</div></a>
 				
 				<a href="#"><div class="col-md-12" id="group-panel">
 					<div>
 						<div class="col-sm-3">
-							<span class="fa fa-users profile-icon" id="sample"></span>
+							<span class="fa fa-users profile-icon"></span>
 						</div>
 						<div class="col-sm-7">
 							<h3 class="label-text">GROUPS</h3>
@@ -56,7 +56,7 @@
 								<div id="circle"><p class="notif-number">2</p></div>
 							</div>                			
                 	</div></a>
-                	<a href="#"><div class="col-md-12 user-group">
+                	<a href="#"><div class="col-md-12 user-group" id="sample-group">
                 			<div class="col-sm-2">
                 				<span class="glyphicon glyphicon-king group-icon"></span>
                 			</div>
