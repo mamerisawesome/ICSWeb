@@ -1,0 +1,29 @@
+{
+	'faculty':[
+		{
+			'name': 'Rommel Bulalacao',
+			'position':'Instructor I',
+			'url':'res/faces/faculty/bulalacao.jpg',
+		},
+		{
+			'name': 'HEHE Bulalacao',
+			'position':'Instructor I',
+			'url':'res/faces/faculty/bulalacao.jpg',
+		},
+		{
+			'name': 'HAHA Bulalacao',
+			'position':'Instructor I',
+			'url':'res/faces/faculty/bulalacao.jpg',
+		},
+		{
+			'name': 'UHM Bulalacao',
+			'position':'Instructor I',
+			'url':'res/faces/faculty/bulalacao.jpg',
+		},
+		{
+			'name': 'TRY Bulalacao',
+			'position':'Instructor I',
+			'url':'res/faces/faculty/bulalacao.jpg',
+		}
+	]
+}

@@ -4,7 +4,7 @@
     {{ HTML::style('css/library.css'); }}
     {{ HTML::script('script/library.js'); }}
 
-	<div id="shelf">
+    <div id="shelf">
 		<div id="shelf-overlay" class="container-fluid wrapping-panel">
 			<div id="shelf-panel1" class="container">
 				<div class="col-md-12" id="shelf-header">

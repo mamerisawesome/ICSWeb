@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content') 
 
-    {{ HTML::style('css/group.css'); }}
+    {{ HTML::style('css/group.css'); }} 
     {{ HTML::script('script/group.js'); }}
 
 	<div class="wrapping-panel">

@@ -1,0 +1,9 @@
+{
+	'faculty':[
+		{
+			'name': 'Rommel Bulalacao',
+			'position':'Instructor I',
+			'url':'res/faces/faculty/bulalacao.jpg' 
+		}
+	]
+}
