@@ -50,6 +50,7 @@
 /* INBOX PANEL */
 
 	#inbox-panel {
+		cursor: hand;
 		background-color: #3498db;
 	}
 
@@ -62,6 +63,7 @@
 /* GROUP PANEL */
 
 	#group-panel {
+		cursor: hand;
 		background-color: #2980b9;
 	}
 
@@ -84,6 +86,7 @@
 	}
 
 	.user-group {
+		cursor: hand;
 		padding: 5px;
 		border-bottom: solid 1px #bdc3c7;
 	}

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+/*
 	$("#group-panel").click(function(){
 		$("#group-field").slideToggle("slow");
 		groupStatus = true;
@@ -15,6 +15,6 @@ $(document).ready(function(){
 			$(".group-icon").show();
 		} 
 		
-	});
+	}); 
 */
 });
