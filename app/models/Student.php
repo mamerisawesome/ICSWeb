@@ -7,8 +7,15 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class Student extends Eloquent implements UserInterface, RemindableInterface {
 
+     use UserTrait, RemindableTrait;
+
     public $timestamps = false;
     protected $fillable = ['username', 'password', 'firstName', 'middleName', 'lastName', 'birthdate', 'sex', 'email', 'studentNumber', 'accessCode'];
+
+    public static $auth_rules = [
+        'email' => 'required|email',
+        'password' => 'required'
+    ];
 
     public static $rules = [
         'username' => 'required',
@@ -24,9 +31,7 @@ class Student extends Eloquent implements UserInterface, RemindableInterface {
     ];
 
     public $messages;
-
-    use UserTrait, RemindableTrait;
-
+   
     /**
      * The database table used by the model.
      *
