@@ -38,9 +38,9 @@ $(document).ready(function(){
 
 	$("#group-panel").click(function(){
 		$("#group-field").slideToggle("slow");
-		groupStatus = true;
+//		groupStatus = true;
 	});
-
+/*
 	$(window).resize(function(){
 		if($(window).width() < 975){
 			$(".profile-icon").hide();
@@ -51,7 +51,7 @@ $(document).ready(function(){
 			$(".group-icon").show();
 		}	
 	});
-
+*/
 	$(".user-group").click(function(){
 		/* If kaya ng by whole na i-load
 		$("#group-feed").load("/script/sample.html")

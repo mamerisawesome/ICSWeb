@@ -17,6 +17,7 @@ class CreateAccessCodesTable extends Migration {
             $table->increments('id');
             $table->string('subjects', 8)->unique();
             $table->string('accessCode', 8)->unique();
+            $table->timestamps();
         });
     }
 

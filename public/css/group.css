@@ -1,226 +1,159 @@
-﻿/*
-	BODY CSS
-*/
+﻿
+/* PROFILE PANEL */
 
-#group-right-panel {
-	padding 0;
-}
-
-#group-menu-wrapper {
-	padding:0;
-}
-
-#nav-pic {
-	height: 30px;
-	width: 30px;
-	margin-bottom:-15px;
-	margin-top: 10px;	
-}
-
-#drpdwn{
-	margin-left:10px;
-	width:auto;
-	height:33px;
-}
-
-/**
-	Profile-Panel
-**/
-
-.profile-icon{
-	margin-top:8px;
-	margin-left:15px;
-	font-size:35px;
-}
-
-#profile-panel h3 {
-	line-height: 15px;
-}
-
-#profile-panel-wrapper{
-	padding-left:0px;
-}
-
-#profile-panel {
-	height: auto;
-	padding-bottom: 20px;
-	padding-left:5px;
-	background-color: #2980b9;
-	color: white;
-}
-
-#name{
-	margin-top:25px;
-}
-
-#user-info-wrapper {
-	width: 100%;
-	height: auto;
-	margin-bottom: 25px;
-}
-
-#user-bio {
-	float: left;
-	width: auto;
-	padding-left:5px;
-	padding-right:10px;
-	margin: 10px 0 10px 0;
-	text-align: justify;
-}
-
-#user-info {
-	width: 60%;
-	padding: 10px;
-	float: right;
-}
-
-/**
-	Inbox Panel
-**/
-
-a > img {
-	margin-top: 5px;
-	height: 40px;
-	width: 55px;
-}
-
-.label-text{
-	text-align:center;
-	bottom:20px;
-	line-height:10px;
-}
-
-#inbox-panel {
-	height: auto;
-	border-bottom: solid 2px #95a5a6;
-	margin: 0px 0 0px 0;
-	background-color: #bdc3c7;
-}
-
-#circle {
-	width: 20px;
-	height: auto;
-	background: #f1c40f;
-	margin: 14px 0 10px 0px;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
-}
-
-/**
-	Group-Panel
-**/
-
-#group-pic{
-	width:auto;
-}
-
-.notif-number{
-	text-align:center;
-}
-
-#group-panel{
-	height: auto;
-	border-bottom: solid 2px #95a5a6;
-	margin: 0px 0 0px 0;
-	overflow: auto;
-	background-color: #bdc3c7;
-}
-
-/*GROUP FIELD*/
-	#group-field{
-		display: none;
-		width: auto;
-		height: auto;
-		padding: 5px;
-		padding-right: 5px;
-		padding-left: 5px;
-		background-color: white;
-		border: solid 2px #34495e;
-		box-shadow: 1px 1px 5px silver;
+	#profile-panel-wrapper{
+		padding: 0;
+		box-shadow: 0px 0px 5px #bdc3c7;
 	}
 
-	#group-field-content{
+	#profile-panel {
+		padding: 10px;
+		background-color: white;
+		color: #7f8c8d;
+	}
+
+	#user-info-wrapper {
+		text-align: center;
+	}
+
+	.profile-icon{
+		font-size:35px;
+		padding: 10px;
+	}
+
+	.circle {
+		width: 20px;
+		height: 20px;
+		background: #2ecc71;
+		border: solid 1px white;
+		border-radius: 50px;
+		position: absolute;
+		line-height: 18px;
+	}
+
+	#group-icon-wrapper .circle {
+		top: 15px;
+		right: 0;
+	}
+
+	#group-field-content .circle {
+		color: white;
+		top: 15px;
+		right: 15px;
+	}
+
+	.notif-number{
+		text-align:center;
+	}
+
+
+/* INBOX PANEL */
+
+	#inbox-panel {
+		background-color: #3498db;
+	}
+
+	#inbox-panel .col-md-12 {
+		text-align: center;
+		color: white;
+	}
+
+
+/* GROUP PANEL */
+
+	#group-panel {
+		background-color: #2980b9;
+	}
+
+	#group-panel .col-md-12 {
+		text-align: center;
+		color: white;
+	}
+
+
+/* GROUP FIELD (dropdown) */
+
+	#group-field {
+		display: none;
+		background-color: white;
+	}
+
+	#group-field-content {
 		width: auto;
 		height:auto;
 	}
 
-	.user-group{
-		border-bottom: solid 3px #95a5a6;
-		height: auto;
-		margin: 0px 0 0px 0;
+	.user-group {
+		padding: 5px;
+		border-bottom: solid 1px #bdc3c7;
 	}
 
-	.group-name{
-		font-size: 15px;
-		margin-left:5px;
+	.group-name {
 		text-align: center;
-		bottom:20px;
-		line-height:10px;
 	}
 
-	.group-icon{
-		font-size: 25px;
-		margin-top:15px;
+	.group-icon {
+		position: absolute;
+		font-size: 15px;
+		margin-top: 10px;
+		left: 25px;
+		top: 8px;
 	}
 
-/**
-	Group-feed
-**/
 
-#group-feed {
-	height: auto;
-	background-color: white;
-	padding: 0;
-	margin: 0 0 0 auto;
-}
 
-/**
-	Welcome Note(For Empty Group page)
-**/
+/* GROUP FEED */
 
-#welcome-note{
-	width: 100%;
-	padding: 5px;
-	color: white;
-	text-align:center;
-	background-color: #7f8c8d;
-}
+	#group-feed {
+		background-color: white;
+		padding-right: 0;
+		box-shadow: 0 0 5px #bdc3c7;
+	}
 
-#welcome{
-	background-color: ‪#25242C;
-}
 
-/**
-	Update-panel
-**/
+	#welcome-note {
+		width: 100%;
+		padding: 5px;
+		text-align:center;
+		background-color: #34495e;
+	}
 
-.update-panel-wrapper {
-	height: auto;
-	border-bottom: solid 1px #e9e0d6;
-}
+	#welcome-note h3 {
+		color: white;
+	}
 
-.update-panel {
-	height: auto;
-	margin: 10px;
-}
+	#welcome{
+		background-color: ‪#25242C;
+	}
 
-.feed-icon-wrapper {
-	margin-top: 20px;
-	text-align: center;
-}
+/* UPDATE PANEL */
 
-.feed-icon {
-	width: 50px;
-	height: 50px;
-	margin: 0;
-	border: 2px solid #354458;
-    border-radius: 50px;
-}
+	.update-panel-wrapper {
+		height: auto;
+		border-bottom: solid 1px #bdc3c7;
+	}
 
-.feed-text {
-	margin-top: 10px;
-	height: auto;
-	text-align: justify;
+	.update-panel {
+		height: auto;
+		margin: 10px;
+	}
 
-}
+	.feed-icon-wrapper {
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	.feed-icon {
+		width: 50px;
+		height: 50px;
+		margin: 0;
+		border: 2px solid #34495e;
+	    border-radius: 50px;
+	}
+
+	.feed-text {
+		margin-top: 10px;
+		height: auto;
+		text-align: justify;
+
+	}
