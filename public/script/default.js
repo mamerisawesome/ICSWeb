@@ -57,7 +57,7 @@ $(document).ready(function(){
 		$("#group-feed").load("/script/sample.html")
 		*/
 		$("#welcome-note").load("/script/sample.html")
-		$(".feed-text").load("/script/sample.html")
+		$(".feed-text").load("/script/sample2.txt")
 	});
 
 	$("#inbox-panel").click(function(){
@@ -65,6 +65,6 @@ $(document).ready(function(){
 		$("#group-feed").load("/script/sample2.html")
 		*/
 		$("#welcome-note").load("/script/sample2.html")
-		$(".feed-text").load("/script/sample2.html")
+		$(".feed-text").load("/script/sample.txt")
 	});	
 });

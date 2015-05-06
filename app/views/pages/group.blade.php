@@ -47,10 +47,10 @@
                 <div id="group-field-content">
                 	<a href="#"><div class="col-md-12 user-group">
                 			<div class="col-sm-2">
-                				<span class="glyphicon glyphicon-heart group-icon"></span>
+                				<span class="glyphicon glyphicon-th group-icon"></span>
                 			</div>
 							<div class="col-sm-8">
-								<h3 class="group-name">Edi Sa Puso Mo!</h3>
+								<h3 class="group-name">Almer and Friends</h3>
 							</div>
 							<div class="col-sm-2">
 								<div id="circle"><p class="notif-number">2</p></div>
@@ -58,10 +58,10 @@
                 	</div></a>
                 	<a href="#"><div class="col-md-12 user-group" id="sample-group">
                 			<div class="col-sm-2">
-                				<span class="glyphicon glyphicon-king group-icon"></span>
+                				<span class="glyphicon glyphicon-file group-icon"></span>
                 			</div>
 							<div class="col-sm-8">
-								<h3 class="group-name">Chess Groups</h3>
+								<h3 class="group-name">CMSC 100 Reporting</h3>
 							</div>
 							<div class="col-sm-2">
 								<div id="circle"><p class="notif-number">2</p></div>
