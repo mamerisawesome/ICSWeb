@@ -1,0 +1,21 @@
+﻿basta wala masyado
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is behind 'origin/master' by 7 commits, and can be fast-forwarded.
+#   (use "git pull" to update your local branch)
+#
+# Changes to be committed:
+#	modified:   app/controllers/SessionsController.php
+#	modified:   app/controllers/StudentsController.php
+#	modified:   app/routes.php
+#	deleted:    app/views/includes/header-log.blade.php
+#	modified:   app/views/includes/header.blade.php
+#	deleted:    app/views/layouts/default-log.blade.php
+#	modified:   app/views/layouts/default.blade.php
+#	modified:   app/views/pages/about.blade.php
+#	modified:   app/views/pages/auth/logStud.blade.php
+#	modified:   public/script/group.js
+#
+

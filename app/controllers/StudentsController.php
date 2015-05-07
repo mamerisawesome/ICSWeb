@@ -57,7 +57,7 @@ class StudentsController extends \BaseController {
         $this->student->password = $pass;
         $this->student->save();
 
-        return Redirect::route('pages.students.index');
+        return Redirect::route('page.home');
 	}
 
 

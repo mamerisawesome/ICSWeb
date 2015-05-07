@@ -40,5 +40,5 @@ Route::resource('faculty','FacultyController');
 //this is for login
 Route::get('pages/student/login', array('as' => 'student.login', 'uses' => 'SessionsController@getLogin'));
 Route::post('pages/student/login', array('as' => 'student.login.post', 'uses' => 'SessionsController@postLogin'));
-Route::get('pages/student/logout', array('as' => 'student.logout', 'uses' => 'SessionsController@logout'));
+Route::get('pages/student/logout', array('as' => 'student.logout', 'uses' => 'SessionsController@destroy'));
 Route::resource('sessions', 'SessionsController');
