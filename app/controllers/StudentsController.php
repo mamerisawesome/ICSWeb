@@ -4,9 +4,6 @@ class StudentsController extends \BaseController {
 
     protected $student;
 
-
-	
-
     public function __construct(Student $student)
     {
         $this->student = $student;

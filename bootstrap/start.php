@@ -24,9 +24,9 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(
-    array('local' => 'localhost')
-);
+$env = $app->detectEnvironment(array(
+    'local' => array('homestead','MAMERisawesome'),
+));
 
 //Dotenv::load(__DIR__.'/../');
 

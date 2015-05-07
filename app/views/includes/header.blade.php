@@ -3,8 +3,7 @@
              <a href="{{URL::to('/')}}"><img src="{{URL::to('res/images/ics_logo.jpg')}}"></a>
             <h2 id="site-title">INSTITUTE OF COMPUTER SCIENCE</h2>
         </div>
-    </div> 
-
+    </div>
     <nav class="navbar navbar-default" id="navigation-menu">
         <div class="container">
             <div class="navbar-header" id="site-name">
@@ -28,11 +27,25 @@
                     <li><a href="{{URL::to('pages/division')}}">Divisions</a></li>
                     <li><a href="{{URL::to('pages/about')}}">About Us</a></li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+                <?php
+                   if (Session::has('username')){
+                ?>  
+                    <ul class="nav navbar-nav navbar-right">
 <!--                    <li><a href="{{ URL::to('pages/students/create') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
--->                 <li id="register-toggle"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li id="login-toggle"><a href="{{URL::to('pages/student/login')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                </ul>
+-->                 <li> <a href="{{URL::to('pages/group')}}"><?php echo $username; ?></a></li>
+                     <li><a href="{{URL::to('pages/student/logout')}}"><span class="glyphicon glyphicon-user"></span> Log out</a></li> 
+                     </ul>
+                <?php
+                    }else{
+                ?>
+                        <ul class="nav navbar-nav navbar-right">
+<!--                    <li><a href="{{ URL::to('pages/students/create') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        -->                 <li id="register-toggle"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li id="login-toggle"><a href="{{URL::to('pages/student/login')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        </ul>
+                <?php    }
+
+                ?> 
             </div>
 
             <div id="register-field" class="col-md-12">

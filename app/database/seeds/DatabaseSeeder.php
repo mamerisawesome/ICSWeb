@@ -173,8 +173,22 @@ class StudentTableSeeder extends Seeder{
                 'birthdate'=>'1222-32-43',
                 'userName'=>'darthvader',
                 'email'=>'vader@email.com',
-                'studentNumber'=>'1229-43492',
+                'studentNumber'=>'1231-43492',
                 'password'=>Hash::make('darkside'),
+            ]
+        );
+
+        DB::table('students')->insert(
+            [
+                'firstName'=>'1',
+                'middleName'=>'1',
+                'lastName'=>'1',
+                'sex'=>'Male',
+                'birthdate'=>'1222-11-11',
+                'userName'=>'1',
+                'email'=>'1@e.com',
+                'studentNumber'=>'1229-43492',
+                'password'=>Hash::make('123'),
             ]
         );
 

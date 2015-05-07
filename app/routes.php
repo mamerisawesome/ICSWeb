@@ -22,17 +22,14 @@ Route::get('pages/library',array('uses' => 'GeneralController@showLibrary', 'as'
 Route::get('pages/curriculum',array('uses' => 'GeneralController@showCurriculum', 'as' => 'page.curriculum'));
 Route::get('pages/directory',array('uses' => 'GeneralController@showDirectory', 'as' => 'page.directory'));
 Route::get('pages/division',array('uses' => 'GeneralController@showDivision', 'as' => 'page.division'));
-Route::get('pages/group',array('uses' => 'GeneralController@showGroup', 'as' => 'page.group'));
 Route::get('pages/home',array('uses' => 'GeneralController@showHome', 'as' => 'page.home'));
 Route::get('pages/profile',array('uses' => 'GeneralController@showProfile', 'as' => 'page.profile'));
 Route::get('pages/publication',array('uses' => 'GeneralController@showPublication', 'as' => 'page.publication'));
 Route::get('pages/register',array('uses' => 'GeneralController@showRegisterForm', 'as' => 'page.reg_form'));
 
-Route::get('/thisIsATestRoute','LaravelHomeControl@showHome');
-
-Route::get('home', function(){
-	return "<h1>This is my home</h1>";
-});
+//Group routes
+//Route::get('pages/group',array('uses' => 'GeneralController@showGroup', 'as' => 'page.group'));
+//Route::get('pages/group/create',array('uses' => 'GeneralController@showGroup', 'as' => 'page.group'));
 
 /* Routes for Sign Up */
 Route::resource('pages/user', 'UserController');
@@ -43,8 +40,19 @@ Route::get('pages/create/faculty', function(){
     return View::make('pages.user.faculty');
 });
 
+//Resourceful controller that follows the RESTful pattern
+Route::resource('sessions', 'SessionsController'); // session management
+Route::resource('pages/group','GroupsController');
+//Route::resource('pages/students','StudentsController');
+//Route::resource('faculty','FacultyController');
+
 /* Routes for Log In */
 Route::get('pages/student/login', array('as' => 'student.login', 'uses' => 'SessionsController@getLogin'));
 Route::post('pages/student/login', array('as' => 'student.login.post', 'uses' => 'SessionsController@postLogin'));
-Route::get('pages/student/logout', array('as' => 'student.logout', 'uses' => 'SessionsController@logout'));
-Route::resource('sessions', 'SessionsController');
+Route::get('pages/student/logout', array('as' => 'student.logout', 'uses' => 'SessionsController@destroy'));
+
+/* TEST ROUTES */
+Route::get('/thisIsATestRoute','LaravelHomeControl@showHome');
+Route::get('home', function(){
+    return "<h1>This is my home</h1>";
+});

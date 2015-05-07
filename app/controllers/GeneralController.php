@@ -40,7 +40,7 @@ class GeneralController extends BaseController{
 
     public function showGroup()
     {
-        return View::make('pages.group');
+        return View::make('pages.groups.group');
     }
 
     public function showHome()

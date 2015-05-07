@@ -1,4 +1,4 @@
-
+@extends('layouts.default')
 @section('content')
 
     {{ HTML::style('css/about.css'); }}
