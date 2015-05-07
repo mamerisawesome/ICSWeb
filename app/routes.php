@@ -34,10 +34,16 @@ Route::get('home', function(){
 	return "<h1>This is my home</h1>";
 });
 
-Route::resource('pages/students','StudentsController');
-Route::resource('faculty','FacultyController');
+/* Routes for Sign Up */
+Route::resource('pages/user', 'UserController');
+Route::get('pages/create/student', function(){
+    return View::make('pages.user.student');
+});
+Route::get('pages/create/faculty', function(){
+    return View::make('pages.user.faculty');
+});
 
-//this is for login
+/* Routes for Log In */
 Route::get('pages/student/login', array('as' => 'student.login', 'uses' => 'SessionsController@getLogin'));
 Route::post('pages/student/login', array('as' => 'student.login.post', 'uses' => 'SessionsController@postLogin'));
 Route::get('pages/student/logout', array('as' => 'student.logout', 'uses' => 'SessionsController@destroy'));

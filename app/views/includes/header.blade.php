@@ -54,10 +54,10 @@
                 <center>
                     <h5>REGISTER to ICS Portal</h5>
                     <button class="btn register-button" id="register-student">
-                    <a href="{{URL::to('pages/students/create')}}">Student</a></button>
+                    <a href="{{URL::to('pages/create/student')}}">Student</a></button>
                     <br>
                     <button class="btn register-button" id="register-faculty">
-                    <a href="{{URL::to('pages/faculty/create')}}">Faculty</a></button>
+                    <a href="{{URL::to('pages/create/faculty')}}">Faculty</a></button>
                 </center>
                 </div>
             </div>

@@ -58,7 +58,7 @@ $studentNumber = Session::get('studentNumber');
 		                	<div class="col-md-12 user-group">
 		                		<span class="glyphicon glyphicon-heart group-icon"></span>
 								<div class="col-sm-12">
-									<h5 class="group-name">Edi Sa Puso Mo!</h5>
+									<h5 class="group-name">Almer and Friends</h5>
 								</div>
 								<div class="circle"><p class="notif-number">2</p></div>
 		                	</div>
