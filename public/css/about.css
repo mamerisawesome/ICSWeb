@@ -1,0 +1,59 @@
+/* ABOUT PANEL 1 */
+
+	#about-panel1 {
+		text-align: justify;
+		background-image: url("../res/images/about-us-overlay.jpg");
+		background-size: 100% 100%;
+	}
+
+	#about-panel1-content {
+		background: rgba(0,0,0,0.5);
+	}
+
+	#about-panel1 h1, h3 {
+		color: white;
+	}
+
+	#about-panel1 h1 {
+		text-align: center;
+	}
+
+	#about-panel1 p {
+		color: #ecf0f1;	
+	}
+
+/* ABOUT PANEL 2 */
+	
+	#about-panel2 {
+		background-color: white;
+	}
+
+	#director-quote h3 {
+		color: #7f8c8d;
+		text-align: center;
+	}
+
+	#director-bio-panel {
+		text-align: center;
+	}
+
+	#director-bio-panel img {
+		border-radius: 100%;
+		width: 50%;
+	}
+
+	#director-bio-panel h6 {
+		font-style: italic;
+		color: #3498db;
+	}
+
+/* ABOUT PANEL 3 */
+
+	#about-panel3 {
+		text-align: justify;
+	}
+
+	#about-panel3 h2 {
+		text-align: center;
+		color: #2c3e50;
+	}
