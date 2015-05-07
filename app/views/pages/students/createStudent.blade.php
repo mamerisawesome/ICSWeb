@@ -59,7 +59,7 @@
                     <em>{{ $errors->first('accessCode') }}</em>
 
                     <br>
-                    {{ Form::submit('Submit', array('class'=>'btn btn-primary')) }}
+                    {{ Form::submit('Submit', array('class'=>'btn btn-primary', 'id'=>'submit       ')) }}
                 {{ Form::close() }}
                 </div>
 
