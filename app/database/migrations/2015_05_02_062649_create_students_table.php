@@ -25,7 +25,6 @@ class CreateStudentsTable extends Migration {
             $table->string('username')->unique();
             $table->string('password', 60);
             $table->string('studentNumber')->unique();
-            $table->string('accessCode');
         });
     }
 

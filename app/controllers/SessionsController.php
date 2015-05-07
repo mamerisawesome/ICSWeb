@@ -23,9 +23,6 @@ class SessionsController extends \BaseController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		$thisemail = Input::get('email');
-		echo $thisemail;
-
 		if(Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))){
 			$id = Auth::user()->id;
 			$username = Auth::user()->username;
@@ -49,7 +46,6 @@ class SessionsController extends \BaseController {
 			Session::put('password',$password);
 			Session::put('studentNumber',$studentNumber);
 			Session::put('accessCode',$accessCode);
-			//echo $thisemail;
 			return Redirect::intended('pages/group');
 		}
 		
@@ -123,9 +119,8 @@ class SessionsController extends \BaseController {
 	 */
 	public function destroy()
 	{
-		Auth::logout();
 		Session::flush();
-		return Redirect::route('pages/student/login');
+		return View::make('pages/home');
 	}
 
 
