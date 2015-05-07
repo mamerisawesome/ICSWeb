@@ -1,5 +1,8 @@
 @extends('layouts.default')
 @section('content')
+    
+    {{ HTML::script('script/validate.js'); }}
+
     <div class="wrapping-panel" id="reg-form-panel">
         <div class="container">
             <div class="col-md-12">
@@ -46,6 +49,8 @@
                     <br>
                     {{ Form::regInput('password','retypePassword','Retype your password','Retype Password') }}
                     <em>{{ $errors->first('retypePassword') }}</em>
+                    <div id="error-message">
+                    </div>
                     <br>
                     {{ Form::regInput('text','studentNumber','XXXX-XXXXX','Student Number') }}
                     <em>{{ $errors->first('studentNumber') }}</em>
@@ -60,7 +65,7 @@
 
             </div>
             <div class="col-md-4" id="welcome-text-panel">
-            <h2>WELCOME to ICS Portal!</h2>
+            <h2 id="welcome-user">WELCOME</h2>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi<br><br>
