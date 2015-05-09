@@ -16,10 +16,9 @@ class GroupsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$data = new StdClass;
-        $data->name = 'first';
-
-        return View::make('pages.groups.group', compact('data'));
+		$data = DB::table('groups')->first();
+        if($data != NULL) return View::make('pages.groups.group', compact('data'));
+        else return View::make('pages.groups.empty');
     }
 
 
@@ -41,20 +40,23 @@ class GroupsController extends \BaseController {
 	 */
 	public function store()
     {
-        $data = new StdClass;
-        $input = Input::all();
+        $data = new Group;
 
-        if(! $this->group->fill($input)->isValid())
-        {
-             return Redirect::back()->withInput()->withErrors($this->group->messages);
-        }
+//        if(! $this->group->fill($input)->isValid())
+//        {
+//             return Redirect::back()->withInput()->withErrors($this->group->messages);
+//        }
 
-        $this->group->accessCode = Input::get('accessCode');
-        $this->group->courseTitle = Input::get('courseTitle');
-        $this->group->section = Input::get('section');
-        $this->group->classSize = Input::get('classSize');
+        $data->accessCode = Input::get('accessCode');
+        $data->courseTitle = Input::get('courseTitle');
+        $data->section = Input::get('section');
+        $data->classSize = Input::get('classSize');
 
-        $this->group->save();
+        //dd(URL::to("JSONcontents/groups/".$data->courseTitle.".json"));
+        //dd(File::isDirectory("JSONcontents"));
+        File::put("public/JSONcontents/groups/".$data->courseTitle.".json",$data);
+
+        $data->save();
 
         return Redirect::route('pages.group.index');
 	}
@@ -68,23 +70,12 @@ class GroupsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		/*$groups = array();
-
-        for($i = 0; $i < 10; $i += 1){
-            $group = new StdClass;
-
-            $group->name = "sample{$i}";
-            $group->id = $i;
-
-            $groups[] = $group;
-        }*/
-        $data = new StdClass;
-        $data->name = $id;
-
-        //echo "<script>alert($group->name);</script>";
-
-        return View::make('pages.groups.group', compact('data'));
-	}
+        $data = DB::table('groups')->where('courseTitle',$id)->first();
+        if($data != NULL) return View::make('pages.groups.group', compact('data'));
+	    else{
+            echo "<h1>Error 404! Group not found!</h1>";
+        }
+    }
 
 
 	/**

@@ -20,15 +20,14 @@
     {{ HTML::script('script/group.js'); }}
 
     <script>
-        x = "{{ $data->name }}";
-        document.write(x);
+        x = "{{ $data->courseTitle }}";
 
-        $(".user-group").click(function(){
+        /*$(".user-group").click(function(){
             //If kaya ng by whole na i-load
             $("#group-feed").load("/script/sample.html")
 
             //$("#welcome-note").load("/script/sample.html")
-            $('#welcome-note').html('{{ $data->name }}');
+            $('#welcome-note').html('{{ $data->courseTitle }}');
             //$(".feed-text").load("/script/sample2.txt")
             $('.feed-text').html('This is some text that I just typed right now!');
         });
@@ -39,7 +38,7 @@
 
             $("#welcome-note").load("/script/sample2.html")
             $(".feed-text").load("/script/sample.txt")
-        });
+        });*/
     </script>
 
     <div class="wrapping-panel">

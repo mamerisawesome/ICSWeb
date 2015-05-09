@@ -14,7 +14,7 @@
 //Route::get('/test', array('uses' => 'TestController@show', 'as' => 'pages.test'));
 Route::get('/', array('uses' => 'HomeController@showWelcome', 'as' => 'index'));
 Route::post('/', array('uses'=> 'HomeController@showWelcome', 'as' => 'index'));
-//Route::get('/pages',array('uses' => 'GeneralController@show', 'as' => 'page/library'));
+Route::get('/pages',array('uses' => 'GeneralController@showHome', 'as' => 'page/library'));
 
 //Controller to the web pages in the site
 Route::get('pages/about',array('uses' => 'GeneralController@showAbout', 'as' => 'page.about'));
@@ -26,10 +26,6 @@ Route::get('pages/home',array('uses' => 'GeneralController@showHome', 'as' => 'p
 Route::get('pages/profile',array('uses' => 'GeneralController@showProfile', 'as' => 'page.profile'));
 Route::get('pages/publication',array('uses' => 'GeneralController@showPublication', 'as' => 'page.publication'));
 Route::get('pages/register',array('uses' => 'GeneralController@showRegisterForm', 'as' => 'page.reg_form'));
-
-//Group routes
-//Route::get('pages/group',array('uses' => 'GeneralController@showGroup', 'as' => 'page.group'));
-//Route::get('pages/group/create',array('uses' => 'GeneralController@showGroup', 'as' => 'page.group'));
 
 /* Routes for Sign Up */
 Route::resource('pages/user', 'UserController');
@@ -43,8 +39,6 @@ Route::get('pages/create/faculty', function(){
 //Resourceful controller that follows the RESTful pattern
 Route::resource('sessions', 'SessionsController'); // session management
 Route::resource('pages/group','GroupsController');
-//Route::resource('pages/students','StudentsController');
-//Route::resource('faculty','FacultyController');
 
 /* Routes for Log In */
 Route::get('pages/student/login', array('as' => 'student.login', 'uses' => 'SessionsController@getLogin'));
@@ -56,3 +50,12 @@ Route::get('/thisIsATestRoute','LaravelHomeControl@showHome');
 Route::get('home', function(){
     return "<h1>This is my home</h1>";
 });
+
+/*PROJECT
+-- content
+-- -- group
+-- -- -- group1.json, group2.json
+-- -- message
+-- -- -- almer.json, tin.json
+-- -- newsfeed
+-- -- -- newsfeed.json*/

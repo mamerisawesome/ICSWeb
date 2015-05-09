@@ -8,7 +8,7 @@
             {{Form::macro('regInput', function($inputType, $idName, $placeholderValue, $labelValue)
                 {
                     echo Form::label($idName, $labelValue);
-                    echo Form::input($inputType, $idName, '' , array('id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue));
+                    echo Form::input($inputType, $idName, '' , array('id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue,'required'=>''));
                 });
             }}
 

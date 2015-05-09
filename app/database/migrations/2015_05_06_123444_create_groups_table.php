@@ -20,6 +20,9 @@ class CreateGroupsTable extends Migration {
             $table->string('section',50);
             $table->integer('classSize');
             $table->string('accessCode',20);
+            // will accept url to a filename with file type JSON
+            $table->string('classList',20);
+            $table->string('posts',20);
 		});
 	}
 
@@ -30,6 +33,8 @@ class CreateGroupsTable extends Migration {
 	 */
 	public function down()
 	{
+        File::cleanDirectory('public/JSONcontents/groups/classList');
+        File::cleanDirectory('public/JSONcontents/groups/posts');
 		Schema::drop('groups');
 	}
 

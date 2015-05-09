@@ -123,7 +123,7 @@
                 <h1>ICS PUBLICATIONS</h1>
                 <div id="publications-group-content" class="col-md-12">
                     <div class="col-md-12 pub-entry">
-                        <div class="col-md-3 pub-image"><img src="{{URL::to('res/publications-images/art-prev-icon1.jpg')}}"></div>
+                        <div class="col-md-3 pub-image"><img src="{{URL::to('res/images/publications-images/art-prev-icon1.jpg')}}"></div>
                         <div class="col-md-9 pub-body"> 
                             <h3 pub-title>ICS is proud to be home to 2015 UPLB Outstanding Junior Faculty in the Physical Sciences</h3>
                             <h5>AKSMojar (February 26, 2015)</h5>
@@ -134,7 +134,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 pub-entry">
-                        <div class="col-md-3 pub-image"><img src="{{URL::to('res/publications-images/art-prev-icon2.jpg')}}"></div>
+                        <div class="col-md-3 pub-image"><img src="{{URL::to('res/images/publications-images/art-prev-icon2.jpg')}}"></div>
                         <div class="col-md-9 pub-body"> 
                             <h3 pub-title>Paper from the Traceability Program presented in PVMA 2015</h3>
                             <h5>Webmaster (February 23, 2015)</h5>
@@ -144,7 +144,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 pub-entry">
-                        <div class="col-md-3 pub-image"><img src="{{URL::to('res/publications-images/art-prev-icon3.jpg')}}"></div>
+                        <div class="col-md-3 pub-image"><img src="{{URL::to('res/images/publications-images/art-prev-icon3.jpg')}}"></div>
                         <div class="col-md-9 pub-body"> 
                             <h3 pub-title>ICS research papers to be presented in conferences in January 2015</h3>
                             <h5>Webmaster (December 17, 2014)</h5>

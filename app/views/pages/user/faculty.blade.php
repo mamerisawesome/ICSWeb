@@ -10,43 +10,37 @@
                 <div class="col-md-12" id="reg-form-body">
                 {{ Form::open(array('route'=>'pages.user.store', 'name'=>'reg-form', 'id'=>'reg-form'))}}
 
-                    {{Form::macro('regInput', function($inputType, $idName, $placeholderValue, $labelValue)
+                    {{ Form::macro('regInput', function($inputType, $idName, $placeholderValue, $labelValue)
                         {
                             echo Form::label($idName, $labelValue);
                             echo Form::input($inputType, $idName, '' , array('id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue, 'required'=>''));
+                            echo '<br>';
                         });
                     }}
 
                     {{ Form::regInput('text','firstName','Enter your first name here','First Name') }}
-                    <br>
                     {{ Form::regInput('text','middleName','Enter your middle name here','Middle Name') }}
-                    <br>
                     {{ Form::regInput('text','lastName','Enter your last name here','Last Name') }}
-                    <br>
                     {{ Form::regInput('date','birthdate', 'YYYY-MM-DD', 'Birthdate') }}
-                    <br>
+
                     {{ Form::label('sex',"Sex")}}
                     <br>
                     {{ Form::radio('sex', 'male') }} Male
                     <br>
                     {{ Form::radio('sex', 'female') }} Female
                     <br><br>
+
                     {{ Form::regInput('email','email','Enter a valid email address','E-mail Address') }}
-                    <br>
                     {{ Form::regInput('text','username','Enter your username','Username') }}
-                    <br>
                     {{ Form::regInput('password','password','Make this password secure','Password') }}
-                    <br>
                     {{ Form::regInput('password','retypePassword','Retype your password','Retype Password') }}
-                    <br>
                     {{ Form::regInput('text','employeeNumber','XXXXXXXXXX','Employee Number') }}
-                    <br>
                     {{ Form::regInput('text','room','(i.e. C-100)','Room') }}
-                    <br>
                     {{ Form::regInput('text','academicPosition','(i.e. Instructor 1)','Academic Position') }}
-                    <br>
+
                     {{ Form::hidden('studentNumber', NULL, array('id'=>'studentNumber')) }}
                     {{ Form::hidden('type', 'faculty', array('id'=>'type')) }}
+
                     {{ Form::submit('Submit', array('class'=>'btn btn-primary')) }}
                 {{ Form::close() }}
                 </div>
