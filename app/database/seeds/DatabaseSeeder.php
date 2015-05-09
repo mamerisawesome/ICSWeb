@@ -22,6 +22,14 @@ class StudentTableSeeder extends Seeder{
 
     public function run()
     {
+        DB::table('accounts')->delete();
+        DB::table('groups')->delete();
+
+        File::cleanDirectory('public/JSONcontents/accounts/groups');
+        File::cleanDirectory('public/JSONcontents/accounts/messages');
+        File::cleanDirectory('public/JSONcontents/groups/classList');
+        File::cleanDirectory('public/JSONcontents/groups/posts');
+
         function createUserJsonFile($name){
             // JSON file creator
             $user_groups = array(
@@ -38,36 +46,6 @@ class StudentTableSeeder extends Seeder{
             File::put('public/JSONcontents/accounts/groups/'.$name.'_groups.json', json_encode($user_groups));
             File::put('public/JSONcontents/accounts/messages/'.$name.'_messages.json', json_encode($user_messages));
         }
-
-        function createGroupJsonFile($name){
-            // JSON file creator
-            $group_classList = array(
-                "userName"          => NULL,
-                "studentNumber"     => NULL
-            );
-
-            $group_posts = array(
-                "postBy"            => NULL,
-                "dateOfPost"        => NULL,
-                "postTitle"         => NULL,
-                "postContent"       => NULL,
-                "comments"          => array(
-                        "commentBy"     => NULL,
-                        "date"          => NULL,
-                        "content"       => NULL
-                )
-            );
-
-            File::put('public/JSONcontents/groups/classList/'.$name.'_classList.json', json_encode($group_classList));
-            File::put('public/JSONcontents/groups/posts/'.$name.'_posts.json', json_encode($group_posts));
-        }
-
-        DB::table('accounts')->delete();
-        DB::table('groups')->delete();
-        File::cleanDirectory('public/JSONcontents/accounts/groups');
-        File::cleanDirectory('public/JSONcontents/accounts/messages');
-        File::cleanDirectory('public/JSONcontents/groups/classList');
-        File::cleanDirectory('public/JSONcontents/groups/posts');
 
         User::create(
             [
@@ -281,13 +259,37 @@ class StudentTableSeeder extends Seeder{
         );
         createUserJsonFile("ADMIN");
 
+        function createGroupJsonFile($name){
+            // JSON file creator
+            $group_classList = array(
+                "userName"          => NULL,
+                "studentNumber"     => NULL
+            );
+
+            $group_posts = array(
+                "postBy"            => NULL,
+                "dateOfPost"        => NULL,
+                "postTitle"         => NULL,
+                "postContent"       => NULL,
+                "comments"          => array(
+                    "commentBy"     => NULL,
+                    "date"          => NULL,
+                    "content"       => NULL
+                )
+            );
+
+            File::put('public/JSONcontents/groups/classList/'.$name.'_classList.json', json_encode($group_classList));
+            File::put('public/JSONcontents/groups/posts/'.$name.'_posts.json', json_encode($group_posts));
+        }
 
         Group::create(
             [
                 'courseTitle'   =>'CMSC170',
                 'classSize'     =>'100',
                 'section'       =>'CD-1L',
-                'accessCode'    =>'MK1mk5n321KJkj'
+                'accessCode'    =>'MK1mk5n321KJkj',
+                'classList'     =>URL::to('public/JSONcontents/groups/classList/CMSC170_classList.json'),
+                'posts'         =>URL::to('public/JSONcontents/groups/posts/CMSC170_posts.json')
             ]
         );
         createGroupJsonFile("CMCS170");
@@ -297,7 +299,9 @@ class StudentTableSeeder extends Seeder{
                 'courseTitle'   =>'CMSC56',
                 'classSize'     =>'100',
                 'section'       =>'X-7L',
-                'accessCode'    =>'MLI5Omk15mk1N1kN32k'
+                'accessCode'    =>'MLI5Omk15mk1N1kN32k',
+                'classList'     =>URL::to('public/JSONcontents/groups/classList/CMSC56_classList.json'),
+                'posts'         =>URL::to('public/JSONcontents/groups/posts/CMSC56_posts.json')
             ]
         );
         createGroupJsonFile("CMSC56");

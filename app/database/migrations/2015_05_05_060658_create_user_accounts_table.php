@@ -29,8 +29,8 @@ class CreateUserAccountsTable extends Migration {
             $table->string('room', 5)->nullable();
             $table->string('academicPosition', 30)->nullable();
             // will accept a url to a filename with a file type JSON
-            $table->string('groups',20);
-            $table->string('messages',20);
+            $table->string('groups',255);
+            $table->string('messages',255);
 		});
 	}
 
@@ -41,10 +41,8 @@ class CreateUserAccountsTable extends Migration {
 	 */
 	public function down()
 	{
-//        File::delete('public/JSONcontents/groups/*.json');
-//        File::delete('public/JSONcontents/messages/*.json');
-        File::cleanDirectory('public/JSONcontents/groups');
-        File::cleanDirectory('public/JSONcontents/messages');
+        File::cleanDirectory('public/JSONcontents/accounts/groups');
+        File::cleanDirectory('public/JSONcontents/accounts/messages');
         Schema::drop('accounts');
 	}
 
