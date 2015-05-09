@@ -112,12 +112,7 @@ class SessionsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-<<<<<<< HEAD
 	public function destroy(){
-=======
-	public function destroy()
-	{
->>>>>>> 2fbcb79544f66ab812b3462f05b8a19f0c6bb367
 		Session::flush();
 		return View::make('pages/home');
 	}

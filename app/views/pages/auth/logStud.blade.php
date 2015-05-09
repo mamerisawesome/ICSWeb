@@ -21,9 +21,6 @@
             {{ Form::regInput('email','email','Enter your email address','E-mail Address') }}
             {{ Form::regInput('password','password','Enter your password','Password') }}
             {{ Form::submit('Submit', array('class'=>'btn btn-primary')) }}
-                    {{ Form::regInput('password','password','Enter your password','Password') }}
-                 <br>   
-                    {{ Form::submit('Submit', array('class'=>'btn btn-primary')) }}
                 {{ Form::close() }}
 
             </div>

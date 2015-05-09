@@ -33,6 +33,10 @@ Route::get('home', function(){
 	return "<h1>This is my home</h1>";
 });
 
+Route::get('pages/users/login', array('as' => 'user.login', 'uses' => 'SessionsController@getLogin'));
+Route::post('pages/users/login', array('as' => 'user.login.post', 'uses' => 'SessionsController@postLogin'));
+Route::get('pages/users/logout', array('as' => 'user.logout', 'uses' => 'SessionsController@destroy'));
+
 /* Routes for Sign Up */
 Route::resource('pages/user', 'UserController');
 Route::get('pages/create/student', function(){
@@ -46,9 +50,7 @@ Route::resource('pages/students','StudentsController');
 Route::resource('faculty','FacultyController');
 
 //this is for login
-Route::get('pages/user/login', array('as' => 'user.login', 'uses' => 'SessionsController@getLogin'));
-Route::post('pages/user/login', array('as' => 'user.login.post', 'uses' => 'SessionsController@postLogin'));
-Route::get('pages/user/logout', array('as' => 'user.logout', 'uses' => 'SessionsController@destroy'));
+
 
 Route::resource('sessions', 'SessionsController');
 

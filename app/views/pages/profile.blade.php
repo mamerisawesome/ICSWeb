@@ -9,8 +9,11 @@
 	$sex = Session::get('sex');
 	$email = Session::get('email');
 	$password = Session::get('password');
-	$studentNumber = Session::get('studentNumber');
-	 $accessCode = Session::get('accessCode');
+	$accessCode = Session::get('accessCode');
+	$academic = Session::get('academic');
+	$employeeNumber = Session::get('employeeNumber');
+	$room = Session::get('room');
+				
 	 //start of the session
 ?>
 @extends('layouts.default')
@@ -26,13 +29,13 @@
 				<img src="{{URL::to('res/faces/faculty/bulalacao.jpg')}}" id="profile-pic" alt="Profile Picture">
 				<div id="profile-basic-info">
 					<h4 class="prof-info" id="prof-name"><?php echo $lastname. ', '. $firstname .' '. $middlename; ?></h4>
-					<h5 class="prof-info" id="prof-desig"><?php echo $academicPosition; ?></h5>
+					<h5 class="prof-info" id="prof-desig"><?php echo $academic; ?></h5>
 					<h5 class="prof-info" id="prof-bio/info">BIO/INFO</h5>
 				</div>
 			</div>
 			<div class="col-md-8" id="profile-upper-right-panel">
 				<div id="profile-info">
-					<p id="room-assignment">ROOM ASSIGNMENT</p>
+					<p id="room-assignment"><?php echo $room; ?></p>
 					<p id="consultation-hours">CONSULTATION HOURS</p>
 					<p id="bio">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
