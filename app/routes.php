@@ -14,7 +14,7 @@
 //Route::get('/test', array('uses' => 'TestController@show', 'as' => 'pages.test'));
 Route::get('/', array('uses' => 'HomeController@showWelcome', 'as' => 'index'));
 Route::post('/', array('uses'=> 'HomeController@showWelcome', 'as' => 'index'));
-//Route::get('/pages',array('uses' => 'GeneralController@show', 'as' => 'page/library'));
+Route::get('/pages',array('uses' => 'GeneralController@showHome', 'as' => 'page/library'));
 
 //Controller to the web pages in the site
 Route::get('pages/about',array('uses' => 'GeneralController@showAbout', 'as' => 'page.about'));
@@ -33,6 +33,15 @@ Route::get('home', function(){
 	return "<h1>This is my home</h1>";
 });
 
+/* Routes for Sign Up */
+Route::resource('pages/user', 'UserController');
+Route::get('pages/create/student', function(){
+    return View::make('pages.user.student');
+});
+Route::get('pages/create/faculty', function(){
+    return View::make('pages.user.faculty');
+});
+
 Route::resource('pages/students','StudentsController');
 Route::resource('faculty','FacultyController');
 
@@ -47,3 +56,4 @@ Route::group(array('prefix'=>'pages', 'before' => 'auth'), function(){
 	Route::get('profile',array('uses' => 'GeneralController@showProfile', 'as' => 'page.profile'));
 	Route::get('group',array('uses' => 'GeneralController@showGroup', 'as' => 'page.group'));
 });
+

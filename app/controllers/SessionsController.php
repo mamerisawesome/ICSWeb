@@ -37,17 +37,14 @@ class SessionsController extends \BaseController {
 
 			if(Auth::user()->type=='student'){
 				Session::put('studentNumber',Auth::user()->studentNumber);
-				return Redirect::intended('pages/group');
+				return Redirect::intended('pages/groups/group');
 			}else{
 				Session::put('employeeNumber',Auth::user()->employeeNumber);
 				Session::put('room',Auth::user()->room);
 				Session::put('academic',Auth::user()->academicPosition);
 				return Redirect::intended('pages/profile');
 			}
-			
 		}
-		
-		return Redirect::route('user.login');
 	}
 
 
@@ -115,7 +112,12 @@ class SessionsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
+<<<<<<< HEAD
 	public function destroy(){
+=======
+	public function destroy()
+	{
+>>>>>>> 2fbcb79544f66ab812b3462f05b8a19f0c6bb367
 		Session::flush();
 		return View::make('pages/home');
 	}

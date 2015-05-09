@@ -93,8 +93,9 @@ class UserController extends \BaseController {
 	{
 		//
         $user = DB::table('accounts')->where('username', $username)->first();;
-        return View::make('pages.user.show', compact('user'));
-	}
+        if($user != NULL) return View::make('pages.user.show', compact('user'));
+	    else return "<h1>Error! User not found!</h1>";
+    }
 
 
 	/**
@@ -105,7 +106,6 @@ class UserController extends \BaseController {
 	 */
 	public function edit($username)
 	{
-		//
         $student = DB::table('accounts')->where('username', $username)->first();
         //return View::make('pages.students.editStudent')->with('student', $student);
 	}

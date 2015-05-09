@@ -1,133 +1,29 @@
-.segment-title {
-	text-align: center;
-}
+	/* IMAGE HEADER */
 
-#command {
-	height: auto;
-	background-color: #354458;
-	color: white;
-}
+	#directory-image-header img {
+		width: 100%;
+		height: auto;
+	}
 
-.control {
-	margin-top: 100px;
-	position: absolute;
-	padding: 50px;
-	z-index: -200;
-	background-color: #ad3045;
-	color: white;
-	border-radius: 200px;
-	box-shadow: 1px 1px 5px #555;
-}
+	/* BODY */
 
+	#directory-body {
+		text-align: center;
+		background-color: white;
+	}
 
-#previous {
-	left: 20;
-}
+	#directory-body h1 {
+	}
+	
 
-#next {
-	right: 20;
-}
+	/* ENTRIES */
+	.person-content {
+		background-color: #ecf0f1;
+		padding: 20px;
+		margin: 10px;
+	}
 
-#slide-view {
-	height: auto;
-	overflow-x: scroll;
-	background: url("../res/images/black_texture.jpg");
-	border: solid #111 20px;
-	box-shadow: 5px 5px 20px black inset;
-}
-
-#slide-view::-webkit-scrollbar {
-	display: none;
-}
-
-#scroll-content {
-	width: 2130px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	list-style: none;
-	text-align: center;
-}
-
-#scroll-content li {
-	width: 200px;
-	margin-right: 25px;
-	margin-left: -20px;
-	margin-top: 20px;
-	display: inline-block;
-	text-align: center;
-	padding: 10px;
-	background-image: url("../res/images/wood.png");
-	border-radius: 5px;
-	box-shadow: 3px 3px 10px black;
-}
-
-#grid-view {
-	height: auto;
-}
-
-#grid-view ul {
-	width: auto;
-	height: auto;
-	margin-top: 20px;
-	margin-bottom: 30px;
-	list-style: none;
-	text-align: center;
-}		
-
-.person img {
-	width: 150px;
-	height: 150px;
-	border-radius: 200px;
-}
-
-#toggle-view-command {
-	margin-left: 30%;
-	margin-right: 30%;
-	height: 30px;
-	line-height: 30px;
-	font-size: 12pt;
-	color: #AAAAAA;
-}
-
-#slide-view-label {
-	float: right;
-}
-
-#grid-view-label {
-	float: left;
-}
-
-.active-label {
-	font-weight: bold;	
-	color: white;
-}
-
-.temp {
-	border: solid 2px red;
-	height: 20px;
-}
-
-#toggle-command-group {
-	height: auto;
-	width: 350px;
-	margin: auto;
-}
-
-#toggle-button {
-	margin: auto;
-	width: 100px;
-	height: 30px;
-	background: white;
-	border-radius: 5px;
-	box-shadow: 1px 1px 5px #333333;
-}
-
-#toggle {
-	width: 50%;
-	height: 100%;
-	background: #3090d9;
-	float: left;
-	border-radius: 5px;
-	box-shadow: 1px 1px 5px #333333;
-}
-
+	.person-content img {
+		width: 70%;
+		border-radius: 100%;
+	}

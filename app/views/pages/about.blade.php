@@ -4,45 +4,70 @@
     {{ HTML::style('css/about.css'); }}
     {{ HTML::script('script/about.js'); }}
 
-	<div class="body-wrapper container">
-	<div class="row">
-		<!-- <div class="col-sm-1"> -->
-		<ul id="tabs">
-		  <li><a href="#mission">Mission & Vision</a></li> 
-		  <li><a href="#timeline">Timeline</a></li>
-		  <li><a href="#about">About Us</a></li>
-		</ul>
+    <div>
+    	<div class="" id="about-panel1">
+    		<div class="wrapping-panel" id="about-panel1-content">
+	    		<div class="container">
+	    			<div class="col-md-12">
+	    				<h1>The UPLB Institute of Computer Science</h1>
+	    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+	    				Integer vitae elementum nibh, vitae malesuada nulla. Donec id urna nunc. Aenean volutpat,
+	    				ex eu congue lacinia, erat nulla scelerisque nisi, molestie vestibulum tortor metus quis lacus.
+	    				Nam diam ipsum, accumsan eget iaculis a, fringilla quis ipsum. Vivamus odio orci, dictum nec
+	    				condimentum sed, vehicula eu dolor. Curabitur condimentum ante sapien, a finibus tortor interdum eget.
+	    				Sed ultrices sollicitudin vestibulum. Cras non felis eget tellus luctus efficitur. Nulla ac justo eget
+	    				nibh lobortis vulputate et sit amet orci. In scelerisque sit amet sapien venenatis ornare.
+	    				Pellentesque magna nibh, porttitor quis est at, rutrum euismod metus.</p>
+	    				<hr>
+	    				<h3>Contact Information</h3>
+	    			</div>
+	    		</div>
+    		</div>
+    	</div>
 
-	<div class="content-wrapper container">
-		<div class="tabContent" id="about">
-		  <h2 class="content-header">About Us</h2>
-		    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique velit vitae interdum blandit. Aliquam eu convallis turpis. Curabitur non neque hendrerit, maximus tortor non, tincidunt risus. Vivamus volutpat urna vel magna iaculis, vel fringilla risus suscipit. Vivamus in varius leo, at tempor eros. Nulla velit est, iaculis ut nibh non, pretium tempus ligula. Duis ipsum nisl, dictum et lectus a, commodo pulvinar neque. Suspendisse mattis velit tempus dictum vestibulum. Sed nibh ante, molestie in semper ac, tristique et lacus. Suspendisse eleifend accumsan enim, varius vehicula ex. Praesent eleifend, mi sed accumsan fringilla, metus massa ultrices nibh, ut mollis odio nisi et est. Aliquam aliquet suscipit ornare.</p>
-			<p>About about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about</p>
-			<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent quis arcu fringilla, eleifend lacus quis, accumsan nunc. Vestibulum sapien nulla, laoreet sed pellentesque sit amet, scelerisque vitae nisi. Praesent nisi nulla, aliquet eget erat vitae, convallis imperdiet felis. Etiam lacinia mi nec orci euismod, eget lobortis dolor interdum. Vivamus lacus odio, malesuada at convallis eu, elementum vitae eros. Suspendisse scelerisque justo faucibus, euismod nunc ultrices, fermentum lectus. Maecenas blandit pellentesque turpis, eget ullamcorper justo porta at. Maecenas ac mi sit amet orci tempor ultricies.</p>
-			<p>Ut consequat consequat ante, ut sagittis turpis vestibulum vel. Etiam porta, metus sed convallis eleifend, orci eros elementum quam, eu aliquet nulla nunc sed nisi. Cras risus sem, tincidunt ac pharetra convallis, porttitor a nunc. Etiam arcu purus, tristique sit amet nunc quis, tincidunt eleifend purus. Phasellus iaculis eu risus ac pretium. Proin sit amet posuere ligula, at rutrum purus. Cras eget dui sed dolor eleifend ullamcorper. Mauris lectus leo, tempus nec gravida a, sodales ac arcu. Maecenas dictum turpis et magna ultricies pharetra. Proin pretium, elit vitae cursus accumsan, lacus ligula lobortis justo, ut vulputate lectus dui a turpis.</p>
-			<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent quis arcu fringilla, eleifend lacus quis, accumsan nunc. Vestibulum sapien nulla, laoreet sed pellentesque sit amet, scelerisque vitae nisi. Praesent nisi nulla, aliquet eget erat vitae, convallis imperdiet felis. Etiam lacinia mi nec orci euismod, eget lobortis dolor interdum. Vivamus lacus odio, malesuada at convallis eu, elementum vitae eros. Suspendisse scelerisque justo faucibus, euismod nunc ultrices, fermentum lectus. Maecenas blandit pellentesque turpis, eget ullamcorper justo porta at. Maecenas ac mi sit amet orci tempor ultricies.</p>
-		</div>
+    	<div class="wrapping-panel" id="about-panel2">
+    		<div class="container">
+    			<div class="col-md-12">
+    				<div class="col-md-8" id="director-quote">
+		                <hr>
+		                <h3 id="director-quote-text">
+			            <span class="fa fa-quote-left"></span>
+							Sed massa ex, accumsan sed convallis vitae, placerat ut risus.
+							Vestibulum sed molestie lorem. Nunc et ex malesuada, auctor arcu sed, rutrum ligula.
+							Nam in sodales leo. Duis dui tortor, convallis sit amet vulputate sed, pulvinar vel quam.
+						<span class="fa fa-quote-right"></span>
+						</h3>
+		                <hr>
+					</div>
+    				<div class="col-md-4" id="director-bio-panel">
+    					<img id="ics-director-image" src="{{URL::to('res/faces/faculty/samaniego.jpg')}}">
+    					<h4>Mr. Jaime M. Samaniego</h4>
+    					<h6>ICS Director</h6>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
 
-		<div class="tabContent" id="timeline">
-		<div id="side">
-			<p>ICS THROUGH THE YEARS</p>
-		</div>
-		<div id="content">
-		  <h2 class="content-header">Timeline</h2>
-		    <p id="part">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique velit vitae interdum blandit. Aliquam eu convallis turpis. Curabitur non neque hendrerit, maximus tortor non, tincidunt risus. Vivamus volutpat urna vel magna iaculis, vel fringilla risus suscipit. Vivamus in varius leo, at tempor eros. Nulla velit est, iaculis ut nibh non, pretium tempus ligula. Duis ipsum nisl, dictum et lectus a, commodo pulvinar neque. Suspendisse mattis velit tempus dictum vestibulum. Sed nibh ante, molestie in semper ac, tristique et lacus. Suspendisse eleifend accumsan enim, varius vehicula ex. Praesent eleifend, mi sed accumsan fringilla, metus massa ultrices nibh, ut mollis odio nisi et est. Aliquam aliquet suscipit ornare. <br />Ut consequat consequat ante, ut sagittis turpis vestibulum vel. Etiam porta, metus sed convallis eleifend, orci eros elementum quam, eu aliquet nulla nunc sed nisi. Cras risus sem, tincidunt ac pharetra convallis, porttitor a nunc. Etiam arcu purus, tristique sit amet nunc quis, tincidunt eleifend purus. Phasellus iaculis eu risus ac pretium. Proin sit amet posuere ligula, at rutrum purus. Cras eget dui sed dolor eleifend ullamcorper. Mauris lectus leo, tempus nec gravida a, sodales ac arcu. Maecenas dictum turpis et magna ultricies pharetra. Proin pretium, elit vitae cursus accumsan, lacus ligula lobortis justo, ut vulputate lectus dui a turpis.</p>
-			<p id="part">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent quis arcu fringilla, eleifend lacus quis, accumsan nunc. Vestibulum sapien nulla, laoreet sed pellentesque sit amet, scelerisque vitae nisi. Praesent nisi nulla, aliquet eget erat vitae, convallis imperdiet felis. Etiam lacinia mi nec orci euismod, eget lobortis dolor interdum. Vivamus lacus odio, malesuada at convallis eu, elementum vitae eros. Suspendisse scelerisque justo faucibus, euismod nunc ultrices, fermentum lectus. Maecenas blandit pellentesque turpis, eget ullamcorper justo porta at. Maecenas ac mi sit amet orci tempor ultricies.</p>
-			<p id="part">Ut consequat consequat ante, ut sagittis turpis vestibulum vel. Etiam porta, metus sed convallis eleifend, orci eros elementum quam, eu aliquet nulla nunc sed nisi. Cras risus sem, tincidunt ac pharetra convallis, porttitor a nunc. Etiam arcu purus, tristique sit amet nunc quis, tincidunt eleifend purus. Phasellus iaculis eu risus ac pretium. Proin sit amet posuere ligula, at rutrum purus. Cras eget dui sed dolor eleifend ullamcorper. Mauris lectus leo, tempus nec gravida a, sodales ac arcu. Maecenas dictum turpis et magna ultricies pharetra. Proin pretium, elit vitae cursus accumsan, lacus ligula lobortis justo, ut vulputate lectus dui a turpis.<br />Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent quis arcu fringilla, eleifend lacus quis, accumsan nunc. Vestibulum sapien nulla, laoreet sed pellentesque sit amet, scelerisque vitae nisi. Praesent nisi nulla, aliquet eget erat vitae, convallis imperdiet felis. Etiam lacinia mi nec orci euismod, eget lobortis dolor interdum. Vivamus lacus odio, malesuada at convallis eu, elementum vitae eros. Suspendisse scelerisque justo faucibus, euismod nunc ultrices, fermentum lectus. Maecenas blandit pellentesque turpis, eget ullamcorper justo porta at. Maecenas ac mi sit amet orci tempor ultricies.</p>
-		</div>
-	</div>
+    	<div class="wrapping-panel" id="about-panel3">
+    		<div class="container">
+    			<div class="col-md-12">
+    				<div class="col-md-6" id="mission-wrapper">
+    					<div class="col-md-12">
+    						<h2>MISSION</h2>
+    						<p>Mauris accumsan metus eget tortor imperdiet, fermentum consequat erat tempus. Maecenas sed ultricies arcu. Sed eu consectetur arcu. Donec dignissim dolor eu viverra sodales. Phasellus iaculis felis ac auctor tincidunt.</p>
 
-		<div class="tabContent" id="mission">
-		  <h2 class="content-header">Mission & Vision</h2>
-		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique velit vitae interdum blandit. Aliquam eu convallis turpis. Curabitur non neque hendrerit, maximus tortor non, tincidunt risus. Vivamus volutpat urna vel magna iaculis, vel fringilla risus suscipit. Vivamus in varius leo, at tempor eros. Nulla velit est, iaculis ut nibh non, pretium tempus ligula. Duis ipsum nisl, dictum et lectus a, commodo pulvinar neque. Suspendisse mattis velit tempus dictum vestibulum. Sed nibh ante, molestie in semper ac, tristique et lacus. Suspendisse eleifend accumsan enim, varius vehicula ex. Praesent eleifend, mi sed accumsan fringilla, metus massa ultrices nibh, ut mollis odio nisi et est. Aliquam aliquet suscipit ornare.</p>
-			<p>Ut consequat consequat ante, ut sagittis turpis vestibulum vel. Etiam porta, metus sed convallis eleifend, orci eros elementum quam, eu aliquet nulla nunc sed nisi. Cras risus sem, tincidunt ac pharetra convallis, porttitor a nunc. Etiam arcu purus, tristique sit amet nunc quis, tincidunt eleifend purus. Phasellus iaculis eu risus ac pretium. Proin sit amet posuere ligula, at rutrum purus. Cras eget dui sed dolor eleifend ullamcorper. Mauris lectus leo, tempus nec gravida a, sodales ac arcu. Maecenas dictum turpis et magna ultricies pharetra. Proin pretium, elit vitae cursus accumsan, lacus ligula lobortis justo, ut vulputate lectus dui a turpis.</p>
-			<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent quis arcu fringilla, eleifend lacus quis, accumsan nunc. Vestibulum sapien nulla, laoreet sed pellentesque sit amet, scelerisque vitae nisi. Praesent nisi nulla, aliquet eget erat vitae, convallis imperdiet felis. Etiam lacinia mi nec orci euismod, eget lobortis dolor interdum. Vivamus lacus odio, malesuada at convallis eu, elementum vitae eros. Suspendisse scelerisque justo faucibus, euismod nunc ultrices, fermentum lectus. Maecenas blandit pellentesque turpis, eget ullamcorper justo porta at. Maecenas ac mi sit amet orci tempor ultricies.</p>
-		</div>
+    					</div>
+    				</div>
+    				<div class="col-md-6" id="vision-wrapper">
+  						<div class="col-md-12">
+    						<h2>VISION</h2>  							
+    						<p>Quisque feugiat finibus leo. Sed et odio sagittis, accumsan purus sit amet, consequat dolor. In dapibus dui a nulla feugiat, at aliquet quam vulputate. Suspendisse pellentesque porta lobortis. </p>
+  						</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
 
-	</div>
-	</div>
-	</div>
+    </div>
+
 @stop

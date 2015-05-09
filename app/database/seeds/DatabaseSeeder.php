@@ -22,161 +22,289 @@ class StudentTableSeeder extends Seeder{
 
     public function run()
     {
-        DB::table('students')->delete();
+        DB::table('accounts')->delete();
+        DB::table('groups')->delete();
 
-        DB::table('students')->insert(
+        File::cleanDirectory('public/JSONcontents/accounts/groups');
+        File::cleanDirectory('public/JSONcontents/accounts/messages');
+        File::cleanDirectory('public/JSONcontents/groups/classList');
+        File::cleanDirectory('public/JSONcontents/groups/posts');
+
+        function createUserJsonFile($name){
+            // JSON file creator
+            $user_groups = array(
+                "groups"        => NULL
+            );
+
+            $user_messages = array(
+                "sentTo"            => NULL,
+                "dateOfMessage"     => NULL,
+                "messageTitle"      => NULL,
+                "messageContent"    => NULL
+            );
+
+            File::put('public/JSONcontents/accounts/groups/'.$name.'_groups.json', json_encode($user_groups));
+            File::put('public/JSONcontents/accounts/messages/'.$name.'_messages.json', json_encode($user_messages));
+        }
+
+        User::create(
             [
-                'firstName'=>'Almer',
-                'middleName'=>'Robot',
-                'lastName'=>'Test',
-                'sex'=>'Male',
-                'birthdate'=>'1111-44-21',
-                'userName'=>'heyalmer',
-                'email'=>'hello@email.com',
-                'studentNumber'=>'2012-12345',
-                'password'=>Hash::make('hello'),
+                'firstName'         =>'Mamer',
+                'middleName'        =>'Taculog',
+                'lastName'          =>'Mendoza',
+                'sex'               =>'Male',
+                'birthdate'         =>'1222-11-11',
+                'userName'          =>'almer',
+                'email'             =>'almer@e.com',
+                'studentNumber'     =>'1229-43492',
+                'password'          =>Hash::make('123'),
+                'type'              =>'student',
+                'groups'            =>URL::to('public/JSONcontents/accounts/groups/almer_groups.json'),
+                'messages'          =>URL::to('public/JSONcontents/accounts/messages/almer_message.json'),
+
+                'employeeNumber'    =>NULL,
+                'room'              =>NULL,
+                'academicPosition'  =>NULL
             ]
         );
+        createUserJsonFile("almer");
 
-        DB::table('students')->insert(
+        User::create(
             [
-                'firstName'=>'Hello',
-                'middleName'=>'Hi',
-                'lastName'=>'Wazup',
-                'sex'=>'Female',
-                'birthdate'=>'1111-12-12',
-                'userName'=>'hellohi',
-                'email'=>'hi@email.com',
-                'studentNumber'=>'2011-12345',
-                'password'=>Hash::make('pass'),
+                'firstName'         =>'Cacai',
+                'middleName'        =>'Babe',
+                'lastName'          =>'Esguerra',
+                'sex'               =>'Female',
+                'birthdate'         =>'1234-01-09',
+                'userName'          =>'cacai',
+                'email'             =>'cacai@e.com',
+                'studentNumber'     =>'3214-41531',
+                'password'          =>Hash::make('123'),
+                'type'              =>'student',
+                'groups'            =>URL::to('public/JSONcontents/accounts/groups/cacai_groups.json'),
+                'messages'          =>URL::to('public/JSONcontents/accounts/messages/cacai_message.json'),
+
+                'employeeNumber'    =>NULL,
+                'room'              =>NULL,
+                'academicPosition'  =>NULL
             ]
         );
+        createUserJsonFile("cacai");
 
-        DB::table('students')->insert(
+
+        User::create(
             [
-                'firstName'=>'Peter',
-                'middleName'=>'Bernard',
-                'lastName'=>'Rupa',
-                'sex'=>'Male',
-                'birthdate'=>'2012-10-11',
-                'userName'=>'megatricycle',
-                'email'=>'peter@email.com',
-                'studentNumber'=>'2013-53532',
-                'password'=>Hash::make('passer'),
+                'firstName'         =>'Leensey',
+                'middleName'        =>'Hello',
+                'lastName'          =>'Lawas',
+                'sex'               =>'Female',
+                'birthdate'         =>'3214-09-01',
+                'userName'          =>'leensey',
+                'email'             =>'leensey@e.com',
+                'studentNumber'     =>'4325-53242',
+                'password'          =>Hash::make('123'),
+                'type'              =>'student',
+                'groups'            =>URL::to('public/JSONcontents/accounts/groups/leensey_groups.json'),
+                'messages'          =>URL::to('public/JSONcontents/accounts/messages/leensey_message.json'),
+
+
+                'employeeNumber'    =>NULL,
+                'room'              =>NULL,
+                'academicPosition'  =>NULL
             ]
         );
+        createUserJsonFile("leensey");
 
-        DB::table('students')->insert(
+
+        User::create(
             [
-                'firstName'=>'Arvie',
-                'middleName'=>'Exorcise',
-                'lastName'=>'Limbo',
-                'sex'=>'Male',
-                'birthdate'=>'2012-20-11',
-                'userName'=>'arvieishello',
-                'email'=>'arvie@email.com',
-                'studentNumber'=>'2012-90432',
-                'password'=>Hash::make('wtf'),
+                'firstName'         =>'Joshua',
+                'middleName'        =>'Hi',
+                'lastName'          =>'Burgos',
+                'sex'               =>'Male',
+                'birthdate'         =>'4222-02-03',
+                'userName'          =>'joshua',
+                'email'             =>'joshua@e.com',
+                'studentNumber'     =>'4124-52142',
+                'password'          =>Hash::make('123'),
+                'type'              =>'student',
+                'groups'            =>URL::to('public/JSONcontents/accounts/groups/joshua_groups.json'),
+                'messages'          =>URL::to('public/JSONcontents/accounts/messages/joshua_message.json'),
+
+
+                'employeeNumber'    =>NULL,
+                'room'              =>NULL,
+                'academicPosition'  =>NULL
             ]
         );
+        createUserJsonFile("joshua");
 
-        DB::table('students')->insert(
+
+        User::create(
             [
-                'firstName'=>'Angelo',
-                'middleName'=>'Capa',
-                'lastName'=>'Guiam',
-                'sex'=>'Male',
-                'birthdate'=>'2013-42-11',
-                'userName'=>'angelocapa',
-                'email'=>'angelo@email.com',
-                'studentNumber'=>'2013-42432',
-                'password'=>Hash::make('angelo'),
+                'firstName'         =>'Angelo',
+                'middleName'        =>'Wazup',
+                'lastName'          =>'Guiam',
+                'sex'               =>'Male',
+                'birthdate'         =>'3412-11-03',
+                'userName'          =>'angelo',
+                'email'             =>'angelo@e.com',
+                'studentNumber'     =>'4352-53125',
+                'password'          =>Hash::make('123'),
+                'type'              =>'student',
+                'groups'            =>URL::to('public/JSONcontents/accounts/groups/angelo_groups.json'),
+                'messages'          =>URL::to('public/JSONcontents/accounts/messages/angelo_message.json'),
+
+
+                'employeeNumber'    =>NULL,
+                'room'              =>NULL,
+                'academicPosition'  =>NULL
             ]
         );
+        createUserJsonFile("angelo");
 
-        DB::table('students')->insert(
+
+        User::create(
             [
-                'firstName'=>'Joshua',
-                'middleName'=>'Hello',
-                'lastName'=>'Burgos',
-                'sex'=>'Male',
-                'birthdate'=>'2013-99-99',
-                'userName'=>'joshuaburgos',
-                'email'=>'joshua@email.com',
-                'studentNumber'=>'2013-43029',
-                'password'=>Hash::make('shit'),
+                'firstName'         =>'Anne',
+                'middleName'        =>'Tin',
+                'lastName'          =>'Montoya',
+                'sex'               =>'Female',
+                'birthdate'         =>'1224-05-01',
+                'userName'          =>'tintin',
+                'email'             =>'anne@e.com',
+                'studentNumber'     =>'54642-41412',
+                'password'          =>Hash::make('123'),
+                'type'              =>'student',
+                'groups'            =>URL::to('public/JSONcontents/accounts/groups/tintin_groups.json'),
+                'messages'          =>URL::to('public/JSONcontents/accounts/messages/tintin_message.json'),
+
+
+                'employeeNumber'    =>NULL,
+                'room'              =>NULL,
+                'academicPosition'  =>NULL
             ]
         );
+        createUserJsonFile("tintin");
 
-        DB::table('students')->insert(
+
+        User::create(
             [
-                'firstName'=>'Cacai',
-                'middleName'=>'-babe',
-                'lastName'=>'Esguerra',
-                'sex'=>'Female',
-                'birthdate'=>'2013-43-23',
-                'userName'=>'isangcacaibabe',
-                'email'=>'cacai@email.com',
-                'studentNumber'=>'2013-32932',
-                'password'=>Hash::make('cacaibabe'),
+                'firstName'         =>'Juan',
+                'middleName'        =>'Protacio',
+                'lastName'          =>'Tama\' Aad',
+                'sex'               =>'Female',
+                'birthdate'         =>'1234-01-09',
+                'userName'          =>'juanitoHonesto',
+                'email'             =>'juanTAMAD@e.com',
+                'password'          =>Hash::make('123'),
+                'type'              =>'faculty',
+                'employeeNumber'    =>'2013402112',
+                'room'              =>'C-123',
+                'academicPosition'  =>'Assistant Professor I',
+                'groups'            =>URL::to('public/JSONcontents/accounts/groups/juanitoHonesto_groups.json'),
+                'messages'          =>URL::to('public/JSONcontents/accounts/messages/juanitoHonesto_message.json'),
+
+
+                'studentNumber'     =>NULL
             ]
         );
+        createUserJsonFile("juanitoHonesto");
 
-        DB::table('students')->insert(
+
+        User::create(
             [
-                'firstName'=>'Anne',
-                'middleName'=>'Kristine',
-                'lastName'=>'Montoya',
-                'sex'=>'Female',
-                'birthdate'=>'2103-43-21',
-                'userName'=>'haruhi1234',
-                'email'=>'annetin@email.com',
-                'studentNumber'=>'2013-13242',
-                'password'=>Hash::make('what'),
+                'firstName'         =>'Josephine',
+                'middleName'        =>'Katigbak',
+                'lastName'          =>'Bracken',
+                'sex'               =>'Female',
+                'birthdate'         =>'2222-06-05',
+                'userName'          =>'rizalForevs',
+                'email'             =>'rizalANDkatigbak@e.com',
+                'password'          =>Hash::make('123'),
+                'type'              =>'faculty',
+                'employeeNumber'    =>'2012029402',
+                'room'              =>'C-125',
+                'academicPosition'  =>'Professor I',
+                'groups'            =>URL::to('public/JSONcontents/accounts/groups/rizalForevs_groups.json'),
+                'messages'          =>URL::to('public/JSONcontents/accounts/messages/rizalForevs_message.json'),
+
+
+                'studentNumber'     =>NULL
             ]
         );
+        createUserJsonFile("rizalForevs");
 
-        DB::table('students')->insert(
+
+        User::create(
             [
-                'firstName'=>'Leensey',
-                'middleName'=>'L0R3Nz0hhxZsz',
-                'lastName'=>'Lawas',
-                'sex'=>'Female',
-                'birthdate'=>'2013-20-11',
-                'userName'=>'leenseylawas',
-                'email'=>'leensey@email.com',
-                'studentNumber'=>'2013-54642',
-                'password'=>Hash::make('hey'),
+                'firstName'         =>'Administrator',
+                'middleName'        =>'Sees',
+                'lastName'          =>'Everything',
+                'sex'               =>'Sexless',
+                'birthdate'         =>'9999-00-00',
+                'userName'          =>'adminCMSC100',
+                'email'             =>'adminCMSC100@admin.admin',
+                'password'          =>Hash::make('adminCMSC100'),
+                'type'              =>'admin',
+                'employeeNumber'    =>'INFINITY',
+                'room'              =>'C-POWER',
+                'academicPosition'  =>'ADMINISTRATOR',
+                'groups'            =>URL::to('public/JSONcontents/accounts/groups/ADMIN_groups.json'),
+                'messages'          =>URL::to('public/JSONcontents/accounts/messages/ADMIN_message.json'),
+
+
+                'studentNumber'     =>'INFINITY'
             ]
         );
+        createUserJsonFile("ADMIN");
 
-        DB::table('students')->insert(
+        function createGroupJsonFile($name){
+            // JSON file creator
+            $group_classList = array(
+                "userName"          => NULL,
+                "studentNumber"     => NULL
+            );
+
+            $group_posts = array(
+                "postBy"            => NULL,
+                "dateOfPost"        => NULL,
+                "postTitle"         => NULL,
+                "postContent"       => NULL,
+                "comments"          => array(
+                    "commentBy"     => NULL,
+                    "date"          => NULL,
+                    "content"       => NULL
+                )
+            );
+
+            File::put('public/JSONcontents/groups/classList/'.$name.'_classList.json', json_encode($group_classList));
+            File::put('public/JSONcontents/groups/posts/'.$name.'_posts.json', json_encode($group_posts));
+        }
+
+        Group::create(
             [
-                'firstName'=>'Jervie',
-                'middleName'=>'Exorcise',
-                'lastName'=>'Limbo',
-                'sex'=>'Male',
-                'birthdate'=>'2012-20-11',
-                'userName'=>'jervieshello',
-                'email'=>'harlo@email.com',
-                'studentNumber'=>'2012-45487',
-                'password'=>Hash::make('wtf'),
+                'courseTitle'   =>'CMSC170',
+                'classSize'     =>'100',
+                'section'       =>'CD-1L',
+                'accessCode'    =>'MK1mk5n321KJkj',
+                'classList'     =>URL::to('public/JSONcontents/groups/classList/CMSC170_classList.json'),
+                'posts'         =>URL::to('public/JSONcontents/groups/posts/CMSC170_posts.json')
             ]
         );
+        createGroupJsonFile("CMCS170");
 
-        DB::table('students')->insert(
+        Group::create(
             [
-                'firstName'=>'Darth',
-                'middleName'=>'Black',
-                'lastName'=>'Vader',
-                'sex'=>'Male',
-                'birthdate'=>'1222-32-43',
-                'userName'=>'darthvader',
-                'email'=>'vader@email.com',
-                'studentNumber'=>'1229-43492',
-                'password'=>Hash::make('darkside'),
+                'courseTitle'   =>'CMSC56',
+                'classSize'     =>'100',
+                'section'       =>'X-7L',
+                'accessCode'    =>'MLI5Omk15mk1N1kN32k',
+                'classList'     =>URL::to('public/JSONcontents/groups/classList/CMSC56_classList.json'),
+                'posts'         =>URL::to('public/JSONcontents/groups/posts/CMSC56_posts.json')
             ]
         );
+        createGroupJsonFile("CMSC56");
 
 //        Student::create(
 //            [

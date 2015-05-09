@@ -52,19 +52,21 @@ $(document).ready(function(){
 		}	
 	});
 */
-	$(".user-group").click(function(){
-		/* If kaya ng by whole na i-load
+	/*$(".user-group").click(function(){
+		 //If kaya ng by whole na i-load
 		$("#group-feed").load("/script/sample.html")
-		*/
-		$("#welcome-note").load("/script/sample.html")
-		$(".feed-text").load("/script/sample2.txt")
-	});
+
+		//$("#welcome-note").load("/script/sample.html")
+		$('#welcome-note').html('<h2>This is something here.</h2>');
+		//$(".feed-text").load("/script/sample2.txt")
+	    $('.feed-text').html('This is some text that I just typed right now!');
+    });
 
 	$("#inbox-panel").click(function(){
-		/* If kaya ng by whole na i-load
+		 //If kaya ng by whole na i-load
 		$("#group-feed").load("/script/sample2.html")
-		*/
+
 		$("#welcome-note").load("/script/sample2.html")
 		$(".feed-text").load("/script/sample.txt")
-	});	
+	});	*/
 });

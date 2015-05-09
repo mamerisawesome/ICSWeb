@@ -31,6 +31,9 @@ class CreateUserAccountsTable extends Migration {
             $table->string('consultation', 100)->nullable();
             $table->string('guide', 1000)->nullable();
             $table->string('bio', 1000)->nullable();
+            // will accept a url to a filename with a file type JSON
+            $table->string('groups',255);
+            $table->string('messages',255);
 		});
 	}
 
@@ -41,7 +44,9 @@ class CreateUserAccountsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('accounts');
+        File::cleanDirectory('public/JSONcontents/accounts/groups');
+        File::cleanDirectory('public/JSONcontents/accounts/messages');
+        Schema::drop('accounts');
 	}
 
 }

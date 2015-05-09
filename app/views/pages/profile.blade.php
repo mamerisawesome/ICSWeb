@@ -25,8 +25,8 @@
 			<div class="col-md-4" id="profile-upper-left-panel">
 				<img src="{{URL::to('res/faces/faculty/bulalacao.jpg')}}" id="profile-pic" alt="Profile Picture">
 				<div id="profile-basic-info">
-					<h4 class="prof-info" id="prof-name"><?php //echo $lastname. ', '. $firstname .' '. $middlename; ?></h4>
-					<h5 class="prof-info" id="prof-desig"><?php //echo $academicPosition; ?></h5>
+					<h4 class="prof-info" id="prof-name"><?php echo $lastname. ', '. $firstname .' '. $middlename; ?></h4>
+					<h5 class="prof-info" id="prof-desig"><?php echo $academicPosition; ?></h5>
 					<h5 class="prof-info" id="prof-bio/info">BIO/INFO</h5>
 				</div>
 			</div>

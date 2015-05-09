@@ -1,3 +1,11 @@
+PROJECT MADE BY:
+- Burgos, Joshua
+- Esguerra, Joshze Rica
+- Guiam, Angelo Capa
+- Lawas, Leensey
+- Mendoza, Almer
+- Montoya, Anne Kristine
+
 /**
  * MILESTONE 0.0
  */
@@ -27,3 +35,19 @@
  - Registration now implemented for students
  - Input values from registration now saves into database
  - Updated UI for the index and the student registration form
+
+/**
+ * MILESTONE 3.0
+ */
+
+ BACK-END:
+ - login now works for both faculty and student
+ - sign up now works for both faculty and student
+ - groups are now initialized
+ - tables for users and groups now are initialized
+ - table groups and users can be populated with database seeder and is working
+ - migrations are fully working to create tables that are necessary for current progress
+
+ FRONT-END:
+ - Group page now available and with UI
+ - Publications updated UI

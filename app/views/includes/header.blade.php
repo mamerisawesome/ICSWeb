@@ -3,8 +3,7 @@
              <a href="{{URL::to('/')}}"><img src="{{URL::to('res/images/ics_logo.jpg')}}"></a>
             <h2 id="site-title">INSTITUTE OF COMPUTER SCIENCE</h2>
         </div>
-    </div> 
-
+    </div>
     <nav class="navbar navbar-default" id="navigation-menu">
         <div class="container">
             <div class="navbar-header" id="site-name">
@@ -32,9 +31,10 @@
                    if (Session::has('username')){
                 ?>  
                         <ul class="nav navbar-nav navbar-right">
-                        <li> <?php if($type=='student'){ ?><a href="{{URL::to('pages/group')}}"> <?php }else{ ?> <a href="{{URL::to('pages/profile')}}" >   <?php } ?> <?php echo $username; ?></a></li>
+                        <li> <?php if($type=='student'){ ?><a href="{{URL::to('pages/groups/group')}}"> <?php }else{ ?> <a href="{{URL::to('pages/profile')}}" >   <?php } ?> <?php echo $username; ?></a></li>
                         <li><a href="{{URL::to('pages/user/logout')}}"><span class="glyphicon glyphicon-user"></span> Log out</a></li> 
                         </ul>
+
                 <?php
                     }else{
                 ?>
