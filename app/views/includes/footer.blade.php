@@ -5,7 +5,7 @@
 					<h2>INSTITUTE OF COMPUTER SCIENCE</h2>
 					College of Arts and Sciences<br>
 					University of the Philippines Los Ba&ntilde;os<br>
-					All Rights Reserved 2014					
+					All Rights Reserved 2014		
 				</div>
 				<div class="col-md-4 footer-detail">
 					<h4>CONTACT INFORMATION</h4>

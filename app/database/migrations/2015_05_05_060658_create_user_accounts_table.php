@@ -28,6 +28,9 @@ class CreateUserAccountsTable extends Migration {
             $table->string('employeeNumber')->nullable()->unique();
             $table->string('room', 5)->nullable();
             $table->string('academicPosition', 30)->nullable();
+            $table->string('consultation', 100)->nullable();
+            $table->string('guide', 1000)->nullable();
+            $table->string('bio', 1000)->nullable();
 		});
 	}
 

@@ -31,18 +31,16 @@
                 <?php
                    if (Session::has('username')){
                 ?>  
-                    <ul class="nav navbar-nav navbar-right">
-<!--                    <li><a href="{{ URL::to('pages/students/create') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
--->                 <li> <a href="{{URL::to('pages/group')}}"><?php echo $username; ?></a></li>
-                     <li><a href="{{URL::to('pages/student/logout')}}"><span class="glyphicon glyphicon-user"></span> Log out</a></li> 
-                     </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                        <li> <?php if($type=='student'){ ?><a href="{{URL::to('pages/group')}}"> <?php }else{ ?> <a href="{{URL::to('pages/profile')}}" >   <?php } ?> <?php echo $username; ?></a></li>
+                        <li><a href="{{URL::to('pages/user/logout')}}"><span class="glyphicon glyphicon-user"></span> Log out</a></li> 
+                        </ul>
                 <?php
                     }else{
                 ?>
                         <ul class="nav navbar-nav navbar-right">
-<!--                    <li><a href="{{ URL::to('pages/students/create') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        -->                 <li id="register-toggle"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                            <li id="login-toggle"><a href="{{URL::to('pages/student/login')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li id="register-toggle"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li id="login-toggle"><a href="{{URL::to('pages/user/login')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                         </ul>
                 <?php    }
 

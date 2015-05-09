@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-md-12" id="reg-form-body">
 
-                {{ Form::open(array('route' => 'student.login.post', 'name'=>'reg-form', 'id'=>'reg-form')) }}
+                {{ Form::open(array('route' => 'user.login.post', 'name'=>'reg-form', 'id'=>'reg-form')) }}
                     {{Form::macro('regInput', function($inputType, $idName, $placeholderValue, $labelValue)
                         {
                             echo Form::label($idName, $labelValue);

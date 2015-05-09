@@ -1,6 +1,5 @@
 @extends('layouts.default')
 @section('content')
-    
     {{ HTML::script('script/validate.js'); }}
 
     <div class="wrapping-panel" id="reg-form-panel">

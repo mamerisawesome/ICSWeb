@@ -1,18 +1,18 @@
-{{
-$username = Session::get('username');
-$id = Session::get('id');
-$firstname = Session::get('firstName');
-$middlename = Session::get('middleName');
-$lastname = Session::get('lastName');
-$birthdate = Session::get('birthdate');
-$sex = Session::get('sex');
-$email = Session::get('email');
-$password = Session::get('password');
-$studentNumber = Session::get('studentNumber');
- $accessCode = Session::get('accessCode');
- //start of the session
- }}
-
+<?php
+	$type = Session::get('type');
+	$username = Session::get('username');
+	$id = Session::get('id');
+	$firstname = Session::get('firstName');
+	$middlename = Session::get('middleName');
+	$lastname = Session::get('lastName');
+	$birthdate = Session::get('birthdate');
+	$sex = Session::get('sex');
+	$email = Session::get('email');
+	$password = Session::get('password');
+	$studentNumber = Session::get('studentNumber');
+	 $accessCode = Session::get('accessCode');
+	 //start of the session
+?>
 @extends('layouts.default')
 @section('content') 
 
@@ -30,8 +30,8 @@ $studentNumber = Session::get('studentNumber');
 				<div class="col-md-12" id="profile-panel">
 					<div id="user-info-wrapper">
 						<div class="col-md-12">
-							<h4 class="user-info" id="name"> <?php echo $lastname. ', '. $firstname .' '. $middlename; ?>  </h4>
-							<h5 class="user-info" id="stdNo"><?php echo $studentNumber ?></h5>
+							<h4 class="user-info" id="name"> <?php //echo $lastname. ', '. $firstname .' '. $middlename; ?>  </h4>
+							<h5 class="user-info" id="stdNo"><?php //echo $studentNumber ?></h5>
 						</div>
 					</div>
 				</div>

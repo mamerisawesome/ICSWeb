@@ -1,3 +1,18 @@
+<?php
+	$type = Session::get('type');
+	$username = Session::get('username');
+	$id = Session::get('id');
+	$firstname = Session::get('firstName');
+	$middlename = Session::get('middleName');
+	$lastname = Session::get('lastName');
+	$birthdate = Session::get('birthdate');
+	$sex = Session::get('sex');
+	$email = Session::get('email');
+	$password = Session::get('password');
+	$studentNumber = Session::get('studentNumber');
+	 $accessCode = Session::get('accessCode');
+	 //start of the session
+?>
 @extends('layouts.default')
 @section('content')
 
@@ -10,8 +25,8 @@
 			<div class="col-md-4" id="profile-upper-left-panel">
 				<img src="{{URL::to('res/faces/faculty/bulalacao.jpg')}}" id="profile-pic" alt="Profile Picture">
 				<div id="profile-basic-info">
-					<h4 class="prof-info" id="prof-name">LASTNAME, FIRSTNAME, MI.</h4>
-					<h5 class="prof-info" id="prof-desig">DESIGNATION</h5>
+					<h4 class="prof-info" id="prof-name"><?php //echo $lastname. ', '. $firstname .' '. $middlename; ?></h4>
+					<h5 class="prof-info" id="prof-desig"><?php //echo $academicPosition; ?></h5>
 					<h5 class="prof-info" id="prof-bio/info">BIO/INFO</h5>
 				</div>
 			</div>

@@ -22,9 +22,8 @@ Route::get('pages/library',array('uses' => 'GeneralController@showLibrary', 'as'
 Route::get('pages/curriculum',array('uses' => 'GeneralController@showCurriculum', 'as' => 'page.curriculum'));
 Route::get('pages/directory',array('uses' => 'GeneralController@showDirectory', 'as' => 'page.directory'));
 Route::get('pages/division',array('uses' => 'GeneralController@showDivision', 'as' => 'page.division'));
-Route::get('pages/group',array('uses' => 'GeneralController@showGroup', 'as' => 'page.group'));
 Route::get('pages/home',array('uses' => 'GeneralController@showHome', 'as' => 'page.home'));
-Route::get('pages/profile',array('uses' => 'GeneralController@showProfile', 'as' => 'page.profile'));
+
 Route::get('pages/publication',array('uses' => 'GeneralController@showPublication', 'as' => 'page.publication'));
 Route::get('pages/register',array('uses' => 'GeneralController@showRegisterForm', 'as' => 'page.reg_form'));
 
@@ -34,17 +33,17 @@ Route::get('home', function(){
 	return "<h1>This is my home</h1>";
 });
 
-/* Routes for Sign Up */
-Route::resource('pages/user', 'UserController');
-Route::get('pages/create/student', function(){
-    return View::make('pages.user.student');
-});
-Route::get('pages/create/faculty', function(){
-    return View::make('pages.user.faculty');
-});
+Route::resource('pages/students','StudentsController');
+Route::resource('faculty','FacultyController');
 
-/* Routes for Log In */
-Route::get('pages/student/login', array('as' => 'student.login', 'uses' => 'SessionsController@getLogin'));
-Route::post('pages/student/login', array('as' => 'student.login.post', 'uses' => 'SessionsController@postLogin'));
-Route::get('pages/student/logout', array('as' => 'student.logout', 'uses' => 'SessionsController@destroy'));
+//this is for login
+Route::get('pages/user/login', array('as' => 'user.login', 'uses' => 'SessionsController@getLogin'));
+Route::post('pages/user/login', array('as' => 'user.login.post', 'uses' => 'SessionsController@postLogin'));
+Route::get('pages/user/logout', array('as' => 'user.logout', 'uses' => 'SessionsController@destroy'));
+
 Route::resource('sessions', 'SessionsController');
+
+Route::group(array('prefix'=>'pages', 'before' => 'auth'), function(){
+	Route::get('profile',array('uses' => 'GeneralController@showProfile', 'as' => 'page.profile'));
+	Route::get('group',array('uses' => 'GeneralController@showGroup', 'as' => 'page.group'));
+});

@@ -17,39 +17,37 @@ class SessionsController extends \BaseController {
 
 	public function postLogin() {
 		$data = Input::all();
-		$validator = Validator::make($data, Student::$auth_rules);
+		$validator = Validator::make($data, User::$auth_rules);
 		if ($validator->fails())
 		{
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
 		if(Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))){
-			$id = Auth::user()->id;
-			$username = Auth::user()->username;
-			$firstName = Auth::user()->firstName;
-			$middleName = Auth::user()->middleName;
-			$lastName = Auth::user()->lastName;
-			$birthdate = Auth::user()->birthdate;
-			$sex = Auth::user()->sex;
-			$email = Auth::user()->email;
-			$password = Auth::user()->password;
-			$studentNumber = Auth::user()->studentNumber;
-			$accessCode =Auth::user()->accessCode;
-			Session::put('username',$username);
-			Session::put('id',$id);
-			Session::put('firstName',$firstName);
-			Session::put('middleName',$middleName);
-			Session::put('lastName',$lastName);
-			Session::put('birthdate',$birthdate);
-			Session::put('sex',$sex);
-			Session::put('email',$email);
-			Session::put('password',$password);
-			Session::put('studentNumber',$studentNumber);
-			Session::put('accessCode',$accessCode);
-			return Redirect::intended('pages/group');
+			Session::put('type', Auth::user()->type);
+			Session::put('username',Auth::user()->username);
+			Session::put('id',Auth::user()->id);
+			Session::put('firstName',Auth::user()->firstName);
+			Session::put('middleName',Auth::user()->middleName);
+			Session::put('lastName',Auth::user()->lastName);
+			Session::put('birthdate',Auth::user()->birthdate);
+			Session::put('sex',Auth::user()->sex);
+			Session::put('email',Auth::user()->email);
+			Session::put('password',Auth::user()->password);
+
+			if(Auth::user()->type=='student'){
+				Session::put('studentNumber',Auth::user()->studentNumber);
+				return Redirect::intended('pages/group');
+			}else{
+				Session::put('employeeNumber',Auth::user()->employeeNumber);
+				Session::put('room',Auth::user()->room);
+				Session::put('academic',Auth::user()->academicPosition);
+				return Redirect::intended('pages/profile');
+			}
+			
 		}
 		
-		return Redirect::route('student.login');
+		return Redirect::route('user.login');
 	}
 
 
@@ -117,8 +115,7 @@ class SessionsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy()
-	{
+	public function destroy(){
 		Session::flush();
 		return View::make('pages/home');
 	}

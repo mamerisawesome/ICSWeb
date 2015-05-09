@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    
+    //alert("Why you no work?");
     var fName = mName = lName = sex = bdate = email = uName = pword = rpword = sNumber = aCode = false; 
 
     $("#submit").attr('disabled','disabled');
@@ -14,7 +14,7 @@ $(document).ready(function(){
         $("#welcome-user").html("WELCOME<br>" + temp + "!");
         if(fName && mName && lName && sex && bdate && email && uName && sNumber && aCode && pword && rpword) $("#submit").removeAttr('disabled');    
     });
-
+///*
     $("#middleName").keyup(function(){
         var temp = $(this).val();
         if(temp != '') mName = true;
@@ -149,5 +149,5 @@ $(document).ready(function(){
         if(!rpword) alert("rpword");
 
     });    
-   
+ //  */
 });
