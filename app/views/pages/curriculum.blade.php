@@ -8,7 +8,7 @@
 	<div class="container">
 	<div class="col-md-12">
 	<h2 class="title">BSCS Curriculum (2011)</h2>
-	<h2 class="title"> <?php echo $lastname; ?> </h2>
+	<h2 class="title"> <?php //echo $lastname; ?> </h2>
 		<div class="scrollable">
 			<svg width="1130" height="500" preserveAspectRatio="xMinYMin meet" class="content">
 				<defs>
