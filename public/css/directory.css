@@ -10,6 +10,8 @@
 	#directory-body {
 		text-align: center;
 		background-color: white;
+		background-image: url("../res/images/faculty-directory-bg.jpg");
+		background-size: 100% auto;
 	}
 
 	#directory-body h1 {
@@ -18,12 +20,18 @@
 
 	/* ENTRIES */
 	.person-content {
-		background-color: #ecf0f1;
+		background-color: white;
 		padding: 20px;
 		margin: 10px;
+		box-shadow: 0 0 5px silver;
 	}
 
 	.person-content img {
 		width: 70%;
 		border-radius: 100%;
+		transition: all 0.3s linear;
+	}
+
+	.person-content img:hover {
+		transform: scale(1.05);
 	}

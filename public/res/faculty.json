@@ -1,9 +1,316 @@
 {
-	'faculty':[
+	"faculty" : [
 		{
-			'name': 'Rommel Bulalacao',
-			'position':'Instructor I',
-			'url':'res/faces/faculty/bulalacao.jpg' 
+			"last" : "Aguila",
+			"first" : "Ivy Joy",
+			"middle" : "U",
+			"position" : "Instructor 1",
+			"room" : "C116",
+			"icon" : "'../res/faces/faculty/aguila.jpg'"
+		},
+		{
+			"last" : "Alambra",
+			"first" : "Allister Grant",
+			"middle" : "C",
+			"position" : "Instructor 1",
+			"room" : "C114",
+			"icon" : "'../res/faces/faculty/alambra.jpg'"
+		},
+		{
+			"last" : "Albacea",
+			"first" : "Eliezer",
+			"middle" : "A",
+			"position" : "Professor 12",
+			"room" : "C119",
+			"icon" : "'../res/faces/faculty/albacea.jpg'"
+		},
+		{
+			"last" : "Arnejo",
+			"first" : "Zenith",
+			"middle" : "O",
+			"position" : "Instructor 3",
+			"room" : "C112",
+			"icon" : "'../res/faces/faculty/arnejo.jpg'"
+		},
+		{
+			"last" : "Bautista",
+			"first" : "Kristine Elaine",
+			"middle" : "P",
+			"position" : "Instructor 1",
+			"room" : "C118",
+			"icon" : "'../res/faces/faculty/bautista.jpg'"
+		},
+		{
+			"last" : "Bawagan",
+			"first" : "Juan Miguel III",
+			"middle" : "J",
+			"position" : "Instructor 1",
+			"room" : "C114",
+			"icon" : "'../res/faces/faculty/bawagan.jpg'"
+		},
+		{
+			"last" : "Borja",
+			"first" : "Shiela Kathleen",
+			"middle" : "L",
+			"position" : "Instructor 3",
+			"room" : "C114",
+			"icon" : "'../res/faces/faculty/borja.jpg'"
+		},
+		{
+			"last" : "Bulalacao",
+			"first" : "Rommel",
+			"middle" : "C",
+			"position" : "Instructor 3",
+			"room" : "C118",
+			"icon" : "'../res/faces/faculty/bulalacao.jpg'"
+		},
+		{
+			"last" : "Castro",
+			"first" : "Fracisco Enrique",
+			"middle" : "G",
+			"position" : "Instructor 1",
+			"room" : "C112",
+			"icon" : "'../res/faces/faculty/castro.jpg'"
+		},
+		{
+			"last" : "Clarino",
+			"first" : "Maria Art",
+			"middle" : "D",
+			"position" : "Assistant Professor 1",
+			"room" : "C121",
+			"icon" : "'../res/faces/faculty/clarino.jpg'"
+		},
+		{
+			"last" : "Danila",
+			"first" : "Lailanie",
+			"middle" : "R",
+			"position" : "Instructor 1",
+			"room" : "C117",
+			"icon" : "'../res/faces/faculty/danila.jpg'"
+		},
+		{
+			"last" : "De Robles",
+			"first" : "Marie Yvette",
+			"middle" : "B",
+			"position" : "Instructor 3",
+			"room" : "C118",
+			"icon" : "'../res/faces/faculty/derobles.jpg'"
+		},
+		{
+			"last" : "Encinas",
+			"first" : "John Emmanuel",
+			"middle" : "I",
+			"position" : "Instructor 3",
+			"room" : "C112",
+			"icon" : "'../res/faces/faculty/encinas.jpg'"
+		},
+		{
+			"last" : "Garcera",
+			"first" : "Ailea Kathleen",
+			"middle" : "G",
+			"position" : "Instructor 1",
+			"room" : "C116",
+			"icon" : "'../res/faces/faculty/garcera.jpg'"
+		},
+		{
+			"last" : "Hermocilla",
+			"first" : "Joseph Anthony",
+			"middle" : "C",
+			"position" : "Assistant Professor 3",
+			"room" : "C120",
+			"icon" : "'../res/faces/faculty/hermocilla.jpg'"
+		},
+		{
+			"last" : "Jacildo",
+			"first" : "Arian",
+			"middle" : "J",
+			"position" : "Assistant Professor 4",
+			"room" : "C1278",
+			"icon" : "'../res/faces/faculty/jacildo.jpg'"
+		},
+		{
+			"last" : "Khan",
+			"first" : "Conception",
+			"middle" : "L",
+			"position" : "Assistant Professor 7",
+			"room" : "C127",
+			"icon" : "'../res/faces/faculty/khan.jpg'"
+		},
+		{
+			"last" : "Lactuan",
+			"first" : "Lei Kristoffer",
+			"middle" : "R",
+			"position" : "Instructor I",
+			"room" : "C112",
+			"icon" : "'../res/faces/faculty/lactuan.jpg'"
+		},
+		{
+			"last" : "Lapitan",
+			"first" : "Fermin Roberto",
+			"middle" : "G",
+			"position" : "Assistant Professor 1",
+			"room" : "120",
+			"icon" : "'../res/faces/faculty/lapitan.jpg'"
+		},
+		{
+			"last" : "Lo",
+			"first" : "Christian John",
+			"middle" : "M",
+			"position" : "Instructor 3",
+			"room" : "C114",
+			"icon" : "'../res/faces/faculty/lo.jpg'"
+		},
+		{
+			"last" : "Madrid",
+			"first" : "Van Randolf",
+			"middle" : "M",
+			"position" : "Professor I",
+			"room" : "C114",
+			"icon" : "'../res/faces/faculty/madrid.jpg'"
+		},
+		{
+			"last" : "Magno",
+			"first" : "Katrina Joy",
+			"middle" : "H",
+			"position" : "Instructor I",
+			"room" : "C112",
+			"icon" : "'../res/faces/faculty/magno.jpg'"
+		},
+		{
+			"last" : "Manalang",
+			"first" : "Martee Aaron",
+			"middle" : "L",
+			"position" : "Instructor I",
+			"room" : "C118",
+			"icon" : "'../res/faces/faculty/manalang.jpg'"
+		},
+		{
+			"last" : "Mariano",
+			"first" : "Vladimir",
+			"middle" : "Y",
+			"position" : "Associate Professor 1",
+			"room" : "C125",
+			"icon" : "'../res/faces/faculty/mariano.jpg'"
+		},
+		{
+			"last" : "Mercado",
+			"first" : "Danilo",
+			"middle" : "J",
+			"position" : "Assistant Professor 1",
+			"room" : "C115",
+			"icon" : "'../res/faces/faculty/mercado_danilo.jpg'"
+		},
+		{
+			"last" : "Mercado",
+			"first" : "Rizza",
+			"middle" : "DC",
+			"position" : "Assistant Professor 1",
+			"room" : "C118",
+			"icon" : "'../res/faces/faculty/mercado_rizza.jpg'"
+		},
+		{
+			"last" : "Monserrat",
+			"first" : "Toni-Jan Keith",
+			"middle" : "P",
+			"position" : "Assistant Professor 1",
+			"room" : "CXXX",
+			"icon" : "'../res/faces/faculty/dummy.png'"
+		},
+		{
+			"last" : "Obrero",
+			"first" : "Rick Jason",
+			"middle" : "G",
+			"position" : "Instructor 1",
+			"room" : "C112",
+			"icon" : "'../res/faces/faculty/obrero.jpg'"
+		},
+		{
+			"last" : "Pabico",
+			"first" : "Jaderick",
+			"middle" : "P",
+			"position" : "Associate Professor 1",
+			"room" : "C112",
+			"icon" : "'../res/faces/faculty/lactuan.jpg'"
+		},
+		{
+			"last" : "Paterno",
+			"first" : "Margarita Carmen",
+			"middle" : "S",
+			"position" : "Assistant Professor 1",
+			"room" : "C121",
+			"icon" : "'../res/faces/faculty/paterno.jpg'"
+		},
+		{
+			"last" : "Peralta",
+			"first" : "Caroline Natalie",
+			"middle" : "M",
+			"position" : "Instructor 3",
+			"room" : "C117",
+			"icon" : "'../res/faces/faculty/peralta.jpg'"
+		},
+		{
+			"last" : "Plaras",
+			"first" : "James Carlo",
+			"middle" : "E",
+			"position" : "Instructor 1",
+			"room" : "C118",
+			"icon" : "'../res/faces/faculty/plaras.jpg'"
+		},
+		{
+			"last" : "Ramirez",
+			"first" : "Joe Ramir",
+			"middle" : "A",
+			"position" : "Instructor 1",
+			"room" : "C114",
+			"icon" : "'../res/faces/faculty/ramirez.jpg'"
+		},
+		{
+			"last" : "Recario",
+			"first" : "Reginald Neil",
+			"middle" : "C",
+			"position" : "Assistant Professor 1",
+			"room" : "C116",
+			"icon" : "'../res/faces/faculty/recario.jpg'"
+		},
+		{
+			"last" : "Rivera",
+			"first" : "Mark Harold",
+			"middle" : "C",
+			"position" : "Assistant Professor 1",
+			"room" : "C114",
+			"icon" : "'../res/faces/faculty/rivera.jpg'"
+		},
+		{
+			"last" : "Samaniego",
+			"first" : "Jaime",
+			"middle" : "M",
+			"position" : "Assistant Professor 7",
+			"room" : "C115",
+			"icon" : "'../res/faces/faculty/samaniego.jpg'"
+		},
+		{
+			"last" : "Tandoc",
+			"first" : "Mark Froilan",
+			"middle" : "B",
+			"position" : "Instructor 1",
+			"room" : "C114",
+			"icon" : "'../res/faces/faculty/tandoc.jpg'"
+		},
+		{
+			"last" : "Tirazona",
+			"first" : "Ludwig Johann",
+			"middle" : "B",
+			"position" : "Instructor 1",
+			"room" : "C123",
+			"icon" : "'../res/faces/faculty/tirazona.jpg'"
+		},
+		{
+			"last" : "Vergara",
+			"first" : "Ginanina Renee",
+			"middle" : "V",
+			"position" : "Instructor 1",
+			"room" : "C116",
+			"icon" : "'../res/faces/faculty/vergara.jpg'"
 		}
 	]
 }

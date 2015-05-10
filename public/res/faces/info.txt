@@ -35,7 +35,7 @@ FACULTY
 	Reginald Neil C. Recario; Assistant Professor 1; 116
 	Mark Harold C. Rivera; Assistant Professor 1; 114
 	Jaime M. Samaniego; Assistant Professor 7; 115
-	Mark Froilan B. Tando; Instructor 1; 114
+	Mark Froilan B. Tandoc; Instructor 1; 114
 	Ludwig Johann B. Tirazona; Instructor1; 123
 	Ginanina Renee V. Vergara; Instructor 1; 116
 
