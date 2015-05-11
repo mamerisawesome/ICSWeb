@@ -4,7 +4,7 @@
     {{ HTML::style('css/library.css'); }}
     {{ HTML::script('script/library.js'); }}
 
-    <div id="shelf">
+    <div id="shelf"> 
 		<div id="shelf-overlay" class="container-fluid wrapping-panel">
 			<div id="shelf-panel1" class="container">
 				<div class="col-md-12" id="shelf-header">
@@ -76,7 +76,7 @@
 							<tr>
 								<?php for($m=0; $m<6; $m++) { ?>
 								<td>
-									<div class="book"><h5>SP</h5></div>								
+									<div class="book" id="sp-thesis"><h5><?= $m ?></h5></div>
 								</td>
 								<?php } ?>
 							</tr>
@@ -85,14 +85,14 @@
 							<tr>
 								<?php for($m=0; $m<6; $m++) { ?>
 								<td>
-									<div class="book"><h5>THESIS</h5></div>								
+									<div class="book" id="sp-thesis"><h5><?= $m ?></h5></div>
 								</td>
 								<?php } ?>
 							</tr>
 						<?php } ?>
 					</table>
 				</div>
-			</div>		
+			</div>
 		</div>
 	</div>
 
@@ -122,7 +122,13 @@
 
 	</div>
 	<div class="container" id="SPT-preview">
-		<img src={{URL::to('/res/images/sample-SPT.jpg')}}>
+		<?php 
+			$id = "<p id='id-container'></p>";
+			$d = 1;
+			$libro = DB::table('library')->where('id', $d)->first();			
+		?>
+		
+		<img src={{URL::to($libro->url)}}>
 		<div id="library-switch"><p>LIBRARY</p></div>
 	</div>
 

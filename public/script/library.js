@@ -58,6 +58,8 @@ function fetchSearchQuery(){
 
 $(document).ready(function(){
 
+	$("#library-switch").show("slow");
+
 	$("#search-SPT").click(function(){
 		if(validateSearchQuery()) {
 			$("#shelf-body").slideToggle("slow");
@@ -75,6 +77,9 @@ $(document).ready(function(){
 	});
 
 	$(".book").click(function(){
+		var id = $(this).text();
+//		alert(id);
+		$("#id-container").html(id);
 		$("#library-switch").show("slow");
 		$("#shelf").slideUp("slow");
 		$("#shelf-body").slideUp("slow");

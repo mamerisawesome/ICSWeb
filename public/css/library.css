@@ -9,7 +9,7 @@
 	#shelf-overlay {
 		background-color: rgba(0,0,0,0.7);
 	}
-	  
+	 
 	#shelf-panel1 {
 		color: white;
 	}
@@ -42,7 +42,7 @@
 		text-align: center;
 	}
 
-	#shelf-search-panel h3, h5 {
+	#shelf-search-panel h3,h5 {
 		color: white;
 	}
 
@@ -58,9 +58,11 @@
 
 
 	#search button {
-		background-color: black;
+		height: 50px;
+		width: 50px;
+		background-color: #3498db;
 		border: none;
-		padding: 15px;
+		line-height: 50px;
 		border-radius: 100%;
 		font-size: 15pt;
 	}
@@ -116,8 +118,8 @@
 	#SPT-preview {
 		margin-top: 25px;
 		margin-bottom: 25px;
-		display: none;
 		padding: 0;
+		display: none;
 		box-shadow: 0px 0px 5px #7f8c8d;
 	}
 
@@ -178,8 +180,8 @@
 		z-index: 5000;
 		text-align: center;
 		position: fixed;
-		right: 25;
-		bottom: 25;
+		right: 25px;
+		bottom: 25px;
 		color: white;
 		cursor: hand;
 		box-shadow: 0 0 5px #2c3e50;
