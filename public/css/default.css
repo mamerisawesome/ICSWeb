@@ -109,50 +109,45 @@ h1, h2, h3, h4, h5, h6 {
 
 /*LOGIN PANEL */
 
-	#login-field {
-		display: none;
-		width: auto;
-		height: auto;
-		position: absolute;
-		top: 50px;
-		right: 50px;
-		z-index: 1000;
-		padding: 10px;
-		padding-right: 25px;
-		padding-left: 25px;
+	#login-form-wrapper {
+		background: url("../res/images/uplb-blur.jpg");
+		background-size: 100%;
+	}
+
+	#login-form-panel {
+		width: 50%;
+		margin: auto;
+		margin-left: 25%;
+		margin-top: 5%;
 		background-color: white;
-		border-top: solid 5px #34495e;
-		border-bottom: solid 5px #34495e;
+		text-align: center;
 		box-shadow: 1px 1px 5px silver;
 	}
 
-	#login-field button {
-		margin-top: 10px;
-		color: white;
-		background-color: #2980b9;
+	#login-form-panel h2 {
+		color: #2c3e50;
 	}
 
-	#login-field input {
-		margin-top: 5px;
-		color: #34495e;
+	#login-icon{
 	}
 
-	#login-field-content {
-		width: auto;
-		float: right;
-		margin-top: 8px;
+	#login-icon img{
+		width: 30%;
+		border-radius: 100%;
+		margin-top: -15%;
+		border: solid 10px white;
 	}
 
-	.log-in-input-field {
-		border: none;
-		border-bottom: solid 1px silver;
-		text-align: center;
+	#login-form-body {
+		width: 90%;
+		margin-left: 5%;
 	}
 
-	#forget-text {
-		font-size: 8pt;
+	#login-submit {
+		padding: 10px;
+		margin: 20px 0 20px 0; 
+		width: 100%;
 	}
-
 
 /* FOOTER */
 

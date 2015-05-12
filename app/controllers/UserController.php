@@ -77,7 +77,7 @@ class UserController extends \BaseController {
         }
 
         $this->user->save();
-        return Redirect::to('pages/user');
+        return Redirect::to('signup_success');
 
 
 	}

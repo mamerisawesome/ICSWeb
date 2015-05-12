@@ -4,7 +4,7 @@
     {{ HTML::style('css/library.css'); }}
     {{ HTML::script('script/library.js'); }}
 
-    <div id="shelf">
+    <div id="shelf"> 
 		<div id="shelf-overlay" class="container-fluid wrapping-panel">
 			<div id="shelf-panel1" class="container">
 				<div class="col-md-12" id="shelf-header">
@@ -25,24 +25,36 @@
 						excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
 						officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
 						rerum facilis est et expedita distinctio.
-
+						<br><br>
 					</div>
 					<div class="col-md-5" id="shelf-search-panel">
 						<h3>What are you looking for?</h3>
-						Author<br>
-						<input class="search-text-input" type="text" name="author" placeholder="author"><br>
-						Title<br>
-						<input class="search-text-input" type="text" name="title" placeholder="book title"><br>
-						Year of Publication<br>
-						<input class="search-text-input" type="number"  min="1990" max="2015" placeholder="year"><br>
-						Type<br>
-						<div class="col-md-12">
-							<div class="col-md-6 type-button" id="thesis-button">UNDERGRADUATE<br>THESIS</div>
-							<div class="col-md-6 type-button" id="sp-button">SPECIAL<br>PROBLEM</div>
-						</div>
-						<button class="btn btn-default" name="submit-search-form" id="search-SPT">Search</button>
-						<button class="btn btn-default" name="submit-clear-form" id="search-SPT">Clear</button>
-					</div>
+<!--						<form name="spt-form">
+-->							<div class="form-group">
+								Author
+								<input class="form-control" type="text" name="spt-author" id="spt-author" placeholder="Last Name only">
+								<p id="spt-author-note" class="spt-search-note"></p>
+							</div>
+
+							<div class="form-group">
+								Title
+								<input class="form-control" type="text" name="spt-title" id="spt-title" placeholder="ICS SP or Thesis Title">
+								<p id="spt-title-note" class="spt-search-note"></p>
+							</div>
+							<div class="form-group">
+								Date
+								<input class="form-control" type="number" min="2000" max="2014" name="spt-year" id="spt-year">
+								<p id="spt-year-note" class="spt-search-note"></p>
+							</div>
+							<div class="col-md-12">
+								<div id="search">
+									<button name="submit-search-form" id="search-SPT">									
+ 										<span class="fa fa-search"></span>
+									</button>
+								</div>							
+							</div>
+<!--						</form>
+-->					</div>
 				</div>
 			</div>
 
@@ -60,27 +72,32 @@
 				<div><img id="shelf-image" src="{{URL::to('res/images/shelf.png')}}"></div>
 				<div class="col-md-12" id="book-list">
 					<table id="book-list-table">
-						<?php for($l=0; $l<2; $l++) { ?>
+						<?php 							
+							for($l=0; $l<14; $l++) { 
+						?>
 							<tr>
-								<?php for($m=0; $m<6; $m++) { ?>
-								<td>
-									<div class="book"><h5>SP</h5></div>								
-								</td>
-								<?php } ?>
+								<?php								
+									for($m=($l*5)+1; $m<=($l+1)*5; $m++) {
+								?>
+									<td>
+										<?php								       
+									        $libro = DB::table('library')->where('id', $m)->first();
+									    ?>
+										<div class="book" id="sp-thesis">
+											<img src="{{URL::to($libro->url)}}">
+											<br>
+											<!-- Method for DISPLAYING $libro 's title and author field-->
+											<!--{{ $libro->title, ' by ', $libro->author }}-->
+										</div>
+									</td>
+								<?php 
+									}								
+								 ?>
 							</tr>
-						<?php } ?>
-						<?php for($l=0; $l<1; $l++) { ?>
-							<tr>
-								<?php for($m=0; $m<6; $m++) { ?>
-								<td>
-									<div class="book"><h5>THESIS</h5></div>								
-								</td>
-								<?php } ?>
-							</tr>
-						<?php } ?>
+						<?php } ?>						
 					</table>
 				</div>
-			</div>		
+			</div>
 		</div>
 	</div>
 
@@ -89,6 +106,11 @@
 			<div class="col-md-12" id="search-result">
 				<div class="container">
 					<h4>SEARCH RESULTS</h4>
+					<div id="search-queries">
+						<p id="search-query-author">Author:</p>
+						<p id="search-query-title">Title:</p>
+						<p id="search-query-year">Year Published:</p>
+					</div>
 					<hr>
 					<div id="results-field">
 						<p>NO RESULTS FOUND</p>
@@ -105,7 +127,7 @@
 
 	</div>
 	<div class="container" id="SPT-preview">
-		<img src={{URL::to('/res/images/sample-SPT.jpg')}}>
+		<div id="preview-wrapper"></div>
 		<div id="library-switch"><p>LIBRARY</p></div>
 	</div>
 
