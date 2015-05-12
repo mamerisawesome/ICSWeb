@@ -1,7 +1,12 @@
 var inputAuthor;
 var inputTitle;
 var inputYear;
+var c = true;
 
+function checker(c){
+    if(c==true) return false;
+    else if(c==false) return true;
+}
 
 function getSearchQuery(){
 	inputAuthor = $("#spt-author").val();
@@ -77,9 +82,13 @@ $(document).ready(function(){
 	});
 
 	$(".book").click(function(){
-		var id = $(this).text();
+		var content = $(this).html();
+//		alert(content);
+		$("#preview-wrapper").html(content);
+//		$("#preview-wrapper").html("dada");
+
 //		alert(id);
-		$("#id-container").html(id);
+//		$("#id-container").html(id);
 		$("#library-switch").show("slow");
 		$("#shelf").slideUp("slow");
 		$("#shelf-body").slideUp("slow");
