@@ -153,7 +153,7 @@
                             <a href="">read more</a>
                         </div>
                     </div>
-                    <a href="">Read More Articles</a>
+                    <a href="/pages/publication">Read More Articles</a>
                 </div>
 
             </div>
