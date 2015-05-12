@@ -72,24 +72,29 @@
 				<div><img id="shelf-image" src="{{URL::to('res/images/shelf.png')}}"></div>
 				<div class="col-md-12" id="book-list">
 					<table id="book-list-table">
-						<?php for($l=0; $l<2; $l++) { ?>
+						<?php 							
+							for($l=0; $l<14; $l++) { 
+						?>
 							<tr>
-								<?php for($m=0; $m<6; $m++) { ?>
-								<td>
-									<div class="book" id="sp-thesis"><h5><?= $m ?></h5></div>
-								</td>
-								<?php } ?>
+								<?php								
+									for($m=($l*5)+1; $m<=($l+1)*5; $m++) {
+								?>
+									<td>
+										<?php								       
+									        $libro = DB::table('library')->where('id', $m)->first();
+									    ?>
+										<div class="book" id="sp-thesis">
+											<img src="{{URL::to($libro->url)}}">
+											<br>
+											<!-- Method for DISPLAYING $libro 's title and author field-->
+											<!--{{ $libro->title, ' by ', $libro->author }}-->
+										</div>
+									</td>
+								<?php 
+									}								
+								 ?>
 							</tr>
-						<?php } ?>
-						<?php for($l=0; $l<1; $l++) { ?>
-							<tr>
-								<?php for($m=0; $m<6; $m++) { ?>
-								<td>
-									<div class="book" id="sp-thesis"><h5><?= $m ?></h5></div>
-								</td>
-								<?php } ?>
-							</tr>
-						<?php } ?>
+						<?php } ?>						
 					</table>
 				</div>
 			</div>
@@ -122,13 +127,7 @@
 
 	</div>
 	<div class="container" id="SPT-preview">
-		<?php 
-			$id = "<p id='id-container'></p>";
-			$d = 1;
-			$libro = DB::table('library')->where('id', $d)->first();			
-		?>
-		
-		<img src={{URL::to($libro->url)}}>
+		<div id="preview-wrapper"></div>
 		<div id="library-switch"><p>LIBRARY</p></div>
 	</div>
 
