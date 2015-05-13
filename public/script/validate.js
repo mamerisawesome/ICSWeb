@@ -136,7 +136,11 @@ $(document).ready(function(){
 
 	$("#sex").keyup(function(){
 		var temp = $(this).val();
+<<<<<<< HEAD
 		if(temp == "male" || temp == "female") sex = true;
+=======
+        if(temp == "male" || temp == "female") sex = true;
+>>>>>>> 69577018d3cae8a008d8a59d86351ef948ddb6f7
 		else{
 			$("#submit").attr('disabled','disabled');
 			sex = false;  
@@ -181,8 +185,22 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');
 			sNumber = false;     
 		} 
+<<<<<<< HEAD
 		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
+=======
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');
+        if(!fName) alert("fName");
+        if(!mName) alert("mName");
+        if(!lName) alert("lName");
+        if(!sex) alert("sex");
+        if(!bdate) alert("bdate");
+        if(!email) alert("email");
+        if(!uName) alert("uName");
+        if(!pword) alert("pword");
+        if(!rpword) alert("rpword");
+>>>>>>> 69577018d3cae8a008d8a59d86351ef948ddb6f7
 	});
+
 
 	/*$("#accessCode").keyup(function(){
 		var temp = $(this).val();

@@ -1,0 +1,143 @@
+{
+	"courses" : [
+		{
+			"number" : "CMSC 1",
+			"title" : "Introduction to Personal Computing",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 2",
+			"title" : "Introduction to the Internet",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},		{
+			"number" : "CMSC 11",
+			"title" : "Introduction to Computer Science",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 21",
+			"title" : "Fundamentals of Programming",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 22",
+			"title" : "Object-Oriented Programming",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 55",
+			"title" : "Discrete Mathematical Structures in Computer Science",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 56",
+			"title" : "Discrete Mathematical Structures in Computer Science I",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 57",
+			"title" : "Discrete Mathematical Structures in Computer Science II",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 100",
+			"title" : "Web Programming",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 123",
+			"title" : "Data Structures",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 124",
+			"title" : "Design and Implementation of Programming Languages",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 125",
+			"title" : "Operating Systems",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 127",
+			"title" : "File Processing and Database Systems",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 128",
+			"title" : "Introduction to Software Engineering",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 129",
+			"title" : "Principles of Compiler Design",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 130",
+			"title" : "Logic Design and Digital Computer Circuits",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 131",
+			"title" : "Introduction to Computer Organization and Machine-Level Programming",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 132",
+			"title" : "Computer Architecture",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 137",
+			"title" : "Data Communications and Networking",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 140",
+			"title" : "Advance Programming",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 141",
+			"title" : "Automata and Language Theory",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 142",
+			"title" : "Design and Analysis of Algorithms",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 150",
+			"title" : "Numerical and Symbolic Computation",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 161",
+			"title" : "Interactive Computer Graphics",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 170",
+			"title" : "Introduction to Artificial Intelligence",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 172",
+			"title" : "Robot Modeling",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 180",
+			"title" : "Introduction to Parallel Computing",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		},
+		{
+			"number" : "CMSC 191",
+			"title" : "Special Topic",
+			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+		}
+	]
+}

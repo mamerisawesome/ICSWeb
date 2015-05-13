@@ -1,7 +1,24 @@
-.title {
-	text-align: center;
-    color: #34495e;
+/* HEADER */
+
+#curriculum-header-wrapper{
+    background-image: url("../res/images/physci.jpg");
+    background-size: 100% 300%;
+    background-position: right bottom;
 }
+
+#curriculum-header{
+    text-align: center;
+}
+
+#curriculum-header h1{
+    color: white;
+}
+
+#curriculum-header p{
+    color: #ecf0f1;
+}
+
+/* SVG */
 
 .scrollable{
 	display: inline-block;
@@ -19,47 +36,19 @@
 }
 
 #svg-curriculum{
-    background-color: rgba(255,255,255,0.8);
-    margin: 10px 0 10px 0; 
-}
-
-
-#course-desc{
     background-color: white;
-    padding-bottom: -10px;
 }
 
-#course{
-    margin: 20px;
-    background-color: white;
-    border-top: 5px solid #2ecc71;
+.scrollable::-webkit-scrollbar { 
+    display: none; 
 }
 
-#course-desc p, #course-desc h3, #course-desc h5{
+/* COURSE TITLES */
+
+#courses-body{
     text-align: center;
 }
 
-#
-
-/*
-a.masterTooltip div {
-    background-color: red;
-    display: none;
+#curriculum-text p{
+    text-align: justify;
 }
-
-a.masterTooltip:hover div{
-    padding: 5px 20px 5px 5px;
-    display: block;
-    z-index: 100;
-    background-color: red;
-    left: 0px;
-    margin: 10px;
-    width: 250px;
-    position: absolute;
-    top: 10px;
-}*/
-
-/*
-What to do: add about below svg
-if cannot add tooltip or enlarge shape
-*/
