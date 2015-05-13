@@ -51,6 +51,7 @@ Route::get('pages/create/faculty', function(){
 
 Route::resource('pages/students','StudentsController');
 Route::resource('faculty','FacultyController');
+Route::resource('pages/groups', 'GroupsController');
 
 //this is for login
 
@@ -59,7 +60,7 @@ Route::resource('sessions', 'SessionsController');
 
 Route::group(array('prefix'=>'pages', 'before' => 'auth'), function(){
 	Route::get('profile',array('uses' => 'GeneralController@showProfile', 'as' => 'page.profile'));
-	Route::get('group',array('uses' => 'GeneralController@showGroup', 'as' => 'page.group'));
+	Route::get('groups',array('uses' => 'GeneralController@showGroup', 'as' => 'page.groups.group'));
 });
 
 Route::post('pages/library/search', 'BookController');
