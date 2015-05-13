@@ -34,6 +34,7 @@
                     {{ Form::regInput('text','username','Enter your username','Username') }}
                     {{ Form::regInput('password','password','Make this password secure','Password') }}
                     {{ Form::regInput('password','retypePassword','Retype your password','Retype Password') }}
+                    <div id="error-message"></div>
                     {{ Form::regInput('text','employeeNumber','XXXXXXXXXX','Employee Number') }}
                     {{ Form::regInput('text','room','(i.e. C-100)','Room') }}
                     {{ Form::regInput('text','academicPosition','(i.e. Instructor 1)','Academic Position') }}
@@ -41,13 +42,13 @@
                     {{ Form::hidden('studentNumber', NULL, array('id'=>'studentNumber')) }}
                     {{ Form::hidden('type', 'faculty', array('id'=>'type')) }}
 
-                    {{ Form::submit('Submit', array('class'=>'btn btn-primary')) }}
+                    {{ Form::submit('Submit', array('id'=>'submit','class'=>'btn btn-primary')) }}
                 {{ Form::close() }}
                 </div>
 
             </div>
             <div class="col-md-4" id="welcome-text-panel">
-            <h2>WELCOME to ICS Portal!</h2>
+            <h2 id="welcome-text">WELCOME to ICS Portal!</h2>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi<br><br>
