@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var fName = mName = lName = sex = bdate = email = uName = pword = rpword = employeeNumber = room = academicPosition = sNumber = aCode = false;
 
 	$("#submit").attr('disabled','disabled');
-	alert("asd");
+	
 	//for faculty
 	$("#employeeNumber").keyup(function(){
 		var temp = $(this).val();
