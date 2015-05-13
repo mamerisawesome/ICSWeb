@@ -90,7 +90,8 @@ $(document).ready(function(){
 	});
 
 	$("#sex").keyup(function(){
-		if($('#sex').is(':checked')) sex = true;
+		var temp = $(this).val();
+        if(temp == "male" || temp == "female") sex = true;
 		else{
 			$("#submit").attr('disabled','disabled');
 			sex = false;  
@@ -135,8 +136,18 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');
 			sNumber = false;     
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');
+        if(!fName) alert("fName");
+        if(!mName) alert("mName");
+        if(!lName) alert("lName");
+        if(!sex) alert("sex");
+        if(!bdate) alert("bdate");
+        if(!email) alert("email");
+        if(!uName) alert("uName");
+        if(!pword) alert("pword");
+        if(!rpword) alert("rpword");
 	});
+
 
 	/*$("#accessCode").keyup(function(){
 		var temp = $(this).val();
