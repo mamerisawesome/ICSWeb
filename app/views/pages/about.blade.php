@@ -68,6 +68,14 @@
     		</div>
     	</div>
 
+        <div class="wrapping-panle" id="about-panel4">
+            <div id="timeline-content">
+                <div id="tic">
+                <img id="tic-icon" src="{{URL::to('res/images/sample2.png')}}">
+                </div>
+            </div>
+        </div>
+
     </div>
 
 @stop
