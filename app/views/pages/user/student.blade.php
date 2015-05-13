@@ -35,6 +35,7 @@
 					{{ Form::regInput('text','username','Enter your username','Username') }}
 					{{ Form::regInput('password','password','Make this password secure','Password') }}
 					{{ Form::regInput('password','retypePassword','Retype your password','Retype Password') }}
+					<div id="error-message"></div>
 					{{ Form::regInput('text','studentNumber','XXXX-XXXXX','Student Number') }}
 
 					{{ Form::hidden('employeeNumber', NULL, array('id'=>'employeeNumber')) }}
@@ -48,7 +49,7 @@
 
 			</div>
 			<div class="col-md-4" id="welcome-text-panel">
-			<h2>WELCOME to ICS Portal!</h2>
+			<h2 id="welcome-text">WELCOME to ICS Portal!</h2>
 			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi<br><br>
