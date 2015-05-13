@@ -63,3 +63,4 @@ Route::group(array('prefix'=>'pages', 'before' => 'auth'), function(){
 	Route::get('groups',array('uses' => 'GeneralController@showGroup', 'as' => 'page.groups.group'));
 });
 
+Route::post('pages/library/search', 'BookController');
