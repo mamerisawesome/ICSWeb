@@ -1,8 +1,53 @@
 $(document).ready(function(){
 	
-	var fName = mName = lName = sex = bdate = email = uName = pword = rpword = sNumber = aCode = false;
+	var fName = mName = lName = sex = bdate = email = uName = pword = rpword = employeeNumber = room = academicPosition = sNumber = aCode = false;
 
 	$("#submit").attr('disabled','disabled');
+	//for faculty
+	$("#employeeNumber").keyup(function(){
+		var temp = $(this).val();
+		if(temp != '')
+			if($.isNumeric(temp) && temp.length == 10) employeeNumber = true;
+			else{
+				$("#submit").attr('disabled','disabled');
+				employeeNumber = false;
+			} 
+		else{
+			$("#submit").attr('disabled','disabled');
+			employeeNumber = false;
+		} 	
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
+	});
+
+	$("#room").keyup(function(){
+		var temp = $(this).val();
+		var temp2;
+		if(temp != ''){
+			temp2 = temp.split("-");
+			if(!($.isNumeric(temp2[0])) && $.isNumeric(temp2[1]) && temp2[1].length == 3 && temp2[0].length == 1) room = true;
+			else{
+				$("#submit").attr('disabled','disabled');
+				room = false;
+			}
+		}
+		else{
+			$("#submit").attr('disabled','disabled');
+			room = false;
+		}
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
+	});
+
+	$("#academicPosition").keyup(function(){
+		var temp = $(this).val();
+		if(temp != '') academicPosition = true;
+		
+		else{
+			$("#submit").attr('disabled','disabled');
+			academicPosition = false;
+		}
+
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
+	});
 
 	$("#firstName").keyup(function(){
 		var temp = $(this).val();
@@ -12,8 +57,8 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');
 			fName = false;
 		}
-		
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
 	});
 
 	$("#middleName").keyup(function(){
@@ -23,7 +68,7 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');
 			mName = false;
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
 	});
 
 	$("#lastName").keyup(function(){
@@ -33,7 +78,7 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');   
 			lName = false;  
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
 	});
 	
 	$("#password").keyup(function(){
@@ -55,7 +100,7 @@ $(document).ready(function(){
 				rpword = true;   
 			}     
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
 	});
 
 	$("#retypePassword").keyup(function(){
@@ -76,7 +121,7 @@ $(document).ready(function(){
 			   pword = true; 
 			 } 
 		}
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
 	});
 
 	$("#birthdate").keyup(function(){
@@ -86,7 +131,7 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');   
 			bdate = false;  
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
 	});
 
 	$("#sex").keyup(function(){
@@ -96,7 +141,7 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');
 			sex = false;  
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
 	});
 
 	$("#email").keyup(function(){
@@ -106,7 +151,7 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');  
 			email = false;
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
 	});
 
 	$("#username").keyup(function(){
@@ -116,7 +161,7 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');   
 			uName = false;  
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
 	});
 
 	$("#studentNumber").keyup(function(){
@@ -136,7 +181,7 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');
 			sNumber = false;     
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
 	});
 
 	/*$("#accessCode").keyup(function(){
@@ -157,7 +202,9 @@ $(document).ready(function(){
 		if(!uName) alert("uName");
 		if(!pword) alert("pword");
 		if(!rpword) alert("rpword");
-
+		if(!room) alert("room");
+		if(!academicPosition) alert("academicPosition");
+		if(!employeeNumber) alert("employeeNumber");
 
 	});*/    
    
