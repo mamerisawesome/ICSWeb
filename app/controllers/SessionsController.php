@@ -37,7 +37,7 @@ class SessionsController extends \BaseController {
 
 			if(Auth::user()->type=='student'){
 				Session::put('studentNumber',Auth::user()->studentNumber);
-				return Redirect::intended('pages/groups/group');
+				return Redirect::intended('pages/group');
 			}else{
 				Session::put('employeeNumber',Auth::user()->employeeNumber);
 				Session::put('room',Auth::user()->room);
@@ -114,7 +114,7 @@ class SessionsController extends \BaseController {
 	 */
 	public function destroy(){
 		Session::flush();
-		return View::make('pages/home');
+		return Redirect::to('/');
 	}
 
 
