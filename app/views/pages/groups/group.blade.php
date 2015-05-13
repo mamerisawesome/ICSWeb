@@ -20,14 +20,14 @@
     {{ HTML::script('script/group.js'); }}
 
     <script>
-        x = "{{ $data->courseTitle }}";
+        x = "{{ 'hello'//$data->courseTitle }}";
 
         /*$(".user-group").click(function(){
             //If kaya ng by whole na i-load
             $("#group-feed").load("/script/sample.html")
 
             //$("#welcome-note").load("/script/sample.html")
-            $('#welcome-note').html('{{ $data->courseTitle }}');
+            $('#welcome-note').html('');
             //$(".feed-text").load("/script/sample2.txt")
             $('.feed-text').html('This is some text that I just typed right now!');
         });
