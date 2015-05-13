@@ -90,7 +90,8 @@ $(document).ready(function(){
 	});
 
 	$("#sex").keyup(function(){
-		if($('#sex').is(':checked')) sex = true;
+		var temp = $(this).val();
+		if(temp == "male" || temp == "female") sex = true;
 		else{
 			$("#submit").attr('disabled','disabled');
 			sex = false;  

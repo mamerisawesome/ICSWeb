@@ -26,7 +26,7 @@ Route::get('pages/home',array('uses' => 'GeneralController@showHome', 'as' => 'p
 
 Route::get('pages/publication',array('uses' => 'GeneralController@showPublication', 'as' => 'page.publication'));
 Route::get('pages/register',array('uses' => 'GeneralController@showRegisterForm', 'as' => 'page.reg_form'));
-Route::get('signup_success',function(){
+Route::post('signup_success',function(){
     return View::make('pages.user.success');
 });
 
