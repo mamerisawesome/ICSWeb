@@ -71,7 +71,8 @@
         <div class="wrapping-panle" id="about-panel4">
             <div id="timeline-content">
                 <div id="tic">
-                <img id="tic-icon" src="{{URL::to('res/images/sample2.png')}}">
+                    <div id="tic-text">THANK YOU FOR VISITING :)</div>
+                    <img id="tic-icon" src="{{URL::to('res/images/sample2.png')}}">
                 </div>
             </div>
         </div>

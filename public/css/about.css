@@ -91,3 +91,14 @@
 	#about-panel4::-webkit-scrollbar {
 		display: none;
 	}
+
+	#tic-text {
+		color: white;
+		width: 400px;
+		text-align: center;
+		padding: 5px;
+		border-radius: 200px;
+		font-size: 20pt;
+		background-color: black;
+		margin-bottom: 20px;
+	}
