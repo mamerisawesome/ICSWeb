@@ -6,13 +6,14 @@ $(document).ready(function(){
 
 	$("#firstName").keyup(function(){
 		var temp = $(this).val();
+		$("#welcome-text").html("WELCOME<br>" + temp + "!");
 		if(temp != '') fName = true;
 		else{
 			$("#submit").attr('disabled','disabled');
 			fName = false;
 		}
-		$("#welcome-user").html("WELCOME<br>" + temp + "!");
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword) $("#submit").removeAttr('disabled');    
+		
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
 	});
 
 	$("#middleName").keyup(function(){
@@ -22,7 +23,7 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');
 			mName = false;
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
 	});
 
 	$("#lastName").keyup(function(){
@@ -32,7 +33,7 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');   
 			lName = false;  
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
 	});
 	
 	$("#password").keyup(function(){
@@ -44,7 +45,7 @@ $(document).ready(function(){
 		
 		 if(password != retype){
 			pword = false;
-			$("#error-message").html("Password do not match!");
+			$("#error-message").html("Password do not match!<br>");
 			$("#submit").attr('disabled','disabled');  
 		}
 		else{
@@ -54,7 +55,7 @@ $(document).ready(function(){
 				rpword = true;   
 			}     
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
 	});
 
 	$("#retypePassword").keyup(function(){
@@ -75,7 +76,7 @@ $(document).ready(function(){
 			   pword = true; 
 			 } 
 		}
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
 	});
 
 	$("#birthdate").keyup(function(){
@@ -85,7 +86,7 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');   
 			bdate = false;  
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
 	});
 
 	$("#sex").keyup(function(){
@@ -94,7 +95,7 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');
 			sex = false;  
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
 	});
 
 	$("#email").keyup(function(){
@@ -104,7 +105,7 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');  
 			email = false;
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
 	});
 
 	$("#username").keyup(function(){
@@ -114,20 +115,30 @@ $(document).ready(function(){
 			$("#submit").attr('disabled','disabled');   
 			uName = false;  
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
 	});
 
-	/*$("#studentNumber").keyup(function(){
+	$("#studentNumber").keyup(function(){
 		var temp = $(this).val();
-		if(temp != '') sNumber = true; 
+		var temp2;
+		if(temp != ''){
+			temp2 = temp.split("-");
+			if($.isNumeric(temp2[0]) && temp2[0].length == 4 && $.isNumeric(temp2[1]) && temp2[1].length == 5){
+				sNumber = true;	
+			}
+			else{
+				$("#submit").attr('disabled','disabled');
+				sNumber = false;	
+			}				
+		}  
 		else{
 			$("#submit").attr('disabled','disabled');
 			sNumber = false;     
 		} 
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword) $("#submit").removeAttr('disabled');    
+		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && sNumber) $("#submit").removeAttr('disabled');    
 	});
 
-	$("#accessCode").keyup(function(){
+	/*$("#accessCode").keyup(function(){
 		var temp = $(this).val();
 		if(temp != '') aCode = true; 
 		else{
