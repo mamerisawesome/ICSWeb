@@ -31,7 +31,7 @@
                    if (Session::has('username')){
                 ?>  
                         <ul class="nav navbar-nav navbar-right">
-                        <li> <?php if($type=='student'){ ?><a href="{{URL::to('pages/groups/group')}}"> <?php }else{ ?> <a href="{{URL::to('pages/profile')}}" >   <?php } ?> <?php echo $username; ?></a></li>
+                        <li> <?php if($type=='student'){ ?><a id="username" href="{{URL::to('pages/group')}}"><?php }else{ ?><a href="{{URL::to('pages/profile')}}" ><?php } ?><?php echo $username; ?></a></li>
                         <li><a href="{{URL::to('pages/users/logout')}}"><span class="glyphicon glyphicon-user"></span> Log out</a></li> 
                         </ul>
 

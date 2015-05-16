@@ -60,7 +60,9 @@ Route::resource('sessions', 'SessionsController');
 
 Route::group(array('prefix'=>'pages', 'before' => 'auth'), function(){
 	Route::get('profile',array('uses' => 'GeneralController@showProfile', 'as' => 'page.profile'));
-	Route::get('groups',array('uses' => 'GeneralController@showGroup', 'as' => 'page.groups.group'));
+	Route::get('group',array('uses' => 'GeneralController@showGroup', 'as' => 'page.group'));
+    Route::post('group/post',array('uses' => 'GroupsController@groupPost', 'as' => 'page.group.post'));
+    // Route::resource('group','GroupsController', array('only'=>array('groupPost','index'))/*,array('uses' => 'GroupsController@groupPost', 'as' => 'page.group.post')*/);
 });
 
 Route::post('pages/library/search', 'BookController');

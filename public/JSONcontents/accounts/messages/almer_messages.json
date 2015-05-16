@@ -1,1 +1,13 @@
-{"sentTo":null,"dateOfMessage":null,"messageTitle":null,"messageContent":null}
+[
+	{
+		"sentFrom":"Mir Ramirez",
+		"dateOfMessage":"February 26, 2014",
+		"messageTitle":"YOU PASSED",
+		"messageContent":"This message informs you that you passed a very hard subject"
+	},{
+		"sentFrom":"Kendall Jaen",
+		"dateOfMessage":"April 5, 2013",
+		"messageTitle":"CMSC 56",
+		"messageContent":"You are now registered under my class. Hello there."
+	}
+]
