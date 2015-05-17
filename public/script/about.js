@@ -18,68 +18,161 @@
 
  	}
 
-/* 	$("#about-panel4").scroll(function(){
- 		var pos = timelineSlider();
-
- 		if(pos >= 4100) {
-			$("#tl-entry-8 > .time-text").show("slow");
+ 	function animate1(status) {
+ 		if(status) {
+ 			$("#tl-entry-1").animate({
+ 				"margin-top":"100px",
+ 				"opacity":"1"
+ 			}, "slow");
  		}
-
- 		else if(pos >= 3850) {
-			$("#tl-entry-7 > .time-text").show("slow");
-			$("#tl-entry-8 > .time-text").hide("slow");
+ 		else {
+ 			$("#tl-entry-1").animate({
+ 				"margin-top":"25px"
+ 			}, "fast");
  		}
+ 	}
 
- 		else if(pos >= 3440) {
-			$("#tl-entry-6 > .time-text").show("slow");
-			$("#tl-entry-7 > .time-text").hide("slow");
-			$("#tl-entry-8 > .time-text").hide("slow");
- 		}
-
- 		else if(pos >= 2640) {
-			$("#tl-entry-5 > .time-text").show("slow");
-			$("#tl-entry-6 > .time-text").hide("slow");
-			$("#tl-entry-7 > .time-text").hide("slow");
-			$("#tl-entry-8 > .time-text").hide("slow");
- 		}
-
- 		else if(pos >= 1880) {
-			$("#tl-entry-4 > .time-text").show("slow");
-			$("#tl-entry-5 > .time-text").hide("slow");
-			$("#tl-entry-6 > .time-text").hide("slow");
-			$("#tl-entry-7 > .time-text").hide("slow");
-			$("#tl-entry-8 > .time-text").hide("slow");
- 		}
-
- 		else if(pos >= 1400) {
-			$("#tl-entry-3 > .time-text").show("slow");
-			$("#tl-entry-4 > .time-text").hide("slow");
-			$("#tl-entry-5 > .time-text").hide("slow");
-			$("#tl-entry-6 > .time-text").hide("slow");
-			$("#tl-entry-7 > .time-text").hide("slow");
-			$("#tl-entry-8 > .time-text").hide("slow");
- 		}
-
- 		else if(pos >= 560) {
-			$("#tl-entry-2 > .time-text").show("slow");
-			$("#tl-entry-3 > .time-text").hide("slow");
-			$("#tl-entry-4 > .time-text").hide("slow");
-			$("#tl-entry-5 > .time-text").hide("slow");
-			$("#tl-entry-6 > .time-text").hide("slow");
-			$("#tl-entry-7 > .time-text").hide("slow");
-			$("#tl-entry-8 > .time-text").hide("slow");
+ 	function animate2(status) {
+ 		if(status) {
+ 			$("#tl-entry-2").animate({
+ 				"margin-top":"100px",
+ 				"opacity":"1"
+ 			}, "slow"); 			
  		}
 
  		else {
-			$("#tl-entry-2 > .time-text").hide("slow");
-			$("#tl-entry-3 > .time-text").hide("slow");
-			$("#tl-entry-4 > .time-text").hide("slow");
-			$("#tl-entry-5 > .time-text").hide("slow");
-			$("#tl-entry-6 > .time-text").hide("slow");
-			$("#tl-entry-7 > .time-text").hide("slow");
-			$("#tl-entry-8 > .time-text").hide("slow");
+ 			$("#tl-entry-2").animate({
+ 				"margin-top":"25px"
+ 			}, "slow");
  		}
+ 	}
+
+ 	function animate3(status) {
+ 		if(status) {
+ 			$("#tl-entry-3").animate({
+ 				"margin-top":"100px",
+ 				"opacity":"1"
+ 			}, "slow"); 			
+ 		}
+
+ 		else {
+ 			$("#tl-entry-3").animate({
+ 				"margin-top":"25px"
+ 			}, "slow");
+ 		}
+ 	}
+
+ 	function animate4(status) {
+ 		if(status) {
+ 			$("#tl-entry-4").animate({
+ 				"margin-top":"100px",
+ 				"opacity":"1"
+ 			}, "slow"); 			
+ 		}
+
+ 		else {
+ 			$("#tl-entry-4").animate({
+ 				"margin-top":"25px"
+ 			}, "slow");
+ 		}
+ 	}
+
+ 	function animate5(status) {
+ 		if(status) {
+ 			$("#tl-entry-5").animate({
+ 				"margin-top":"100px",
+ 				"opacity":"1"
+ 			}, "slow"); 			
+ 		}
+
+ 		else {
+ 			$("#tl-entry-5").animate({
+ 				"margin-top":"25px"
+ 			}, "slow");
+ 		}
+ 	}
+
+ 	function animate6(status) {
+ 		if(status) {
+ 			$("#tl-entry-6").animate({
+ 				"margin-top":"100px",
+ 				"opacity":"1"
+ 			}, "slow"); 			
+ 		}
+
+ 		else {
+ 			$("#tl-entry-6").animate({
+ 				"margin-top":"25px"
+ 			}, "slow");
+ 		}
+ 	}
+
+ 	function animate7(status) {
+ 		if(status) {
+ 			$("#tl-entry-7").animate({
+ 				"margin-top":"100px",
+ 				"opacity":"1"
+ 			}, "slow"); 			
+ 		}
+
+ 		else {
+ 			$("#tl-entry-7").animate({
+ 				"margin-top":"25px"
+ 			}, "slow");
+ 		}
+ 	}
+
+ 	function animate8(status) {
+ 		if(status) {
+ 			$("#tl-entry-8").animate({
+ 				"margin-top":"100px",
+ 				"opacity":"1"
+ 			}, "slow"); 			
+ 		}
+
+ 		else {
+ 			$("#tl-entry-8").animate({
+ 				"margin-top":"25px"
+ 			}, "slow");
+ 		}
+ 	}
+
+ 	$("#about-panel4").scroll(function(){
+ 		var pos = timelineSlider();
+
+ 		if (pos >= 280 && pos < 1240) {
+ 			animate1(true);
+ 		}
+
+ 		if (pos >= 1240 && pos < 2080) {
+ 			animate2(true);
+ 		}
+
+ 		if (pos >= 2080 && pos < 2560) {
+ 			animate3(true);
+ 		}
+
+  		if (pos >= 2560 && pos < 3320) {
+ 			animate4(true);
+ 		}
+ 		
+  		if (pos >= 3320 && pos < 4120) {
+ 			animate5(true);
+ 		}
+
+  		if (pos >= 4120 && pos < 4560) {
+ 			animate6(true);
+ 		}
+
+  		if (pos >= 4560 && pos < 5000) {
+ 			animate7(true);
+ 		}
+
+  		if (pos >= 5000 && pos < 5440) {
+ 			animate8(true);
+ 		}
+
  	});
- */
+
 
  });
