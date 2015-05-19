@@ -1,3 +1,4 @@
+
 <?php
 
 class UserController extends \BaseController {
@@ -77,7 +78,7 @@ class UserController extends \BaseController {
         }
 
         $this->user->save();
-        return Redirect::to('user/signup_success');
+        return Redirect::to('signup_success');
 
 
 	}
