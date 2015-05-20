@@ -1,3 +1,4 @@
+
 @extends('layouts.default')
 @section('content')
  
@@ -28,9 +29,9 @@
 						<br><br>
 					</div>
 					<div class="col-md-5" id="shelf-search-panel">
+						{{ Form::open(array('route'=>'pages.library.search', 'name'=>'spt-form', 'id'=>'spt-form'))}}
 						<h3>What are you looking for?</h3>
-<!--						<form name="spt-form">
--->							<div class="form-group">
+						<div class="form-group">
 								Author
 								<input class="form-control" type="text" name="spt-author" id="spt-author" placeholder="Last Name only">
 								<p id="spt-author-note" class="spt-search-note"></p>
@@ -53,8 +54,8 @@
 									</button>
 								</div>							
 							</div>
-<!--						</form>
--->					</div>
+						{{ Form::close() }}	
+					</div>
 				</div>
 			</div>
 

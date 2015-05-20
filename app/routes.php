@@ -1,3 +1,4 @@
+
 <?php
 
 /*
@@ -26,7 +27,7 @@ Route::get('pages/home',array('uses' => 'GeneralController@showHome', 'as' => 'p
 
 Route::get('pages/publication',array('uses' => 'GeneralController@showPublication', 'as' => 'page.publication'));
 Route::get('pages/register',array('uses' => 'GeneralController@showRegisterForm', 'as' => 'page.reg_form'));
-Route::post('signup_success',function(){
+Route::get('signup_success',function(){
     return View::make('pages.user.success');
 });
 
@@ -65,4 +66,5 @@ Route::group(array('prefix'=>'pages', 'before' => 'auth'), function(){
     // Route::resource('group','GroupsController', array('only'=>array('groupPost','index'))/*,array('uses' => 'GroupsController@groupPost', 'as' => 'page.group.post')*/);
 });
 
-Route::post('pages/library/search', 'BookController');
+Route::post('pages/library/search', array('as' => 'pages.library.search', 'uses' => 'BookController@search'));
+
