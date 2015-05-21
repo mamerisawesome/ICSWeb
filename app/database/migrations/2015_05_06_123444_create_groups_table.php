@@ -19,7 +19,7 @@ class CreateGroupsTable extends Migration {
             $table->string('courseTitle',10);
             $table->string('section',50);
             $table->integer('classSize');
-            $table->string('accessCode',20);
+            $table->string('accessCode',10);
             // will accept url to a filename with file type JSON
             $table->string('classList',255);
             $table->string('posts',255);

@@ -41,7 +41,7 @@ class StudentTableSeeder extends Seeder{
                 "sentFrom"          => "Admin",
                 "dateOfMessage"     => "Forever 21, 2015",
                 "messageTitle"      => "Congratulations!",
-                "messageContent"    => "Congratulations user! You successfully created your first account."
+                "messageContent"    => "Congratulations user! You successfully created your ICS account."
             )];
 
             File::put('public/JSONcontents/accounts/groups/'.$name.'_groups.json', json_encode($user_groups));
@@ -292,7 +292,7 @@ class StudentTableSeeder extends Seeder{
                 'courseTitle'   =>'CMSC170',
                 'classSize'     =>'100',
                 'section'       =>'UV-2L',
-                'accessCode'    =>'MK1mk5n321KJkj',
+                'accessCode'    =>sha1('CMSC170UV-2L'),
                 'classList'     =>URL::to('public/JSONcontents/groups/classList/CMSC170_classList.json'),
                 'posts'         =>URL::to('public/JSONcontents/groups/posts/CMSC170_posts.json')
             ]
@@ -304,7 +304,7 @@ class StudentTableSeeder extends Seeder{
                 'courseTitle'   =>'CMSC56',
                 'classSize'     =>'100',
                 'section'       =>'X-2L',
-                'accessCode'    =>'MLI5Omk15mk1N1kN32k',
+                'accessCode'    =>sha1('CMSC56X-2L'),
                 'classList'     =>URL::to('public/JSONcontents/groups/classList/CMSC56_classList.json'),
                 'posts'         =>URL::to('public/JSONcontents/groups/posts/CMSC56_posts.json')
             ]

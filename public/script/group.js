@@ -1,5 +1,7 @@
 $(document).ready(function(){
-
+    var currentGroup = '';
+    var currentSubject = '';
+    var currentSection = '';
     $.ajax({
         url: "../JSONcontents/accounts/groups/"+$("#username").html()+"_groups.json",
         success: function(data){
@@ -7,6 +9,7 @@ $(document).ready(function(){
             var studentData = groupData.groups;
             var html = '';
             var groupList = '';
+            var endHtml = '';
             $("#group-panel").click(function () {
                 if (studentData.length == 0) {
                     $('#input-post-field').slideUp('slow');
@@ -52,11 +55,28 @@ $(document).ready(function(){
                 '</div>';
             }
 
-            $("#group-field-content").html(html);
+            endHtml = '' +
+                '<div class="col-md-12 user-group">' +
+                    '<span class="glyphicon glyphicon-plus group-icon"></span>' +
+                    '<div class="col-sm-12">' +
+                        '<h5 class="group-name"><a href="/pages/group/join">JOIN A GROUP</a></h5>' +
+                    '</div>' +
+                '</div>'+
+                '<div class="col-md-12 user-group">' +
+                    '<span class="glyphicon glyphicon-plus group-icon"></span>' +
+                    '<div class="col-sm-12">' +
+                        '<h5 class="group-name"><a href="/pages/group/create">CREATE A GROUP</a></h5>' +
+                    '</div>' +
+                '</div>';
+
+            $("#group-field-content").html(html+endHtml);
 
             $(".user-group").click(function () {
                 var header = $(this).find(".groupName").attr("subject") + " " + $(this).find(".groupName").attr("section");
                 var group = $(this).find(".groupName").attr("subject") + $(this).find(".groupName").attr("section");
+                currentGroup = group;
+                currentSubject = $(this).find(".groupName").attr("subject");
+                currentSection = $(this).find(".groupName").attr("section");
                 $('#subject-name').val($(this).find(".groupName").attr("subject"));
                 $('#section-name').val($(this).find(".groupName").attr("section"));
                 $.ajax({
@@ -69,28 +89,48 @@ $(document).ready(function(){
                         });
                         var post = JSON.parse(posts);
                         var groupContent = '';
-                        for (var j = 0; j < post.length; j += 1) {
-                            groupContent += '' +
-                            '<div class="update-panel-wrapper">' +
-                                '<div class="container-fluid update-panel">' +
-                                    '<div class="col-md-12">' +
-                                        '<div class="col-sm-1 feed-icon-wrapper">' +
-                                            '<img src="http://localhost:8000/res/images/sample1.png" class="feed-icon" class="img-rounded" alt="sample">' +
-                                        '</div>' +
-                                        '<div class="col-sm-11 post-title">' +
-                                            '<h4>' + post[j].postTitle + ' <small>' + post[j].dateOfPost + '</small>' + '</h4>' +
-                                            '<h6> by ' + post[j].postBy + '</h6>' +
-                                        '</div>' +
-                                        '<div class="col-sm-11 feed-text">' +
-                                        '<p>' + post[j].postContent + '</p>' +
+                        if(post.length == 0){
+                            groupContent = '' +
+                                '<div class="update-panel-wrapper">' +
+                                    '<div class="container-fluid update-panel">' +
+                                        '<div class="col-md-12">' +
+                                            '<h4 class="pull-center">NO POSTS YET!</h4>' +
                                         '</div>' +
                                     '</div>' +
-                                '</div>' +
-                            '</div>';
+                                '</div>';
                         }
+                        post.reverse();
+                        for (var j = 0; j < post.length; j += 1) {
+                            groupContent += '' +
+                                '<div class="update-panel-wrapper">' +
+                                    '<div class="container-fluid update-panel">' +
+                                        '<div class="col-md-12">' +
+                                            '<div class="col-sm-1 feed-icon-wrapper">' +
+                                                '<img src="http://localhost:8000/res/images/sample1.png" class="feed-icon" class="img-rounded" alt="sample">' +
+                                            '</div>' +
+                                            '<div class="col-sm-11 post-title">' +
+                                                '<h4>' + post[j].postTitle + ' <small>' + post[j].dateOfPost + '</small>' + '</h4>' +
+                                                '<h6> by ' + post[j].postBy + '</h6>' +
+                                            '</div>' +
+                                            '<div class="col-sm-11 feed-text">' +
+                                            '<p>' + post[j].postContent + '</p>' +
+                                            '</div>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>';
+                        }
+                        var classList = ''+
+                            '<a id="showList" href="#">'+
+                            '<div class="col-md-12 user-group">' +
+                                '<span class="glyphicon glyphicon-user group-icon"></span>' +
+                                '<div class="col-sm-12">' +
+                                    '<h5 class="group-name">See class list</h5>' +
+                                '</div>' +
+                            '</div>'+
+                            '</a>';
                         function done() {
                             $("#welcome").html(header);
-                            $("#content-box").html(groupContent);
+                            $("#content-box").html(groupContent+classList);
                             $("#group-feed").slideToggle("slow");
                         }
 
@@ -99,6 +139,111 @@ $(document).ready(function(){
                 });
             });
         }
+    });
+
+    $('body').off('click','#showList');
+    $('body').on('click','#showList',function(e){
+        $.ajax({
+            url:"../JSONcontents/groups/classList/"+currentGroup+"_classList.json",
+            success:function(list){
+                var classlist = JSON.parse(list);
+                var listHtml = '';
+                for(var h = 0; h < classlist.length; h += 1){
+                    listHtml += ''+
+                        '<div class="update-panel-wrapper">'+
+                            '<div class="container-fluid update-panel">'+
+                                '<div class="col-md-12">'+
+                                    '<h4 class="pull-center">'+ classlist[h] +'</h4>'+
+                                '</div>'+
+                            '</div>'+
+                        '</div>';
+                }
+
+                var back = ''+
+                    '<a id="showGroup" href="#">'+
+                        '<div class="col-md-12 user-group">' +
+                            '<span class="glyphicon glyphicon-eject group-icon"></span>' +
+                            '<div class="col-sm-12">' +
+                                '<h5 class="group-name">Back to posts</h5>' +
+                            '</div>' +
+                        '</div>'+
+                    '</a>';
+
+                function done() {
+                    $("#content-box").html(listHtml+back);
+                    $("#group-feed").slideToggle("slow");
+                }
+
+                $("#group-feed").slideUp("slow", done);
+            }
+        });
+        e.preventDefault();
+
+    });
+
+    $('body').off('click','#showGroup');
+    $('body').on('click','#showGroup',function(e){
+        var group = currentGroup;
+        $('#subject-name').val(currentSubject);
+        $('#section-name').val(currentSection);
+        $.ajax({
+            url: "../JSONcontents/groups/posts/" + group + "_posts.json",
+            success: function (posts) {
+                $('#input-post-field').slideDown('slow');
+                $('#postIn').fadeOut('slow', function () {
+                    $(this).html(header);
+                    $(this).fadeIn();
+                });
+                var post = JSON.parse(posts);
+                var groupContent = '';
+                if(post.length == 0){
+                    groupContent = '' +
+                    '<div class="update-panel-wrapper">' +
+                    '<div class="container-fluid update-panel">' +
+                    '<div class="col-md-12">' +
+                    '<h4 class="pull-center">NO POSTS YET!</h4>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>';
+                }
+                post.reverse();
+                for (var j = 0; j < post.length; j += 1) {
+                    groupContent += '' +
+                    '<div class="update-panel-wrapper">' +
+                    '<div class="container-fluid update-panel">' +
+                    '<div class="col-md-12">' +
+                    '<div class="col-sm-1 feed-icon-wrapper">' +
+                    '<img src="http://localhost:8000/res/images/sample1.png" class="feed-icon" class="img-rounded" alt="sample">' +
+                    '</div>' +
+                    '<div class="col-sm-11 post-title">' +
+                    '<h4>' + post[j].postTitle + ' <small>' + post[j].dateOfPost + '</small>' + '</h4>' +
+                    '<h6> by ' + post[j].postBy + '</h6>' +
+                    '</div>' +
+                    '<div class="col-sm-11 feed-text">' +
+                    '<p>' + post[j].postContent + '</p>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>';
+                }
+                var classList = ''+
+                    '<a id="showList" href="#">'+
+                    '<div class="col-md-12 user-group">' +
+                    '<span class="glyphicon glyphicon-user group-icon"></span>' +
+                    '<div class="col-sm-12">' +
+                    '<h5 class="group-name">See class list</h5>' +
+                    '</div>' +
+                    '</div>'+
+                    '</a>';
+                function done() {
+                    $("#content-box").html(groupContent+classList);
+                    $("#group-feed").slideToggle("slow");
+                }
+
+                $("#group-feed").slideUp("slow", done);
+            }
+        });
+
     });
 
     $("#inbox-panel").click(function(){
@@ -153,56 +298,3 @@ $(document).ready(function(){
     });
 
 });
-
-/*
-$(document).ready(function(){
-    //$(".user-group").click(function(){
-     //   $("#group-feed").slideUp("slow");
-     //   //$("#group-feed").css('display','none');
-     //   $("#group-feed").slideToggle("slow");
-	//	groupStatus = true;
-	//});
-	//$(window).resize(function(){
-	//	if($(window).width() < 975){
-	//		$(".profile-icon").hide();
-	//		$(".group-icon").hide();
-	//	}
-	//	else{
-	//		$(".profile-icon").show();
-	//		$(".group-icon").show();
-	//	}
-    //
-	//});
-
-
-    */
-/*$(".user-group").click(function(){
-		*//*
-*/
-/* If kaya ng by whole na i-load
-		$("#group-feed").load("/script/sample.html")
-		*//*
-*/
-/*
-        $("#group-feed").slideUp("slow");
-        $("#welcome-note").load("/script/sample.html")
-		$(".feed-text").load("/script/sample2.txt")
-        $("#group-feed").slideToggle("slow");
-    });
-
-	$("#inbox-panel").click(function(){
-		*//*
-*/
-/* If kaya ng by whole na i-load
-		$("#group-feed").load("/script/sample2.html")
-		*//*
-*/
-/*
-        $("#group-feed").slideUp("slow");
-        $("#welcome-note").load("/script/sample2.html")
-		$(".feed-text").load("/script/sample.txt")
-        $("#group-feed").slideToggle("slow");
-    });*//*
-
-});
-*/

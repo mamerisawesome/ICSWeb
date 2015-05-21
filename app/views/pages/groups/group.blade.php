@@ -95,15 +95,16 @@
                         {{ Form::input('hidden','section-name','',array('value'=>'','id'=>'section-name')) }}
 
                         {{ Form::label('Title') }}
-                        {{ Form::input('text','postTitle','',array('class'=>'form-control')) }}
+                        {{ Form::input('text','postTitle','',array('autocomplete'=>'off','class'=>'form-control','id'=>'postTitle')) }}
 
                         {{ Form::label('Content') }}
-                        {{ Form::input('textbox','postContent','',array('class'=>'form-control')) }}
+                        {{ Form::textarea('postContent','',array('autocomplete'=>'off','class'=>'form-control','id'=>'postContent','style'=>'resize:none;max-width:100%;max-height:130px;padding-top:-100px;')) }}
                         <br>
 
-                        {{ Form::submit('Post',array('class'=>'btn btn-primary pull-right')) }}
+                        {{ Form::submit('Post',array('class'=>'btn btn-primary pull-right','id'=>'postDone')) }}
 
                     {{ Form::close() }}
+
                 </div>
 
         	</div>
