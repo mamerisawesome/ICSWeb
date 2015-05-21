@@ -109,15 +109,8 @@
 		margin-top: 400px;
 		transition: all 0.3s linear;
 		-webkit-animation: TRAIN 0.5s infinite;
-
 	}
 
-/* DATE- ENTRIES */
-/*
-	.col-md-12, .tl-photo-wrapper, .time-text {
-		border: solid 1px red;
-	}
-*/
 	.date-entry {
 		height: 200px;
 		overflow: hidden;

@@ -1,11 +1,11 @@
-1982
+1982 
 - The first time Computer Science was recognized as a discipline in UPLB when the Institute of Mathematical Sciences and Physics (IMSP) was established with the Division of Computer Science as on of its divisions. Dr. Ann Inez N. Gironella was the first director of IMSP and Prof. Wilfredo Cabezon was the first Division Head of the Division of Computer Science. IMSP was established when Dr. Emil Q. Javier was the Chancellor of UPLB.
 - Together with the esablishment of the Division of Computer Science was the institution of the BS Computer Science (BSCS) curriculum in UPLB. Hence, the BS Computer Science Progrm was officially instituted in 1982.
 1983
 - During the initial implementation of the BSCS program, three professors and instructors in Statistics handled the computer science courses. There three are: Dr. Manuel M. Manuel, Prof. Wilfredo E. Cabezon, and Dr. Eliezer A. Albacea (Instructor then). With the help of the Australian government through the International Development Program (IDP) of Australian Univerities and Colleges, the staff of the Division grew in number from initially three to about ten with graduate degrees in Computer Sience.
 - The first students in the program were admitted.
 1988
-- The Division the Master of Science in Computer Science. This became very popular among the teaching staff of the Division. 
+- The Division instituted the Master of Science in Computer Science. This became very popular among the teaching staff of the Division. 
 1995
 - In January 26, 1995, the UP Board of Regents separated the Division of Computer Science from IMSP and merged this with the existing Los Banos Computer Center to form the Institute of Computer Science (ICS). This happened when Dr. Eliezer A. Albacea was the head of the Division, Dr. Ruben Villareal was the Chancellor of UPLB and Dr. Emil Q. Javier was the President of UP. Dr Eliezer A. Albacea became the first Director of ICS.
 1996

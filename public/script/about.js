@@ -1,21 +1,11 @@
  $(document).ready(function(){
 
  	$("#about-panel4").scrollLeft(0);
-/* 	$("#tl-entry-1 > .time-text").hide(0);
- 	$("#tl-entry-2 > .time-text").hide(0);
- 	$("#tl-entry-3 > .time-text").hide(0);
- 	$("#tl-entry-4 > .time-text").hide(0);
- 	$("#tl-entry-5 > .time-text").hide(0);
- 	$("#tl-entry-6 > .time-text").hide(0);
- 	$("#tl-entry-7 > .time-text").hide(0);
- 	$("#tl-entry-8 > .time-text").hide(0);
-*/
 
  	function timelineSlider(){
 	 	var pos = $("#about-panel4").scrollLeft();
- 			console.log(pos); 
+// 			console.log(pos); 
 		return pos;
-
  	}
 
  	function animate1(status) {
@@ -39,7 +29,6 @@
  				"opacity":"1"
  			}, "slow"); 			
  		}
-
  		else {
  			$("#tl-entry-2").animate({
  				"margin-top":"25px"
@@ -69,7 +58,6 @@
  				"opacity":"1"
  			}, "slow"); 			
  		}
-
  		else {
  			$("#tl-entry-4").animate({
  				"margin-top":"25px"
@@ -84,7 +72,6 @@
  				"opacity":"1"
  			}, "slow"); 			
  		}
-
  		else {
  			$("#tl-entry-5").animate({
  				"margin-top":"25px"
@@ -114,7 +101,6 @@
  				"opacity":"1"
  			}, "slow"); 			
  		}
-
  		else {
  			$("#tl-entry-7").animate({
  				"margin-top":"25px"
@@ -129,7 +115,6 @@
  				"opacity":"1"
  			}, "slow"); 			
  		}
-
  		else {
  			$("#tl-entry-8").animate({
  				"margin-top":"25px"
@@ -143,36 +128,28 @@
  		if (pos >= 280 && pos < 1240) {
  			animate1(true);
  		}
-
  		if (pos >= 1240 && pos < 2080) {
  			animate2(true);
  		}
-
  		if (pos >= 2080 && pos < 2560) {
  			animate3(true);
  		}
-
   		if (pos >= 2560 && pos < 3320) {
  			animate4(true);
  		}
- 		
   		if (pos >= 3320 && pos < 4120) {
  			animate5(true);
  		}
-
   		if (pos >= 4120 && pos < 4560) {
  			animate6(true);
  		}
-
   		if (pos >= 4560 && pos < 5000) {
  			animate7(true);
  		}
-
   		if (pos >= 5000 && pos < 5440) {
  			animate8(true);
  		}
 
  	});
-
 
  });
