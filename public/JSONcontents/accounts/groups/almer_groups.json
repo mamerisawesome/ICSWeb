@@ -1,7 +1,1 @@
-{
-	"groups":
-		[
-			{"subject":"CMSC170","section":"UV-2L"},
-			{"subject":"CMSC56","section":"X-2L"}
-		]
-}
+{"groups":[{"subject":"CMSC56","section":"X-2L"},{"subject":"HELLO101","section":"H-4L"},{"subject":"CMSC170","section":"UV-2L"}]}

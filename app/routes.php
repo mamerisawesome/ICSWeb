@@ -27,7 +27,7 @@ Route::get('pages/home',array('uses' => 'GeneralController@showHome', 'as' => 'p
 
 Route::get('pages/publication',array('uses' => 'GeneralController@showPublication', 'as' => 'page.publication'));
 Route::get('pages/register',array('uses' => 'GeneralController@showRegisterForm', 'as' => 'page.reg_form'));
-Route::get('signup_success',function(){
+Route::get('user/signup_success',function(){
     return View::make('pages.user.success');
 });
 
@@ -50,8 +50,8 @@ Route::get('pages/create/faculty', function(){
     return View::make('pages.user.faculty');
 });
 
-Route::resource('pages/students','StudentsController');
-Route::resource('faculty','FacultyController');
+//Route::resource('pages/students','StudentsController');
+//Route::resource('faculty','FacultyController');
 Route::resource('pages/groups', 'GroupsController');
 
 //this is for login
@@ -61,8 +61,13 @@ Route::resource('sessions', 'SessionsController');
 
 Route::group(array('prefix'=>'pages', 'before' => 'auth'), function(){
 	Route::get('profile',array('uses' => 'GeneralController@showProfile', 'as' => 'page.profile'));
-	Route::get('group',array('uses' => 'GeneralController@showGroup', 'as' => 'page.group'));
+	// Group routes
+    Route::get('group',array('uses' => 'GeneralController@showGroup', 'as' => 'page.group'));
     Route::post('group/post',array('uses' => 'GroupsController@groupPost', 'as' => 'page.group.post'));
+    Route::get('group/join',array('uses' => 'GroupsController@showGroupJoin', 'as' => 'page.group.join'));
+    Route::post('group/join/post',array('uses' => 'GroupsController@groupJoin', 'as' => 'page.group.join.post'));
+    Route::get('group/create',array('uses'=>'GroupsController@create','as'=>'page.group.create'));
+    Route::post('group/store',array('uses' => 'GroupsController@store', 'as' => 'page.group.store'));
     // Route::resource('group','GroupsController', array('only'=>array('groupPost','index'))/*,array('uses' => 'GroupsController@groupPost', 'as' => 'page.group.post')*/);
 });
 

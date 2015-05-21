@@ -13,8 +13,8 @@
 					{{ Form::macro('regInput', function($inputType, $idName, $placeholderValue, $labelValue)
 						{
 							echo Form::label($idName, $labelValue);
-							if($idName == 'studentNumber') echo Form::input($inputType, $idName, '' , array('maxlength'=>'10','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue));
-							else echo Form::input($inputType, $idName, '' , array('id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue));
+							if($idName == 'studentNumber') echo Form::input($inputType, $idName, '' , array('autocomplete'=>'off','maxlength'=>'10','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue));
+							else echo Form::input($inputType, $idName, '' , array('autocomplete'=>'off','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue));
 							echo '<br>';
 						});
 					}}
