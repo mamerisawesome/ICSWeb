@@ -13,7 +13,7 @@
                     {{ Form::macro('regInput', function($inputType, $idName, $placeholderValue, $labelValue)
                         {
                             echo Form::label($idName, $labelValue);
-                            echo Form::input($inputType, $idName, '' , array('id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue, 'required'=>''));
+                            echo Form::input($inputType, $idName, '' , array('autocomplete'=>'off','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue, 'required'=>''));
                             echo '<br>';
                         });
                     }}

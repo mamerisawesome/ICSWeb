@@ -4,6 +4,7 @@
 	#profile-panel-wrapper{
 		padding: 0;
 		box-shadow: 0px 0px 5px #bdc3c7;
+        margin-bottom:20px;
 	}
 
 	#profile-panel {
@@ -160,3 +161,23 @@
 		text-align: justify;
 
 	}
+
+/* POST FIELD */
+
+    #input-post-field {
+        display: none;
+
+        top:0px;
+        background-color: white;
+
+        height:100%;
+        overflow:auto;
+
+        padding-left:10px;
+        padding-right:10px;
+        padding-top:10px;
+    }
+
+    #postDone {
+        margin-bottom:10px;
+    }

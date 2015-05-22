@@ -1,3 +1,4 @@
+
 <?php
 
 class UserController extends \BaseController {
@@ -19,7 +20,8 @@ class UserController extends \BaseController {
 		//
         $users = DB::table('accounts')->orderBy('lastName', 'asc')->get();
         if(DB::table('accounts')->count() > 0)  return View::make('pages.user.index')->with('users', $users);
-        return View::make('pages.user.empty');
+        Session::flush();
+        return Redirect::route('index');
 	}
 
 
@@ -76,8 +78,26 @@ class UserController extends \BaseController {
             $this->user->studentNumber = Input::get('studentNumber');
         }
 
+        function createUserJsonFile($name){
+            // JSON file creator
+            $user_groups = array(
+                "groups"        => array()
+            );
+
+            $user_messages = [array(
+                "sentFrom"          => "Admin",
+                "dateOfMessage"     => "Forever 21, 2015",
+                "messageTitle"      => "Congratulations!",
+                "messageContent"    => "Congratulations user you successfully created your ICS account."
+            )];
+
+            File::put('public/JSONcontents/accounts/groups/'.$name.'_groups.json', json_encode($user_groups));
+            File::put('public/JSONcontents/accounts/messages/'.$name.'_messages.json', json_encode($user_messages));
+        }
+
+        createUserJsonFile(Input::get('username'));
         $this->user->save();
-        return Redirect::to('user/signup_success');
+        return Redirect::to('signup_success');
 
 
 	}

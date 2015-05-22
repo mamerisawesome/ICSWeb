@@ -19,28 +19,6 @@
     {{ HTML::style('css/group.css'); }} 
     {{ HTML::script('script/group.js'); }}
 
-    <script>
-        x = "{{ 'hello'//$data->courseTitle }}";
-
-        /*$(".user-group").click(function(){
-            //If kaya ng by whole na i-load
-            $("#group-feed").load("/script/sample.html")
-
-            //$("#welcome-note").load("/script/sample.html")
-            $('#welcome-note').html('');
-            //$(".feed-text").load("/script/sample2.txt")
-            $('.feed-text').html('This is some text that I just typed right now!');
-        });
-
-        $("#inbox-panel").click(function(){
-            //If kaya ng by whole na i-load
-            $("#group-feed").load("/script/sample2.html")
-
-            $("#welcome-note").load("/script/sample2.html")
-            $(".feed-text").load("/script/sample.txt")
-        });*/
-    </script>
-
     <div class="wrapping-panel">
 
 	<div class="container">
@@ -61,21 +39,28 @@
 
                 {{-- Buttons found beneath the profile panel --}}
 				<div class="col-md-12" id="group-control-panel">
+
+                    {{-- Inbox and Group buttons --}}
 					<div class="col-md-12" id="group-icon-wrapper">
+
+					    {{-- Inbox button --}}
 						<div class="col-md-6" id="inbox-panel">
 							<div class="col-md-12">
 								<span class="glyphicon glyphicon-envelope profile-icon"></span>
 								<div class="circle"><p class="notif-number">2</p></div>
 							</div>
 						</div>
+
+						{{-- Group button --}}
 						<div class="col-md-6" id="group-panel">
 							<div class="col-md-12">
 								<span class="fa fa-users profile-icon"></span>
 								<div class="circle"><p class="notif-number">2</p></div>
 							</div>
 						</div>
+
 					</div>
-				
+
                     {{-- List of groups --}}
 		            <div id="group-field" class="col-md-12">
 		                <div id="group-field-content">
@@ -96,7 +81,32 @@
 		                	</div>
 		                </div>
 		            </div>
+
     			</div>
+
+    			{{-- Input field to post --}}
+                <div id="input-post-field" class="col-md-12">
+                    <h5>Post something in <span id="postIn"></span></h5>
+                    {{ Form::open(array('action'=>'page.group.post', 'name'=>'post-form', 'id'=>'post-form'))}}
+                        <?php $name = Session::get('firstName') . ' ' . Session::get('lastName'); ?>
+
+                        {{ Form::input('hidden','postBy',$name,array('value'=>$name,'id'=>'postBy')) }}
+                        {{ Form::input('hidden','subject-name','',array('value'=>'','id'=>'subject-name')) }}
+                        {{ Form::input('hidden','section-name','',array('value'=>'','id'=>'section-name')) }}
+
+                        {{ Form::label('Title') }}
+                        {{ Form::input('text','postTitle','',array('autocomplete'=>'off','class'=>'form-control','id'=>'postTitle')) }}
+
+                        {{ Form::label('Content') }}
+                        {{ Form::textarea('postContent','',array('autocomplete'=>'off','class'=>'form-control','id'=>'postContent','style'=>'resize:none;max-width:100%;max-height:130px;padding-top:-100px;')) }}
+                        <br>
+
+                        {{ Form::submit('Post',array('class'=>'btn btn-primary pull-right','id'=>'postDone')) }}
+
+                    {{ Form::close() }}
+
+                </div>
+
         	</div>
 
 		    {{-- Division that displays the group content --}}
@@ -108,33 +118,35 @@
 					<h3 id="welcome">NEWS FEED</h3>
 				</div>
 
-                <?php for($i = 0; $i < 3; $i += 1){ ?>
-				<div class="update-panel-wrapper">
-					<div class="container-fluid update-panel">
-						<div class="col-md-12">
-						<div class="col-sm-1 feed-icon-wrapper">
-							<img src="{{URL::to('res/images/sample1.png')}}" class="feed-icon" class="img-rounded" alt="sample">
-						</div>
-						<div class="col-sm-11 feed-text">
-							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-						</div>
-						</div>
-					</div>
-				</div>
+                    <div id="content-box">
+                    <?php for($i = 0; $i < 3; $i += 1){ ?>
+                    <div class="update-panel-wrapper">
+                        <div class="container-fluid update-panel">
+                            <div class="col-md-12">
+                            <div class="col-sm-1 feed-icon-wrapper">
+                                <img src="{{URL::to('res/images/sample1.png')}}" class="feed-icon" class="img-rounded" alt="sample">
+                            </div>
+                            <div class="col-sm-11 feed-text">
+                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
 
-				<div class="update-panel-wrapper">
-					<div class="container-fluid update-panel">
-						<div class="col-md-12">
-						<div class="col-sm-1 feed-icon-wrapper">
-							<img src="{{URL::to('res/images/sample2.png')}}" class="feed-icon" class="img-rounded" alt="sample">
-						</div>
-						<div class="col-sm-11 feed-text">
-							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-						</div>
-						</div>
-					</div>
-				</div>
-                <?php } ?>
+                    <div class="update-panel-wrapper">
+                        <div class="container-fluid update-panel">
+                            <div class="col-md-12">
+                            <div class="col-sm-1 feed-icon-wrapper">
+                                <img src="{{URL::to('res/images/sample2.png')}}" class="feed-icon" class="img-rounded" alt="sample">
+                            </div>
+                            <div class="col-sm-11 feed-text">
+                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php } ?>
+                    </div>
 				</div>
 			</div>
 		</div>
