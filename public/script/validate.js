@@ -8,14 +8,19 @@ $(document).ready(function(){
 	$("#employeeNumber").keyup(function(){
 		var temp = $(this).val();
 		if(temp != '')
-			if($.isNumeric(temp) && temp.length == 10) employeeNumber = true;
+			if($.isNumeric(temp) && temp.length == 10){
+				employeeNumber = true;
+				$("#error-en").html("");	
+			} 
 			else{
 				$("#submit").attr('disabled','disabled');
 				employeeNumber = false;
+				$("#error-en").html("Invalid Employee Number!<br>");	
 			} 
 		else{
 			$("#submit").attr('disabled','disabled');
 			employeeNumber = false;
+				
 		} 	
 		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#submit").removeAttr('disabled');    
 	});
@@ -25,9 +30,13 @@ $(document).ready(function(){
 		var temp2;
 		if(temp != ''){
 			temp2 = temp.split("-");
-			if(!($.isNumeric(temp2[0])) && $.isNumeric(temp2[1]) && temp2[1].length == 3 && temp2[0].length == 1) room = true;
+			if(!($.isNumeric(temp2[0])) && $.isNumeric(temp2[1]) && temp2[1].length == 3 && temp2[0].length == 1){
+				room = true;
+				$("#error-room").html("");		
+			} 
 			else{
 				$("#submit").attr('disabled','disabled');
+				$("#error-room").html("Invalid Room Assignment! (i.e C-100)<br>");
 				room = false;
 			}
 		}

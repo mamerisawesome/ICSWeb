@@ -36,7 +36,9 @@
                     {{ Form::regInput('password','retypePassword','Retype your password','Retype Password') }}
                     <div id="error-message"></div>
                     {{ Form::regInput('text','employeeNumber','XXXXXXXXXX','Employee Number') }}
+                    <div id="error-en"></div>
                     {{ Form::regInput('text','room','(i.e. C-100)','Room') }}
+                    <div id="error-room"></div>
                     {{ Form::regInput('text','academicPosition','(i.e. Instructor 1)','Academic Position') }}
 
                     {{ Form::hidden('studentNumber', NULL, array('id'=>'studentNumber')) }}
