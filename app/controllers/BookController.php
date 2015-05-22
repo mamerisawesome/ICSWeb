@@ -30,77 +30,51 @@ class BookController extends \BaseController {
         if($author!=NULL&&$title==NULL&&$year==NULL){
             $result = DB::table('library')->where('lastName', $author)->get();
             if($result != NULL) return View::make('pages.book.show', compact('result'));
-            else return "<h1>Error! SP not found!</h1>";
+            else return View::make('pages.book.error');
         }
 
         //if only title field is filled up
         else if($author==NULL&&$title!=NULL&&$year==NULL){
             $result = DB::table('library')->where('title', $title)->get();
             if($result != NULL) return View::make('pages.book.show', compact('result'));
-            else return "<h1>Error! SP not found!</h1>";
+            else return View::make('pages.book.error');
         }
 
         //if only year field is filled up
         else if($author==NULL&&$title==NULL&&$year!=NULL){
              $result = DB::table('library')->where('year', $year)->get();
             if($result != NULL) return View::make('pages.book.show', compact('result'));
-            else return "<h1>Error! SP not found!</h1>";
+            else return View::make('pages.book.error');
         }
 
         //if author and title field is filled up
         else if($author!=NULL&&$title!=NULL&&$year==NULL){
              $result = DB::table('library')->where('author', $author)->orWhere('title', $title)->get();
             if($result != NULL) return View::make('pages.book.show', compact('result'));
-            else return "<h1>Error! SP not found!</h1>";
+            else return View::make('pages.book.error');
         }
 
         //if author and year field is filled up
         else if($author!=NULL&&$title==NULL&&$year!=NULL){
              $result = DB::table('library')->where('author', $author)->orWhere('year', $year)->get();
             if($result != NULL) return View::make('pages.book.show', compact('result'));
-            else return "<h1>Error! SP not found!</h1>";
+            else return View::make('pages.book.error');
         }
 
         //if title and year field is filled up
         else if($author==NULL&&$title!=NULL&&$year!=NULL){
              $result = DB::table('library')->where('title', $title)->orWhere('year', $year)->get();
             if($result != NULL) return View::make('pages.book.show', compact('result'));
-            else return "<h1>Error! SP not found!</h1>";
+            else return View::make('pages.book.error');
         }
 
         //if all fields are filled up
         else if($author!=NULL&&$title!=NULL&&$year!=NULL){
-            /*$result = DB::table('library')->where(function($query)
-            {
-                $query->where('author', $author)
-                    ->where('title', $title)
-                    ->where('year', $year);
-            })
-            ->get();
 
-            $first = DB::table('library')->where('author', $author)->orWhere('title', $title)->get();
-            $result = DB::table('users')->where('year', $year)->unionAll($first)->get();*/
+            $result = DB::table('library')->where('title', $title)->orWhere('author', $author)->get();
 
-            //$result = DB::select('select * from library where (author, title, year) = (?, ?, ?)', array($author, $title, $year));            
-
-            //$result = DB::table('library')->where(array('author'=>$author,'title'=>$title, 'year'=>$year))->get();
-
-            //$result = DB::table('library')->where('author', $author)->orWhere('title', $title)->orWhere('year', $year)->get();
-
-
-$result = DB::table('library')
-            ->where('author', $author)
-            ->orWhere(function($query)
-            {
-                $query->where('year', $year)
-                        ->where('title', $title);
-            })
-            ->get();
-
-
-
-            if($result != NULL) return View::make('pages.book.show', compact('result'));
-            else return dd($result);
+            if($result != NULL) return View::make('pages.book.show1', compact('result'))->with('year', $year);
+            else return View::make('pages.book.error');
         }
     }
 
