@@ -33,7 +33,12 @@ class GroupsController extends BaseController {
 
         function createGroupJsonFile($name){
             // JSON file creator
-            $group_classList = [Session::get('username')];
+            $group_classList = [
+                "username"  =>Session::get('username'),
+                "firstname" =>Session::get('firstName'),
+                "middlename"=>Session::get('middleName'),
+                "lastname"  =>Session::get('lastName')
+            ];
 
 //            $group_posts = [];
 
@@ -114,10 +119,20 @@ class GroupsController extends BaseController {
         if($count){
             $query = DB::table('groups')->where('accessCode',Input::get('accessCode'))->first();
             $username = Input::get('userName');
+            $firstname = Session::get('firstName');
+            $middlename = Session::get('middleName');
+            $lastname = Session::get('lastName');
             $group = $query->courseTitle . $query->section;
 
+            $userData = array(
+                "username" => $username,
+                "firstname" => $firstname,
+                "middlename" => $middlename,
+                "lastname" => $lastname
+            );
+
             $groupData = json_decode(file_get_contents('public/JSONcontents/groups/classList/'. $group . '_classList.json'), true);
-            array_push($groupData,Input::get('userName'));
+            array_push($groupData,$userData);
 
             $userData = json_decode(file_get_contents('public/JSONcontents/accounts/groups/'. $username . '_groups.json'), true);
             $groupObject = [
