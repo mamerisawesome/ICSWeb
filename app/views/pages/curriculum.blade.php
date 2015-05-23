@@ -4,17 +4,13 @@
 	{{ HTML::style('css/curriculum.css'); }}
     {{ HTML::script('script/curriculum.js'); }}
 
-<title>ICS UPLB - Courses</title>
 	<div>
 		<div class="wrapping-panel" id="curriculum-header-wrapper">
 			<div class="container" id="curriculum-header">
 				<h1>BS Computer Science Curriculum</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 	Integer vitae elementum nibh, vitae malesuada nulla. Donec id urna nunc. Aenean volutpat, ex eu congue lacinia, erat nulla scelerisque nisi, molestie vestibulum tortor metus quis lacus. Nam diam ipsum, accumsan eget iaculis a, fringilla quis ipsum. Vivamus odio orci, dictum nec condimentum sed, vehicula eu dolor.
-				</p>
-				<p>
-					Integer vitae elementum nibh, vitae malesuada nulla. Donec id urna nunc. Aenean volutpat, ex eu congue lacinia, erat nulla scelerisque nisi, molestie vestibulum tortor metus quis lacus. Nam diam ipsum, accumsan eget iaculis a, fringilla quis ipsum. Vivamus odio orci, dictum nec condimentum sed, vehicula eu dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-				</p>
+				<p> The BS Computer Science (BSCS) curriculum was initially offered by UPLB in 1983, the first of its kind in UP System, if not in the country at that time.</p>
+				<p> The program aims to produce graduates highly capable of working in the computer industry and whole well-equipped to pursue graduate studies in Computer Science. A solid technical background complemented by real experience on real systems provide the students with necessary tools to handle the most demanding aspects of systems development, data management, and science of omputing. Graduates re well-placed in the industry and government not only in the Philippines but also abroad</p>
+				<p>The present curriculum is based on the recommendations of the ACM/IEEE-Computer Society Joint Curriculum Task Force. The curriculum provids a broad-based and coherent converge of computer science. Students develop a reasonable level of understanding about the subject areas of the discipline, as well as an appreciation in the interrelationships among these areas. Students are also trained in the methodologies pf computing research an development. Speialized courses offered as electives to ensure depth of study in some subject areas. </p>
 			</div>
 		</div>
 	</div>
