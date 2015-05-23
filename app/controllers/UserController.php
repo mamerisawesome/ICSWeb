@@ -154,5 +154,29 @@ class UserController extends \BaseController {
         return Redirect::route('pages.students.index');*/
 	}
 
+    public function sendMessage()
+    {
+        $information = Input::all();
+//        dd($information);
+        return View::make('pages.user.sendMessage')->with('information',$information);
+    }
+
+    public function storeMessage()
+    {
+//        dd(Input::all());
+        $user_messages = array(
+            "sentFrom"          => Input::get('sentFrom'),
+            "dateOfMessage"     => date('F d, Y'),
+            "messageTitle"      => Input::get('messageTitle'),
+            "messageContent"    => Input::get('messageContent')
+        );
+
+        $userData = json_decode(file_get_contents('public/JSONcontents/accounts/messages/'. Input::get('sendTo') . '_messages.json'), true);
+        array_push($userData,$user_messages);
+
+//        dd($userData);
+        File::put('public/JSONcontents/accounts/messages/'.Input::get('sendTo').'_messages.json', json_encode($userData));
+        return Redirect::route('page.group');
+    }
 
 }

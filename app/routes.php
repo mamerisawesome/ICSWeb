@@ -27,7 +27,7 @@ Route::get('pages/home',array('uses' => 'GeneralController@showHome', 'as' => 'p
 
 Route::get('pages/publication',array('uses' => 'GeneralController@showPublication', 'as' => 'page.publication'));
 Route::get('pages/register',array('uses' => 'GeneralController@showRegisterForm', 'as' => 'page.reg_form'));
-Route::get('user/signup_success',function(){
+Route::get('signup_success',function(){
     return View::make('pages.user.success');
 });
 
@@ -68,8 +68,11 @@ Route::group(array('prefix'=>'pages', 'before' => 'auth'), function(){
     Route::post('group/join/post',array('uses' => 'GroupsController@groupJoin', 'as' => 'page.group.join.post'));
     Route::get('group/create',array('uses'=>'GroupsController@create','as'=>'page.group.create'));
     Route::post('group/store',array('uses' => 'GroupsController@store', 'as' => 'page.group.store'));
+    // Message sending
+    Route::post('user/message',array('uses'=> 'UserController@sendMessage','as'=>'page.user.message'));
+    Route::post('user/message/send',array('uses'=> 'UserController@storeMessage','as'=>'page.user.message.store'));
     // Route::resource('group','GroupsController', array('only'=>array('groupPost','index'))/*,array('uses' => 'GroupsController@groupPost', 'as' => 'page.group.post')*/);
 });
 
 Route::post('pages/library/search', array('as' => 'pages.library.search', 'uses' => 'BookController@search'));
-
+Route::get('team', array('uses'=>'team','as'=>'GeneralController@showTeam'));

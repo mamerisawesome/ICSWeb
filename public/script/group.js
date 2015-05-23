@@ -2,6 +2,10 @@ $(document).ready(function(){
     var currentGroup = '';
     var currentSubject = '';
     var currentSection = '';
+
+
+
+    /* WILL GET GROUP LIST FROM ACCOUNTS */
     $.ajax({
         url: "../JSONcontents/accounts/groups/"+$("#username").html()+"_groups.json",
         success: function(data){
@@ -10,6 +14,7 @@ $(document).ready(function(){
             var html = '';
             var groupList = '';
             var endHtml = '';
+            /* WILL TOGGLE GROUP LIST */
             $("#group-panel").click(function () {
                 if (studentData.length == 0) {
                     $('#input-post-field').slideUp('slow');
@@ -71,6 +76,9 @@ $(document).ready(function(){
 
             $("#group-field-content").html(html+endHtml);
 
+
+
+            /* WILL GET POST DATA FROM GROUPS */
             $(".user-group").click(function () {
                 var header = $(this).find(".groupName").attr("subject") + " " + $(this).find(".groupName").attr("section");
                 var group = $(this).find(".groupName").attr("subject") + $(this).find(".groupName").attr("section");
@@ -121,12 +129,12 @@ $(document).ready(function(){
                         }
                         var classList = ''+
                             '<a id="showList" href="#">'+
-                            '<div class="col-md-12 user-group">' +
-                                '<span class="glyphicon glyphicon-user group-icon"></span>' +
-                                '<div class="col-sm-12">' +
-                                    '<h5 class="group-name">See class list</h5>' +
-                                '</div>' +
-                            '</div>'+
+                                '<div class="col-md-12 user-group">' +
+                                    '<span class="glyphicon glyphicon-user group-icon"></span>' +
+                                    '<div class="col-sm-12">' +
+                                        '<h5 class="group-name">See class list</h5>' +
+                                    '</div>' +
+                                '</div>'+
                             '</a>';
                         function done() {
                             $("#welcome").html(header);
@@ -138,9 +146,20 @@ $(document).ready(function(){
                     }
                 });
             });
+            /* --------------------------------- */
+
+
+
+
         }
     });
+    /* --------------------------------- */
 
+
+
+
+
+    /* WILL GET LIST OF STUDENTS / FACULTY FROM GROUPS */
     $('body').off('click','#showList');
     $('body').on('click','#showList',function(e){
         $.ajax({
@@ -148,15 +167,18 @@ $(document).ready(function(){
             success:function(list){
                 var classlist = JSON.parse(list);
                 var listHtml = '';
+
                 for(var h = 0; h < classlist.length; h += 1){
-                    listHtml += ''+
-                        '<div class="update-panel-wrapper">'+
-                            '<div class="container-fluid update-panel">'+
-                                '<div class="col-md-12">'+
-                                    '<h4 class="pull-center">'+ classlist[h] +'</h4>'+
-                                '</div>'+
-                            '</div>'+
+                    if(classlist[h].username != $('#username').text()){
+                        $('.username-container').find('.usernameContainer').val(classlist[h].username);
+                        $('.username-container').find('.selectUsername').val(classlist[h].firstname + " " + classlist[h].lastname);
+                        $('.username-container').find('.nameContainer').val(classlist[h].firstname + " " + classlist[h].lastname);
+                        //$('.username-container').find('.usernameForm').attr('action','/pages/message/');
+                        listHtml += '' +
+                        '<div class="update-panel-wrapper">' +
+                        $('.username-container').html() +
                         '</div>';
+                    }
                 }
 
                 var back = ''+
@@ -180,7 +202,13 @@ $(document).ready(function(){
         e.preventDefault();
 
     });
+    /* --------------------------------- */
 
+
+
+
+
+    /* WILL SHOW LIST OF POSTS FROM GROUPS */
     $('body').off('click','#showGroup');
     $('body').on('click','#showGroup',function(e){
         var group = currentGroup;
@@ -199,41 +227,41 @@ $(document).ready(function(){
                 if(post.length == 0){
                     groupContent = '' +
                     '<div class="update-panel-wrapper">' +
-                    '<div class="container-fluid update-panel">' +
-                    '<div class="col-md-12">' +
-                    '<h4 class="pull-center">NO POSTS YET!</h4>' +
-                    '</div>' +
-                    '</div>' +
+                        '<div class="container-fluid update-panel">' +
+                            '<div class="col-md-12">' +
+                                '<h4 class="pull-center">NO POSTS YET!</h4>' +
+                            '</div>' +
+                        '</div>' +
                     '</div>';
                 }
                 post.reverse();
                 for (var j = 0; j < post.length; j += 1) {
                     groupContent += '' +
                     '<div class="update-panel-wrapper">' +
-                    '<div class="container-fluid update-panel">' +
-                    '<div class="col-md-12">' +
-                    '<div class="col-sm-1 feed-icon-wrapper">' +
-                    '<img src="http://localhost:8000/res/images/sample1.png" class="feed-icon" class="img-rounded" alt="sample">' +
-                    '</div>' +
-                    '<div class="col-sm-11 post-title">' +
-                    '<h4>' + post[j].postTitle + ' <small>' + post[j].dateOfPost + '</small>' + '</h4>' +
-                    '<h6> by ' + post[j].postBy + '</h6>' +
-                    '</div>' +
-                    '<div class="col-sm-11 feed-text">' +
-                    '<p>' + post[j].postContent + '</p>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
+                        '<div class="container-fluid update-panel">' +
+                            '<div class="col-md-12">' +
+                                '<div class="col-sm-1 feed-icon-wrapper">' +
+                                    '<img src="http://localhost:8000/res/images/sample1.png" class="feed-icon" class="img-rounded" alt="sample">' +
+                                '</div>' +
+                                '<div class="col-sm-11 post-title">' +
+                                    '<h4>' + post[j].postTitle + ' <small>' + post[j].dateOfPost + '</small>' + '</h4>' +
+                                    '<h6> by ' + post[j].postBy + '</h6>' +
+                                '</div>' +
+                                '<div class="col-sm-11 feed-text">' +
+                                    '<p>' + post[j].postContent + '</p>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
                     '</div>';
                 }
                 var classList = ''+
                     '<a id="showList" href="#">'+
-                    '<div class="col-md-12 user-group">' +
-                    '<span class="glyphicon glyphicon-user group-icon"></span>' +
-                    '<div class="col-sm-12">' +
-                    '<h5 class="group-name">See class list</h5>' +
-                    '</div>' +
-                    '</div>'+
+                        '<div class="col-md-12 user-group">' +
+                            '<span class="glyphicon glyphicon-user group-icon"></span>' +
+                            '<div class="col-sm-12">' +
+                                '<h5 class="group-name">See class list</h5>' +
+                            '</div>' +
+                        '</div>'+
                     '</a>';
                 function done() {
                     $("#content-box").html(groupContent+classList);
@@ -243,9 +271,15 @@ $(document).ready(function(){
                 $("#group-feed").slideUp("slow", done);
             }
         });
-
+        e.preventDefault();
     });
+    /* --------------------------------- */
 
+
+
+
+
+    /* WILL GET MESSAGES FROM ACCOUNTS */
     $("#inbox-panel").click(function(){
         //If kaya ng by whole na i-load
         //$("#group-feed").load("/script/sample2.html")
@@ -266,6 +300,7 @@ $(document).ready(function(){
                             '</div>'+
                         '</div>';
                 }
+                message.reverse();
                 for(var l = 0; l < message.length; l += 1){
                     inboxContent += ''+
                         '<div class="update-panel-wrapper">'+
@@ -296,5 +331,14 @@ $(document).ready(function(){
         });
 
     });
+    /* --------------------------------- */
 
+
+
+
+
+    // database connection
+    //$('body').click(function(){
+    //    document.write();
+    //});
 });

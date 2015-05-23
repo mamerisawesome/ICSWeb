@@ -73,4 +73,9 @@ class GeneralController extends BaseController{
         return View::make('pages.register_form');
     }
 
+
+    public function showTeam()
+    {
+        return View::make('pages.team');
+    }
 }
