@@ -89,10 +89,10 @@ class GroupsController extends BaseController {
 
     public function groupPost(){
         $group_posts = array(
-            "postBy"            => Input::get('postBy'),
+            "postBy"            => htmlspecialchars(Input::get('postBy')),
             "dateOfPost"        => date('F d, Y'),
-            "postTitle"         => Input::get('postTitle'),
-            "postContent"       => Input::get('postContent'),
+            "postTitle"         => htmlspecialchars(Input::get('postTitle')),
+            "postContent"       => htmlspecialchars(Input::get('postContent')),
             "comments"          => array(
                 "commentBy"     => NULL,
                 "date"          => NULL,
@@ -102,10 +102,6 @@ class GroupsController extends BaseController {
 
         $groupData = json_decode(file_get_contents('public/JSONcontents/groups/posts/'. Input::get('subject-name') . Input::get('section-name') . '_posts.json'), true);
         array_push($groupData,$group_posts);
-//        for($i = 0; $i < $groupData; ){
-//
-//        }
-        //dd();
         File::put('public/JSONcontents/groups/posts/'.Input::get('subject-name').Input::get('section-name').'_posts.json', json_encode($groupData));
         return Redirect::route('page.group');
     }

@@ -165,10 +165,10 @@ class UserController extends \BaseController {
     {
 //        dd(Input::all());
         $user_messages = array(
-            "sentFrom"          => Input::get('sentFrom'),
+            "sentFrom"          => htmlspecialchars(Input::get('sentFrom')),
             "dateOfMessage"     => date('F d, Y'),
-            "messageTitle"      => Input::get('messageTitle'),
-            "messageContent"    => Input::get('messageContent')
+            "messageTitle"      => htmlspecialchars(Input::get('messageTitle')),
+            "messageContent"    => htmlspecialchars(Input::get('messageContent'))
         );
 
         $userData = json_decode(file_get_contents('public/JSONcontents/accounts/messages/'. Input::get('sendTo') . '_messages.json'), true);

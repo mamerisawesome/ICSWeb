@@ -3,8 +3,6 @@ $(document).ready(function(){
     var currentSubject = '';
     var currentSection = '';
 
-
-
     /* WILL GET GROUP LIST FROM ACCOUNTS */
     $.ajax({
         url: "../JSONcontents/accounts/groups/"+$("#username").html()+"_groups.json",
