@@ -52,11 +52,7 @@ class GroupsController extends BaseController {
                 "dateOfPost"        => date('F d, Y'),
                 "postTitle"         => 'Group created',
                 "postContent"       => 'Your new group has been created. Updates will be posted in here.',
-                "comments"          => array(
-                    "commentBy"     => NULL,
-                    "date"          => NULL,
-                    "content"       => NULL
-                )
+                "comments"          => []
             )];
 
             $userData = json_decode(file_get_contents('public/JSONcontents/accounts/groups/'. Session::get('username') . '_groups.json'), true);
@@ -93,11 +89,7 @@ class GroupsController extends BaseController {
             "dateOfPost"        => date('F d, Y'),
             "postTitle"         => htmlspecialchars(Input::get('postTitle')),
             "postContent"       => htmlspecialchars(Input::get('postContent')),
-            "comments"          => array(
-                "commentBy"     => NULL,
-                "date"          => NULL,
-                "content"       => NULL
-            )
+            "comments"          => []
         );
 
         $groupData = json_decode(file_get_contents('public/JSONcontents/groups/posts/'. Input::get('subject-name') . Input::get('section-name') . '_posts.json'), true);
@@ -150,4 +142,23 @@ class GroupsController extends BaseController {
 
         return Redirect::route('page.group');
     }
+
+    public function storeComment(){
+//        dd(Input::all());
+
+        $commentData = array(
+            "commentBy"     => Session::get('firstName') . ' ' . Session::get('lastName'),
+            "date"          => date('F d, Y'),
+            "content"       => Input::get('commentContent')
+        );
+
+        $comment = json_decode(file_get_contents('public/JSONcontents/groups/posts/' . Input::get('commentGroup') . '_posts.json'), true);
+//        dd($userData);
+        array_push($comment[Input::get('commentPostIndex')]['comments'], $commentData);
+//        dd($userData[Input::get('commentPostIndex')]['comments']);
+//        dd($comment);
+        File::put('public/JSONcontents/groups/posts/' . Input::get('commentGroup') . '_posts.json', json_encode($comment));
+        return Redirect::route('page.group');
+    }
+
 }

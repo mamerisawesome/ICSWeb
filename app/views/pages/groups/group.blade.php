@@ -172,5 +172,26 @@
         </div>
     </div>
 
+    <div class="update-panel-wrapper comment-container-input hidden">
+        <div class="container-fluid comment-panel">
+            <div class="col-md-12">
+            <h4 class="pull-center">
+            {{ Form::open(array('action'=>'page.user.comment.store', 'name'=>'commentForm', 'class'=>'commentForm')) }}
+
+                {{ Form::hidden('commentBy',Session::get('firstName') . " " . Session::get('lastname'),array('class'=>'usernameContainer')) }}
+                {{ Form::hidden('commentGroup','',array('class'=>'commentGroup')) }}
+                {{ Form::hidden('commentPostIndex',-1,array('class'=>'commentPostIndex')) }}
+                <div class="input-group">
+                    {{ Form::text('commentContent','',array('id'=>'commentContent','class'=>'form-control')) }}
+                    <span class="input-group-btn">
+                        {{ Form::submit('Comment',array('class'=>'btn btn-primary')) }}
+                    </span>
+                </div><!-- /input-group -->
+
+            {{ Form::close() }}
+            </div>
+        </div>
+    </div>
+
 </div>
 @stop

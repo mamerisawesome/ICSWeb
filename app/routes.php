@@ -52,8 +52,6 @@ Route::get('pages/create/faculty', function(){
 
 //Route::resource('pages/students','StudentsController');
 //Route::resource('faculty','FacultyController');
-Route::resource('pages/groups', 'GroupsController');
-
 //this is for login
 
 
@@ -71,6 +69,9 @@ Route::group(array('prefix'=>'pages', 'before' => 'auth'), function(){
     // Message sending
     Route::post('user/message',array('uses'=> 'UserController@sendMessage','as'=>'page.user.message'));
     Route::post('user/message/send',array('uses'=> 'UserController@storeMessage','as'=>'page.user.message.store'));
+    // Comments sending
+    Route::post('user/comment/send',array('uses'=> 'GroupsController@storeComment','as'=>'page.user.comment.store'));
+    Route::resource('groups', 'GroupsController');
     // Route::resource('group','GroupsController', array('only'=>array('groupPost','index'))/*,array('uses' => 'GroupsController@groupPost', 'as' => 'page.group.post')*/);
 });
 
