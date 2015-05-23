@@ -4,7 +4,7 @@
  
     {{ HTML::style('css/library.css'); }}
     {{ HTML::script('script/library.js'); }}
-<title>ICS UPLB - Library</title>
+
     <div id="shelf"> 
 		<div id="shelf-overlay" class="container-fluid wrapping-panel">
 			<div id="shelf-panel1" class="container">
@@ -44,7 +44,7 @@
 							</div>
 							<div class="form-group">
 								Date
-								<input class="form-control" type="number" min="2000" max="2014" name="spt-year" id="spt-year">
+								<input class="form-control" type="number" min="2008" max="2014" name="spt-year" id="spt-year">
 								<p id="spt-year-note" class="spt-search-note"></p>
 							</div>
 							<div class="col-md-12">
@@ -126,10 +126,13 @@
 
 	<!-- whole body (content) wrapped by a single div -->
 
-	</div>
-	<div class="container" id="SPT-preview">
-		<div id="preview-wrapper"></div>
-		<div id="library-switch"><p>LIBRARY</p></div>
+		<div class="container" id="SPT-preview">
+			<div id="preview-wrapper" class="col-md-12">
+				
+			</div>
+			<div id="library-switch"><p>LIBRARY</p></div>
+		</div>
+
 	</div>
 
 @stop

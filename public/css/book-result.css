@@ -89,3 +89,15 @@ img {
 		width:100%;
 		height:auto;
 	}
+
+#not-found {
+
+}
+
+#cute-pusheen img {
+	overflow: hidden;
+	width: 30%;
+	margin: auto;
+	border-radius: 100%;
+	border: 10px solid white;
+}

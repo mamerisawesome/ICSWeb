@@ -1,20 +1,3 @@
-/*function sample(){
-	$.ajax({url: "/script/sample.txt",
-	 success: function(result){
-            $("#title-panel").html("sample");
-        }});
-}*/
-
-/*$(document).ready(function(){
-	$(".links-panel").click(function(){
-		$.ajax({url: "/script/News1.txt",
-		success: function(result){
-			$("#title-panel").html("<h2>" + result) + "</h2>";
-		}});
-	});
-
-});
-*/
 $(document).ready(function(){
 	var NEWS;
 	var i;
@@ -36,6 +19,11 @@ $(document).ready(function(){
 		$(".links").click(function(){
 			ID = $(this).attr('id');
 			ID = ID[4];
+
+			$(this).css({
+				"color": "maroon"
+			});
+			
 			$("#title-panel").html("<h2 class='text'>" + NEWS[ID]['title'] + "</h2>" + "<hr>");
 			$("#body-panel").html("<p class='text'>" + NEWS[ID]['content'] + "</p>");
 		});	

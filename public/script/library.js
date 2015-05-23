@@ -25,7 +25,6 @@ function validateSearchQuery(){
 	if(inputAuthor.length > 0 || inputYear.length > 0 || inputTitle.length > 0) return true;
 	else {
 		alert("Please put at least one search query!");
-		return false;
 	}
 }
 
@@ -83,12 +82,7 @@ $(document).ready(function(){
 
 	$(".book").click(function(){
 		var content = $(this).html();
-//		alert(content);
 		$("#preview-wrapper").html(content);
-//		$("#preview-wrapper").html("dada");
-
-//		alert(id);
-//		$("#id-container").html(id);
 		$("#library-switch").show("slow");
 		$("#shelf").slideUp("slow");
 		$("#shelf-body").slideUp("slow");
@@ -104,14 +98,14 @@ $(document).ready(function(){
 
 	$("#spt-year").keyup(function(){
 		var year = $(this).val();
-		if(year.length == 4 && (year >= 2000 && year <= 2014)) {
+		if(year.length == 4 && (year >= 2008 && year <= 2014)) {
 			$("#spt-year-note").html("");
 		}
 		if(year.length > 4) {
 			$("#spt-year-note").html("please enter a 4-digit year");
 		}
-		if(year < 200 || year > 2014) {
-			$("#spt-year-note").html("plase choose a year from 2001 to 2014 only");			
+		if(year < 2008 || year > 2014) {
+			$("#spt-year-note").html("plase choose a year from 2008 to 2014 only");			
 		}
 	});
 

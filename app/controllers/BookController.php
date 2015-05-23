@@ -150,6 +150,10 @@ class BookController extends \BaseController {
             if($result != NULL) return View::make('pages.book.show', compact('result'));
             else return View::make('pages.book.error');
         }
+
+        else{
+            return Redirect::to('pages/library');
+        }
     }
 
 }
