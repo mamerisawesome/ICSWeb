@@ -1,3 +1,14 @@
+@media screen and (max-width: 1100px) {
+	#degree-program-icon {
+		display: none;
+	}
+
+	.pub-image {
+		width: 60%;
+		margin: auto;
+	}
+}
+
 /* IMAGE CAROUSEL */
 
 	#carousel-wrapper {
@@ -21,7 +32,7 @@
 	}
 
 	.item {
-		width: 100%;
+		width: 100%; 
 		height: auto;
 	}
 

@@ -88,28 +88,28 @@
 
                     <div class="col-md-12 event-group">
                         <div class="col-md-4 event-entry">
-                            <div class="col-md-3 event-date-stamp"><h4>12</h4><p>APRIL 2015</p><p>7PM ICSMH</p></div>
-                            <div class="col-md-9 event-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            <div class="col-md-3 event-date-stamp"><h4>28-4</h4><p>MAY 2015</p><p>TBA</p></div>
+                            <div class="col-md-9 event-body">Finals Week</div>
+                        </div>
+                        <div class="col-md-4 event-entry">
+                            <div class="col-md-3 event-date-stamp"><h4>9</h4><p>JUNE 2015</p><p>TBA</p></div>
+                            <div class="col-md-9 event-body">Last day of submitting of grades</div>
+                        </div>
+                        <div class="col-md-4 event-entry">
+                            <div class="col-md-3 event-date-stamp"><h4>4</h4><p>JULY 2015</p><p>F Park</p></div>
+                            <div class="col-md-9 event-body">UPLB Commencement Exercises</div>
                         </div>
                         <div class="col-md-4 event-entry">
                             <div class="col-md-3 event-date-stamp"><h4>12</h4><p>APRIL 2015</p><p>7PM ICSMH</p></div>
                             <div class="col-md-9 event-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
                         </div>
                         <div class="col-md-4 event-entry">
-                            <div class="col-md-3 event-date-stamp"><h4>12</h4><p>APRIL 2015</p><p>7PM ICSMH</p></div>
-                            <div class="col-md-9 event-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            <div class="col-md-3 event-date-stamp"><h4>15-16</h4><p>JUNE 2015</p><p>TBA</p></div>
+                            <div class="col-md-9 event-body">Removals Period</div>
                         </div>
                         <div class="col-md-4 event-entry">
-                            <div class="col-md-3 event-date-stamp"><h4>12</h4><p>APRIL 2015</p><p>7PM ICSMH</p></div>
-                            <div class="col-md-9 event-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                        </div>
-                        <div class="col-md-4 event-entry">
-                            <div class="col-md-3 event-date-stamp"><h4>12</h4><p>APRIL 2015</p><p>7PM ICSMH</p></div>
-                            <div class="col-md-9 event-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                        </div>
-                        <div class="col-md-4 event-entry">
-                            <div class="col-md-3 event-date-stamp"><h4>12</h4><p>APRIL 2015</p><p>7PM ICSMH</p></div>
-                            <div class="col-md-9 event-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            <div class="col-md-3 event-date-stamp"><h4>11</h4><p>JUNE 2015</p><p>TBA</p></div>
+                            <div class="col-md-9 event-body">Deadline for application for waiver of prerequisite</div>
                         </div>
 
                     </div>
