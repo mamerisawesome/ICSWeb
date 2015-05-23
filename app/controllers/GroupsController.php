@@ -33,12 +33,12 @@ class GroupsController extends BaseController {
 
         function createGroupJsonFile($name){
             // JSON file creator
-            $group_classList = [
+            $group_classList = [array(
                 "username"  =>Session::get('username'),
                 "firstname" =>Session::get('firstName'),
                 "middlename"=>Session::get('middleName'),
                 "lastname"  =>Session::get('lastName')
-            ];
+            )];
 
 //            $group_posts = [];
 
@@ -130,20 +130,26 @@ class GroupsController extends BaseController {
                 "middlename" => $middlename,
                 "lastname" => $lastname
             );
-
+            $flag = 0;
             $groupData = json_decode(file_get_contents('public/JSONcontents/groups/classList/'. $group . '_classList.json'), true);
-            array_push($groupData,$userData);
+            for($o = 0; $o < count($groupData); $o += 1) {
+                if($username == $groupData[$o]['username']){
+                    $flag += 1;
+                }
+            }
+            if($flag == 0){
+                array_push($groupData, $userData);
 
-            $userData = json_decode(file_get_contents('public/JSONcontents/accounts/groups/'. $username . '_groups.json'), true);
-            $groupObject = [
-                "subject"=>$query->courseTitle,
-                "section"=>$query->section
-            ];
-            array_push($userData['groups'],$groupObject);
+                $userData = json_decode(file_get_contents('public/JSONcontents/accounts/groups/' . $username . '_groups.json'), true);
+                $groupObject = [
+                    "subject" => $query->courseTitle,
+                    "section" => $query->section
+                ];
+                array_push($userData['groups'], $groupObject);
 
-            File::put('public/JSONcontents/groups/classList/'.$group.'_classList.json', json_encode($groupData));
-            File::put('public/JSONcontents/accounts/groups/'.$username.'_groups.json', json_encode($userData));
-
+                File::put('public/JSONcontents/groups/classList/' . $group . '_classList.json', json_encode($groupData));
+                File::put('public/JSONcontents/accounts/groups/' . $username . '_groups.json', json_encode($userData));
+            }
         }
 
         return Redirect::route('page.group');
