@@ -45,8 +45,7 @@
                     {{ Form::hidden('studentNumber', NULL, array('id'=>'studentNumber')) }}
                     {{ Form::hidden('type', 'faculty', array('id'=>'type')) }}
 
-                    {{ Form::submit('Submit', array('id'=>'submit','class'=>'btn btn-primary')) }}
-                {{ Form::close() }}
+                    <div id="valid" class="btn btn-primary">Submit</div>
                 </div>
 
             </div>
@@ -71,5 +70,17 @@
             </div>
         </div>
     </div>
+
+    <div id="dimmer" class="col-md-12"></div>
+
+    <div id="pop-up">
+        <div class="col-md-12">
+            <span class="glyphicon glyphicon-ok"></span>
+            <div>THANK YOU FOR REGISTERING</div>
+                {{ Form::submit('Close', array('id'=>'close-pop','class'=>'btn btn-default')) }}
+        </div>
+    </div>
+
+                {{ Form::close() }}
 
 @stop

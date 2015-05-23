@@ -97,7 +97,7 @@ class UserController extends \BaseController {
 
         createUserJsonFile(Input::get('username'));
         $this->user->save();
-        return Redirect::to('signup_success');
+        return Redirect::to('/');
 
 
 	}

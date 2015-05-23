@@ -1,6 +1,8 @@
 @extends('layouts.default')
 @section('content')
+
 <title>ICS UPLB - Sign Up as Student</title>
+
 	<div class="wrapping-panel" id="reg-form-panel">
 		<div class="container">
 			<div class="col-md-12">
@@ -44,9 +46,9 @@
 					{{ Form::hidden('room', NULL, array('id'=>'room')) }}
 					{{ Form::hidden('academicPosition', NULL, array('id'=>'academicPosition')) }}
 					{{ Form::hidden('type', 'student', array('id'=>'type')) }}
+					
+					<div id="valid" class="btn btn-primary">Submit</div>
 
-					{{ Form::submit('Submit', array('id'=>'submit','class'=>'btn btn-primary')) }}
-				{{ Form::close() }}
 				</div>
 
 			</div>
@@ -71,5 +73,18 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="dimmer" class="col-md-12"></div>
+
+	<div id="pop-up">
+		<div class="col-md-12">
+			<span class="glyphicon glyphicon-ok"></span>
+			<div>THANK YOU FOR REGISTERING</div>
+				{{ Form::submit('Close', array('id'=>'close-pop','class'=>'btn btn-default')) }}
+		</div>
+	</div>
+
+				{{ Form::close() }}
+
 
 @stop
