@@ -30,6 +30,8 @@ $(document).ready(function(){
 			name2 = name + i;
 			$(name2).html("<a href='#'>" + NEWS[i]['title'] + "</a>");
 		}
+			$("#title-panel").html("<h2 class='text'>" + NEWS[0]['title'] + "</h2>" + "<hr>");
+			$("#body-panel").html("<p class='text'>" + NEWS[0]['content'] + "</p>");
 		
 		$(".links").click(function(){
 			ID = $(this).attr('id');
