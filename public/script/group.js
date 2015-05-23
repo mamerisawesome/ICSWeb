@@ -109,49 +109,49 @@ $(document).ready(function(){
                         post.reverse();
                         for (var j = 0; j < post.length; j += 1) {
                             groupContent += '' +
-                                '<div class="update-panel-wrapper post-container">' +
-                                    '<div class="container-fluid update-panel">' +
-                                        '<div class="col-md-12">' +
-                                            '<div class="col-sm-1 feed-icon-wrapper">' +
-                                                '<img src="http://localhost:8000/res/images/sample1.png" class="feed-icon" class="img-rounded" alt="sample">' +
-                                            '</div>' +
-                                            '<div class="col-sm-11 post-title">' +
-                                                '<h4>' + post[j].postTitle + ' <small>' + post[j].dateOfPost + '</small>' + '</h4>' +
-                                                '<h6> by ' + post[j].postBy + '</h6>' +
-                                            '</div>' +
-                                            '<div class="col-sm-11 feed-text">' +
-                                                '<p>' + post[j].postContent + '</p>' +
-                                            '</div>' +
-                                        '</div>' +
-                                        '<small style="cursor:pointer" class="pull-right post-controller">COMMENTS</small>'+
-                                    '</div>';
+                            '<div class="update-panel-wrapper post-container">' +
+                            '<div class="container-fluid update-panel">' +
+                            '<div class="col-md-12">' +
+                            '<div class="col-sm-1 feed-icon-wrapper">' +
+                            '<img src="http://localhost:8000/res/images/sample1.png" class="feed-icon" class="img-rounded" alt="sample">' +
+                            '</div>' +
+                            '<div class="col-sm-11 post-title">' +
+                            '<h4>' + post[j].postTitle + ' <small>' + post[j].dateOfPost + '</small>' + '</h4>' +
+                            '<h6> by ' + post[j].postBy + '</h6>' +
+                            '</div>' +
+                            '<div class="col-sm-11 feed-text">' +
+                            '<p>' + post[j].postContent + '</p>' +
+                            '</div>' +
+                            '</div>' +
+                            '<small style="cursor:pointer" class="pull-right post-controller">COMMENTS</small>'+
+                            '</div>';
                             groupContent += '' + '<div class="comment-frame" style="display:none">';
                             for(var k = 0; k < post[j]['comments'].length; k += 1) {
                                 groupContent += '' +
-                                    '<div class="comment-container-wrapper">' +
-                                        '<div class="container-fluid comment-container">' +
-                                            '<div class="col-md-12">' +
-                                                '<div class="col-sm-11 comment-header">' +
-                                                    '<h5>' +
-                                                        post[j]['comments'][k]['commentBy'] +
-                                                        ' <small>' + post[j]['comments'][k]['date'] + '</small>' +
-                                                    '</h5>' +
-                                                '</div>' +
-                                                '<div class="col-sm-11 comment-content">' +
-                                                    '<p>' + post[j]['comments'][k]['content'] + '</p>' +
-                                                '</div>' +
-                                            '</div>' +
-                                        '</div>' +
-                                    '</div>';
+                                '<div class="comment-container-wrapper">' +
+                                '<div class="container-fluid comment-container">' +
+                                '<div class="col-md-12">' +
+                                '<div class="col-sm-11 comment-header">' +
+                                '<h5>' +
+                                post[j]['comments'][k]['commentBy'] +
+                                ' <small>' + post[j]['comments'][k]['date'] + '</small>' +
+                                '</h5>' +
+                                '</div>' +
+                                '<div class="col-sm-11 comment-content">' +
+                                '<p>' + post[j]['comments'][k]['content'] + '</p>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>';
                             }
                             $('.comment-container-input').find('.commentGroup').val(group);
                             $('.comment-container-input').closest('.postIndex').val();
                             var size = post.length - j - 1;
                             $('.comment-container-input').find('.commentPostIndex').val(size);
                             groupContent += ''+
-                                '<div class="update-panel-wrapper comment-container-send" >' +
-                                    $('.comment-container-input').html() +
-                                '</div>';
+                            '<div class="update-panel-wrapper comment-container-send" >' +
+                            $('.comment-container-input').html() +
+                            '</div>';
                             groupContent += '</div>';
 
 
