@@ -24,7 +24,7 @@
 	display: inline-block;
 	position: relative;
 	width: 100%;
-	overflow-x: scroll;
+	overflow-x: auto;
 	overflow-y: visible;
 }
 
@@ -39,11 +39,13 @@
     background-color: white;
 }
 
-.scrollable::-webkit-scrollbar { 
-    display: none; 
-}
-
 /* COURSE TITLES */
+
+#curriculum-content{
+    margin: 7px 0 7px 0;
+    padding: 0 7px 0 7px;
+    border-top: 3px solid #27ae60;
+}
 
 #courses-body{
     text-align: center;
