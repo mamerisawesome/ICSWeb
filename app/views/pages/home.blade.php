@@ -3,7 +3,7 @@
 
     {{ HTML::style('css/home.css'); }}
     {{ HTML::script('script/home.js'); }}
-
+<title>Home</title>
     <div id="body-wrapper"> 
     
         <div class="container-fluid" id="carousel-wrapper">

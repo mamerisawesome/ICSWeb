@@ -1,11 +1,13 @@
 @extends('layouts.default')
 @section('content')
+<title>Sign Up - Student</title>
 	<div class="wrapping-panel" id="reg-form-panel">
 		<div class="container">
 			<div class="col-md-12">
 			<div class="col-md-8" id="registration-form-panel">
 				<div class="col-md-12" id="reg-form-title">
 				<h2>ICS Student Register Form</h2>
+				
 				</div>
 				<div class="col-md-12" id="reg-form-body">
 				{{ Form::open(array('route'=>'pages.user.store', 'name'=>'reg-form', 'id'=>'reg-form'))}}
@@ -13,8 +15,8 @@
 					{{ Form::macro('regInput', function($inputType, $idName, $placeholderValue, $labelValue)
 						{
 							echo Form::label($idName, $labelValue);
-							if($idName == 'studentNumber') echo Form::input($inputType, $idName, '' , array('autocomplete'=>'off','maxlength'=>'10','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue));
-							else echo Form::input($inputType, $idName, '' , array('autocomplete'=>'off','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue));
+							if($idName == 'studentNumber') echo Form::input($inputType, $idName, '' , array('maxlength'=>'10','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue));
+							else echo Form::input($inputType, $idName, '' , array('id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue));
 							echo '<br>';
 						});
 					}}
@@ -37,7 +39,7 @@
 					{{ Form::regInput('password','retypePassword','Retype your password','Retype Password') }}
 					<div id="error-message"></div>
 					{{ Form::regInput('text','studentNumber','XXXX-XXXXX','Student Number') }}
-
+					<div id="error-message-studNum"></div>
 					{{ Form::hidden('employeeNumber', NULL, array('id'=>'employeeNumber')) }}
 					{{ Form::hidden('room', NULL, array('id'=>'room')) }}
 					{{ Form::hidden('academicPosition', NULL, array('id'=>'academicPosition')) }}

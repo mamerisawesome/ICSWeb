@@ -121,7 +121,7 @@ $(document).ready(function(){
 
 		if(password != retype){
 			rpword = false;
-			$("#error-message").html("Password do not match!");
+			$("#error-message").html("Password do not match!<br>");
 			$("#submit").attr('disabled','disabled');  
 		}
 		else{
@@ -181,14 +181,17 @@ $(document).ready(function(){
 		if(temp != ''){
 			temp2 = temp.split("-");
 			if($.isNumeric(temp2[0]) && temp2[0].length == 4 && $.isNumeric(temp2[1]) && temp2[1].length == 5){
+				$("#error-message-studNum").html("");
 				sNumber = true;	
 			}
 			else{
+				$("#error-message-studNum").html("Not a valid Student Number!<br><br>");
 				$("#submit").attr('disabled','disabled');
 				sNumber = false;	
 			}				
 		}  
 		else{
+			$("#error-message-studNum").html("");
 			$("#submit").attr('disabled','disabled');
 			sNumber = false;     
 		} 

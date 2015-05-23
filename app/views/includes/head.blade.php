@@ -1,7 +1,6 @@
     <meta charset="utf-8"/>
     <meta name="description" content=""/>
     <meta name="author" content="Almer and Friends"/>
-    <title>ICS UPLB</title>
 
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
