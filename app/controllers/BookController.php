@@ -1,4 +1,5 @@
 
+
 <?php
 
 class BookController extends \BaseController {
@@ -28,7 +29,26 @@ class BookController extends \BaseController {
 
         //if only author field is filled up
         if($author!=NULL&&$title==NULL&&$year==NULL){
-            $result = DB::table('library')->where('lastName', $author)->get();
+
+            $all = DB::table('library')->get();
+            $ln = array();//associative array
+            $result = array();
+
+            foreach($all as $a){
+                $n = strlen($a->lastName);                
+                $comma = 0;
+
+                for($i=0;$i<$n;$i++){                    
+                    if($a->lastName[$i]==','){
+                        $comma += 1;
+                        $split = explode(", ", $a->lastName);
+                        if(strtoupper($split[0])==strtoupper($author)) array_push($result, $a);       
+                        if(strtoupper($split[1])==strtoupper($author)) array_push($result, $a);                        
+                    }
+                }
+                if($comma==0) if(strtoupper($a->lastName)==strtoupper($author)) array_push($result, $a);                        
+            }        
+
             if($result != NULL) return View::make('pages.book.show', compact('result'));
             else return View::make('pages.book.error');
         }
@@ -49,14 +69,51 @@ class BookController extends \BaseController {
 
         //if author and title field is filled up
         else if($author!=NULL&&$title!=NULL&&$year==NULL){
-             $result = DB::table('library')->where('author', $author)->orWhere('title', $title)->get();
+            $all = DB::table('library')->get();
+            $ln = array();//associative array
+            $result = array();
+
+            foreach($all as $a){
+                $n = strlen($a->lastName);                
+                $comma = 0;
+
+                for($i=0;$i<$n;$i++){                    
+                    if($a->lastName[$i]==','){
+                        $comma += 1;
+                        $split = explode(", ", $a->lastName);
+                        if(strtoupper($split[0])==strtoupper($author)&&strtoupper($title)==strtoupper($a->title)) array_push($result, $a);       
+                        if(strtoupper($split[1])==strtoupper($author)&&strtoupper($title)==strtoupper($a->title)) array_push($result, $a);                        
+                    }
+                }
+                if($comma==0) if($a->lastName==$author&&$title==$a->title) array_push($result, $a); 
+            }  
+
             if($result != NULL) return View::make('pages.book.show', compact('result'));
             else return View::make('pages.book.error');
         }
 
         //if author and year field is filled up
         else if($author!=NULL&&$title==NULL&&$year!=NULL){
-             $result = DB::table('library')->where('author', $author)->orWhere('year', $year)->get();
+            
+            $all = DB::table('library')->get();
+            $ln = array();//associative array
+            $result = array();
+
+            foreach($all as $a){
+                $n = strlen($a->lastName);                
+                $comma = 0;
+
+                for($i=0;$i<$n;$i++){                    
+                    if($a->lastName[$i]==','){
+                        $comma += 1;
+                        $split = explode(", ", $a->lastName);
+                        if(strtoupper($split[0])==strtoupper($author)&&$year==$a->year) array_push($result, $a);       
+                        if(strtoupper($split[1])==strtoupper($author)&&$year==$a->year) array_push($result, $a);                        
+                    }
+                }
+                if($comma==0) if(strtoupper($a->lastName)==strtoupper($author)&&$year==$a->year) array_push($result, $a); 
+            }  
+
             if($result != NULL) return View::make('pages.book.show', compact('result'));
             else return View::make('pages.book.error');
         }
@@ -71,9 +128,26 @@ class BookController extends \BaseController {
         //if all fields are filled up
         else if($author!=NULL&&$title!=NULL&&$year!=NULL){
 
-            $result = DB::table('library')->where('title', $title)->orWhere('author', $author)->get();
+            $all = DB::table('library')->get();
+            $ln = array();//associative array
+            $result = array();
 
-            if($result != NULL) return View::make('pages.book.show1', compact('result'))->with('year', $year);
+            foreach($all as $a){
+                $n = strlen($a->lastName);                
+                $comma = 0;
+
+                for($i=0;$i<$n;$i++){                    
+                    if($a->lastName[$i]==','){
+                        $comma += 1;
+                        $split = explode(", ", $a->lastName);
+                        if(strtoupper($split[0])==strtoupper($author)&&$year==$a->year&&strtoupper($title)==strtoupper($a->title)) array_push($result, $a);       
+                        if(strtoupper($split[1])==strtoupper($author)&&$year==$a->year&&strtoupper($title)==strtoupper($a->title)) array_push($result, $a);                        
+                    }
+                }
+                if($comma==0) if(strtoupper($a->lastName)==strtoupper($author)&&$year==$a->year&&strtoupper($title)==strtoupper($a->title)) array_push($result, $a);                        
+            } 
+
+            if($result != NULL) return View::make('pages.book.show', compact('result'));
             else return View::make('pages.book.error');
         }
     }

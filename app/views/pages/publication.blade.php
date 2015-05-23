@@ -3,7 +3,7 @@
 
     {{ HTML::style('css/publication.css'); }}
     {{ HTML::script('script/publication.js'); }}
-<title>News</title>
+<title>ICS UPLB - News</title>
 	<div class="wrapping-panel">
 		<div class="container">
 			<div class="col-md-12">

@@ -4,7 +4,7 @@
  
     {{ HTML::style('css/library.css'); }}
     {{ HTML::script('script/library.js'); }}
-<title>Library</title>
+<title>ICS UPLB - Library</title>
     <div id="shelf"> 
 		<div id="shelf-overlay" class="container-fluid wrapping-panel">
 			<div id="shelf-panel1" class="container">
