@@ -58,19 +58,33 @@ $(document).ready(function(){
                 '</div>';
             }
 
-            endHtml = '' +
-                '<div class="col-md-12 user-group">' +
-                    '<span class="glyphicon glyphicon-plus group-icon"></span>' +
-                    '<div class="col-sm-12">' +
-                        '<h5 class="group-name"><a href="/pages/group/join">JOIN A GROUP</a></h5>' +
-                    '</div>' +
-                '</div>'+
-                '<div class="col-md-12 user-group">' +
-                    '<span class="glyphicon glyphicon-plus group-icon"></span>' +
-                    '<div class="col-sm-12">' +
-                        '<h5 class="group-name"><a href="/pages/group/create">CREATE A GROUP</a></h5>' +
-                    '</div>' +
-                '</div>';
+            var checker = $("#checker").val();
+
+            if(checker!='student'){
+                endHtml = '' +
+                    '<div class="col-md-12 user-group">' +
+                        '<span class="glyphicon glyphicon-plus group-icon"></span>' +
+                        '<div class="col-sm-12">' +
+                            '<h5 class="group-name"><a href="/pages/group/join">JOIN A GROUP</a></h5>' +
+                        '</div>' +
+                    '</div>'+
+                    '<div class="col-md-12 user-group">' +
+                        '<span class="glyphicon glyphicon-plus group-icon"></span>' +
+                        '<div class="col-sm-12">' +
+                            '<h5 class="group-name"><a href="/pages/group/create">CREATE A GROUP</a></h5>' +
+                        '</div>' +
+                    '</div>';
+            }
+
+            else{
+                endHtml = '' +
+                    '<div class="col-md-12 user-group">' +
+                        '<span class="glyphicon glyphicon-plus group-icon"></span>' +
+                        '<div class="col-sm-12">' +
+                            '<h5 class="group-name"><a href="/pages/group/join">JOIN A GROUP</a></h5>' +
+                        '</div>'+
+                    '</div>';
+            }
 
             $("#group-field-content").html(html+endHtml);
 

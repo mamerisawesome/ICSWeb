@@ -84,7 +84,10 @@
 
     			</div>
 
-    			{{-- Input field to post --}}
+                <?php $type = Session::get('type'); ?>
+                <input type="hidden" id="checker" value="{{ $type }}"/>
+
+    			{{-- Input field to post --}}                
                 <div id="input-post-field" class="col-md-12">
                     <h5>Post something in <span id="postIn"></span></h5>
                     {{ Form::open(array('action'=>'page.group.post', 'name'=>'post-form', 'id'=>'post-form'))}}
