@@ -1,0 +1,68 @@
+{
+	"facilities" : [
+		{
+			"caption" : "The students can study in the library",
+			"gallery-pic" : "'../res/facilities/IMG_3733.jpg'"
+		},
+		{
+			"caption" : "Numerous resources can be found",
+			"gallery-pic" : "'../res/facilities/IMG_3735.jpg'"
+		},
+		{
+			"caption" : "Copies of SP by past students",
+			"gallery-pic" : "'../res/facilities/IMG_3736.jpg'"
+		},
+		{
+			"caption" : "The ICS Conference Room",
+			"gallery-pic" : "'../res/facilities/IMG_3739.jpg'"
+		},
+		{
+			"caption" : "A PC Lab in the Institute",
+			"gallery-pic" : "'../res/facilities/IMG_3740.jpg'"
+		},
+		{
+			"caption" : "One of the three lecture halls, the ICS Mega Hall",
+			"gallery-pic" : "'../res/facilities/IMG_3745.jpg'"
+		},
+		{
+			"caption" : "Inside ICS Lecture Hall 4",
+			"gallery-pic" : "'../res/facilities/IMG_3754.jpg'"
+		},
+		{
+			"caption" : "PC Lab 8",
+			"gallery-pic" : "'../res/facilities/IMG_3760.jpg'"
+		},
+		{
+			"caption" : "PC Lab 9",
+			"gallery-pic" : "'../res/facilities/IMG_3761.jpg'"
+		},
+		{
+			"caption" : "PC Lab 9",
+			"gallery-pic" : "'../res/facilities/IMG_3765.jpg'"
+		},
+		{
+			"caption" : "Wifi Device",
+			"gallery-pic" : "'../res/facilities/IMG_3766.jpg'"
+		},
+		{
+			"caption" : "PC Lab 7",
+			"gallery-pic" : "'../res/facilities/IMG_3768.jpg'"
+		},
+		{
+			"caption" : "GS Room",
+			"gallery-pic" : "'../res/facilities/IMG_3774.jpg'"
+		},
+		{
+			"caption" : "Wifi Device",
+			"gallery-pic" : "'../res/facilities/IMG_3776.jpg'"
+		},
+		{
+			"caption" : "PS C-101",
+			"gallery-pic" : "'../res/facilities/IMG_3784.jpg'"
+		},
+		{
+			"caption" : "PS C-101",
+			"gallery-pic" : "'../res/facilities/IMG_3787.jpg'"
+		}
+	]
+}
