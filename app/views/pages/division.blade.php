@@ -6,6 +6,7 @@
 
 	<!-- whole body (content) wrapped by a single div -->
 
+<title>ICS UPLB - Divisions</title>
 
 	<div id="div-and-faci">
 		<div class="wrapping-panel" id="div-faci-header">

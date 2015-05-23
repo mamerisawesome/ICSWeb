@@ -1,5 +1,6 @@
 @extends('layouts.default')
 @section('content')
+<title>ICS UPLB - Sign Up as Faculty</title>
     <div class="wrapping-panel" id="reg-form-panel">
         <div class="container">
             <div class="col-md-12">

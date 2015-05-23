@@ -68,6 +68,9 @@ Route::group(array('prefix'=>'pages', 'before' => 'auth'), function(){
     Route::post('group/join/post',array('uses' => 'GroupsController@groupJoin', 'as' => 'page.group.join.post'));
     Route::get('group/create',array('uses'=>'GroupsController@create','as'=>'page.group.create'));
     Route::post('group/store',array('uses' => 'GroupsController@store', 'as' => 'page.group.store'));
+    // Message sending
+    Route::post('user/message',array('uses'=> 'UserController@sendMessage','as'=>'page.user.message'));
+    Route::post('user/message/send',array('uses'=> 'UserController@storeMessage','as'=>'page.user.message.store'));
     // Route::resource('group','GroupsController', array('only'=>array('groupPost','index'))/*,array('uses' => 'GroupsController@groupPost', 'as' => 'page.group.post')*/);
 });
 

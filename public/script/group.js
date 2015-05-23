@@ -167,15 +167,18 @@ $(document).ready(function(){
             success:function(list){
                 var classlist = JSON.parse(list);
                 var listHtml = '';
+
                 for(var h = 0; h < classlist.length; h += 1){
-                    listHtml += ''+
-                        '<div class="update-panel-wrapper">'+
-                            '<div class="container-fluid update-panel">'+
-                                '<div class="col-md-12">'+
-                                    '<h4 class="pull-center"><input type="submit"value="'+ classlist[h].firstname + " "+ classlist[h].lastname +'"/></h4>'+
-                                '</div>'+
-                            '</div>'+
+                    if(classlist[h].username != $('#username').text()){
+                        $('.username-container').find('.usernameContainer').val(classlist[h].username);
+                        $('.username-container').find('.selectUsername').val(classlist[h].firstname + " " + classlist[h].lastname);
+                        $('.username-container').find('.nameContainer').val(classlist[h].firstname + " " + classlist[h].lastname);
+                        //$('.username-container').find('.usernameForm').attr('action','/pages/message/');
+                        listHtml += '' +
+                        '<div class="update-panel-wrapper">' +
+                        $('.username-container').html() +
                         '</div>';
+                    }
                 }
 
                 var back = ''+
@@ -297,6 +300,7 @@ $(document).ready(function(){
                             '</div>'+
                         '</div>';
                 }
+                message.reverse();
                 for(var l = 0; l < message.length; l += 1){
                     inboxContent += ''+
                         '<div class="update-panel-wrapper">'+

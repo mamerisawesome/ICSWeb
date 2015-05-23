@@ -2,8 +2,8 @@
 @section('content')
 
     {{ HTML::style('css/publication.css'); }}
-
-
+    {{ HTML::script('script/publication.js'); }}
+<title>ICS UPLB - News</title>
 	<div class="wrapping-panel">
 		<div class="container">
 			<div class="col-md-12">
@@ -24,10 +24,10 @@
 					
 					 
 					<?php
-						for($i=1; $i<6; $i++) { ?>
-						<div class="links-panel col-md-12">
-							<div class="col-md-2"><?php echo $i; ?></div>				
-							<div class="col-md-10">	
+						for($i=0; $i<5; $i++) { ?>
+						<div class="links-panel col-md-12" >
+							<div class="col-md-2"><?php echo $i + 1; ?></div>				
+							<div class="col-md-10 links" id=news{{$i}}>	
 								<a href="#">NEWS ARTICLE TITLE goes here</a>
 							</div>
 						</div>
