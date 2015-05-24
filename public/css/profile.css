@@ -1,25 +1,29 @@
 /* UPPER PANEL - ABOUT */
 
+#profile-body{
+	background-image: url("../res/images/uplb-blur.jpg");
+	background-size: 100%;
+}
+
 #upper-panel {
 	margin: 10px 0 10px 0;
-	/*height: 350px;*/
 }
 
 
-	/* UPPER LEFT - INFO */
+/* UPPER LEFT - INFO */
 
 #profile-upper-left-panel {
-	height: 100%;
+	height: 370px;
 	text-align: center;
-	background-color: #95a5a6;
-	border-right: 5px solid #2ecc71;
+	background-color: rgba(236, 240, 241,0.5);
+	border-right: 5px solid #2c3e50;
 	color: white;
 }
 
 #profile-pic {
-  height:220px;
-  width: 220px;
-  border-radius: 220px;
+  height:170px;
+  width: 170px;
+  border-radius: 100%;
   margin-top: 25px;
   background-color: white;
   box-shadow: 1px 1px 5px #333333;
@@ -29,11 +33,26 @@
 	margin: 25px;
 }
 
-	/* UPPER RIGHT - LONGER INFO */
+form{
+	margin: 0 auto;
+	width: 200px; 
+}
+
+input{
+	margin-top: 10px;
+	color: #2c3e50;
+}
+
+/* UPPER RIGHT - LONGER INFO */
+
+#edit-profile{
+	float: right;
+	color: #2980b9;
+}
 
 #profile-upper-right-panel {
-	height: 100%;
-	background-color: #bdc3c7;
+	height: 370px;
+	background-color: rgba(189, 195, 199,0.8);
 	color: white;
 	padding: 2%;
 }
@@ -49,7 +68,8 @@
 .prof-info{
 	text-align:center;
 }
-	/* UPPER RIGHT > BELOW - MESSAGING */
+
+/* UPPER RIGHT > BELOW - MESSAGING */
 #profile-message-wrapper {
 	width: 100%;
 	margin-top: 20px;
@@ -64,12 +84,13 @@
 /* BOTTOM PANEL - SENDING EXER */
 
 #prof-bottom-panel {
+	background-color: rgba(256, 256, 256, 0.9);
 	height: 300px;
 	margin-bottom: 15px;
 	padding-top: 15px;
 }
 
-	/* BOTTOM LEFT - GUIDELINES ON SENDING EXER */
+/* BOTTOM LEFT - GUIDELINES ON SENDING EXER */
 
 #prof-bottom-panel-content {
 	margin: 15px 25px 0 0;
@@ -81,7 +102,7 @@
 	margin-bottom: 5px;
 }
 
-	/* BOTTOM RIGHT - EXER FORM */
+/* BOTTOM RIGHT - EXER FORM */
 
 #send-exer-panel{
 	height: 100%;
@@ -108,4 +129,11 @@
 
 #profile-exer table button {
 	text-align: center;
+}
+
+/* BOTTOM RIGHT - GROUPS AND EDIT PROFILE */
+
+#groups-panel{
+	height: 100%;
+	margin-top: 5%;
 }

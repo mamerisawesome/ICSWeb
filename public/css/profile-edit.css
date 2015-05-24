@@ -1,0 +1,48 @@
+#profile-body{
+	background-image: url("../res/images/uplb-blur.jpg");
+	background-size: 100%;
+}
+
+p{
+	color: black;
+}
+
+/* FORM TITLE */
+
+#form-title {
+	padding: 5px;
+	background-color: #34495e;
+}
+
+#form-title h3{
+	color: white;
+	text-align: center;
+}
+
+/* MAIN CONTENT */
+
+#upper-panel {
+	margin: 100px 0 10px 0;
+}
+
+#profile-upper-left-panel {
+	height: 350px;
+	text-align: center;
+	background-color: rgba(52, 73, 94,0.2);
+	border-right: 5px solid #2c3e50;
+	color: white;
+}
+
+#profile-upper-right-panel {
+	height: 350px;
+	background-color: rgba(189, 195, 199,0.4);
+	color: white;
+	padding: 2%;
+}
+
+#prof-bottom-panel-content{
+	width: 50%;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 100px;
+}

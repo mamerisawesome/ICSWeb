@@ -4,15 +4,15 @@
 
     {{ HTML::style('css/profile.css'); }}
     <?php $filename=Session::get('username').".jpg"; ?>
-	<title>{{Session::get('username')}}</title>
-	<div>
+	<title>{{Session::get('firstName'). ' ' . Session::get('lastName')}}</title>
+	<div id="profile-body">
 	<div class="container" id="body-wrapper">
 		<div class="col-md-12" id="upper-panel">
 			<div class="col-md-4" id="profile-upper-left-panel">
 				<?php if(Session::has('avatar')) {?>
-					<img src="{{URL::to('upload/'.$filename)}}"/>
+					<img src="{{URL::to('upload/'.$filename)}}" id="profile-pic"/>
 				<?php }else{ ?>	
-					<img src="{{URL::to('res/images/blue_contacts.png')}}"/>
+					<img src="{{URL::to('res/images/blue_contacts.png')}}" id="profile-pic"/>
 				<?php } ?>
 				<form action="upload_file" method="post" enctype="multipart/form-data">
 					<input type="file" name="uploadfile" size="20" />
@@ -31,18 +31,21 @@
 						<h5 class="prof-info" id="prof-bio/info">BIO/INFO<br><?php if(Session::get('consult')==null){ echo "No Bio/Info Yet."; }else{echo Session::get('bio');} ?></h5>
 					</p>
 				</div>
-				<div id="profile-message-wrapper">
-					<p><a href="#">Message <span class="fa fa-envelope-o" id="sample"></span></a></p>
-				</div>
+				<?php if(Session::get('type')=='faculty'){ ?>
+						<div id="profile-message-wrapper">
+							<p>
+							<a href="{{URL::to('pages/profile-edit')}}">Edit your profile <span class="fa fa-user" id="sample"></span></a>
+							</p>
+						</div>
+				<?php } else { ?>
+					<div id="profile-message-wrapper">
+						<p><a href="#">Message <span class="fa fa-envelope-o" id="sample"></span></a></p>
+					</div>
+				<?php } ?>
 			</div>
 		</div>
 	</div>
 	
-	<!-- 
-		The following div (for sending exers) will not be visible should the prof log in
-		Not yet implemented
-	-->
-
 	<div class="container" id="body-wrapper">
 		<div class="col-md-12" id="prof-bottom-panel">
 			<div id="prof-bottom-panel-content">
@@ -52,7 +55,8 @@
 						<br><?php if(Session::get('guide')==null){ echo "No Guides/Reminders Yet."; }else{echo Session::get('guide');} ?>
 					</ul>
 				</div>
-				<?php if(Session::get('type')=='student'){ ?><div class="col-md-8" id="send-exer-panel">
+				<?php if(Session::get('type')=='student'){ ?>
+				<div class="col-md-8" id="send-exer-panel">
 					<h5>{ SEND YOUR EXERCISE }</h5>
 					<form id="profile-exer" action="#">
 						<table>
@@ -87,8 +91,11 @@
 					</form>
 				</div>	
 				<?php }else{ ?>
-					<h5>Dito na yung link nung groups kung sino man ang gagawa nun hehe</h5>
-					<h5><a href="{{URL::to('pages/profile-edit')}}">Edit - This is for editing hehe</span></a></h5>
+				
+				<div id="groups-panel" class="col-md-8">
+						<h3><a href="{{URL::to('pages/group')}}">Go to timeline</a></h3>
+						<h4>You can see the latest updates from your groups, create groups, and view your messages.</h4>
+				</div>
 				<?php } ?>
 			</div>
 		
