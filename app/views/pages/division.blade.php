@@ -13,10 +13,10 @@
 			<div class="container">
 				<h1>Divisions and Facilities</h1>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 	Integer vitae elementum nibh, vitae malesuada nulla. Donec id urna nunc. Aenean volutpat, ex eu congue lacinia, erat nulla scelerisque nisi, molestie vestibulum tortor metus quis lacus. Nam diam ipsum, accumsan eget iaculis a, fringilla quis ipsum. Vivamus odio orci, dictum nec condimentum sed, vehicula eu dolor.
+					The ICS is divided into six (6) administrative functions called divisions. A division is headed by a division head who is appointed by the UPLB Chancellor upon recommendation by the ICS Director. A division is usually headed by a senior faculty member. The six ICS divisions are: Academic Programs Division, Computer Training and Extension Division, Los Banos Computer Center, Networking and Data Communications Division, Regional Units and Outreach Division, Research and Development Division, Working Committees.
 				</p>
 				<p>
-					Integer vitae elementum nibh, vitae malesuada nulla. Donec id urna nunc. Aenean volutpat, ex eu congue lacinia, erat nulla scelerisque nisi, molestie vestibulum tortor metus quis lacus. Nam diam ipsum, accumsan eget iaculis a, fringilla quis ipsum. Vivamus odio orci, dictum nec condimentum sed, vehicula eu dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+					The Institute operates a variety of computing equipments to support the research and instructional need of UPLB students and faculty. These equipments are interconnected within local area networks that are directly connected to the Internet. 
 				</p>
 			</div>
 		</div>
@@ -90,34 +90,11 @@
 
     <div class="container" id="facilities-panel">
     	<h1>Facilities</h1>
-    	<p>Sed massa ex, accumsan sed convallis vitae, placerat ut risus. Vestibulum sed molestie lorem. Nunc et ex malesuada, auctor arcu sed, rutrum ligula. Nam in sodales leo. Duis dui tortor, convallis sit amet vulputate sed, pulvinar vel quam.</p><br />
-    	<div class="col-md-12" id="facilities-gallery">
-    		<div class="col-md-3"><img class="faci-img" src="{{URL::to('res/images/physci.jpg')}}"></div>
-    		<div class="col-md-3"><img class="faci-img" src="{{URL::to('res/images/sample2.jpg')}}"></div>
-    		<div class="col-md-3"><img class="faci-img" src="{{URL::to('res/images/sample.jpg')}}"></div>
-    		<div class="col-md-3"><img class="faci-img" src="{{URL::to('res/images/sample2.jpg')}}"></div>
-    	</div>
-    	<div class="col-md-12" id="facilities-gallery">
-    		<div class="col-md-3"><img class="faci-img" src="{{URL::to('res/images/sample.jpg')}}"></div>
-    		<div class="col-md-3"><img class="faci-img" src="{{URL::to('res/images/sample2.jpg')}}"></div>
-    		<div class="col-md-3"><img class="faci-img" src="{{URL::to('res/images/sample.jpg')}}"></div>
-    		<div class="col-md-3"><img class="faci-img" src="{{URL::to('res/images/physci.jpg')}}"></div>
-    	</div>
-    	<div class="col-md-12" id="facilities-gallery">
-    		<div class="col-md-3"><img class="faci-img" src="{{URL::to('res/images/physci.jpg')}}"></div>
-    		<div class="col-md-3"><img class="faci-img" src="{{URL::to('res/images/sample2.jpg')}}"></div>
-    		<div class="col-md-6">
-    			<p id="facilities-quote">
-    					"Vestibulum sed molestie lorem. Nunc et ex malesuada, auctor arcu sed, rutrum ligula. Nam in sodales leo. Duis dui tortor, convallis sit amet vulputate sed, pulvinar vel quam. Nam in sodales leo. "
-    			</p>
-    		</div>
-    	</div>
-    	<div class="col-md-12" id="facilities-gallery">
-    		<div class="col-md-3"><img class="faci-img" src="{{URL::to('res/images/sample2.jpg')}}"></div>
-    		<div class="col-md-3"><img class="faci-img" src="{{URL::to('res/images/sample.jpg')}}"></div>
-    		<div class="col-md-3"><img class="faci-img" src="{{URL::to('res/images/physci.jpg')}}"></div>
-    		<div class="col-md-3"><img class="faci-img" src="{{URL::to('res/images/sample.jpg')}}"></div>
-    	</div>
+    	<p>There are currently 12 fully air-conditioned student research and teaching laboratories. The Institute also maintains two clusters for high-performance computing research and for teaching parallel computing and maintain three air-conditioned lecture halls that are equipped with multimedia systems connected to the Internet. The library houses approximately 1,000 book titles, journals, magazines, theses, and special problem manuscripts.</p><br />
+   		<div class="col-md-12" id="gallery-container">	
+
+		</div>
+	
    	</div>
 
 @stop

@@ -1,13 +1,14 @@
 $(document).ready(function(){
+
 	$.getJSON("../res/courses.json", function(data){
 		
 		var courses = data['courses'];
 		var coursecontent = "";
 
-		for(var i = 0; i<7; i++){
+		for(var i = 0; i<10; i++){
 			coursecontent += "<div class='col-md-12'>"
-			for(var j = 4*i; j< [(4*i)+4]; j++) {
-				coursecontent += "<div class='course col-md-3'>"
+			for(var j = 3*i; j< [(3*i)+3]; j++) {
+				coursecontent += "<div class='course col-md-4'>"
 									+ "<div class='col-md-12' id='curriculum-content'>"
 										+ "<div id='curriculum-text'>"
 											+ "<h3>"
