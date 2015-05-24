@@ -3,14 +3,17 @@
 
     {{ HTML::style('css/publication.css'); }}
     {{ HTML::script('script/publication.js'); }}
-<title>ICS UPLB - News</title>
+
+	<title>News</title>
+	
 	<div class="wrapping-panel">
 		<div class="container">
+
 			<div class="col-md-12">
+				<img id="pub-head" src="{{URL::to('res/images/pub-head.jpg')}}">
 			
 			<div class="col-md-9" id="news-right-panel">
-				<div class="col-md-12" id="news-article-wrapper">				
-				<img id="pub-head" src="{{URL::to('res/images/pub-head.jpg')}}">
+				<div class="col-md-12" id="news-article-wrapper">
 					<div id="title-panel">
 						<h2 class="texts">ICS BEARS 500 GRADUATES, 2015</h2>
 						<h5>by ics publication<h5>
@@ -28,7 +31,6 @@
 
 			<div class="col-md-3" id="news-left-panel">
 				<div id="news-header" class="col-md-12">
-					<img src="{{URL::to('res/images/pusheen-read.png')}}">					
 					<h1>ICS NEWS</h1>
 				</div>					
 					 
@@ -37,7 +39,7 @@
 					<div class="links-panel col-md-12" >
 						<div class="col-md-2"><?php echo $i + 1; ?></div>				
 						<div class="col-md-10 links" id=news{{$i}}>	
-							<a href="#">NEWS ARTICLE TITLE goes here</a>
+							<a href="#title-panel">NEWS ARTICLE TITLE goes here</a>
 						</div>
 						</div>
 				<?php } ?>

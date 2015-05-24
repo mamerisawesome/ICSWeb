@@ -3,7 +3,9 @@
 
     {{ HTML::style('css/about.css'); }}
     {{ HTML::script('script/about.js'); }}
- <title>ICS UPLB - About Us</title>
+
+    <title>About Us</title>
+
     <div>
     	<div class="" id="about-panel1">
     		<div class="wrapping-panel" id="about-panel1-content">

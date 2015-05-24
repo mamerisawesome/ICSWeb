@@ -4,7 +4,8 @@
 	{{ HTML::style('css/curriculum.css'); }}
     {{ HTML::script('script/curriculum.js'); }}
 
-<title>ICS UPLB - Courses</title>
+    <title>Courses</title>
+
 	<div>
 		<div class="wrapping-panel" id="curriculum-header-wrapper">
 			<div class="container" id="curriculum-header">

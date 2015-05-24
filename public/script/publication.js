@@ -20,13 +20,13 @@ $(document).ready(function(){
 			ID = $(this).attr('id');
 			ID = ID[4];
 
-			$(this).css({
-				"color": "maroon"
-			});
-			
 			$("#title-panel").html("<h2 class='text'>" + NEWS[ID]['title'] + "</h2>" + "<hr>");
 			$("#body-panel").html("<p class='text'>" + NEWS[ID]['content'] + "</p>");
-		});	
+			
+			$('html, body').animate({
+			        scrollTop: $("#pub-head").offset().top
+			    }, "fast");
+					});	
 
 		$("#news-searchbar-wrapper").click(function(){
 			document.getElementById('news-searchbar').value = null;

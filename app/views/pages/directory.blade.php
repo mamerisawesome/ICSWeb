@@ -5,7 +5,8 @@
     {{ HTML::script('script/directory.js'); }}
 
 	<!-- whole body (content) wrapped by a single div -->
-<title>ICS UPLB - Faculty And Staff</title>
+	<title>Faculty</title>
+	
 	<div>
 		<div id="directory-image-header">
 			<img src="{{URL::to('res/images/faculty-directory-header-2.jpg')}}">

@@ -3,7 +3,9 @@
 
     {{ HTML::style('css/home.css'); }}
     {{ HTML::script('script/home.js'); }}
-<title>ICS UPLB - Home</title>
+    
+    <title>ICS UPLB</title>
+    
     <div id="body-wrapper"> 
     
         <div class="container-fluid" id="carousel-wrapper">

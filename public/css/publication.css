@@ -1,12 +1,14 @@
 body {
 	background-color: white;
 }
+
 /* LEFT PENL */
 
 	#news-left-panel {
 		padding: 0;
 		text-align: center;
 		background-color: #bdc3c7;
+		margin-top: 20px;		
 	}
 
 	#news-header {
@@ -43,16 +45,18 @@ body {
 
 	#pub-head {
 		width: 100%;
+		box-shadow: 0 0 5px gray;
 	}
 
 	#news-right-panel {
-		padding-left: 0;
+		padding: 0;
+		margin-top: 20px;
 	}
 
 	#news-article-wrapper {
 		background-color: white;
-		box-shadow: 0px 0px 5px #bdc3c7;
-		padding: 0;
+/*		box-shadow: 0px 0px 5px #bdc3c7;
+*/		padding: 0;
 	}
 
 	#news-article-wrapper h2 {

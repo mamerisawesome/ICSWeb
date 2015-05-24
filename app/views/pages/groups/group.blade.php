@@ -19,6 +19,8 @@
     {{ HTML::style('css/group.css'); }} 
     {{ HTML::script('script/group.js'); }}
 
+    <title>{{$username}}</title>
+
     <div class="wrapping-panel">
 
 	<div class="container">

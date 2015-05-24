@@ -3,8 +3,8 @@
     <meta name="author" content="Almer and Friends"/>
 
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
-    <title>ICS UPLB</title>
-    {{ HTML::style('css/bootstrap.css'); }}
+<!--    <title>ICS UPLB</title>
+    -->{{ HTML::style('css/bootstrap.css'); }}
     {{ HTML::style('css/font-awesome.css'); }}
     {{ HTML::style('css/font-awesome.min.css'); }}
 

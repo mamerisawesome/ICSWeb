@@ -16,11 +16,13 @@
 				
 	 //start of the session
 ?>
+
 @extends('layouts.default')
 @section('content')
 
     {{ HTML::style('css/profile.css'); }}
 
+	<title>{{$username}}</title>
 
 	<div>
 	<div class="container" id="body-wrapper">
