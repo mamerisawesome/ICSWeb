@@ -39,11 +39,18 @@ class SessionsController extends \BaseController {
 				Session::put('studentNumber',Auth::user()->studentNumber);
 				return Redirect::intended('pages/group');
 			}else{
+				if(Auth::user()->avatar!=null){
+					Session::put('avatar', Auth::user()->avatar);
+				}
 				Session::put('employeeNumber',Auth::user()->employeeNumber);
 				Session::put('room',Auth::user()->room);
 				Session::put('academic',Auth::user()->academicPosition);
+				Session::put('consult', Auth::user()->consultation);
+				Session::put('guide', Auth::user()->guide);
+				Session::put('bio', Auth::user()->bio);
 				return Redirect::intended('pages/profile');
 			}
+			
 		}
 	}
 
@@ -114,7 +121,7 @@ class SessionsController extends \BaseController {
 	 */
 	public function destroy(){
 		Session::flush();
-		return Redirect::to('/');
+		return Redirect::to('pages/home');
 	}
 
 

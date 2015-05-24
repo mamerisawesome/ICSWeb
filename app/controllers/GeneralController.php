@@ -28,6 +28,11 @@ class GeneralController extends BaseController{
         return View::make('pages.curriculum');
     }
 
+     public function showFile()
+    {
+        return View::make('successfile');
+    }
+
     public function showDirectory()
     {
         return View::make('pages.directory');
@@ -63,6 +68,11 @@ class GeneralController extends BaseController{
         return View::make('pages.profile');
     }
 
+    public function showProfileEdit()
+    {
+        return View::make('pages.profile-edit');
+    }
+
     public function showPublication()
     {
         return View::make('pages.publication');
@@ -71,6 +81,11 @@ class GeneralController extends BaseController{
     public function showRegisterForm()
     {
         return View::make('pages.register_form');
+    }
+
+    public function showOrganization()
+    {
+        return View::make('pages.organization');
     }
 
 }

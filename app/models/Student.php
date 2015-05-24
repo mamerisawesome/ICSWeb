@@ -10,7 +10,7 @@ class Student extends Eloquent implements UserInterface, RemindableInterface {
      use UserTrait, RemindableTrait;
 
     public $timestamps = false;
-    protected $fillable = ['username', 'password', 'firstName', 'middleName', 'lastName', 'birthdate', 'sex', 'email', 'studentNumber', 'accessCode'];
+    protected $fillable = ['avatar','username', 'password', 'firstName', 'middleName', 'lastName', 'birthdate', 'sex', 'email', 'studentNumber', 'accessCode'];
 
     public static $auth_rules = [
         'email' => 'required|email',

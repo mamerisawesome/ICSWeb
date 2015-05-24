@@ -104,10 +104,37 @@ class UserController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($username)
+	public function edit()
 	{
-        $student = DB::table('accounts')->where('username', $username)->first();
-        //return View::make('pages.students.editStudent')->with('student', $student);
+		$lastName = Input::get('lastName');
+        $middleName = Input::get('middleName');
+        $firstName = Input::get('firstName');
+ 		$room = Input::get('room');
+ 		$consultation = Input::get('consultation');
+ 		$bio = Input::get('bio');
+ 		$academicPosition = Input::get('academicPosition');
+ 		$guide = Input::get('guide');
+        $username = Session::get('username');
+
+        DB::update("update accounts set middleName = '".$middleName."' where username = '".$username."' ");
+        DB::update("update accounts set lastName = '".$lastName."' where username = '".$username."' ");
+        DB::update("update accounts set firstName = '".$firstName."' where username = '".$username."' ");
+        DB::update("update accounts set room = '".$room."' where username = '".$username."' ");
+        DB::update("update accounts set bio = '".$bio."' where username = '".$username."' ");
+        DB::update("update accounts set consultation = '".$consultation."' where username = '".$username."' ");
+        DB::update("update accounts set guide = '".$guide."' where username = '".$username."' ");
+        DB::update("update accounts set academicPosition = '".$academicPosition."' where username = '".$username."' ");
+        
+
+        Session::put('firstName', $firstName);
+        Session::put('lastName', $lastName);
+        Session::put('middleName', $middleName);
+        Session::put('academic', $academicPosition);
+		Session::put('room', $room);
+		Session::put('consult', $consultation);
+		Session::put('bio', $bio);
+		Session::put('guide', $guide);
+        return Redirect::to('pages/profile');
 	}
 
 

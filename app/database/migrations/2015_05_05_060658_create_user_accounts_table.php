@@ -34,6 +34,8 @@ class CreateUserAccountsTable extends Migration {
             // will accept a url to a filename with a file type JSON
             $table->string('groups',255);
             $table->string('messages',255);
+            //for the profile picture
+            $table->string('avatar', 50)->nullable();
 		});
 	}
 

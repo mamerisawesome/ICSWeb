@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"vlucas/phpdotenv": "1.0.*@dev"
+		"vlucas/phpdotenv": "1.0.*@dev",
 	},
 	"autoload": {
 		"classmap": [

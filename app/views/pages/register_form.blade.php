@@ -35,6 +35,7 @@
                     {{ Form::regInput('text','accessCode','Access code given by faculty members','Access Code') }}
 
                     <br>
+                    <?= Form::file('avatar') ?>
                     {{ Form::submit('Submit', array('class'=>'btn btn-primary')) }}
                 {{ Form::close() }}
 

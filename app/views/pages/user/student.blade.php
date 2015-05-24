@@ -18,7 +18,6 @@
 							echo '<br>';
 						});
 					}}
-
 					{{ Form::regInput('text','firstName','Enter your first name here','First Name') }}
 					{{ Form::regInput('text','middleName','Enter your middle name here','Middle Name') }}
 					{{ Form::regInput('text','lastName','Enter your last name here','Last Name') }}
