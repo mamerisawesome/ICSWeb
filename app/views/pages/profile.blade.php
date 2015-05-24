@@ -1,8 +1,10 @@
+
 @extends('layouts.default')
 @section('content')
 
     {{ HTML::style('css/profile.css'); }}
     <?php $filename=Session::get('username').".jpg"; ?>
+	<title>{{Session::get('username')}}</title>
 	<div>
 	<div class="container" id="body-wrapper">
 		<div class="col-md-12" id="upper-panel">

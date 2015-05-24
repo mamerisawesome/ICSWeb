@@ -3,7 +3,9 @@
 
     {{ HTML::style('css/home.css'); }}
     {{ HTML::script('script/home.js'); }}
-
+    
+    <title>ICS UPLB</title>
+    
     <div id="body-wrapper"> 
     
         <div class="container-fluid" id="carousel-wrapper">
@@ -88,28 +90,28 @@
 
                     <div class="col-md-12 event-group">
                         <div class="col-md-4 event-entry">
-                            <div class="col-md-3 event-date-stamp"><h4>12</h4><p>APRIL 2015</p><p>7PM ICSMH</p></div>
-                            <div class="col-md-9 event-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            <div class="col-md-3 event-date-stamp"><h4>27</h4><p>FEB 2015</p><p>11:59:59PM</p></div>
+                            <div class="col-md-9 event-body">Deadline for entries for ICS Shirt Design Contest. Win P1,000 + ICS Shirt + Bragging rights!</div>
                         </div>
                         <div class="col-md-4 event-entry">
-                            <div class="col-md-3 event-date-stamp"><h4>12</h4><p>APRIL 2015</p><p>7PM ICSMH</p></div>
-                            <div class="col-md-9 event-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            <div class="col-md-3 event-date-stamp"><h4>16</h4><p>FEB 2015</p><p>10AM ICSMH</p></div>
+                            <div class="col-md-9 event-body">BS Computer Science 2014 General Assembly</div>
                         </div>
                         <div class="col-md-4 event-entry">
-                            <div class="col-md-3 event-date-stamp"><h4>12</h4><p>APRIL 2015</p><p>7PM ICSMH</p></div>
-                            <div class="col-md-9 event-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            <div class="col-md-3 event-date-stamp"><h4>09</h4><p>FEB 2015</p><p>7AM ICSMH</p></div>
+                            <div class="col-md-9 event-body">Practicum Orientation</div>
                         </div>
                         <div class="col-md-4 event-entry">
-                            <div class="col-md-3 event-date-stamp"><h4>12</h4><p>APRIL 2015</p><p>7PM ICSMH</p></div>
-                            <div class="col-md-9 event-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            <div class="col-md-3 event-date-stamp"><h4>06</h4><p>FEB 2015</p><p>1PM ICS LH3</p></div>
+                            <div class="col-md-9 event-body">Career Orientation with Dr. Vladimir Y. Mariano and  Mr. Rodolfo N. Duldulao Jr.</div>
                         </div>
                         <div class="col-md-4 event-entry">
-                            <div class="col-md-3 event-date-stamp"><h4>12</h4><p>APRIL 2015</p><p>7PM ICSMH</p></div>
-                            <div class="col-md-9 event-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            <div class="col-md-3 event-date-stamp"><h4>04</h4><p>FEB 2015</p><p>10AM ICSLH3</p></div>
+                            <div class="col-md-9 event-body">Career Orientation with Mr. Micael Andrei B. Diaz de Rivera and Mr. Jack Elendill B. Lagare</div>
                         </div>
                         <div class="col-md-4 event-entry">
-                            <div class="col-md-3 event-date-stamp"><h4>12</h4><p>APRIL 2015</p><p>7PM ICSMH</p></div>
-                            <div class="col-md-9 event-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            <div class="col-md-3 event-date-stamp"><h4>30</h4><p>JAN 2015</p><p>10AM ICSMH</p></div>
+                            <div class="col-md-9 event-body">Keeping Yourself Essential: Lessons Learned from 25 Years in the IT Industry</div>
                         </div>
 
                     </div>

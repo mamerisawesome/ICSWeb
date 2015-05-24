@@ -3,70 +3,75 @@
 
     {{ HTML::style('css/about.css'); }}
     {{ HTML::script('script/about.js'); }}
- 
+
+    <title>About Us</title>
+
     <div>
-    	<div class="" id="about-panel1">
-    		<div class="wrapping-panel" id="about-panel1-content">
-	    		<div class="container">
-	    			<div class="col-md-12">
-	    				<h1>The UPLB Institute of Computer Science</h1>
-	    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-	    				Integer vitae elementum nibh, vitae malesuada nulla. Donec id urna nunc. Aenean volutpat,
-	    				ex eu congue lacinia, erat nulla scelerisque nisi, molestie vestibulum tortor metus quis lacus.
-	    				Nam diam ipsum, accumsan eget iaculis a, fringilla quis ipsum. Vivamus odio orci, dictum nec
-	    				condimentum sed, vehicula eu dolor. Curabitur condimentum ante sapien, a finibus tortor interdum eget.
-	    				Sed ultrices sollicitudin vestibulum. Cras non felis eget tellus luctus efficitur. Nulla ac justo eget
-	    				nibh lobortis vulputate et sit amet orci. In scelerisque sit amet sapien venenatis ornare.
-	    				Pellentesque magna nibh, porttitor quis est at, rutrum euismod metus.</p>
-	    				<hr>
-	    				<h3>Contact Information</h3>
-	    			</div>
-	    		</div>
-    		</div>
-    	</div>
+        <div class="" id="about-panel1">
+            <div class="wrapping-panel" id="about-panel1-content">
+                <div class="container">
+                    <div class="col-md-12">
+                        <h1>The UPLB Institute of Computer Science</h1>
+                        <p>The Institute of Computer Science (ICS) is an autonomous institute of the College of Arts and Sciences (CAS) of the University of the Philippines Los Baños (UPLB). ICS is Commission on Higher Education's (CHED) Center of Excellence in Information Technology Education. ICS has strong undergraduate and graduate (Diploma, MIT, MS and PhD) degree programs in computer science and information technology with more than 30 faculty members, and about 600 students. ICS is committed to excellence in teaching, research, and extension. ICS is home to the first and only Academician in Computer Science.</p>
+                        <hr>
+                        <h3>Contact Information</h3> <p>Daytime Phone (8:00-17:00 +8:00GMT): 63-49-536-2313 | Facsimile: 63-49-536-2302</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    	<div class="wrapping-panel" id="about-panel2">
-    		<div class="container">
-    			<div class="col-md-12">
-    				<div class="col-md-8" id="director-quote">
-		                <hr>
-		                <h3 id="director-quote-text">
-			            <span class="fa fa-quote-left"></span>
-							Sed massa ex, accumsan sed convallis vitae, placerat ut risus.
-							Vestibulum sed molestie lorem. Nunc et ex malesuada, auctor arcu sed, rutrum ligula.
-							Nam in sodales leo. Duis dui tortor, convallis sit amet vulputate sed, pulvinar vel quam.
-						<span class="fa fa-quote-right"></span>
-						</h3>
-		                <hr>
-					</div>
-    				<div class="col-md-4" id="director-bio-panel">
-    					<img id="ics-director-image" src="{{URL::to('res/faces/faculty/samaniego.jpg')}}">
-    					<h4>Mr. Jaime M. Samaniego</h4>
-    					<h6>ICS Director</h6>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
+        <div class="wrapping-panel" id="about-panel2">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="col-md-8" id="director-quote">
+                        <hr>
+                        <h3 id="director-quote-text">
+                        <span class="fa fa-quote-left"></span>
+                            e0wH fH0uwHz bH3bhE qH0u,.. muZhsTa nA U?? KuM@in qHa na B@... ?? jHe Jhe jH3... wHala n@ aQh0ug mSavI.. sLe3p nA mIii... jHe jHe jHe - lHiL zHupLad0uwH.214 _..,,
+                        <span class="fa fa-quote-right"></span>
+                        </h3>
+                        <hr>
+                    </div>
+                    <div class="col-md-4" id="director-bio-panel">
+                        <img id="ics-director-image" src="{{URL::to('res/faces/faculty/samaniego.jpg')}}">
+                        <h4>Mr. Jaime M. Samaniego</h4>
+                        <h6>ICS Director</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    	<div class="wrapping-panel" id="about-panel3">
-    		<div class="container">
-    			<div class="col-md-12">
-    				<div class="col-md-6" id="mission-wrapper">
-    					<div class="col-md-12">
-    						<h2>MISSION</h2>
-    						<p>Mauris accumsan metus eget tortor imperdiet, fermentum consequat erat tempus. Maecenas sed ultricies arcu. Sed eu consectetur arcu. Donec dignissim dolor eu viverra sodales. Phasellus iaculis felis ac auctor tincidunt.</p>
+        <div class="wrapping-panel" id="about-panel3">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="col-md-6" id="mission-wrapper">
+                        <div class="col-md-12">
+                            <h2>MISSION</h2>
+                            <ul>
+                            <li>
+                                To produe the needed quality manpower for the software industry of the Philippines and the manpower needed to carry out the information processing functions of private and government institutions
+                            </li>
+                            <li>
+                                To carry out high-level research and development in computer science and computer hardware so as to enhance locally produed computer products
+                            </li>
+                            <li>
+                                To continuously upgrade the computing personnel of industry and government through training.
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6" id="vision-wrapper">
+                        <div class="col-md-12">
+                            <h2>VISION</h2>                             
+                            <p>To become the National Center of Excellence in Computer Science </p>
+                            <p><b>UPDATE</b>: The Institute is CHED's National Center of Excellence in Information Technology Education. CHED is Commission on Higher Education under the Office of the President of the Republic of the Philippines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    					</div>
-    				</div>
-    				<div class="col-md-6" id="vision-wrapper">
-  						<div class="col-md-12">
-    						<h2>VISION</h2>  							
-    						<p>Quisque feugiat finibus leo. Sed et odio sagittis, accumsan purus sit amet, consequat dolor. In dapibus dui a nulla feugiat, at aliquet quam vulputate. Suspendisse pellentesque porta lobortis. </p>
-  						</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
+
 
         <div class="wrapping-panle" id="about-panel4">
             <div id="timeline-content">

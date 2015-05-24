@@ -51,6 +51,8 @@ class SessionsController extends \BaseController {
 				return Redirect::intended('pages/profile');
 			}
 			
+		}else{
+			return Redirect::back();
 		}
 	}
 

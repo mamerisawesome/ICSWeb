@@ -22,7 +22,7 @@
                     <li><a href="{{URL::to('/')}}">Home</a></li>
                     <li><a href="{{URL::to('pages/publication')}}">News</a></li>
                     <li><a href="{{URL::to('pages/library')}}">Library</a></li>
-                    <li><a href="{{URL::to('pages/directory')}}">Faculty and Staff</a></li>
+                    <li><a href="{{URL::to('pages/directory')}}">Faculty</a></li>
                     <li><a href="{{URL::to('pages/curriculum')}}">Courses</a></li>
                     <li><a href="{{URL::to('pages/division')}}">Divisions</a></li>
                     <li><a href="{{URL::to('pages/about')}}">About Us</a></li>

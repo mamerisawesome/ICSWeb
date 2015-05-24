@@ -1,0 +1,21 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   app/views/includes/head.blade.php
+#	modified:   app/views/pages/about.blade.php
+#	modified:   app/views/pages/curriculum.blade.php
+#	modified:   app/views/pages/directory.blade.php
+#	modified:   app/views/pages/division.blade.php
+#	modified:   app/views/pages/groups/group.blade.php
+#	modified:   app/views/pages/home.blade.php
+#	modified:   app/views/pages/library.blade.php
+#	modified:   app/views/pages/profile.blade.php
+#	modified:   app/views/pages/publication.blade.php
+#	modified:   public/css/publication.css
+#	modified:   public/script/publication.js
+#
+

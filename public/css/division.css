@@ -92,3 +92,8 @@ h1{
 	font-size: 22px;
 	font-style: italic;
 }
+
+#img-caption{
+	font-size: 12px;
+	text-align: center;
+}

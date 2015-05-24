@@ -1,23 +1,25 @@
 $(document).ready(function(){
+	$.getJSON("../res/facilities-gallery.json", function(data){
 
-	$("#publication1 > .pub-title-bar").click(function(){
-		$("#publication1 > .pub-text").toggle("fast")
+		var picture = data['facilities'];
+		var gallerycontent = "";
+
+		for(var i = 0; i<4; i++){
+			gallerycontent += "<div class='col-md-12' id='facilities-gallery'>"
+			for(var j = 4*i; j< [(4*i)+4]; j++) {
+				gallerycontent += "<div class='col-md-3'>"
+									+ "<img class='faci-img' src=" + picture[j]['gallery-pic'] + "/>"
+									+ "<div id='img-caption'>"
+										+ "<p>"
+											+ picture[j]['caption']
+										+ "</p>"
+									+ "</div>"
+								+ "</div>"
+			}
+			gallerycontent += "</div>"
+		}
+
+		$("#gallery-container").html(gallerycontent);
+
 	});
-
-	$("#publication2 > .pub-title-bar").click(function(){
-		$("#publication2 > .pub-text").toggle("fast")
-	});
-
-	$("#publication3 > .pub-title-bar").click(function(){
-		$("#publication3 > .pub-text").toggle("fast")
-	});
-
-	$("#publication4 > .pub-title-bar").click(function(){
-		$("#publication4 > .pub-text").toggle("fast")
-	});
-
-	$("#publication5 > .pub-title-bar").click(function(){
-		$("#publication5 > .pub-text").toggle("fast")
-	});
-
 });

@@ -1,11 +1,10 @@
     <meta charset="utf-8"/>
     <meta name="description" content=""/>
     <meta name="author" content="Almer and Friends"/>
-    <title>ICS UPLB</title>
 
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
-
-    {{ HTML::style('css/bootstrap.css'); }}
+<!--    <title>ICS UPLB</title>
+    -->{{ HTML::style('css/bootstrap.css'); }}
     {{ HTML::style('css/font-awesome.css'); }}
     {{ HTML::style('css/font-awesome.min.css'); }}
 

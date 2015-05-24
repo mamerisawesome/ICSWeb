@@ -69,4 +69,21 @@ $(document).ready(function(){
 		$("#welcome-note").load("/script/sample2.html")
 		$(".feed-text").load("/script/sample.txt")
 	});	*/
+	
+	$("#valid").click(function(){
+		$("#dimmer").fadeToggle("fast");
+		$("#pop-up").toggle("slow");
+	});
+
+/*
+	$("#firstName").val("Angelo");
+	$("#middleName").val("Capa");
+	$("#lastName").val("Guiam");
+	$("#email").val("asdfg@gmail.com");
+	$("#username").val("asdfg@gmail.com");
+	$("#password").val("asdfg@gmail.com");
+	$("#retypePassword").val("asdfg@gmail.com");
+	$("#studentNumber").val("2013-09868");
+*/
+
 });

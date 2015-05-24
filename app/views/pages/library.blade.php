@@ -1,8 +1,11 @@
+
 @extends('layouts.default')
 @section('content')
  
     {{ HTML::style('css/library.css'); }}
     {{ HTML::script('script/library.js'); }}
+
+    <title>Library</title>
 
     <div id="shelf"> 
 		<div id="shelf-overlay" class="container-fluid wrapping-panel">
@@ -28,9 +31,9 @@
 						<br><br>
 					</div>
 					<div class="col-md-5" id="shelf-search-panel">
+						{{ Form::open(array('route'=>'pages.library.search', 'name'=>'spt-form', 'id'=>'spt-form'))}}
 						<h3>What are you looking for?</h3>
-<!--						<form name="spt-form">
--->							<div class="form-group">
+						<div class="form-group">
 								Author
 								<input class="form-control" type="text" name="spt-author" id="spt-author" placeholder="Last Name only">
 								<p id="spt-author-note" class="spt-search-note"></p>
@@ -43,7 +46,7 @@
 							</div>
 							<div class="form-group">
 								Date
-								<input class="form-control" type="number" min="2000" max="2014" name="spt-year" id="spt-year">
+								<input class="form-control" type="number" min="2008" max="2014" name="spt-year" id="spt-year">
 								<p id="spt-year-note" class="spt-search-note"></p>
 							</div>
 							<div class="col-md-12">
@@ -53,8 +56,8 @@
 									</button>
 								</div>							
 							</div>
-<!--						</form>
--->					</div>
+						{{ Form::close() }}	
+					</div>
 				</div>
 			</div>
 
@@ -125,10 +128,13 @@
 
 	<!-- whole body (content) wrapped by a single div -->
 
-	</div>
-	<div class="container" id="SPT-preview">
-		<div id="preview-wrapper"></div>
-		<div id="library-switch"><p>LIBRARY</p></div>
+		<div class="container" id="SPT-preview">
+			<div id="preview-wrapper" class="col-md-12">
+				
+			</div>
+			<div id="library-switch"><p>LIBRARY</p></div>
+		</div>
+
 	</div>
 
 @stop

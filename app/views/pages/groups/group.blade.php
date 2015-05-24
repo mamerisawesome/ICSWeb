@@ -19,6 +19,8 @@
     {{ HTML::style('css/group.css'); }} 
     {{ HTML::script('script/group.js'); }}
 
+    <title>{{$username}}</title>
+
     <div class="wrapping-panel">
 
 	<div class="container">
@@ -84,7 +86,10 @@
 
     			</div>
 
-    			{{-- Input field to post --}}
+                <?php $type = Session::get('type'); ?>
+                <input type="hidden" id="checker" value="{{ $type }}"/>
+
+    			{{-- Input field to post --}}                
                 <div id="input-post-field" class="col-md-12">
                     <h5>Post something in <span id="postIn"></span></h5>
                     {{ Form::open(array('action'=>'page.group.post', 'name'=>'post-form', 'id'=>'post-form'))}}
@@ -95,15 +100,16 @@
                         {{ Form::input('hidden','section-name','',array('value'=>'','id'=>'section-name')) }}
 
                         {{ Form::label('Title') }}
-                        {{ Form::input('text','postTitle','',array('class'=>'form-control')) }}
+                        {{ Form::input('text','postTitle','',array('autocomplete'=>'off','class'=>'form-control','id'=>'postTitle')) }}
 
                         {{ Form::label('Content') }}
-                        {{ Form::input('textbox','postContent','',array('class'=>'form-control')) }}
+                        {{ Form::textarea('postContent','',array('autocomplete'=>'off','class'=>'form-control','id'=>'postContent','style'=>'resize:none;max-width:100%;max-height:130px;padding-top:-100px;')) }}
                         <br>
 
-                        {{ Form::submit('Post',array('class'=>'btn btn-primary pull-right')) }}
+                        {{ Form::submit('Post',array('class'=>'btn btn-primary pull-right','id'=>'postDone')) }}
 
                     {{ Form::close() }}
+
                 </div>
 
         	</div>
@@ -118,6 +124,7 @@
 				</div>
 
                     <div id="content-box">
+
                     <?php for($i = 0; $i < 3; $i += 1){ ?>
                     <div class="update-panel-wrapper">
                         <div class="container-fluid update-panel">
@@ -150,6 +157,46 @@
 			</div>
 		</div>
 	</div>
+
+    <div class="update-panel-wrapper username-container hidden">
+        <div class="container-fluid update-panel">
+            <div class="col-md-12">
+                <h4 class="pull-center">
+                {{ Form::open(array('action'=>'page.user.message', 'name'=>'usernameForm', 'class'=>'usernameForm')) }}
+
+                    {{ Form::hidden('senderUsername',Session::get('username'),array('class'=>'usernameContainer')) }}
+                    {{ Form::hidden('senderFirstname',Session::get('firstName'),array('class'=>'firstnameContainer')) }}
+                    {{ Form::hidden('senderMiddlename',Session::get('middleName'),array('class'=>'middlenameContainer')) }}
+                    {{ Form::hidden('senderLastname',Session::get('lastName'),array('class'=>'lastnameContainer')) }}
+
+                    {{ Form::hidden('usernameContainer','',array('class'=>'usernameContainer')) }}
+                    {{ Form::hidden('nameContainer','',array('class'=>'nameContainer')) }}
+                    {{ Form::submit('', array("style"=>"background-color: transparent;border:none;color:#34495e;",'class'=>'selectUsername')) }}
+                {{ Form::close() }}
+            </div>
+        </div>
+    </div>
+
+    <div class="update-panel-wrapper comment-container-input hidden">
+        <div class="container-fluid comment-panel">
+            <div class="col-md-12">
+            <h4 class="pull-center">
+            {{ Form::open(array('action'=>'page.user.comment.store', 'name'=>'commentForm', 'class'=>'commentForm')) }}
+
+                {{ Form::hidden('commentBy',Session::get('firstName') . " " . Session::get('lastname'),array('class'=>'usernameContainer')) }}
+                {{ Form::hidden('commentGroup','',array('class'=>'commentGroup')) }}
+                {{ Form::hidden('commentPostIndex',-1,array('class'=>'commentPostIndex')) }}
+                <div class="input-group">
+                    {{ Form::text('commentContent','',array('id'=>'commentContent','class'=>'form-control')) }}
+                    <span class="input-group-btn">
+                        {{ Form::submit('Comment',array('class'=>'btn btn-primary')) }}
+                    </span>
+                </div><!-- /input-group -->
+
+            {{ Form::close() }}
+            </div>
+        </div>
+    </div>
 
 </div>
 @stop

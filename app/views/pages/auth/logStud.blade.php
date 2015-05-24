@@ -1,5 +1,6 @@
 @extends('layouts.default')
 @section('content')
+<title>Login</title>
 	<div class="wrapping-panel" id="login-form-wrapper">
         <div class="container">
             <div class="col-md-12">
@@ -14,7 +15,7 @@
                             {{Form::macro('regInput', function($inputType, $idName, $placeholderValue, $labelValue)
                                 {
                                     echo Form::label($idName, $labelValue);
-                                    echo Form::input($inputType, $idName, '' , array('id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue,'required'=>''));
+                                    echo Form::input($inputType, $idName, '' , array('autocomplete'=>'off','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue,'required'=>''));
                                 });
                             }}
                         {{ Form::regInput('email','email','Email address',' ') }}

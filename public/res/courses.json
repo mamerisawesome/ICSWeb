@@ -1,43 +1,34 @@
 {
 	"courses" : [
 		{
-			"number" : "CMSC 1",
-			"title" : "Introduction to Personal Computing",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
-		},
-		{
 			"number" : "CMSC 2",
 			"title" : "Introduction to the Internet",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
-		},		{
+			"description" : "Tools and services of the Internet, Internet protocols, search engines, file transfer protocol (FTP), email, listservers and HTML programming"
+		},		
+		{
 			"number" : "CMSC 11",
 			"title" : "Introduction to Computer Science",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Introduction to the major areas of computer science; software systems and methodology; computer theory; computer organization and architecture."
 		},
 		{
 			"number" : "CMSC 21",
 			"title" : "Fundamentals of Programming",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Expansion and development of materials introduced in CMSC 11; processing files and linked-lists; programming in the C language; recursion; systematic program development; top-down design and program verification."
 		},
 		{
 			"number" : "CMSC 22",
 			"title" : "Object-Oriented Programming",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
-		},
-		{
-			"number" : "CMSC 55",
-			"title" : "Discrete Mathematical Structures in Computer Science",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Programming using an object-oriented language"
 		},
 		{
 			"number" : "CMSC 56",
 			"title" : "Discrete Mathematical Structures in Computer Science I",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Principles of combinatorics, probability, algebraic systems and graph theory."
 		},
 		{
 			"number" : "CMSC 57",
 			"title" : "Discrete Mathematical Structures in Computer Science II",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Principles of combinatorics, probability, algebraic systems and graph theory."
 		},
 		{
 			"number" : "CMSC 100",
@@ -47,97 +38,117 @@
 		{
 			"number" : "CMSC 123",
 			"title" : "Data Structures",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Abstract data types and implementation of data structures; arrays, stacks, queues, linked lists, mappings, trees, sets and graphs; internal and external searching and sorting; dynamic storage management."
 		},
 		{
 			"number" : "CMSC 124",
 			"title" : "Design and Implementation of Programming Languages",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Study of the fundamental concepts in the design and implementation of current high-level programming languages; syntax and translation; language definition structures; elementary and structured data types; astraction mechanisms; sequence and data control; run time considerations."
 		},
 		{
 			"number" : "CMSC 125",
 			"title" : "Operating Systems",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Processor management, memory management, file and disk management, resource management, concurrent processes, networks and distributed systems."
 		},
 		{
 			"number" : "CMSC 127",
 			"title" : "File Processing and Database Systems",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Data models: relational, network and hierarchical models; Database management system, data definition and manipulation language; Data security, integrity, synchronization, protection and recovery; Principal database systems and query languages."
 		},
 		{
 			"number" : "CMSC 128",
 			"title" : "Introduction to Software Engineering",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Principles and methods for the design, implementation, validation, evaluation and maintenance of software systems."
 		},
 		{
 			"number" : "CMSC 129",
 			"title" : "Principles of Compiler Design",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Fundamental conepts in the design and implementation of compilers: lexical analysis, syntax analysis, intermediate code generation, code generation and optimization."
 		},
 		{
 			"number" : "CMSC 130",
 			"title" : "Logic Design and Digital Computer Circuits",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Data representation and computer arithmetic; logic functions and equations; description, analysis and design of combinatorial and sequential circuits; functional properties of digital integrated circuits."
 		},
 		{
 			"number" : "CMSC 131",
 			"title" : "Introduction to Computer Organization and Machine-Level Programming",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "An introduction to computer organization and interfaces between hardware and software; Microcomputer systems: basic computer organization, memory addressing, CPU-memory-I/O relationships, interfacing, interrupt mechanisms; Assembly language: data structure repreentations, program control implementations, subroutines, parameter passing, recursion, direct-video graphics, serial port communications."
 		},
 		{
 			"number" : "CMSC 132",
 			"title" : "Computer Architecture",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Advanced topics in computer systems organization from a designer's point of view: multiprocessing, pipelining, array processors, associative processors; Microprogramming, techniques for increasing primary memory bandwidths; Modularization, interleaving, access path widening, cache and associative memories; Virtual memory; Bus structures; Multiprogramming and time sharing organizations; Network principles and protocols; Distributed resources."
 		},
 		{
 			"number" : "CMSC 137",
 			"title" : "Data Communications and Networking",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
-		},
-		{
-			"number" : "CMSC 140",
-			"title" : "Advance Programming",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Basic principles of data communications; design issues and protocols in the layers of data network; networks for various applications."
 		},
 		{
 			"number" : "CMSC 141",
 			"title" : "Automata and Language Theory",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Abstract machines and languages; finite automata, regular expressions, pushdown automata, context free languages, Turing machines and recursively enumerable languages."
 		},
 		{
 			"number" : "CMSC 142",
 			"title" : "Design and Analysis of Algorithms",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Algorithm analysis techniques, algorithm design techniques, applications of these techniques."
 		},
 		{
 			"number" : "CMSC 150",
 			"title" : "Numerical and Symbolic Computation",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Computational problem solving; sources of errors in computation; iterative approximation methods and symbolic"
 		},
 		{
 			"number" : "CMSC 161",
 			"title" : "Interactive Computer Graphics",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Graphic systems software and hardware, 2D drawing algorithm, geometrical transformations, surface modeling, 3D viewing, visible surface determination algorithms, reflection and illumination models, shading models for polygons, color theory, ray tracing, animation."
+		},
+		{
+			"number" : "CMSC 165",
+			"title" : "Digital Image Processing",
+			"description" : "Methods for aquiring, creating, manipulatig, enhancing and analyzing digital images."
 		},
 		{
 			"number" : "CMSC 170",
 			"title" : "Introduction to Artificial Intelligence",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Basic principles of Artificial Intelligence; knowledge representation; natural language processing; pattern recognition; and, expert systems."
 		},
 		{
 			"number" : "CMSC 172",
 			"title" : "Robot Modeling",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Robotics manipulators and their characteristics; conversion from joint space to real world motion."
 		},
 		{
 			"number" : "CMSC 180",
 			"title" : "Introduction to Parallel Computing",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"description" : "Parallel computational models, machine architectures, performance models, algorithms, and programming."
+		},
+		{
+			"number" : "CMSC 190",
+			"title" : "Special Problem",
+			"description" : "To be enrolled twice; once as one-unit course to prepare for a proposal, then as a two-unit course implement the proposal."
 		},
 		{
 			"number" : "CMSC 191",
-			"title" : "Special Topic",
-			"description" : "Developing web applications using web technologies such as CGI scripts, PHP, ASP, JavaScripts, JavaApplets, XHTML, Ajax and CSS."
+			"title" : "Special Topics",
+			"description" : "Elective"
+		},
+		{
+			"number" : "CMSC 198",
+			"title" : "Practicum",
+			"description" : "May be taken as elective."
+		},
+		{
+			"number" : "CMSC 199",
+			"title" : "Undergraduate Seminar",
+			"description" : ""
+		},
+		{
+			"number" : "CMSC 200",
+			"title" : "Undergraduate Thesis",
+			"description" : ""
 		}
 	]
 }
