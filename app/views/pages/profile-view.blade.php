@@ -109,6 +109,7 @@
 						<h4>You can see the latest updates from your groups, create groups, and view your messages.</h4>
 				</div>
 				<?php } ?>
+				
 			</div>
 		
 		</div>
