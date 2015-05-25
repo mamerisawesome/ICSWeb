@@ -37,7 +37,8 @@ class GroupsController extends BaseController {
                 "username"  =>Session::get('username'),
                 "firstname" =>Session::get('firstName'),
                 "middlename"=>Session::get('middleName'),
-                "lastname"  =>Session::get('lastName')
+                "lastname"  =>Session::get('lastName'),
+                "type"      =>Session::get('type')
             )];
 
 //            $group_posts = [];
@@ -58,7 +59,8 @@ class GroupsController extends BaseController {
             $userData = json_decode(file_get_contents('public/JSONcontents/accounts/groups/'. Session::get('username') . '_groups.json'), true);
             $groupObject = [
                 "subject"=>Input::get('courseTitle'),
-                "section"=>Input::get('section')
+                "section"=>Input::get('section'),
+                "accessCode"=>Input::get('accessCode')
             ];
             array_push($userData['groups'],$groupObject);
 
@@ -116,8 +118,10 @@ class GroupsController extends BaseController {
                 "username" => $username,
                 "firstname" => $firstname,
                 "middlename" => $middlename,
-                "lastname" => $lastname
+                "lastname" => $lastname,
+                "type" => Session::get('type')
             );
+
             $flag = 0;
             $groupData = json_decode(file_get_contents('public/JSONcontents/groups/classList/'. $group . '_classList.json'), true);
             for($o = 0; $o < count($groupData); $o += 1) {
@@ -131,7 +135,8 @@ class GroupsController extends BaseController {
                 $userData = json_decode(file_get_contents('public/JSONcontents/accounts/groups/' . $username . '_groups.json'), true);
                 $groupObject = [
                     "subject" => $query->courseTitle,
-                    "section" => $query->section
+                    "section" => $query->section,
+                    "accessCode" => Input::get('accessCode')
                 ];
                 array_push($userData['groups'], $groupObject);
 
