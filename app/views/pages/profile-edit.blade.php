@@ -23,6 +23,7 @@
 @section('content')
 
     {{ HTML::style('css/profile-edit.css'); }}
+    {{ HTML::script('script/edit-profile.js'); }}
 
     <title>Edit Your Profile</title>
 	<div id="profile-body">
@@ -30,7 +31,8 @@
         {{ Form::macro('regInput', function($inputType, $idName, $value, $placeholderValue, $labelValue)
             {
                 echo Form::label($idName, $labelValue);
-                echo Form::input($inputType, $idName, $value , array('id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue, 'required'=>''));
+                if($idName == 'room') echo Form::input($inputType, $idName, $value , array('id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue, 'required'=>'', 'maxlength'=>'5'));
+                else echo Form::input($inputType, $idName, $value , array('id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue, 'required'=>''));
                 echo '<br>';
             });
          }}
@@ -51,6 +53,7 @@
 			<div class="col-md-8" id="profile-upper-right-panel">
 				<div id="profile-info">
 					{{ Form::regInput('text','room',$room,'Enter your Room Number','Room Number') }}
+					<div id="error-room"></div>
 					{{ Form::regInput('text','consultation',$consult,'Enter your Consultation Hours','Consultation Hours') }}
 					{{ Form::regInput('text','bio',$bio,'Enter your Bio/Info','Bio/Info') }}
 					{{ Form::regInput('text','guide',$guide,'Enter your Guide/Reminders','Guide/Reminders') }}				
@@ -62,7 +65,10 @@
 	
 	<div class="container" id="body-wrapper">
 		<div class="col-md-12" id="prof-bottom-panel">
-			<div id="prof-bottom-panel-content">
+			<div class="col-md-4">
+					<a href={{URL::to('pages/profile')}}><div id="back" class="btn btn-primary" onclick=>Back</div></a>
+			</div>
+			<div class="col-md-8" id="prof-bottom-panel-content">
 					{{ Form::submit('Submit', array('id'=>'submit','class'=>'btn btn-primary')) }}
 					{{ Form::close() }}	
 			</div>

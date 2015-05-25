@@ -1,9 +1,0 @@
-[
-	{"username":"ADMIN","firstname":"Administrator","middlename":"Sees","lastname":"Everything","type":"admin"},
-	{"username":"almer","firstname":"Mamer","middlename":"Taculog","lastname":"Mendoza","type":"student"},
-	{"username":"joshua","firstname":"Joshua","middlename":"Hi","lastname":"Burgos","type":"student"},
-	{"username":"tintin","firstname":"Anne","middlename":"Tin","lastname":"Montoya","type":"student"},
-	{"username":"leensey","firstname":"Leensey","middlename":"Hello","lastname":"Lawas","type":"student"},
-	{"username":"cacai","firstname":"Cacai","middlename":"Babe","lastname":"Esguerra","type":"student"},
-	{"username":"angelo","firstname":"Angelo","middlename":"Wazup","lastname":"Guiam","type":"student"}
-]

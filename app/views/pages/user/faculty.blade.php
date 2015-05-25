@@ -13,8 +13,18 @@
 
                     {{ Form::macro('regInput', function($inputType, $idName, $placeholderValue, $labelValue)
                         {
-                            echo Form::label($idName, $labelValue);
-                            echo Form::input($inputType, $idName, '' , array('autocomplete'=>'off','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue, 'required'=>''));
+                            if($idName == 'employeeNumber'){
+                                echo Form::label($idName, $labelValue);
+                                echo Form::input($inputType, $idName, '' , array('maxlength'=>'9', 'autocomplete'=>'off','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue, 'required'=>''));
+                            }
+                            else if($idName == 'room'){
+                                echo Form::label($idName, $labelValue);
+                                echo Form::input($inputType, $idName, '' , array('maxlength'=>'5', 'autocomplete'=>'off','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue, 'required'=>''));
+                            }
+                            else{
+                                echo Form::label($idName, $labelValue);
+                                echo Form::input($inputType, $idName, '' , array('autocomplete'=>'off','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue, 'required'=>''));
+                            }
                             echo '<br>';
                         });
                     }}
@@ -36,7 +46,8 @@
                     {{ Form::regInput('password','password','Make this password secure','Password') }}
                     {{ Form::regInput('password','retypePassword','Retype your password','Retype Password') }}
                     <div id="error-message"></div>
-                    {{ Form::regInput('text','employeeNumber','XXXXXXXXXX','Employee Number') }}
+                    
+                    {{ Form::regInput('text','employeeNumber','XXXXXXXXX','Employee Number') }}
                     <div id="error-en"></div>
                     {{ Form::regInput('text','room','(i.e. C-100)','Room') }}
                     <div id="error-room"></div>
@@ -51,13 +62,8 @@
             </div>
             <div class="col-md-4" id="welcome-text-panel">
             <h2 id="welcome-text">WELCOME to ICS Portal!</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi<br><br>
-            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            oluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."</p>
+            <p>ICS has strong undergraduate and graduate (Diploma, MIT, MS and PhD) degree programs in computer science and information technology with more than 30 faculty members, and about 600 students. We are committed to excellence in teaching, research, and extension.</p>
+            <p>Home to the first and only Academician in Computer Science.</p>
             <span>
                 <hr>
                 <span class="fa fa-quote-left"></span>
