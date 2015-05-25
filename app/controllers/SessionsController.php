@@ -11,6 +11,29 @@ class SessionsController extends \BaseController {
 	{
 		//
 	}
+
+	public function viewProfile($lastName){
+		$user = DB::table('accounts')->where('lastName', $lastName)->first();
+		if($user==null){
+			return View::make('pages.notfound');
+		}else if($user->type=='student'){
+			Session::put('typeProf', $user->type);
+			return View::make('pages.notfound');
+		}else{
+			Session::put('avatarProf', $user->avatar);
+			Session::put('firstNameProf',$user->firstName);
+			Session::put('middleNameProf',$user->middleName);
+			Session::put('lastNameProf',$user->lastName);
+			Session::put('usernameProf',$user->username);
+			Session::put('academicProf',$user->academicPosition);
+			Session::put('roomProf',$user->room);
+			Session::put('consultProf', $user->consultation);
+			Session::put('guideProf', $user->guide);
+			Session::put('bioProf', $user->bio);
+			return View::make('pages.profile-view');
+		}
+	}
+
 	public function getLogin(){
 		return View::make('pages.auth.logStud');
 	}

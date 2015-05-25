@@ -16,7 +16,8 @@ $(document).ready(function(){
 										+ faculty[i]['middle']
 									+ "</h5>"
 									+ faculty[i]['position'] + "<br>"
-									+ faculty[i]['room']
+									+ faculty[i]['room'] + "<br>"
+									+ "<a href='/pages/profiles/"+faculty[i]['last']+"'>Go to Profile Page</a>"
 								+ "</div>"						
 							+ "</div>"
 						+ "</div>"

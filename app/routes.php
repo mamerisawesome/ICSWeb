@@ -17,6 +17,8 @@ Route::get('/', array('uses' => 'HomeController@showWelcome', 'as' => 'index'));
 Route::post('/', array('uses'=> 'HomeController@showWelcome', 'as' => 'index'));
 Route::get('/pages',array('uses' => 'GeneralController@showHome', 'as' => 'page/library'));
 
+
+Route::get('pages/profiles/{lastname}', array('uses'=> 'SessionsController@viewProfile', 'as' => 'page.prof'));
 Route::resource('fileupload','FileController');
 Route::post('pages/upload_file', array('uses'=> 'FileController@upload_file', 'as' => 'page.fileupload'));
 Route::post('pages/profile', array('uses'=> 'FileController@upload_file', 'as' => 'page.fileupload'));

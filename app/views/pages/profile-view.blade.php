@@ -1,15 +1,14 @@
 <?php
-	$type = Session::get('type');
-	$avatar = Session::get('avatar');
-	$firstname = Session::get('firstName');
-	$middlename = Session::get('middleName');
-	$lastname = Session::get('lastName');
-	$username = Session::get('username');
-	$academic = Session::get('academic');
-	$room = Session::get('room');
-	$consult = Session::get('consult');
-	$guide = Session::get('guide');
-	$bio = Session::get('bio');
+	$avatar = Session::get('avatarProf');
+	$firstname = Session::get('firstNameProf');
+	$middlename = Session::get('middleNameProf');
+	$lastname = Session::get('lastNameProf');
+	$username = Session::get('usernameProf');
+	$academic = Session::get('academicProf');
+	$room = Session::get('roomProf');
+	$consult = Session::get('consultProf');
+	$guide = Session::get('guideProf');
+	$bio = Session::get('bioProf');
 	 //start of the session
 ?>
 @extends('layouts.default')
@@ -18,7 +17,6 @@
     {{ HTML::style('css/profile.css'); }}
     <?php $filename= $username.".jpg"; ?>
 	<title>{{ $firstname. ' ' . $lastname }}</title>
-	<?php if($type=='faculty'){ ?>
 	<div id="profile-body">
 	<div class="container" id="body-wrapper">
 		<div class="col-md-12" id="upper-panel">
@@ -69,30 +67,53 @@
 						<br><?php if($guide==null){ echo "No Guides/Reminders Yet."; }else{echo $guide;} ?>
 					</ul>
 				</div>
+				<?php if(Session::get('type')=='student'){ ?>
+				<div class="col-md-8" id="send-exer-panel">
+					<h5>{ SEND YOUR EXERCISE }</h5>
+					<form id="profile-exer" action="#">
+						<table>
+							<tr>
+								<td><p class="inputTitle">SUBJECT:</p></td>
+								<td><input type="text" class="inputField" id="subject" required></td>
+							</tr>
+							<tr>
+								<td><p class="inputTitle">SECTION:</p></td>
+								<td><input type="text" class="inputField" id="section" required></td>
+							</tr>
+							<tr>
+								<td><p class="inputTitle">NAME:</p></td>
+								<td><input type="text" class="inputField" id="stdNAME" required></td>
+							</tr>
+							<tr>
+								<td><p class="inputTitle">STD NO:</p></td>
+								<td><input type="text" class="inputField" id="stdNo" required></td>
+							</tr>
+							<tr>
+								<td><p class="inputTitle">EX NO/TITLE:</p></td>
+								<td><input type="text" class="inputField" id="EXno/title" required></td>
+							</tr>
+							<tr>
+								<td><p class="inputTitle">NOTE:</p></td>
+								<td><input type="text" class="inputField" id="NOTE" required></td>
+							</tr>
+						</table>
+						<br>
+						<button type="button" class="btn btn-primary">UPLOAD FILE</button>
+
+					</form>
+				</div>	
+				<?php }else{ ?>
 				
 				<div id="groups-panel" class="col-md-8">
 						<h3><a href="{{URL::to('pages/group')}}">Go to timeline</a></h3>
 						<h4>You can see the latest updates from your groups, create groups, and view your messages.</h4>
 				</div>
+				<?php } ?>
 			</div>
 		
 		</div>
 		
 	</div>
 	</div>
-	<?php }else{ ?>
-		<div id="not-found" class="wrapping-panel">
-		<div class="container">
-			<div class="col-md-12">
-			<center>
-				<div id="cute-pusheen"><img src="{{URL::to('res/images/pusheen.gif')}}"></div>
-				
-					<h1>Students do not have a profile page.</h1>
-				<button id="back-to-library" class="btn btn-primary"><a class="btn btn-primary" href="{{ URL::to('pages/group') }}">Back to Groups</a></button>
-			</center>
-			</div>			
-		</div>
-		</div>
-	<?php } ?>
 
 @stop
