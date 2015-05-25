@@ -25,11 +25,10 @@
                 <div class="col-md-12">
                     <div class="col-md-8" id="director-quote">
                         <hr>
-                        <h3 id="director-quote-text">
-                        <span class="fa fa-quote-left"></span>
-                            e0wH fH0uwHz bH3bhE qH0u,.. muZhsTa nA U?? KuM@in qHa na B@... ?? jHe Jhe jH3... wHala n@ aQh0ug mSavI.. sLe3p nA mIii... jHe jHe jHe - lHiL zHupLad0uwH.214 _..,,
-                        <span class="fa fa-quote-right"></span>
-                        </h3>
+                        <h1 id="director-quote-text">
+                            Leading the Philippines in computer science education, research, and extension<br />
+                        <span class="fa fa-angle-double-down"></span>
+                        </h1>
                         <hr>
                     </div>
                     <div class="col-md-4" id="director-bio-panel">
@@ -49,7 +48,7 @@
                             <h2>MISSION</h2>
                             <ul>
                             <li>
-                                To produe the needed quality manpower for the software industry of the Philippines and the manpower needed to carry out the information processing functions of private and government institutions
+                                To produce the needed quality manpower for the software industry of the Philippines and the manpower needed to carry out the information processing functions of private and government institutions
                             </li>
                             <li>
                                 To carry out high-level research and development in computer science and computer hardware so as to enhance locally produed computer products

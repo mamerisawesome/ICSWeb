@@ -17,7 +17,7 @@
 			<div class="container">
 				<div class="col-md-12">
 					<h1>MEET THE GEEKS</h1>
-					<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>				
+					<p>These are the members of the ICS Faculty. You may view their pictures, names, position, and room assignment here. To be able to view their consultation hours and other information, please sign up or log in to our portal.</p>				
 					<br>
 					<div class="col-md-12" id="faculty-container">
 					</div>

@@ -53,13 +53,8 @@
 			</div>
 			<div class="col-md-4" id="welcome-text-panel">
 			<h2 id="welcome-text">WELCOME to ICS Portal!</h2>
-			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi<br><br>
-			ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-			oluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-			occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-			anim id est laborum."</p>
+			<p>ICS has strong undergraduate and graduate (Diploma, MIT, MS and PhD) degree programs in computer science and information technology with more than 30 faculty members, and about 600 students. We are committed to excellence in teaching, research, and extension.</p>
+			<p>Home to the first and only Academician in Computer Science.</p>
 			<span>
 				<hr>
 				<span class="fa fa-quote-left"></span>

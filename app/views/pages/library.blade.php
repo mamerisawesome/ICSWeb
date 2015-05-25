@@ -15,19 +15,11 @@
 				</div>
 				<div class="col-md-12" id="shelf-menu">
 					<div class="col-md-7" id="shelf-info-panel">
-						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-						praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-						excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
-						officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-						rerum facilis est et expedita distinctio.
-						<br><br>
+						 The Institute maintains a library that houses approximately 1,000 book titles, journals, magazines, theses, and special problem manuscripts. Here you'll find a collection of SPs and thesis from our graduates. Feel free to browse through the library and read through the summaries.<br><br>Also, you may help us update the collection of computer science books in the library by donating computer science books published 1999 and later. You may contact icslibrary@up.edu.ph for more details.
+						<br><hr />
 						OFFICE HOURS:
 						<br><br>
-						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-						praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-						excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
-						officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-						rerum facilis est et expedita distinctio.
+						8:00-17:00 +8:00GMT
 						<br><br>
 					</div>
 					<div class="col-md-5" id="shelf-search-panel">
