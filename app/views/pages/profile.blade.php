@@ -15,8 +15,8 @@
 					<img src="{{URL::to('res/images/blue_contacts.png')}}" id="profile-pic"/>
 				<?php } ?>
 				<form action="upload_file" method="post" enctype="multipart/form-data">
-					<input type="file" name="uploadfile" size="20" />
-					<input type="submit" name="upload" value="upload" /> 
+					<input type="file" name="uploadfile" size="20"/>
+					<input type="submit" name="upload" value="upload" class="btn btn-primary"/> 
 				</form>
 				<div id="profile-basic-info">
 					<h4 class="prof-info" id="prof-name"><?php echo Session::get('lastName'). ', '. Session::get('firstName') .' '. Session::get('middleName'); ?></h4>

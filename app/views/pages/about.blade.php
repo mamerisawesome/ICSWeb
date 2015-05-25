@@ -112,13 +112,13 @@
                     <div class="time-text">
                     The Division instituted the Master of Science in Computer Science. This became very popular among the teaching staff of the Division. 
                     </div>
-                    <div class="tl-photo-wrapper"><img class="tl-photo" src="{{URL::to('res/faces/faculty/albacea.jpg')}}"></div>
+                    <div class="tl-photo-wrapper"><img class="tl-photo" src="{{URL::to('res/timeline/computer-science.png')}}"></div>
                 </div>
 
                 <div class="date-entry col-md-12" id="tl-entry-4">
                     <div class="time-text">
                     In January 26, 1995, the UP Board of Regents separated the Division of Computer Science from IMSP and merged this with the existing Los Banos Computer Center to form the Institute of Computer Science (ICS). This happened when Dr. Eliezer A. Albacea was the head of the Division, Dr. Ruben Villareal was the Chancellor of UPLB and Dr. Emil Q. Javier was the President of UP. Dr Eliezer A. Albacea became the first Director of ICS.                    </div>
-                    <div class="tl-photo-wrapper"><img class="tl-photo" src="{{URL::to('res/images/ics_logo.jpg')}}"></div>
+                    <div class="tl-photo-wrapper"><img class="tl-photo" src="{{URL::to('res/timeline/up-logo.png')}}"></div>
                 </div>
 
                 <div class="date-entry col-md-12" id="tl-entry-5">
@@ -133,21 +133,21 @@
                     <div class="time-text">
                         Ph.D. in Computer Science was instituted.
                     </div>
-                    <div class="tl-photo-wrapper"><img class="tl-photo" src="{{URL::to('res/images/ics_logo.jpg')}}"></div>
+                    <div class="tl-photo-wrapper"><img class="tl-photo" src="{{URL::to('res/timeline/phd-cs.jpg')}}"></div>
                 </div>
 
                 <div class="date-entry col-md-12" id="tl-entry-7">
                     <div class="time-text">
                         Master in Information Technology was instituted.
                     </div>
-                    <div class="tl-photo-wrapper"><img class="tl-photo" src="{{URL::to('res/images/ics_logo.jpg')}}"></div>
+                    <div class="tl-photo-wrapper"><img class="tl-photo" src="{{URL::to('res/timeline/binary.jpg')}}"></div>
                 </div>
 
                 <div class="date-entry col-md-12" id="tl-entry-8">
                     <div class="time-text">
                         ICS was designated as National Center of Excellence (COE) in Information Technology by CHED.
                     </div>
-                    <div class="tl-photo-wrapper"><img class="tl-photo" src="{{URL::to('res/images/ics_logo.jpg')}}"></div>
+                    <div class="tl-photo-wrapper"><img class="tl-photo" src="{{URL::to('res/timeline/ched.png')}}"></div>
                 </div>
 
             </div>
