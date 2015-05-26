@@ -1,5 +1,6 @@
 @extends('layouts.default')
 @section('content')
+    <title>Send message</title>
     <div class="wrapping-panel" id="login-form-wrapper">
         <div class="container">
             <div class="col-md-12">

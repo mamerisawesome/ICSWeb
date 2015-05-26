@@ -3,7 +3,7 @@
 
     {{ HTML::style('css/book-result.css'); }}
     {{ HTML::script('script/book-result.js'); }}
-
+    <title>Search results</title>
     <div id="result-wrapper" class="wrapping-panel">
 
     	<div id="result-container" class="container">
