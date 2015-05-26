@@ -17,7 +17,10 @@
 				<div class="col-md-4 footer-detail">
 					<h4>GET CONNECTED</h4>
 					<img src="{{URL::to('res/icons/facebook_icon.png')}}">				
-					<img src="{{URL::to('res/icons/twitter_icon.png')}}">				
+					<img src="{{URL::to('res/icons/twitter_icon.png')}}">
+					<div class="col-md-8">
+						<p>Disclaimer: Information found on this website are from ICS UPLB</p>	
+					</div>
 				</div>
 			</div>
 		</div>
