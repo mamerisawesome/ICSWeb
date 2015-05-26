@@ -63,8 +63,8 @@ function fetchSearchQuery(){
 $(document).ready(function(){
 	$("#library-switch").show("slow");
 
-/*	$("#search-SPT").click(function(){
-
+/*
+	$("#search-SPT").click(function(){
 		if(validateSearchQuery()) {
 			$("#shelf-body").slideToggle("slow");
 			$("#shelf").slideToggle("slow");

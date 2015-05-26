@@ -3,7 +3,7 @@
 
     {{ HTML::style('css/book-result.css'); }}
     {{ HTML::script('script/book-result.js'); }}
-
+    <title>No result(s) found</title>
 	<div id="not-found" class="wrapping-panel">
 		<div class="container">
 			<div class="col-md-12">
