@@ -157,7 +157,12 @@ $(document).ready(function(){
 
 	$("#email").keyup(function(){
 		var temp = $(this).val();
-		if(temp != '') email = true; 
+		var temp2, temp3;
+		if(temp != ''){
+			temp2 = temp.split("@");
+			temp3 = temp2[1].split(".");
+			if(!$.isNumeric(temp2[1]) && temp3[1] == "com")	email = true; 			
+		} 
 		else{
 			$("#valid").attr('disabled','disabled');  
 			email = false;
