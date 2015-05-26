@@ -13,8 +13,18 @@
 
                     {{ Form::macro('regInput', function($inputType, $idName, $placeholderValue, $labelValue)
                         {
-                            echo Form::label($idName, $labelValue);
-                            echo Form::input($inputType, $idName, '' , array('autocomplete'=>'off','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue, 'required'=>''));
+                            if($idName == 'employeeNumber'){
+                                echo Form::label($idName, $labelValue);
+                                echo Form::input($inputType, $idName, '' , array('maxlength'=>'9', 'autocomplete'=>'off','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue, 'required'=>''));
+                            }
+                            else if($idName == 'room'){
+                                echo Form::label($idName, $labelValue);
+                                echo Form::input($inputType, $idName, '' , array('maxlength'=>'5', 'autocomplete'=>'off','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue, 'required'=>''));
+                            }
+                            else{
+                                echo Form::label($idName, $labelValue);
+                                echo Form::input($inputType, $idName, '' , array('autocomplete'=>'off','id'=>$idName,'class'=>'form-control','placeholder'=>$placeholderValue, 'required'=>''));
+                            }
                             echo '<br>';
                         });
                     }}
@@ -36,7 +46,8 @@
                     {{ Form::regInput('password','password','Make this password secure','Password') }}
                     {{ Form::regInput('password','retypePassword','Retype your password','Retype Password') }}
                     <div id="error-message"></div>
-                    {{ Form::regInput('text','employeeNumber','XXXXXXXXXX','Employee Number') }}
+                    
+                    {{ Form::regInput('text','employeeNumber','XXXXXXXXX','Employee Number') }}
                     <div id="error-en"></div>
                     {{ Form::regInput('text','room','(i.e. C-100)','Room') }}
                     <div id="error-room"></div>
