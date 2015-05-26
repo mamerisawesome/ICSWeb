@@ -7,8 +7,8 @@ $(document).ready(function(){
 	//for faculty
 	$("#employeeNumber").keyup(function(){
 		var temp = $(this).val();
-		if(temp != '')
-			if($.isNumeric(temp) && temp.length == 10){
+		if(temp != ''){
+			if($.isNumeric(temp) && temp.length == 9){
 				employeeNumber = true;
 				$("#error-en").html("");	
 			} 
@@ -16,7 +16,8 @@ $(document).ready(function(){
 				$("#valid").attr('disabled','disabled');
 				employeeNumber = false;
 				$("#error-en").html("Invalid Employee Number!<br>");	
-			} 
+			}
+		}
 		else{
 			$("#valid").attr('disabled','disabled');
 			employeeNumber = false;
@@ -67,7 +68,6 @@ $(document).ready(function(){
 			$("#valid").attr('disabled','disabled');
 			fName = false;
 		}
-		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#valid").removeAttr('disabled');    
 		if(fName && mName && lName && sex && bdate && email && uName && pword && rpword && (sNumber || (employeeNumber && room && academicPosition))) $("#valid").removeAttr('disabled');    
 	});
 

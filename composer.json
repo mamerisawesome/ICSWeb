@@ -6,6 +6,7 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"vlucas/phpdotenv": "1.0.*@dev",
+		"codesleeve/laravel-stapler": "1.0.*"
 	},
 	"autoload": {
 		"classmap": [

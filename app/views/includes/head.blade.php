@@ -15,5 +15,5 @@
     
     {{ HTML::script('script/jquery.min.js'); }}
     {{ HTML::script('script/bootstrap.min.js'); }}
-
+    {{ HTML::script('script/validate.js'); }}
     {{ HTML::script('script/default.js'); }}
