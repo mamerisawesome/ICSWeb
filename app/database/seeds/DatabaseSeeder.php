@@ -34,7 +34,18 @@ class StudentTableSeeder extends Seeder{
         function createUserJsonFile($name){
             // JSON file creator
             $user_groups = array(
-                "groups"        => array()
+                "groups"        => [
+                    array(
+                        "subject"=>'CMSC100',
+                        "section"=>'B-5L',
+                        "accessCode"=>sha1('CMSC100B-5L')
+                    ),
+                    array(
+                        "subject"=>'CMSC170',
+                        "section"=>'X',
+                        "accessCode"=>sha1('CMSC170X')
+                    )
+                ]
             );
 
             $user_messages = [array(
@@ -191,50 +202,50 @@ class StudentTableSeeder extends Seeder{
 
         User::create(
             [
-                'firstName'         =>'Juan',
-                'middleName'        =>'Protacio',
-                'lastName'          =>'Tama\' Aad',
-                'sex'               =>'Female',
-                'birthdate'         =>'1234-01-09',
-                'userName'          =>'juanitoHonesto',
-                'email'             =>'juanTAMAD@e.com',
+                'firstName'         =>'Mark',
+                'middleName'        =>'M',
+                'lastName'          =>'Alfonso',
+                'sex'               =>'Male',
+                'birthdate'         =>'0000-00-00',
+                'userName'          =>'alfonso',
+                'email'             =>'alfonso@e.com',
                 'password'          =>Hash::make('123'),
                 'type'              =>'faculty',
-                'employeeNumber'    =>'2013402112',
-                'room'              =>'C-123',
-                'academicPosition'  =>'Assistant Professor I',
-                'groups'            =>URL::to('public/JSONcontents/accounts/groups/juanitoHonesto_groups.json'),
-                'messages'          =>URL::to('public/JSONcontents/accounts/messages/juanitoHonesto_message.json'),
+                'employeeNumber'    =>'0000000000',
+                'room'              =>'C-000',
+                'academicPosition'  =>'Academic Position XXX',
+                'groups'            =>URL::to('public/JSONcontents/accounts/groups/alfonso_groups.json'),
+                'messages'          =>URL::to('public/JSONcontents/accounts/messages/alfonso_message.json'),
 
 
                 'studentNumber'     =>NULL
             ]
         );
-        createUserJsonFile("juanitoHonesto");
+        createUserJsonFile("alfonso");
 
 
         User::create(
             [
-                'firstName'         =>'Josephine',
-                'middleName'        =>'Katigbak',
-                'lastName'          =>'Bracken',
-                'sex'               =>'Female',
-                'birthdate'         =>'2222-06-05',
-                'userName'          =>'rizalForevs',
-                'email'             =>'rizalANDkatigbak@e.com',
+                'firstName'         =>'Jose',
+                'middleName'        =>'Ponce',
+                'lastName'          =>'Rivera',
+                'sex'               =>'Male',
+                'birthdate'         =>'0000-00-00',
+                'userName'          =>'jose',
+                'email'             =>'jose@e.com',
                 'password'          =>Hash::make('123'),
                 'type'              =>'faculty',
-                'employeeNumber'    =>'2012029402',
-                'room'              =>'C-125',
+                'employeeNumber'    =>'000000000000',
+                'room'              =>'C-000',
                 'academicPosition'  =>'Professor I',
-                'groups'            =>URL::to('public/JSONcontents/accounts/groups/rizalForevs_groups.json'),
-                'messages'          =>URL::to('public/JSONcontents/accounts/messages/rizalForevs_message.json'),
+                'groups'            =>URL::to('public/JSONcontents/accounts/groups/jose_groups.json'),
+                'messages'          =>URL::to('public/JSONcontents/accounts/messages/jose_message.json'),
 
 
                 'studentNumber'     =>NULL
             ]
         );
-        createUserJsonFile("rizalForevs");
+        createUserJsonFile("jose");
 
 
         User::create(
@@ -262,26 +273,55 @@ class StudentTableSeeder extends Seeder{
 
         function createGroupJsonFile($name){
             // JSON file creator
-            $group_classList = [];
+//            $group_classList = [];
+            $group_classList = [
+                array(
+                    "username"  =>'almer',
+                    "firstname" =>'Mamer',
+                    "middlename"=>'Taculog',
+                    "lastname"  =>'Mendoza',
+                    "type"      =>'student'
+                ),array(
+                    "username"  =>'tintin',
+                    "firstname" =>'Anne',
+                    "middlename"=>'Kristine',
+                    "lastname"  =>'Montoya',
+                    "type"      =>'student'
+                ),array(
+                    "username"  =>'angelo',
+                    "firstname" =>'Angelo',
+                    "middlename"=>'Capa',
+                    "lastname"  =>'Guiam',
+                    "type"      =>'student'
+                ),array(
+                    "username"  =>'almer',
+                    "firstname" =>'Joshua',
+                    "middlename"=>'Hi',
+                    "lastname"  =>'Burgos',
+                    "type"      =>'student'
+                ),array(
+                    "username"  =>'alfonso',
+                    "firstname" =>'Mark',
+                    "middlename"=>'M',
+                    "lastname"  =>'Alfonso',
+                    "type"      =>'faculty'
+                ),array(
+                    "username"  =>'jose',
+                    "firstname" =>'Jose',
+                    "middlename"=>'Ponce',
+                    "lastname"  =>'Rivera',
+                    "type"      =>'faculty'
+                ),
+            ];
 
-            $group_posts = [];
-
-//            $group_classList = array(
-//                "userName"          => NULL,
-//                "studentNumber"     => NULL
-//            );
-//
-//            $group_posts = [array(
-//                "postBy"            => NULL,
-//                "dateOfPost"        => NULL,
-//                "postTitle"         => NULL,
-//                "postContent"       => NULL,
-//                "comments"          => array(
-//                    "commentBy"     => NULL,
-//                    "date"          => NULL,
-//                    "content"       => NULL
-//                )
-//            )];
+//            $group_posts = [];
+            $group_posts = [array(
+                "postBy"            => 'Mark' . ' ' . 'Alfonso',
+                "dateOfPost"        => date('F d, Y'),
+                "postTitle"         => 'Group created',
+                "postContent"       => 'Your new group has been created. Updates will be posted in here.',
+                "comments"          => []
+            )];
 
             File::put('public/JSONcontents/groups/classList/'.$name.'_classList.json', json_encode($group_classList));
             File::put('public/JSONcontents/groups/posts/'.$name.'_posts.json', json_encode($group_posts));
@@ -291,25 +331,25 @@ class StudentTableSeeder extends Seeder{
             [
                 'courseTitle'   =>'CMSC170',
                 'classSize'     =>'100',
-                'section'       =>'UV-2L',
-                'accessCode'    =>sha1('CMSC170UV-2L'),
-                'classList'     =>URL::to('public/JSONcontents/groups/classList/CMSC170_classList.json'),
-                'posts'         =>URL::to('public/JSONcontents/groups/posts/CMSC170_posts.json')
+                'section'       =>'X',
+                'accessCode'    =>sha1('CMSC170X'),
+                'classList'     =>URL::to('public/JSONcontents/groups/classList/CMSC170X_classList.json'),
+                'posts'         =>URL::to('public/JSONcontents/groups/posts/CMSC170X_posts.json')
             ]
         );
-        createGroupJsonFile("CMSC170UV-2L");
+        createGroupJsonFile("CMSC170X");
 
         Group::create(
             [
-                'courseTitle'   =>'CMSC56',
+                'courseTitle'   =>'CMSC100',
                 'classSize'     =>'100',
-                'section'       =>'X-2L',
-                'accessCode'    =>sha1('CMSC56X-2L'),
-                'classList'     =>URL::to('public/JSONcontents/groups/classList/CMSC56_classList.json'),
-                'posts'         =>URL::to('public/JSONcontents/groups/posts/CMSC56_posts.json')
+                'section'       =>'B-5L',
+                'accessCode'    =>sha1('CMSC100B-5L'),
+                'classList'     =>URL::to('public/JSONcontents/groups/classList/CMSC100B-5L_classList.json'),
+                'posts'         =>URL::to('public/JSONcontents/groups/posts/CMSC100B-5L_posts.json')
             ]
         );
-        createGroupJsonFile("CMSC56X-2L");
+        createGroupJsonFile("CMSC100B-5L");
 
         DB::update("INSERT INTO `library` (`id`, `year`, `author`, `lastName`, `title`, `url`) VALUES
             (1, 2008, 'Ani, Darla Grace B.', 'Ani', 'An Interface for Clustered Monitoring of Arbitrary Number of Remote Desktops', '/res/SP/SP2008/SP_2008_Ani.jpg'),

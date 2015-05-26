@@ -133,7 +133,7 @@
 		</div>
 	</div>
 
-    <div class="update-panel-wrapper username-container hidden">
+    <div class="update-panel-wrapper username-container-special hidden">
         <div class="container-fluid update-panel">
             <div class="col-md-12">
                 <h4 class="pull-center">

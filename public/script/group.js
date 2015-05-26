@@ -372,12 +372,16 @@ $(document).ready(function() {
                     if(classlist[h].username != $('#username').text()){
                         //alert(classlist[h].type);
                         if(classlist[h].type != 'student') {
-                            $('.username-container').find('.usernameFormSpecial').attr({
+                            $('.username-container-special').find('.usernameFormSpecial').attr({
                                 'action': '//localhost:8000/pages/profiles/' + classlist[h].lastname,
                                 'method': 'GET'
                             });
-                            $('.username-container').find('.selectUsername').val(classlist[h].firstname + " " + classlist[h].lastname);
+                            $('.username-container-special').find('.selectUsername').val(classlist[h].firstname + " " + classlist[h].lastname);
 
+                            listHtml += '' +
+                            '<div class="update-panel-wrapper">' +
+                                $('.username-container-special').html() +
+                            '</div>';
                         }else {
                             $('.username-container').find('.usernameForm').attr({
                                 'action': '//localhost:8000/pages/user/message',
@@ -387,11 +391,13 @@ $(document).ready(function() {
                             $('.username-container').find('.usernameContainer').val(classlist[h].username);
                             $('.username-container').find('.selectUsername').val(classlist[h].firstname + " " + classlist[h].lastname);
                             $('.username-container').find('.nameContainer').val(classlist[h].firstname + " " + classlist[h].lastname);
-                        }
-                        listHtml += '' +
+
+                            listHtml += '' +
                             '<div class="update-panel-wrapper">' +
                                 $('.username-container').html() +
                             '</div>';
+                        }
+
                     }
                 }
 

@@ -183,6 +183,7 @@ class UserController extends \BaseController {
 
     public function sendMessage()
     {
+        //dd(Input::all());
         $information = Input::all();
 //        dd($information);
         return View::make('pages.user.sendMessage')->with('information',$information);
