@@ -371,13 +371,23 @@ $(document).ready(function() {
                 for(var h = 0; h < classlist.length; h += 1){
                     if(classlist[h].username != $('#username').text()){
                         //alert(classlist[h].type);
-                        if(classlist[h].type != 'student') $('.username-container').find('.usernameForm').attr({'action':'//localhost:8000/pages/profile','method':'GET'});
-                        else $('.username-container').find('.usernameForm').attr({'action':'//localhost:8000/pages/user/message','method':'POST'});
+                        if(classlist[h].type != 'student') {
+                            $('.username-container').find('.usernameFormSpecial').attr({
+                                'action': '//localhost:8000/pages/profiles/' + classlist[h].lastname,
+                                'method': 'GET'
+                            });
+                            $('.username-container').find('.selectUsername').val(classlist[h].firstname + " " + classlist[h].lastname);
 
-                        $('.username-container').find('.usernameContainer').val(classlist[h].username);
-                        $('.username-container').find('.selectUsername').val(classlist[h].firstname + " " + classlist[h].lastname);
-                        $('.username-container').find('.nameContainer').val(classlist[h].firstname + " " + classlist[h].lastname);
+                        }else {
+                            $('.username-container').find('.usernameForm').attr({
+                                'action': '//localhost:8000/pages/user/message',
+                                'method': 'POST'
+                            });
 
+                            $('.username-container').find('.usernameContainer').val(classlist[h].username);
+                            $('.username-container').find('.selectUsername').val(classlist[h].firstname + " " + classlist[h].lastname);
+                            $('.username-container').find('.nameContainer').val(classlist[h].firstname + " " + classlist[h].lastname);
+                        }
                         listHtml += '' +
                             '<div class="update-panel-wrapper">' +
                                 $('.username-container').html() +

@@ -137,20 +137,31 @@
         <div class="container-fluid update-panel">
             <div class="col-md-12">
                 <h4 class="pull-center">
-                {{ Form::open(array('action'=>'page.user.message', 'name'=>'usernameForm', 'class'=>'usernameForm', 'id'=>'usernameFormId')) }}
-
-                    {{ Form::hidden('senderUsername',Session::get('username'),array('class'=>'usernameContainer')) }}
-                    {{ Form::hidden('senderFirstname',Session::get('firstName'),array('class'=>'firstnameContainer')) }}
-                    {{ Form::hidden('senderMiddlename',Session::get('middleName'),array('class'=>'middlenameContainer')) }}
-                    {{ Form::hidden('senderLastname',Session::get('lastName'),array('class'=>'lastnameContainer')) }}
-
-                    {{ Form::hidden('usernameContainer','',array('class'=>'usernameContainer')) }}
-                    {{ Form::hidden('nameContainer','',array('class'=>'nameContainer')) }}
+                {{ Form::open(array('action'=>'page.user.message', 'name'=>'usernameFormSpecial', 'class'=>'usernameFormSpecial', 'id'=>'usernameFormIdSpecial')) }}
                     {{ Form::submit('', array("style"=>"background-color: transparent;border:none;color:#34495e;",'class'=>'selectUsername')) }}
                 {{ Form::close() }}
             </div>
         </div>
     </div>
+
+    <div class="update-panel-wrapper username-container hidden">
+            <div class="container-fluid update-panel">
+                <div class="col-md-12">
+                    <h4 class="pull-center">
+                    {{ Form::open(array('action'=>'page.user.message', 'name'=>'usernameForm', 'class'=>'usernameForm', 'id'=>'usernameFormId')) }}
+
+                        {{ Form::hidden('senderUsername',Session::get('username'),array('class'=>'usernameContainer')) }}
+                        {{ Form::hidden('senderFirstname',Session::get('firstName'),array('class'=>'firstnameContainer')) }}
+                        {{ Form::hidden('senderMiddlename',Session::get('middleName'),array('class'=>'middlenameContainer')) }}
+                        {{ Form::hidden('senderLastname',Session::get('lastName'),array('class'=>'lastnameContainer')) }}
+
+                        {{ Form::hidden('usernameContainer','',array('class'=>'usernameContainer')) }}
+                        {{ Form::hidden('nameContainer','',array('class'=>'nameContainer')) }}
+                        {{ Form::submit('', array("style"=>"background-color: transparent;border:none;color:#34495e;",'class'=>'selectUsername')) }}
+                    {{ Form::close() }}
+                </div>
+            </div>
+        </div>
 
     <div class="update-panel-wrapper comment-container-input hidden">
         <div class="container-fluid comment-panel">
