@@ -122,7 +122,6 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Codesleeve\LaravelStapler\LaravelStaplerServiceProvider',
-		'Andrew13\Cabinet\CabinetServiceProvider',
 
 	),
 

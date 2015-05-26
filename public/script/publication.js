@@ -16,17 +16,20 @@ $(document).ready(function(){
 			$("#title-panel").html("<h2 class='text'>" + NEWS[0]['title'] + "</h2>" + "<hr>");
 			$("#body-panel").html("<p class='text'>" + NEWS[0]['content'] + "</p>");
 		
-		$(".links").click(function(){
+		$(".links").click(function(e){
 			ID = $(this).attr('id');
 			ID = ID[4];
 
 			$("#title-panel").html("<h2 class='text'>" + NEWS[ID]['title'] + "</h2>" + "<hr>");
 			$("#body-panel").html("<p class='text'>" + NEWS[ID]['content'] + "</p>");
-			
-			$('html, body').animate({
+
+			$('html, body')
+                .animate({
 			        scrollTop: $("#pub-head").offset().top
-			    }, "fast");
-					});	
+                }, "fast"
+            );
+            e.preventDefault();
+        });
 
 		$("#news-searchbar-wrapper").click(function(){
 			document.getElementById('news-searchbar').value = null;

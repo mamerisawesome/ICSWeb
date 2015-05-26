@@ -3,7 +3,7 @@
 
 	#profile-panel-wrapper{
 		padding: 0;
-		box-shadow: 0px 0px 5px #bdc3c7;
+        box-shadow: 0px 0px 5px #bdc3c7;
         margin-bottom:20px;
 	}
 
@@ -92,6 +92,12 @@
 		border-bottom: solid 1px #bdc3c7;
 	}
 
+    .user-links {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: solid 1px #bdc3c7;
+    }
+
 	.group-name {
 		text-align: center;
 	}
@@ -107,6 +113,12 @@
 
 
 /* GROUP FEED */
+
+    @media (max-width: 990px) {
+        #group-feed-wrapper {
+            padding: 0;
+        }
+    }
 
 	#group-feed {
 		background-color: white;

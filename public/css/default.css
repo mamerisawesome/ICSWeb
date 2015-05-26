@@ -19,8 +19,12 @@
 
 body {
 	font-family: montserrat-reg;
-	background-color: #ECF0F1;
+	background-color: #34495E;
 	color: #7f8c8d;
+}
+
+#main {
+    background-color: #ECF0F1;
 }
 
 h1, h2, h3, h4, h5, h6 {

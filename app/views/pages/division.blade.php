@@ -86,7 +86,6 @@
     	</div>
 	    </div>
     </div>
-	</div>
 
     <div class="container" id="facilities-panel">
     	<h1>Facilities</h1>
