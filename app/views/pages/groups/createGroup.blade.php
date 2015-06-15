@@ -1,12 +1,13 @@
 @extends('layouts.default')
 @section('content')
+    <title>Create group</title>
     <div class="wrapping-panel" id="login-form-wrapper">
         <div class="container">
             <div class="col-md-12">
                 <div class="col-md-12" id="login-form-panel">
                     <div class="col-md-12" id="login-icon"><img src="{{URL::to('res/faces/faculty/dummy.png')}}"/></div>
                     <div class="col-md-12" id="login-form-title">
-                        <h2>JOIN A GROUP</h2>
+                        <h2>CREATE A GROUP</h2>
                     </div>
                     <div class="col-md-12" id="login-form-body">
                         {{ Form::open(array('route'=>'page.group.store', 'name'=>'reg-form', 'id'=>'reg-form'))}}

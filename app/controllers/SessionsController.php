@@ -146,7 +146,7 @@ class SessionsController extends \BaseController {
 	 */
 	public function destroy(){
 		Session::flush();
-		return Redirect::to('pages/home');
+		return Redirect::to('/');
 	}
 
 

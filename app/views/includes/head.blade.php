@@ -17,3 +17,4 @@
     {{ HTML::script('script/bootstrap.min.js'); }}
    
     {{ HTML::script('script/default.js'); }}
+<!--    {{ HTML::script('script/validate.js'); }} -->

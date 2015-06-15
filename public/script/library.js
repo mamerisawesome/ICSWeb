@@ -61,9 +61,9 @@ function fetchSearchQuery(){
 
 
 $(document).ready(function(){
-
 	$("#library-switch").show("slow");
 
+/*
 	$("#search-SPT").click(function(){
 		if(validateSearchQuery()) {
 			$("#shelf-body").slideToggle("slow");
@@ -72,7 +72,7 @@ $(document).ready(function(){
 			fetchSearchQuery();			
 		}
 	});
-
+*/
 	$("#back-to-shelf").click(function(){
 		$("#shelf-body").slideToggle("slow");
 		$("#shelf").slideToggle("slow");
